@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, Routes } from "react-router"
+import { createHashRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
 
 import Insights from './advantiumComponents/Insights.jsx'
@@ -23,7 +24,7 @@ import Contact from './advantiumComponents/testing.jsx'
 
 const Root = createRoot(document.getElementById('root'));
 
-let allRouts = createBrowserRouter(
+let allRouts = createHashRouter(
   [
     {
       path: '/',
@@ -50,9 +51,9 @@ let allRouts = createBrowserRouter(
       element: <Contact  />
     },
 
-     {
-    basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
-  }
+  //    {
+  //   basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
+  // }
    
   ]
 )
