@@ -48,7 +48,11 @@ let allRouts = createBrowserRouter(
     {
       path: 'Contact',
       element: <Contact  />
-    }
+    },
+
+     {
+    basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
+  }
    
   ]
 )
