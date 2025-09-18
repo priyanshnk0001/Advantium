@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+body{
+    background-color: #0f172a;
+}
+.naresh{
+    background-color: #0f172a;
+    font-size: 60px;
+    color: white;
+    z-index: 6;
+}
