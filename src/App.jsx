@@ -78,7 +78,7 @@ export default function HoverSpotLight() {
       paused: true,
     });
 
-    const arrow2 = document.querySelector(".advantiumBottomButton .nextArrowButton2");
+    const arrow2 = document.querySelector(".BookingBtn-container");
     if (!arrow2) return;
 
     const onEnter2 = () => rotateTweenArrow2.current.play();
@@ -155,11 +155,13 @@ export default function HoverSpotLight() {
           <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds text-white text-3xl mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
-            <button className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer hover:bg-amber-400">Book a meeting</button>
+            <div className="BookingBtn-container">
+            <button className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
             <button
               className="nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
               <CallMadeIcon className="!w-8 !h-8" />
             </button>
+            </div>
             <button className="software border-2 rounded-full py-4 px-7 text-[20px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
           </div>
         </div>

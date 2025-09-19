@@ -53,7 +53,7 @@ export default function Header() {
             paused: true,
         });
 
-        const arrow = document.querySelector(".Header-nextArrowButton");
+        const arrow = document.querySelector(".header-bookingBtn-container");
         if (!arrow) return;
 
         const onEnter = () => rotateTweenArrow.current.play();
@@ -370,11 +370,13 @@ export default function Header() {
                      ${isActive ? " text-amber-300" : "after:w-0"}`}>
                     <button className="Header-contactButton border-2 rounded-full py-3 px-7 text-[20px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
                     </NavLink>
-                    <button className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer hover:bg-amber-400">Book a meeting</button>
+                    <div className="header-bookingBtn-container">
+                    <button className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
                     <button
                         className="Header-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
 
                     ><CallMadeIcon className="!w-8 !h-8" /></button>
+                    </div>
                 </div>
             </div>
 
