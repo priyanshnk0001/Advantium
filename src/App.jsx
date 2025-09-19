@@ -149,7 +149,7 @@ export default function HoverSpotLight() {
 
         <Header />
 
-        <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  ">
+        <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
           <div className="w-fit overflow-hidden"> <h1 className='techBuilds text-white text-8xl font-bold overflow-hidden'>Tech builds.</h1></div>
           <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-8xl font-bold overflow-hidden'>scale</h1></div>
           <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds text-white text-3xl mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
@@ -167,7 +167,7 @@ export default function HoverSpotLight() {
 
 
 
-        <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%" }}>
+        <div className='overflow-x-hidden' style={{ position: "absolute", bottom: 0, left: 0, width: "100%" }}>
           <CarouselLoopFinal embedded
 
           />

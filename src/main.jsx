@@ -51,9 +51,9 @@ let allRouts = createHashRouter(
       element: <Contact  />
     },
 
-  //    {
-  //   basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
-  // }
+     {
+    basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
+  }
    
   ]
 )

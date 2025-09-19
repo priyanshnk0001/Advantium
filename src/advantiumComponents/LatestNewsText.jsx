@@ -63,7 +63,7 @@ function LatestNewsText() {
 
     }, []);
     return (
-        <div className=' bg-gradient-to-b from-[#0f172a] to-white'>
+        <div className=' bg-gradient-to-b from-[#0f172a] to-white overflow-x-hidden'>
             <div className="latest-heading-cont flex justify-between items-end px-20 py-[200px] leading-none    ">
                 <h1 className="sharingknowledge-text text-gray-200 text-xl mb-1 ">Sharing knowledge <br /> is in our DNA</h1>
                 <h1 className="latestNews-BigText text-[6.5rem] text-white font-bold ">Latest news <br /> from the 𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 </h1>

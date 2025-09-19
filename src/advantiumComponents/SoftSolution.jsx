@@ -130,7 +130,7 @@ function SoftSolution() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center  '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-x-hidden  '>
             <div className="softImg-main-cont w-[50%] h-[90vh] rounded-3xl relative">
                 <div className="CMP-img w-[100%] h-[90vh] rounded-3xl absolute bg">
                     <img className='object-fit w-full h-full rounded-3xl' src="https://cdn.supplyon.com/wp-content/uploads/2022/07/Customer-Portal-Management_social-media_blog-1024x535.jpg" alt="" />

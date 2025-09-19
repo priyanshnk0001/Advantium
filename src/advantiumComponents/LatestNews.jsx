@@ -88,7 +88,7 @@ function LatestNews() {
         <div
             onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
             onMouseLeave={() => setPos({})}
-            className="LN-main-cont w-[100%]  relative bg-white   transition-colors"
+            className="LN-main-cont w-[100%]  relative bg-white overflow-x-hidden   transition-colors"
         //     style={{
         //         background: `radial-gradient(
         //   900px circle at ${pos.x}px ${pos.y}px,
