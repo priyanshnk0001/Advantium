@@ -9,12 +9,36 @@ import { ScrambleTextPlugin } from 'gsap/all';
 import InsCarousell from './InsCarousell';
 
 function Footer() {
+
+    // useGSAP(() => {
+    //     const tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: ".insightsFooter-main",
+    //             scroller: "body",
+    //             scrub: 2,
+    //             start:"top 99%",
+    //             end:"top 1%",
+                
+    //             markers: true
+    //         }
+    //     })
+    //     tl.from(".FP2-child h1",{
+    //         x: -300,
+    //         stagger:0.3
+    //     })
+
+    //     tl.from(".FP1-headingText , .FP1-child ",{
+    //         x: -550,
+    //         stagger:0.5,
+    //         duration:1
+    //     },"-=3")
+    // })
     return (
         <div>
             <div className="insightsFooter-main w-[100%]  bg-slate-900">
                 <div className="insightsFooter-cont w-[100%] bg-slate-900 flex justify-between">
-                    <div className="footer-contentP2 w-[35%] h-[75vh] pl-12 flex flex-col justify-center  ">
-                        <h1 className='text-white text-6xl mb-5 pl-10'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                    <div className="footer-contentP1 w-[35%] h-[75vh] pl-12 flex flex-col justify-center overflow-hidden  ">
+                        <h1 className='FP1-headingText text-white text-6xl mb-5 pl-10'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
                         <div className="FP1-child grid grid-cols-3 px-10  gap-y-5 ">
                             <div className="FP1-sub-child py-5 px-8 rounded-2xl flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="iso27001.png" alt="" /></div>
                             <div className="FP1-sub-child py-5 px-8 rounded-2xl flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="nen7510.webp" alt="" /></div>

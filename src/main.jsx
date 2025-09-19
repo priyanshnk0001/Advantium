@@ -9,7 +9,7 @@ import { RouterProvider } from 'react-router'
 import Insights from './advantiumComponents/Insights.jsx'
 import About from './advantiumComponents/About.jsx'
 import Careers from './advantiumComponents/Careers.jsx'
-import Contact from './advantiumComponents/testing.jsx'
+import Contact from './advantiumComponents/Contact.jsx'
 
 
 

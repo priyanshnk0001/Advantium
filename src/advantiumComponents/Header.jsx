@@ -21,6 +21,11 @@ export default function Header() {
 
     const [pos, setPos] = useState({ x: 750, y: 400 });
     const rotateTweenArrow = useRef(null);
+    const bookingTweenArrow = useRef(null);
+
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
+const [isDeliverOpen, setIsDeliverOpen] = useState(false);
+const [isCasesOpen, setIsCasesOpen] = useState(false);
 
     useGSAP(() => {
         const tl = gsap.timeline();
@@ -70,106 +75,222 @@ export default function Header() {
     }, []);
 
 
+    useGSAP(() => {
+        bookingTweenArrow.current = gsap.to(".Booking-drawer-Btn-container .booking-nextArrowButton", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor: "#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const arrow4 = document.querySelector(".Booking-drawer-Btn-container");
+        if (!arrow4) return;
+
+        const onEnter = () => bookingTweenArrow.current.play();
+        const onLeave = () => bookingTweenArrow.current.reverse();
+
+        arrow4.addEventListener("mouseenter", onEnter);
+        arrow4.addEventListener("mouseleave", onLeave);
+
+        return () => {
+            arrow4.removeEventListener("mouseenter", onEnter);
+            arrow4.removeEventListener("mouseleave", onLeave);
+            bookingTweenArrow.current.kill();
+        };
+    }, []);
+
+
+    
 
 
 
 
+
+
+
+
+
+   useGSAP(() => {
+    // ---------------- Deliver Drawer ----------------
+    const deliver = document.querySelector(".insightsNavP1 .Header-deliver");
+    const deliverDrawer = document.querySelector(".Header-deliverdrawer");
+
+    const dtl = gsap.timeline({ paused: true, reversed: true });
+    dtl.to(".Header-deliverdrawer", { top: 0, duration: 0.5, opacity: 1 });
+    dtl.from(".Header-deliverdrawer h1", { x: -500, duration: 0.8 });
+
+    // ---------------- Cases Drawer ----------------
+    const cases = document.querySelector(".insightsNavP1 .Header-cases");
+    const casesDrawer = document.querySelector(".Header-casesdrawer");
+
+    const ctl = gsap.timeline({ paused: true, reversed: true });
+    ctl.to(".Header-casesdrawer", { top: 0, duration: 0.5, opacity: 1 });
+    ctl.from(".Header-cases-drawer-child", {
+        y: 450,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2
+    });
+    ctl.from(
+        ".Header-cases-subchild",
+        {
+            y: 450,
+            opacity: 0,
+            stagger: 0.3
+        },
+        "-=0.4"
+    );
+
+    // ---------------- Booking Drawer (same useGSAP scope) ----------------
+    const bookingBtn = document.querySelector(".Header-bookingButton");
+    const bookingDrawerEl = document.querySelector(".Header-Bookingdrawer");
+
+    const btl = gsap.timeline({ paused: true, reversed: true });
+    btl.to(".Header-Bookingdrawer", { top: 0, duration: 0.45, opacity: 1, ease: "power2.out" });
+    btl.from(".bookingP1 > * , .bookingP2 > *", {
+        y: 30,
+        opacity: 0,
+        stagger: 0.6
+    }, "0.1");
+
+    const closeBookingIfOpen = () => {
+        if (btl && !btl.reversed()) {
+            btl.timeScale(2).reverse();
+            try { setIsBookingOpen(false); } catch (e) {}
+        }
+    };
+
+   
+    const openDDrawer = () => {
+        closeBookingIfOpen();
+        if (dtl.reversed()) {
+            dtl.timeScale(1).play(); // open
+            try { setIsBookingOpen(false); setIsCasesOpen(false); } catch (e) {}
+        }
+    };
+    const closeDDrawer = () => {
+        if (!dtl.reversed()) {
+            dtl.timeScale(4).reverse(); // close
+        }
+    };
+
+    const openCDrawer = () => {
+        closeBookingIfOpen();
+        if (ctl.reversed()) {
+            ctl.timeScale(1).play();
+            try { setIsBookingOpen(false); setIsDeliverOpen(false); } catch (e) {}
+        }
+    };
+    const closeCDrawer = () => {
+        if (!ctl.reversed()) {
+            ctl.timeScale(4).reverse();
+        }
+    };
+
+    const toggleBooking = (e) => {
+        e && e.stopPropagation();
+        if (!btl) return;
+
+        if (btl.reversed()) {
+            if (!dtl.reversed()) dtl.timeScale(4).reverse();
+            if (!ctl.reversed()) ctl.timeScale(4).reverse();
+
+            btl.timeScale(1).play();
+            try { setIsBookingOpen(true); } catch (e) {}
+        } else {
+            btl.timeScale(2).reverse();
+            try { setIsBookingOpen(false); } catch (e) {}
+        }
+    };
+
+    const onBookingBgClick = (ev) => {
+        if (ev.target === bookingDrawerEl && btl && !btl.reversed()) {
+            btl.timeScale(2).reverse();
+            try { setIsBookingOpen(false); } catch (e) {}
+        }
+    };
+
+    if (deliver) {
+        deliver.addEventListener("mouseenter", openDDrawer);
+        deliver.addEventListener("mouseenter", closeCDrawer);
+        deliver.addEventListener("click", closeDDrawer);
+    }
+    if (deliverDrawer) {
+        deliverDrawer.addEventListener("mouseleave", closeDDrawer);
+    }
+
+    if (cases) {
+        cases.addEventListener("mouseenter", openCDrawer);
+        cases.addEventListener("mouseenter", closeDDrawer);
+        cases.addEventListener("click", closeCDrawer);
+    }
+    if (casesDrawer) {
+        casesDrawer.addEventListener("mouseleave", closeCDrawer);
+    }
+
+    const insights = document.querySelector(".insightsNavP1 .Header-insightsText");
+    if (insights) {
+        insights.addEventListener("mouseenter", closeDDrawer);
+        insights.addEventListener("mouseenter", closeCDrawer);
+    }
+
+    if (bookingBtn) bookingBtn.addEventListener("click", toggleBooking);
+    if (bookingDrawerEl) bookingDrawerEl.addEventListener("click", onBookingBgClick);
+
+    // cleanup
+    return () => {
+        if (deliver) {
+            deliver.removeEventListener("mouseenter", openDDrawer);
+            deliver.removeEventListener("mouseenter", closeCDrawer);
+            deliver.removeEventListener("click", closeDDrawer);
+        }
+        if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
+        dtl.kill();
+
+        if (cases) {
+            cases.removeEventListener("mouseenter", openCDrawer);
+            cases.removeEventListener("mouseenter", closeDDrawer);
+            cases.removeEventListener("click", closeCDrawer);
+        }
+        if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
+        ctl.kill();
+
+        if (insights) {
+            insights.removeEventListener("mouseenter", closeDDrawer);
+            insights.removeEventListener("mouseenter", closeCDrawer);
+        }
+
+        if (bookingBtn) bookingBtn.removeEventListener("click", toggleBooking);
+        if (bookingDrawerEl) bookingDrawerEl.removeEventListener("click", onBookingBgClick);
+        btl.kill();
+    };
+}, []);
 
 
 
     useGSAP(() => {
-        // ---------------- Deliver Drawer ----------------
-        const deliver = document.querySelector(".insightsNavP1 .Header-deliver");
-        const deliverDrawer = document.querySelector(".Header-deliverdrawer");
+  const btl = gsap.timeline({ paused: true, reversed: true });
+  btl.to(".Header-Bookingdrawer", {
+    top: 0,
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+  });
 
-        const dtl = gsap.timeline({ paused: true, reversed: true });
-        dtl.to(".Header-deliverdrawer", { top: 0, duration: 0.5, opacity: 1 });
-        dtl.from(".Header-deliverdrawer h1", { x: -500, duration: 0.8 });
-
-        const openDDrawer = () => {
-            if (dtl.reversed()) {
-                dtl.timeScale(1).play(); // open
-            }
-        };
-        const closeDDrawer = () => {
-            if (!dtl.reversed()) {
-                dtl.timeScale(4).reverse(); // close
-            }
-        };
-
-        // ---------------- Cases Drawer ----------------
-        const cases = document.querySelector(".insightsNavP1 .Header-cases");
-        const casesDrawer = document.querySelector(".Header-casesdrawer");
-
-        const ctl = gsap.timeline({ paused: true, reversed: true });
-        ctl.to(".Header-casesdrawer", { top: 0, duration: 0.5, opacity: 1 });
-        ctl.from(".Header-cases-drawer-child", {
-            y: 450,
-            opacity: 0,
-            duration: 0.5,
-            stagger: 0.2
-        });
-        ctl.from(
-            ".Header-cases-subchild",
-            {
-                y: 450,
-                opacity: 0,
-                stagger: 0.3
-            },
-            "-=0.4"
-        );
+  if (isBookingOpen) btl.timeScale(1).play();
+  else btl.timeScale(2).reverse();
+}, [isBookingOpen]);
 
 
-        const openCDrawer = () => {
-            if (ctl.reversed()) {
-                ctl.timeScale(1).play();
-            }
-        };
-        const closeCDrawer = () => {
-            if (!ctl.reversed()) {
-                ctl.timeScale(4).reverse();
-            }
-        };
-
-
-        const insights = document.querySelector(".insightsNavP1 .Header-insightsText");
-        const about = document.querySelector(".insightsNavP1 .Header-aboutText");
-        const careers = document.querySelector(".insightsNavP1 .Header-careersText");
-
-
-
-        deliver.addEventListener("mouseenter", openDDrawer);
-        deliver.addEventListener("mouseenter", closeCDrawer);
-        deliverDrawer.addEventListener("mouseleave", closeDDrawer);
-        deliver.addEventListener("click", closeDDrawer);
-
-
-        cases.addEventListener("mouseenter", openCDrawer);
-        cases.addEventListener("mouseenter", closeDDrawer);
-        casesDrawer.addEventListener("mouseleave", closeCDrawer);
-        cases.addEventListener("click", closeCDrawer);
-
-        insights.addEventListener("mouseenter", closeDDrawer);
-        insights.addEventListener("mouseenter", closeCDrawer);
-
-
-        return () => {
-            deliver.removeEventListener("mouseenter", openDDrawer);
-            deliver.removeEventListener("mouseenter", closeCDrawer);
-            deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
-            deliver.removeEventListener("click", closeDDrawer);
-            dtl.kill();
-
-            cases.removeEventListener("mouseenter", openCDrawer);
-            cases.removeEventListener("mouseenter", closeDDrawer);
-            casesDrawer.removeEventListener("mouseleave", closeCDrawer);
-            cases.removeEventListener("click", closeCDrawer);
-
-            insights.removeEventListener("mouseenter", closeDDrawer);
-            insights.removeEventListener("mouseenter", closeCDrawer);
-            ctl.kill();
-        };
-    }, []);
+const toggleBooking = () => {
+  if (!isBookingOpen) {
+    setIsDeliverOpen(false);
+    setIsCasesOpen(false);
+  }
+  setIsBookingOpen((prev) => !prev);
+};
 
 
 
@@ -262,61 +383,58 @@ export default function Header() {
 
 
 
-  useGSAP(() => {
-  const lines = document.querySelectorAll(".NavTextUnderline");
+    useGSAP(() => {
+        const lines = document.querySelectorAll(".NavTextUnderline");
 
-  lines.forEach((line) => {
-    const underline = line.querySelector(".underline-line");
-    const icon = line.querySelector(".KeyboardArrowDownIcon"); // per-line icon (may be null)
+        lines.forEach((line) => {
+            const underline = line.querySelector(".underline-line");
+            const icon = line.querySelector(".KeyboardArrowDownIcon"); // per-line icon (may be null)
 
-    if (!underline) return;
+            if (!underline) return;
 
-    const unline = gsap.to(underline, {
-      width: "95%",
-      duration: 0.5,
-      paused: true
-    });
+            const unline = gsap.to(underline, {
+                width: "95%",
+                duration: 0.5,
+                paused: true
+            });
 
-    // create icon tween only if icon exists
-    let iconTween = null;
-    if (icon) {
-      iconTween = gsap.to(icon, {
-        rotation: 180,
-        // NOTE: changing color on an MUI svg may not work via 'color' — consider using css variable or class toggle.
-        // If color change doesn't reflect, prefer: icon.classList.add('text-amber-300') and handle in CSS/Tailwind.
-        color: "#fcd34d",
-        duration: 0.5,
-        paused: true,
-        transformOrigin: "50% 50%"
-      });
-    }
+            let iconTween = null;
+            if (icon) {
+                iconTween = gsap.to(icon, {
+                    rotation: 180,
+                    
+                    color: "#fcd34d",
+                    duration: 0.5,
+                    paused: true,
+                    transformOrigin: "50% 50%"
+                });
+            }
 
-    const onEnter = () => {
-      unline.play();
-      if (iconTween) iconTween.play();
-    };
-    const onLeave = () => {
-      unline.reverse();
-      if (iconTween) iconTween.reverse();
-    };
+            const onEnter = () => {
+                unline.play();
+                if (iconTween) iconTween.play();
+            };
+            const onLeave = () => {
+                unline.reverse();
+                if (iconTween) iconTween.reverse();
+            };
 
-    line.addEventListener("mouseenter", onEnter);
-    line.addEventListener("mouseleave", onLeave);
+            line.addEventListener("mouseenter", onEnter);
+            line.addEventListener("mouseleave", onLeave);
 
-    // store handlers for cleanup
-    line._handlers = { onEnter, onLeave, iconTween };
-  });
+            // store handlers for cleanup
+            line._handlers = { onEnter, onLeave, iconTween };
+        });
 
-  return () => {
-    lines.forEach((line) => {
-      const h = line._handlers || {};
-      if (h.onEnter) line.removeEventListener("mouseenter", h.onEnter);
-      if (h.onLeave) line.removeEventListener("mouseleave", h.onLeave);
-      if (h.iconTween) h.iconTween.kill();
-      // you may also want to kill underline tweens, but they are stored in closure — ok to leave
-    });
-  };
-}, []);
+        return () => {
+            lines.forEach((line) => {
+                const h = line._handlers || {};
+                if (h.onEnter) line.removeEventListener("mouseenter", h.onEnter);
+                if (h.onLeave) line.removeEventListener("mouseleave", h.onLeave);
+                if (h.iconTween) h.iconTween.kill();
+            });
+        };
+    }, []);
 
 
 
@@ -347,19 +465,19 @@ export default function Header() {
                     <NavLink to="/Insights" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`}>
                         <h1 className="Header-insightsText NavTextUnderline text-[15px] cursor-pointer relative ">Insights
-                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+                            <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1>
                     </NavLink>
                     <NavLink to="/About" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`} >
                         <h1 className="Header-aboutText NavTextUnderline text-[15px] cursor-pointer relative ">About us
-                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
-                             </h1></NavLink>
+                            <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+                        </h1></NavLink>
                     <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`}>
                         <h1 className="Header-careersText NavTextUnderline text-[15px] cursor-pointer relative ">Careers
-                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
-                             </h1></NavLink>
+                            <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+                        </h1></NavLink>
                 </div>
                 <div className="insightsNavP2 flex justify-center items-center text-center w-[20%] ">
                     <NavLink to="/" >
@@ -368,14 +486,14 @@ export default function Header() {
                 <div className="insightsNavP3 w-[40%] flex justify-center items-center  ">
                     <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? " text-amber-300" : "after:w-0"}`}>
-                    <button className="Header-contactButton border-2 rounded-full py-3 px-7 text-[20px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
+                        <button className="Header-contactButton border-2 rounded-full py-3 px-7 text-[20px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
                     </NavLink>
-                    <div className="header-bookingBtn-container">
-                    <button className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
-                    <button
-                        className="Header-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
+                    <div  className="header-bookingBtn-container">
+                        <button   className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+                        <button
+                            className="Header-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
 
-                    ><CallMadeIcon className="!w-8 !h-8" /></button>
+                        ><CallMadeIcon className="!w-8 !h-8" /></button>
                     </div>
                 </div>
             </div>
@@ -599,6 +717,99 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+
+
+
+            <div className="Header-Bookingdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0    bg-black backdrop-filter backdrop-blur-[12px] z-40   ">
+                <div className="Header-booking-container w-[100%] flex mt-50">
+                    <div className="bookingP1 w-[45%] pl-10   ">
+                        <div className="BP1-child w-[100%] flex flex-col items-start gap-10 text-white  ">
+                            <h1 className="helper-work text-6xl text-white ">Book an appointment</h1>
+                            <h1 className='text-gray-400 text-xl  '>Curious how we can help with your digital challenges? Schedule a quick chat and get immediate insight into the best solution for your situation.</h1>
+                            <div className="booking-img-cont flex justify-center items-center gap-5 text-white text-xl">
+                                <div className="book-img"><img className='w-[150px] h-[150px] rounded-full' src="fundament.png" alt="" /></div>
+                                <div className="book-name">
+                                    <h1>name</h1>
+                                    <h1 className='text-gray-400'>Designation</h1>
+                                </div>
+
+                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-2 ml-20 cursor-pointer">@</button>
+
+                            </div>
+
+
+                            <div className="booking-img-cont flex justify-center items-center gap-5 text-white text-xl">
+                                <div className="book-img"><img className='w-[150px] h-[150px] rounded-full' src="fundament.png" alt="" /></div>
+                                <div className="book-name">
+                                    <h1>name</h1>
+                                    <h1 className='text-gray-400'>Designation</h1>
+                                </div>
+
+                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-2 ml-20 cursor-pointer">@</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="bookingP2 w-[55%] text-white px-15   ">
+
+                        <form className=' flex flex-col gap-10 ' action="">
+                            <div>
+                                <label htmlFor="">What is your name ?</label>
+                                <input
+                                    type="text"
+                                    placeholder="Name"
+                                    aria-label="Name"
+                                    className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4"
+                                />
+                            </div>
+
+                            <div className='flex w-[100%] justify-between py-4'>
+                                <div className='w-[45%] flex flex-col gap-4'>
+                                    <label htmlFor="">What is your e-mail?</label>
+                                    <input
+                                        type="email"
+                                        placeholder="Email address"
+                                        aria-label="Email address"
+                                        className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4"
+                                    />
+                                </div>
+                                <div className='w-[45%] flex flex-col gap-4'>
+                                    <label htmlFor="">What is your phone number?</label>
+                                    <input
+                                        type="number"
+                                        placeholder="Phone number"
+                                        aria-label="Phone number"
+                                        className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4"
+                                    />
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <label htmlFor="">What would you like to talk about?</label>
+                                <textarea
+                                    placeholder="Type your answer here"
+                                    aria-label="answer"
+                                    rows={4}
+                                    className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4 resize-y"
+                                />
+                            </div>
+
+                            <div className="Booking-drawer-Btn-container">
+                                <button className="booking-drawer-Button  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+                                <button
+                                    className="booking-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
+                                    <CallMadeIcon className="!w-8 !h-8" />
+                                </button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
 
 
 
