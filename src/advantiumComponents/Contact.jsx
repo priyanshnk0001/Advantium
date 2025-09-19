@@ -16,12 +16,12 @@ function Contact() {
     const [pos, setPos] = useState({ x: 750, y: 400 });
 
 
-     useGSAP(() => {
+    useGSAP(() => {
         const tl = gsap.timeline();
         tl.from(".contact-main-cont", {
             y: 1200,
             duration: 0.5,
-        },"ok")
+        }, "ok")
 
         tl.from(".contact-headingText", {
             x: "-100%",
@@ -43,7 +43,7 @@ function Contact() {
     })
 
 
-   
+
 
     return (
         <>
@@ -95,8 +95,8 @@ function Contact() {
                             </div>
                         </div>
                         <div className="details2 w-[40%]">
-                             <h1 className="helper-work text-4xl text-white pb-15">Want to discuss your digital challenges? Jarno is happy to help.</h1>
-                            <div className="contact-img-cont flex justify-center items-center gap-5 text-white text-xl">
+                            <h1 className="helper-work text-4xl text-white pb-15">Want to discuss your digital challenges? Jarno is happy to help.</h1>
+                            <div className="contact-img-cont flex justify-center  gap-5 text-white text-xl">
                                 <div className="cont-img"><img className='w-[150px] h-[150px] rounded-full' src="fundament.png" alt="" /></div>
                                 <div className="cont-name">
                                     <h1>name</h1>
@@ -122,7 +122,7 @@ function Contact() {
                 </div>
             </div>
 
-            <Footer/>
+            <Footer />
         </>
     )
 }
