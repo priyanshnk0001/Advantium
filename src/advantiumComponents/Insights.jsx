@@ -16,7 +16,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Footer from './Footer';
-import Header from './header';
+import Header from './Header';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -27,10 +27,10 @@ export default function Insights() {
 
     useGSAP(() => {
         const tl = gsap.timeline();
-        tl.from(".insights-main-cont", {
-            y: 1200,
-            duration: 0.5,
-        },"ok")
+        // tl.from(".insights-main-cont", {
+        //     y: 1200,
+        //     duration: 0.5,
+        // },"ok")
 
         tl.from(".Insights-headingText", {
             x: "-100%",
@@ -131,7 +131,7 @@ export default function Insights() {
           <Header/>
 
             <div className="Insights-ad-Content-cont w-[100%] min-h-screen   flex flex-col justify-center items-center  text-start px-[84px]   ">
-                <h1 className='Insights-headingText text-[130px] text-white font-bold text-start self-start mt-60 leading-none'>Latest news from the <br /> 𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                <h1 className='Insights-headingText text-[130px] text-white font-semi-bold text-start self-start mt-60 leading-none'>Latest news from the <br /> Advantium</h1>
                 <div className='w-[100%] mt-[160px] mx-auto  grid grid-cols-1 sm:grid-cols-2 gap-6   '>
                     <Card className='Insights-card left1 ' sx={{ width: 665, backgroundColor: 'transparent', boxShadow: 'none' }}>
                         <CardMedia
@@ -142,7 +142,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes
@@ -162,7 +162,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes
@@ -182,7 +182,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes
@@ -202,7 +202,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes
@@ -222,7 +222,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes
@@ -242,7 +242,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes
@@ -262,7 +262,7 @@ export default function Insights() {
                         />
                         <CardContent className='text-white'>
                             <Typography gutterBottom variant="h3" component="div">
-                                𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞 Insights
+                                Advantium Insights
                             </Typography>
                             <Typography className='text-gray-300 ' variant="body2" sx={{ fontSize: "20px" }}>
                                 Phase 1 - Group Classes

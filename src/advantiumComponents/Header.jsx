@@ -6,11 +6,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
+import { TextPlugin } from 'gsap/all';
 import { NavLink, useLocation } from 'react-router-dom';
 // import { useLocation } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import './Header.css';
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,8 +28,8 @@ export default function Header() {
     const bookingTweenArrow = useRef(null);
 
     const [isBookingOpen, setIsBookingOpen] = useState(false);
-const [isDeliverOpen, setIsDeliverOpen] = useState(false);
-const [isCasesOpen, setIsCasesOpen] = useState(false);
+    const [isDeliverOpen, setIsDeliverOpen] = useState(false);
+    const [isCasesOpen, setIsCasesOpen] = useState(false);
 
     useGSAP(() => {
         const tl = gsap.timeline();
@@ -103,7 +106,6 @@ const [isCasesOpen, setIsCasesOpen] = useState(false);
     }, []);
 
 
-    
 
 
 
@@ -111,187 +113,189 @@ const [isCasesOpen, setIsCasesOpen] = useState(false);
 
 
 
-
-
-   useGSAP(() => {
-    // ---------------- Deliver Drawer ----------------
-    const deliver = document.querySelector(".insightsNavP1 .Header-deliver");
-    const deliverDrawer = document.querySelector(".Header-deliverdrawer");
-
-    const dtl = gsap.timeline({ paused: true, reversed: true });
-    dtl.to(".Header-deliverdrawer", { top: 0, duration: 0.5, opacity: 1 });
-    dtl.from(".Header-deliverdrawer h1", { x: -500, duration: 0.8 });
-
-    // ---------------- Cases Drawer ----------------
-    const cases = document.querySelector(".insightsNavP1 .Header-cases");
-    const casesDrawer = document.querySelector(".Header-casesdrawer");
-
-    const ctl = gsap.timeline({ paused: true, reversed: true });
-    ctl.to(".Header-casesdrawer", { top: 0, duration: 0.5, opacity: 1 });
-    ctl.from(".Header-cases-drawer-child", {
-        y: 450,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.2
-    });
-    ctl.from(
-        ".Header-cases-subchild",
-        {
-            y: 450,
-            opacity: 0,
-            stagger: 0.3
-        },
-        "-=0.4"
-    );
-
-    // ---------------- Booking Drawer (same useGSAP scope) ----------------
-    const bookingBtn = document.querySelector(".Header-bookingButton");
-    const bookingDrawerEl = document.querySelector(".Header-Bookingdrawer");
-
-    const btl = gsap.timeline({ paused: true, reversed: true });
-    btl.to(".Header-Bookingdrawer", { top: 0, duration: 0.45, opacity: 1, ease: "power2.out" });
-    btl.from(".bookingP1 > * , .bookingP2 > *", {
-        y: 30,
-        opacity: 0,
-        stagger: 0.6
-    }, "0.1");
-
-    const closeBookingIfOpen = () => {
-        if (btl && !btl.reversed()) {
-            btl.timeScale(2).reverse();
-            try { setIsBookingOpen(false); } catch (e) {}
-        }
-    };
-
-   
-    const openDDrawer = () => {
-        closeBookingIfOpen();
-        if (dtl.reversed()) {
-            dtl.timeScale(1).play(); // open
-            try { setIsBookingOpen(false); setIsCasesOpen(false); } catch (e) {}
-        }
-    };
-    const closeDDrawer = () => {
-        if (!dtl.reversed()) {
-            dtl.timeScale(4).reverse(); // close
-        }
-    };
-
-    const openCDrawer = () => {
-        closeBookingIfOpen();
-        if (ctl.reversed()) {
-            ctl.timeScale(1).play();
-            try { setIsBookingOpen(false); setIsDeliverOpen(false); } catch (e) {}
-        }
-    };
-    const closeCDrawer = () => {
-        if (!ctl.reversed()) {
-            ctl.timeScale(4).reverse();
-        }
-    };
-
-    const toggleBooking = (e) => {
-        e && e.stopPropagation();
-        if (!btl) return;
-
-        if (btl.reversed()) {
-            if (!dtl.reversed()) dtl.timeScale(4).reverse();
-            if (!ctl.reversed()) ctl.timeScale(4).reverse();
-
-            btl.timeScale(1).play();
-            try { setIsBookingOpen(true); } catch (e) {}
-        } else {
-            btl.timeScale(2).reverse();
-            try { setIsBookingOpen(false); } catch (e) {}
-        }
-    };
-
-    const onBookingBgClick = (ev) => {
-        if (ev.target === bookingDrawerEl && btl && !btl.reversed()) {
-            btl.timeScale(2).reverse();
-            try { setIsBookingOpen(false); } catch (e) {}
-        }
-    };
-
-    if (deliver) {
-        deliver.addEventListener("mouseenter", openDDrawer);
-        deliver.addEventListener("mouseenter", closeCDrawer);
-        deliver.addEventListener("click", closeDDrawer);
-    }
-    if (deliverDrawer) {
-        deliverDrawer.addEventListener("mouseleave", closeDDrawer);
-    }
-
-    if (cases) {
-        cases.addEventListener("mouseenter", openCDrawer);
-        cases.addEventListener("mouseenter", closeDDrawer);
-        cases.addEventListener("click", closeCDrawer);
-    }
-    if (casesDrawer) {
-        casesDrawer.addEventListener("mouseleave", closeCDrawer);
-    }
-
-    const insights = document.querySelector(".insightsNavP1 .Header-insightsText");
-    if (insights) {
-        insights.addEventListener("mouseenter", closeDDrawer);
-        insights.addEventListener("mouseenter", closeCDrawer);
-    }
-
-    if (bookingBtn) bookingBtn.addEventListener("click", toggleBooking);
-    if (bookingDrawerEl) bookingDrawerEl.addEventListener("click", onBookingBgClick);
-
-    // cleanup
-    return () => {
-        if (deliver) {
-            deliver.removeEventListener("mouseenter", openDDrawer);
-            deliver.removeEventListener("mouseenter", closeCDrawer);
-            deliver.removeEventListener("click", closeDDrawer);
-        }
-        if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
-        dtl.kill();
-
-        if (cases) {
-            cases.removeEventListener("mouseenter", openCDrawer);
-            cases.removeEventListener("mouseenter", closeDDrawer);
-            cases.removeEventListener("click", closeCDrawer);
-        }
-        if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
-        ctl.kill();
-
-        if (insights) {
-            insights.removeEventListener("mouseenter", closeDDrawer);
-            insights.removeEventListener("mouseenter", closeCDrawer);
-        }
-
-        if (bookingBtn) bookingBtn.removeEventListener("click", toggleBooking);
-        if (bookingDrawerEl) bookingDrawerEl.removeEventListener("click", onBookingBgClick);
-        btl.kill();
-    };
-}, []);
 
 
 
     useGSAP(() => {
-  const btl = gsap.timeline({ paused: true, reversed: true });
-  btl.to(".Header-Bookingdrawer", {
-    top: 0,
-    opacity: 1,
-    duration: 0.5,
-    ease: "power2.out",
-  });
+        // ---------------- Deliver Drawer ----------------
+        const deliver = document.querySelector(".insightsNavP1 .Header-deliver");
+        const deliverDrawer = document.querySelector(".Header-deliverdrawer");
 
-  if (isBookingOpen) btl.timeScale(1).play();
-  else btl.timeScale(2).reverse();
-}, [isBookingOpen]);
+        const dtl = gsap.timeline({ paused: true, reversed: true });
+        dtl.to(".Header-deliverdrawer", { top: 0, duration: 0.5, opacity: 1 });
+        dtl.from(".Header-deliverdrawer h1", { x: -500, duration: 0.8 });
+
+        // ---------------- Cases Drawer ----------------
+        const cases = document.querySelector(".insightsNavP1 .Header-cases");
+        const casesDrawer = document.querySelector(".Header-casesdrawer");
+
+        const ctl = gsap.timeline({ paused: true, reversed: true });
+        ctl.to(".Header-casesdrawer", { top: 0, duration: 0.5, opacity: 1 });
+        ctl.from(".Header-cases-drawer-child", {
+            y: 450,
+            opacity: 0,
+            duration: 0.5,
+            stagger: 0.2
+        });
+        ctl.from(
+            ".Header-cases-subchild",
+            {
+                y: 450,
+                opacity: 0,
+                stagger: 0.3
+            },
+            "-=0.4"
+        );
+
+        // ---------------- Booking Drawer (same useGSAP scope) ----------------
+        const bookingBtn = document.querySelector(".Header-bookingButton");
+        const bookingDrawerEl = document.querySelector(".Header-Bookingdrawer");
+
+        const btl = gsap.timeline({ paused: true, reversed: true });
+        btl.to(".Header-Bookingdrawer", { top: 0, duration: 0.45, opacity: 1, ease: "power2.out" });
+        btl.to(".Header-bookingButton", { text: "Close overlay", ease: "none" })
+        btl.from(".bookingP1 > * , .bookingP2 > * ", {
+            y: 30,
+            opacity: 0,
+            stagger: 0.6
+        }, "0.2");
+
+        const closeBookingIfOpen = () => {
+            if (btl && !btl.reversed()) {
+                btl.timeScale(2).reverse();
+                try { setIsBookingOpen(false); } catch (e) { }
+            }
+        };
 
 
-const toggleBooking = () => {
-  if (!isBookingOpen) {
-    setIsDeliverOpen(false);
-    setIsCasesOpen(false);
-  }
-  setIsBookingOpen((prev) => !prev);
-};
+        const openDDrawer = () => {
+            closeBookingIfOpen();
+            if (dtl.reversed()) {
+                dtl.timeScale(1).play(); // open
+                try { setIsBookingOpen(false); setIsCasesOpen(false); } catch (e) { }
+            }
+        };
+        const closeDDrawer = () => {
+            if (!dtl.reversed()) {
+                dtl.timeScale(4).reverse(); // close
+            }
+        };
+
+        const openCDrawer = () => {
+            closeBookingIfOpen();
+            if (ctl.reversed()) {
+                ctl.timeScale(1).play();
+                try { setIsBookingOpen(false); setIsDeliverOpen(false); } catch (e) { }
+            }
+        };
+        const closeCDrawer = () => {
+            if (!ctl.reversed()) {
+                ctl.timeScale(4).reverse();
+            }
+        };
+
+        const toggleBooking = (e) => {
+            e && e.stopPropagation();
+            if (!btl) return;
+
+            if (btl.reversed()) {
+                if (!dtl.reversed()) dtl.timeScale(4).reverse();
+                if (!ctl.reversed()) ctl.timeScale(4).reverse();
+
+                btl.timeScale(1).play();
+                try { setIsBookingOpen(true); } catch (e) { }
+            } else {
+                btl.timeScale(2).reverse();
+                try { setIsBookingOpen(false); } catch (e) { }
+            }
+        };
+
+        const onBookingBgClick = (ev) => {
+            if (ev.target === bookingDrawerEl && btl && !btl.reversed()) {
+                btl.timeScale(2).reverse();
+                try { setIsBookingOpen(false); } catch (e) { }
+            }
+        };
+
+        if (deliver) {
+            deliver.addEventListener("mouseenter", openDDrawer);
+            deliver.addEventListener("mouseenter", closeCDrawer);
+            deliver.addEventListener("click", closeDDrawer);
+        }
+        if (deliverDrawer) {
+            deliverDrawer.addEventListener("mouseleave", closeDDrawer);
+        }
+
+        if (cases) {
+            cases.addEventListener("mouseenter", openCDrawer);
+            cases.addEventListener("mouseenter", closeDDrawer);
+            cases.addEventListener("click", closeCDrawer);
+        }
+        if (casesDrawer) {
+            casesDrawer.addEventListener("mouseleave", closeCDrawer);
+        }
+
+        const insights = document.querySelector(".insightsNavP1 .Header-insightsText");
+        if (insights) {
+            insights.addEventListener("mouseenter", closeDDrawer);
+            insights.addEventListener("mouseenter", closeCDrawer);
+        }
+
+        if (bookingBtn) bookingBtn.addEventListener("click", toggleBooking);
+        if (bookingDrawerEl) bookingDrawerEl.addEventListener("click", onBookingBgClick);
+
+        // cleanup
+        return () => {
+            if (deliver) {
+                deliver.removeEventListener("mouseenter", openDDrawer);
+                deliver.removeEventListener("mouseenter", closeCDrawer);
+                deliver.removeEventListener("click", closeDDrawer);
+            }
+            if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
+            dtl.kill();
+
+            if (cases) {
+                cases.removeEventListener("mouseenter", openCDrawer);
+                cases.removeEventListener("mouseenter", closeDDrawer);
+                cases.removeEventListener("click", closeCDrawer);
+            }
+            if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
+            ctl.kill();
+
+            if (insights) {
+                insights.removeEventListener("mouseenter", closeDDrawer);
+                insights.removeEventListener("mouseenter", closeCDrawer);
+            }
+
+            if (bookingBtn) bookingBtn.removeEventListener("click", toggleBooking);
+            if (bookingDrawerEl) bookingDrawerEl.removeEventListener("click", onBookingBgClick);
+            btl.kill();
+        };
+    }, []);
+
+
+
+    useGSAP(() => {
+        const btl = gsap.timeline({ paused: true, reversed: true });
+        btl.to(".Header-Bookingdrawer", {
+            top: 0,
+            opacity: 1,
+            duration: 0.5,
+            ease: "power2.out",
+        });
+
+        if (isBookingOpen) btl.timeScale(1).play();
+        else btl.timeScale(2).reverse();
+    }, [isBookingOpen]);
+
+
+    const toggleBooking = () => {
+        if (!isBookingOpen) {
+            setIsDeliverOpen(false);
+            setIsCasesOpen(false);
+        }
+        setIsBookingOpen((prev) => !prev);
+    };
 
 
 
@@ -348,7 +352,6 @@ const toggleBooking = () => {
         const handlerMap = new Map();
 
         items.forEach((item) => {
-            // find icon INSIDE the same .cases-subchild
             const icon = item.querySelector(".Header-iconAnim");
             if (!icon) return;
 
@@ -403,7 +406,7 @@ const toggleBooking = () => {
             if (icon) {
                 iconTween = gsap.to(icon, {
                     rotation: 180,
-                    
+
                     color: "#fcd34d",
                     duration: 0.5,
                     paused: true,
@@ -455,7 +458,7 @@ const toggleBooking = () => {
         //         ), #0f172a`,
         //             }}
         >
-            <div className="insightsNav w-[100%] flex justify-between items-center px-[40px] py-10 absolute top-0 left-0 text-white z-50">
+            <div className="insightsNav w-[100%]  flex justify-between items-center px-[40px] py-10 absolute top-0 left-0 text-white z-50">
                 <div className="insightsNavP1 w-[40%] flex justify-between items-center ml-[30px] px-7  ">
                     <h1 className="Header-deliver NavTextUnderline text-[15px] cursor-pointer relative  ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
@@ -480,23 +483,25 @@ const toggleBooking = () => {
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1></NavLink>
                 </div>
-                <div className="insightsNavP2 flex justify-center items-center text-center w-[20%] ">
+                <div className="insightsNavP2 flex justify-center  items-center text-center w-[20%]  ">
                     <NavLink to="/" >
-                        <h1 className=" Header-advantium-text text-[50px] font-extrabold">𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1></NavLink>
+                        <h1 className=" Header-advantium-text flex items-center gap-2 text-[30px] font-bold"><img className='w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
                 </div>
                 <div className="insightsNavP3 w-[40%] flex justify-center items-center  ">
                     <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? " text-amber-300" : "after:w-0"}`}>
                         <button className="Header-contactButton border-2 rounded-full py-3 px-7 text-[20px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
                     </NavLink>
-                    <div  className="header-bookingBtn-container">
-                        <button   className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+                    <div className="header-bookingBtn-container">
+                        <button className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
                         <button
                             className="Header-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
 
                         ><CallMadeIcon className="!w-8 !h-8" /></button>
                     </div>
                 </div>
+
+                <div className="mobile-menu hidden">menu</div>
             </div>
 
 
@@ -727,26 +732,28 @@ const toggleBooking = () => {
                         <div className="BP1-child w-[100%] flex flex-col items-start gap-10 text-white  ">
                             <h1 className="helper-work text-6xl text-white ">Book an appointment</h1>
                             <h1 className='text-gray-400 text-xl  '>Curious how we can help with your digital challenges? Schedule a quick chat and get immediate insight into the best solution for your situation.</h1>
-                            <div className="booking-img-cont flex justify-center items-center gap-5 text-white text-xl">
-                                <div className="book-img"><img className='w-[150px] h-[150px] rounded-full' src="fundament.png" alt="" /></div>
+                            <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
+                                <div className="book-img flex items-center gap-5"><img className='w-[150px] h-[150px] rounded-full' src="neerajAdvantium.jpeg" alt="" />
                                 <div className="book-name">
-                                    <h1>name</h1>
-                                    <h1 className='text-gray-400'>Designation</h1>
+                                    <h1>Neeraj Kumar</h1>
+                                    <h1 className='text-gray-400'>Co-Founder and Director</h1>
+                                </div>
                                 </div>
 
-                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-2 ml-20 cursor-pointer">@</button>
+                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-3 ml-20 cursor-pointer">@</button>
 
                             </div>
 
 
-                            <div className="booking-img-cont flex justify-center items-center gap-5 text-white text-xl">
-                                <div className="book-img"><img className='w-[150px] h-[150px] rounded-full' src="fundament.png" alt="" /></div>
+                            <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
+                                <div className="book-img flex items-center gap-5"><img className='w-[150px] h-[150px] rounded-full' src="priyaAdvantium.webp" alt="" />
                                 <div className="book-name">
-                                    <h1>name</h1>
-                                    <h1 className='text-gray-400'>Designation</h1>
+                                    <h1>Priya Fozdar</h1>
+                                    <h1 className='text-gray-400'>Director</h1>
+                                </div>
                                 </div>
 
-                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-2 ml-20 cursor-pointer">@</button>
+                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-3 ml-20 cursor-pointer">@</button>
 
                             </div>
 

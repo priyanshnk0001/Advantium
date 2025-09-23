@@ -9,7 +9,7 @@ import { ScrambleTextPlugin } from 'gsap/all';
 import OppositeScroll from './OppositeScroll';
 import Footer from './Footer';
 import CallMadeIcon from '@mui/icons-material/CallMade';
-import Header from './header';
+import Header from './Header';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,17 +22,17 @@ export default function About() {
 
     useGSAP(() => {
         const tl = gsap.timeline();
-        tl.from(".about-main-cont", {
+        // tl.from(".about-main-cont", {
 
-            y: 1200,
-            duration: 0.5,
-        })
+        //     y: 1200,
+        //     duration: 0.5,
+        // })
 
          tl.from(".about-headingText , .about-SubHeadingText",{
             x: "-100%",
             stagger:0.4,
             duration:0.8
-        },"-=0.5")
+        })
 
         tl.from(".aboutJobOpeningBtn-cont",{
             x:"-130%"
@@ -96,8 +96,8 @@ export default function About() {
 
 
             <div className="about-ad-Content-cont w-[100%] min-h-screen   flex flex-col justify-center items-center  text-start px-[84px]   ">
-                    <h1 className='about-headingText text-[130px] text-white font-semibold text-start self-start leading-none mt-[100px]'>We are 𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                    <h1 className='about-SubHeadingText text-xl text-white/70 font-semibold text-start self-start break-keep mt-[50px] pr-90'>How do you stay agile in a rapidly changing digital world? How do you get the maximum out of existing systems? At 𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞, we have been working on these questions for almost 15 years, and we would love to help you find the answers. We see every challenge as an opportunity to look further and create future-proof solutions. With our knowledge and experience, we reduce complex issues to their essence and develop smart, scalable technological solutions that immediately add value.</h1>
+                    <h1 className='about-headingText text-[130px] text-white font-semi-bold text-start self-start leading-none mt-[100px]'>We are Advantium</h1>
+                    <h1 className='about-SubHeadingText text-xl text-white/70 font-semibold text-start self-start break-keep mt-[50px] pr-90'>How do you stay agile in a rapidly changing digital world? How do you get the maximum out of existing systems? At Advantium, we have been working on these questions for almost 15 years, and we would love to help you find the answers. We see every challenge as an opportunity to look further and create future-proof solutions. With our knowledge and experience, we reduce complex issues to their essence and develop smart, scalable technological solutions that immediately add value.</h1>
 
                     <div className="aboutJobOpeningBtn-cont  flex self-start mt-15 items-center  ">
 

@@ -1,0 +1,38 @@
+@media (max-width: 500px) {
+
+    .techBuilds-text{
+        font-size: 70px;
+        margin-top: 30px;
+    }
+
+    .scaleText{
+        font-size: 70px;
+    }
+
+    .techBuilds-info{
+        font-size: x-large;
+        margin-top: 10px;
+    }
+
+    .advantiumBottomButton{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .BookingBtn-container{
+        display: flex;
+    }
+
+    .bookingButton{
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .nextArrowButton2{
+        font-size: 10px;
+                padding: 10px 8px;
+
+
+    }
+}

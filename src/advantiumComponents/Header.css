@@ -1,0 +1,35 @@
+@media (max-width: 500px) {
+    .insightsNav{
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .insightsNavP1{
+        display: none;
+    }
+
+    .insightsNavP2{
+        width: fit-content;
+        /* position: absolute;
+        top:0%;
+        left: 0%;
+        padding: 10px; */
+
+    }
+
+    .Header-advantium-text{
+        font-size: x-large;
+    }
+
+    .insightsNavP3{
+        display: none;
+
+    }
+    .mobile-menu{
+        display: initial;
+    }
+
+
+}

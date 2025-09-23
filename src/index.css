@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 body{
     background-color: #0f172a;
 }
@@ -8,4 +10,22 @@ body{
     font-size: 60px;
     color: white;
     z-index: 6;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  font-family: 'Poppins', sans-serif;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { useState } from "react";
 import { useEffect } from 'react';
 import { useRef } from 'react';
@@ -6,9 +7,8 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
-import CarouselLoopFinal from './advantiumComponents/CarouselLoopFinal.jsx'
 import CallMadeIcon from '@mui/icons-material/CallMade';
-import Header from './advantiumComponents/header.jsx';
+import Header from './advantiumComponents/Header.jsx';
 import Image from './advantiumComponents/Image.jsx'
 import SplitText from './advantiumComponents/SplitText'
 import SoftSolution from './advantiumComponents/SoftSolution.jsx'
@@ -16,10 +16,15 @@ import LatestNews from './advantiumComponents/LatestNews.jsx'
 import LatestNewsText from './advantiumComponents/LatestNewsText.jsx'
 import SpinnyWheel from './advantiumComponents/SpinnyWheel.jsx'
 import Footer from './advantiumComponents/Footer.jsx';
+import Marquee from "react-fast-marquee";
+
+import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);
+
+window.addEventListener('load', () => window.scrollTo(0, 0));
 
 export default function HoverSpotLight() {
   const [pos, setPos] = useState({ x: 750, y: 400 });
@@ -27,11 +32,11 @@ export default function HoverSpotLight() {
 
   useGSAP(() => {
     const tl = gsap.timeline();
-    tl.from(".advantium-main-cont", {
+    // tl.from(".advantium-main-cont", {
 
-      y: 1200,
-      duration: 0.5,
-    })
+    //   y: 1200,
+    //   duration: 0.5,
+    // })
 
 
 
@@ -40,7 +45,7 @@ export default function HoverSpotLight() {
       opacity: 0,
       duration: 0.5,
       stagger: 0.3,
-    }, "-=0.7")
+    })
 
     tl.from(".ad-Content-cont .bookingButton", {
       y: 50,
@@ -147,20 +152,21 @@ export default function HoverSpotLight() {
         }}
       >
 
+
         <Header />
 
         <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
-          <div className="w-fit overflow-hidden"> <h1 className='techBuilds text-white text-8xl font-bold overflow-hidden'>Tech builds.</h1></div>
+          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-8xl font-bold overflow-hidden'>Tech builds.</h1></div>
           <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-8xl font-bold overflow-hidden'>scale</h1></div>
-          <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds text-white text-3xl mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
+          <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-3xl mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
             <div className="BookingBtn-container">
-            <button className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
-            <button
-              className="nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
-              <CallMadeIcon className="!w-8 !h-8" />
-            </button>
+              <button className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+              <button
+                className="nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
+                <CallMadeIcon className="!w-8 !h-8" />
+              </button>
             </div>
             <button className="software border-2 rounded-full py-4 px-7 text-[20px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
           </div>
@@ -169,10 +175,20 @@ export default function HoverSpotLight() {
 
 
 
-        <div className='overflow-x-hidden' style={{ position: "absolute", bottom: 0, left: 0, width: "100%" }}>
-          <CarouselLoopFinal embedded
-
-          />
+        <div className='overflow-x-hidden flex items-center h-[10vh] ' style={{ position: "absolute", bottom: 0, left: 0, width: "100%", }}>
+          <Marquee className='text-white text-[25px]'>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+            <h1 className="mr-20">Advantium</h1>
+          </Marquee>
         </div>
 
       </div>

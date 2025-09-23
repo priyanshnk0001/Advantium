@@ -6,7 +6,8 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
-import InsCarousell from './InsCarousell';
+import Marquee from "react-fast-marquee";
+
 
 function Footer() {
 
@@ -18,7 +19,7 @@ function Footer() {
     //             scrub: 2,
     //             start:"top 99%",
     //             end:"top 1%",
-                
+
     //             markers: true
     //         }
     //     })
@@ -38,7 +39,7 @@ function Footer() {
             <div className="insightsFooter-main w-[100%]  bg-slate-900">
                 <div className="insightsFooter-cont w-[100%] bg-slate-900 flex justify-between">
                     <div className="footer-contentP1 w-[35%] h-[75vh] pl-12 flex flex-col justify-center overflow-hidden  ">
-                        <h1 className='FP1-headingText text-white text-6xl mb-5 pl-10'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                        <h1 className='FP1-headingText text-white text-6xl mb-5 pl-10'>Advantium</h1>
                         <div className="FP1-child grid grid-cols-3 px-10  gap-y-5 ">
                             <div className="FP1-sub-child py-5 px-8 rounded-2xl flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="iso27001.png" alt="" /></div>
                             <div className="FP1-sub-child py-5 px-8 rounded-2xl flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="nen7510.webp" alt="" /></div>
@@ -55,55 +56,55 @@ function Footer() {
                     <div className="footer-contentP2 w-[65%] h-[75vh] grid grid-cols-3 px-10">
                         <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                             <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
                         </div>
                         <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                             <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
                         </div>
                         <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                             <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
                         </div>
                         <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                             <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
                         </div>
                         <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                             <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
                         </div>
                         <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                             <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
-                            <h1 className='text-white text-xl'>𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
+                            <h1 className='text-white text-xl'>Advantium</h1>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div className='flex items-center  h-[25vh]' style={{ width: "100%", height: "25vh" }}>
-                <InsCarousell embedded
 
-                />
-            </div>
+
+            <Marquee className='flex items-end text-9xl  text-white space-x-10  h-[25vh]' style={{ width: "100%", height: "25vh" }}>
+                Think inside the Advantium.
+            </Marquee>
         </div>
     )
 }

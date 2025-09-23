@@ -31,7 +31,7 @@ export default function Marquee() {
     return (
         <div className="relative w-[100%] h-[100vh] overflow-hidden bg-gradient-to-b from-white to-[#0f172a] py-6 pb-10 flex items-baseline-last">
 
-            <h1 className="ourTeam-heading absolute text-8xl font-bold font-stretch-200% text-gray-500  left-50 top-20">Our team. Or <br /> well, actually, <br /> your team.</h1>
+            <h1 className="ourTeam-heading absolute text-8xl font-semi-bold font-stretch-200% text-gray-500  left-50 top-20">Our team. Or <br /> well, actually, <br /> your team.</h1>
             {/* simple fade edges */}
             {/* <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-gray-50 to-transparent z-30" />
             <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-gray-50 to-transparent z-30" /> */}

@@ -1,0 +1,20 @@
+@media (max-width: 500px) {
+   .splitText-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0% 30px;
+    margin: 0%;
+   }
+   
+    .Dot{
+        font-size: xx-large;
+        font-weight: bold;
+      
+        padding-bottom: 20px;
+        margin-top: -250px;
+    
+        
+       
+    }
+}

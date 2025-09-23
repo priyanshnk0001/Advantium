@@ -2,9 +2,13 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { createBrowserRouter, Routes } from "react-router"
-import { createHashRouter } from 'react-router'
-import { RouterProvider } from 'react-router'
+import {  Routes } from "react-router"
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider
+} from 'react-router-dom';
+
 
 import Insights from './advantiumComponents/Insights.jsx'
 import About from './advantiumComponents/About.jsx'
@@ -57,6 +61,10 @@ let allRouts = createHashRouter(
    
   ]
 )
+
+
+
+
 
 Root.render(
   <StrictMode>

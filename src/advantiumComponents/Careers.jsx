@@ -10,7 +10,7 @@ import OppositeScroll from './OppositeScroll';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 
 
-import Header from './header';
+import Header from './Header';
 import Footer from './Footer';
 
 
@@ -25,17 +25,17 @@ export default function Careers() {
 
     useGSAP(() => {
         const tl = gsap.timeline();
-        tl.from(".Careers-main-cont", {
+        // tl.from(".Careers-main-cont", {
 
-            y: 1200,
-            duration: 0.5,
-        })
+        //     y: 1200,
+        //     duration: 0.5,
+        // })
 
           tl.from(".career-headingText , .career-SubHeadingText",{
             x: "-100%",
             stagger:0.4,
             duration:0.8
-        },"-=0.5")
+        })
 
         tl.from(".careerJobOpeningBtn-cont",{
             x:"-130%"
@@ -98,9 +98,9 @@ export default function Careers() {
             <Header/>
           
            <div className="career-ad-Content-cont w-[100%] min-h-screen   flex flex-col justify-center items-center  text-start px-[84px]   ">
-                    <h1 className='career-headingText text-[130px] text-white font-semibold text-start self-start leading-none mt-[100px]'>Ready to join <br /> the 𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞?</h1>
+                    <h1 className='career-headingText text-[130px] text-white font-semi-bold text-start self-start leading-none mt-[100px]'>Ready to join <br /> the Advantium?</h1>
                     <h1 className='career-SubHeadingText text-xl text-white/70 font-semibold text-start self-start break-keep mt-[50px] pr-90'>
-                    How Learning, helping each other further and experience adventures together. At 𝔸𝕕𝕧𝕒𝕟𝕥𝕚𝕦𝕞, you will work on digital solutions with a team of driven specialists. You get the space to grow, develop your skills and make impact. Whether you are developer, designer or strateeg: together we push boundaries.</h1>
+                    How Learning, helping each other further and experience adventures together. At Advantium, you will work on digital solutions with a team of driven specialists. You get the space to grow, develop your skills and make impact. Whether you are developer, designer or strateeg: together we push boundaries.</h1>
 
                     <div className="careerJobOpeningBtn-cont  flex self-start mt-15 items-center  ">
 
