@@ -71,6 +71,9 @@ export default function About() {
     })
 
 
+    
+
+
 
 
     return (
@@ -115,6 +118,7 @@ export default function About() {
                 <div className="relative overflow-x-hidden    bg-slate-900 rounded-lg">
                     <OppositeScroll />
                 </div>
+               
 
                 <div className="aboutBottomTextCont w-[100%] flex flex-col justify-center items-center break-keep text-start ">
                     <div className="ABT mx-50 mb-20 ">

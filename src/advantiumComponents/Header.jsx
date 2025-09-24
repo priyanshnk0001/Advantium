@@ -21,6 +21,23 @@ gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(TextPlugin);
 
 export default function Header() {
+//     const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     const handleLoad = () => setLoading(false);  // page load होते ही loading false
+
+//     if (document.readyState === "complete") {
+//       setLoading(false); // agar page pehle se loaded hai
+//     } else {
+//       window.addEventListener("load", handleLoad);
+//     }
+
+//     return () => window.removeEventListener("load", handleLoad);
+//   }, []);
+
+
+
+
     const location = useLocation();
 
     const [pos, setPos] = useState({ x: 750, y: 400 });
@@ -457,6 +474,7 @@ export default function Header() {
         //           transparent 80%
         //         ), #0f172a`,
         //             }}
+        // className={loading ? "hidden" : ""}
         >
             <div className="insightsNav w-[100%]  flex justify-between items-center px-[40px] py-10 absolute top-0 left-0 text-white z-50">
                 <div className="insightsNavP1 w-[40%] flex justify-between items-center ml-[30px] px-7  ">
@@ -726,7 +744,7 @@ export default function Header() {
 
 
 
-            <div className="Header-Bookingdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0    bg-black backdrop-filter backdrop-blur-[12px] z-40   ">
+            <div className="Header-Bookingdrawer w-[100%] h-[100vh] absolute top-[-100vh] opacity-0    bg-black backdrop-filter backdrop-blur-[12px] z-40   ">
                 <div className="Header-booking-container w-[100%] flex mt-50">
                     <div className="bookingP1 w-[45%] pl-10   ">
                         <div className="BP1-child w-[100%] flex flex-col items-start gap-10 text-white  ">

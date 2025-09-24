@@ -39,19 +39,21 @@ export default function Marquee() {
             <div ref={marqueeRef} className="flex relative z-10
             
              "
-          
-             >
+
+            >
                 <div ref={contentRef} className="flex">
                     <div className="box group relative mx-4 w-70 h-100 flex items-center justify-center">
                         <div className="panel w-full h-full bg-white rounded-xl flex items-center justify-center">
                             <img
-                                src="./inCorpe.png"
+                                src="./dubeySir.jpeg"
                                 alt="HTML"
-                                className="w-70 h-100 object-cover transition-opacity duration-300 group-hover:opacity-0"
+                                className="w-full h-100 object-fit transition-opacity duration-300 group-hover:opacity-0"
                             />
-                            <span className="absolute text-4xl text-center font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black">
-                                Advantium <br /> HTML
-                            </span>
+                            <div className="absolute  text-start px-5 space-y-4 flex flex-col    opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black">
+                                <h1 className="text-semi-bold text-black name">name</h1>
+                                <h1 className="text-gray-400 designation">Designation</h1>
+                                <h1 className="text-[12px] text-gray-700 about-person">Default information for a tech employee generally includes data points collected for standard HR and IT purposes, as well as specific technical details related to their role and systems access. This information can be separated into three main categories: personal, professional, and technical. </h1>
+                            </div>
                         </div>
                     </div>
 
@@ -62,9 +64,11 @@ export default function Marquee() {
                                 alt="JS"
                                 className="w-70 h-100 object-cover transition-opacity duration-300 group-hover:opacity-0"
                             />
-                            <span className="absolute text-4xl text-center font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black">
-                                Advantium <br /> JS
-                            </span>
+                            <div className="absolute  text-start px-5 space-y-4 flex flex-col    opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black">
+                                <h1 className="text-semi-bold text-black name">name</h1>
+                                <h1 className="text-gray-400 designation">Designation</h1>
+                                <h1 className="text-[12px] text-gray-700 about-person">Default information for a tech employee generally includes data points collected for standard HR and IT purposes, as well as specific technical details related to their role and systems access. This information can be separated into three main categories: personal, professional, and technical. </h1>
+                            </div>
                         </div>
                     </div>
 
@@ -75,9 +79,11 @@ export default function Marquee() {
                                 alt="C"
                                 className="w-70 h-100 object-cover transition-opacity duration-300 group-hover:opacity-0"
                             />
-                            <span className="absolute text-4xl text-center font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black">
-                                Advantium <br /> C
-                            </span>
+                            <div className="absolute  text-start px-5 space-y-4 flex flex-col    opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black">
+                                <h1 className="text-semi-bold text-black name">name</h1>
+                                <h1 className="text-gray-400 designation">Designation</h1>
+                                <h1 className="text-[12px] text-gray-700 about-person">Default information for a tech employee generally includes data points collected for standard HR and IT purposes, as well as specific technical details related to their role and systems access. This information can be separated into three main categories: personal, professional, and technical. </h1>
+                            </div>
                         </div>
                     </div>
 

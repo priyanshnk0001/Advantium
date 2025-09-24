@@ -6,6 +6,9 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
+
+import { NavLink, useLocation } from 'react-router-dom';
+
 import Marquee from "react-fast-marquee";
 
 
@@ -23,7 +26,7 @@ function Footer() {
     //             markers: true
     //         }
     //     })
-    //     tl.from(".FP2-child h1",{
+    //     tl.from(".FP2-child",{
     //         x: -300,
     //         stagger:0.3
     //     })
@@ -34,6 +37,51 @@ function Footer() {
     //         duration:1
     //     },"-=3")
     // })
+
+
+    useGSAP(() => {
+        const Flines = document.querySelectorAll(".footer-TextUnderline");
+
+        Flines.forEach((line) => {
+            const Funderline = line.querySelector(".underline-footer");
+
+            if (!Funderline) return;
+
+            const Funline = gsap.to(Funderline, {
+                width: "95%",
+                duration: 0.5,
+                paused: true
+            });
+
+
+
+            const onEnter = () => {
+                Funline.play();
+
+            };
+            const onLeave = () => {
+                Funline.reverse();
+            };
+
+            line.addEventListener("mouseenter", onEnter);
+            line.addEventListener("mouseleave", onLeave);
+
+            // store handlers for cleanup
+            line._handlers = { onEnter, onLeave, };
+        });
+
+        return () => {
+            Flines.forEach((line) => {
+                const h = line._handlers || {};
+                if (h.onEnter) line.removeEventListener("mouseenter", h.onEnter);
+                if (h.onLeave) line.removeEventListener("mouseleave", h.onLeave);
+            });
+        };
+    }, []);
+
+
+
+
     return (
         <div>
             <div className="insightsFooter-main w-[100%]  bg-slate-900">
@@ -53,49 +101,130 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="footer-contentP2 w-[65%] h-[75vh] grid grid-cols-3 px-10">
-                        <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                            <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
+                    <div className="footer-contentP2 w-[65%] h-[75vh] grid grid-cols-3 px-10 ">
+                        <div className="overflow-x-hidden">
+                            <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
+                                <h1 className='text-gray-400 text-2xl'>Office</h1>
+                                <h1 className='text-white text-xl'>C 22 UGF, </h1>
+                                <h1 className='text-white text-xl'>Anoop Nagar, </h1>
+                                <h1 className='text-white text-xl'>Delhi</h1>
+                            </div>
                         </div>
-                        <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                            <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
+                        <div className="overflow-x-hidden">
+                            <div className="FP2-child  text-start flex flex-col gap-5 p-5 overflow-x-hidden">
+                                <h1 className='text-gray-400 text-2xl '>What we do</h1>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline  text-white text-xl '>Apps
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Websites & CMS
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>E-commerce
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Data Management Platform
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                            </div>
                         </div>
-                        <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                            <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
+                        <div className="overflow-x-hidden">
+                            <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
+                                <h1 className='text-gray-400 text-2xl'>Who we are</h1>
+
+                                <NavLink to="/About" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>About us
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Careers
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Contact
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                            </div>
                         </div>
-                        <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                            <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
+                        <div className="overflow-x-hidden">
+                            <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
+                                <h1 className='text-gray-400 text-2xl'>Follow us</h1>
+                                <NavLink to="https://in.linkedin.com/company/advantium-technologies" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>LinkedIn
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="https://www.instagram.com/neeraj.kumar.mnnit" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Instagram
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Facebook
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                            </div>
                         </div>
-                        <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                            <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
+                        <div className="overflow-x-hidden">
+                            <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
+                                <h1 className='text-gray-400 text-2xl'>Community</h1>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Blog
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Cases
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Careers
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                            </div>
                         </div>
-                        <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                            <h1 className='text-gray-400 text-2xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
-                            <h1 className='text-white text-xl'>Advantium</h1>
+                        <div className="overflow-x-hidden">
+                            <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
+                                <h1 className='text-gray-400 text-2xl'>General</h1>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>Privacy Statement
+                                        <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+
+                                    </h1>
+                                </NavLink>
+                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                    <h1 className='footer-TextUnderline text-white text-xl'>General terms and <br /> conditions
+                                        <span className="underline-footer absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
+                                    </h1>
+                                </NavLink>
+                            </div>
                         </div>
+
 
                     </div>
                 </div>

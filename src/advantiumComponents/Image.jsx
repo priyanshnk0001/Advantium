@@ -32,7 +32,7 @@ function Image() {
     })
   return (
     <div className='image-container w-[100%] h-[100vh] bg-slate-900 flex justify-center items-center overflow-x-hidden'>
-      <img className='w-[50%] h-[80vh] rounded-3xl' src="whiteLaptop.jpg" alt="" />
+      <img className='w-[50%] h-[80vh] rounded-3xl' src="tech001.jpg" alt="" />
     </div>
   )
 }

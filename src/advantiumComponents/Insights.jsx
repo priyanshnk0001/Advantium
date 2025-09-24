@@ -84,9 +84,6 @@ export default function Insights() {
             }
         )
 
-
-        
-
         tl2.from(".Insights-card.left", {
             scale: 0,
             stagger: 0.3,
