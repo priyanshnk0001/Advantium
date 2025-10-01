@@ -11,7 +11,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 
 import Marquee from "react-fast-marquee";
 
-
 function Footer() {
 
     // useGSAP(() => {
@@ -83,9 +82,10 @@ function Footer() {
 
 
     return (
-        <div>
-            <div className="insightsFooter-main w-[100%]  bg-slate-900">
-                <div className="insightsFooter-cont w-[100%] bg-slate-900 flex justify-between">
+        // bg-gradient-to-b from-[#0f172a]  to-gray-700
+        <div className=' bg-gray-700'>
+            <div className="insightsFooter-main w-[100%]  ">
+                <div className="insightsFooter-cont w-[100%]  flex justify-between">
                     <div className="footer-contentP1 w-[35%] h-[75vh] pl-12 flex flex-col justify-center overflow-hidden  ">
                         <h1 className='FP1-headingText text-white text-6xl mb-5 pl-10'>Advantium</h1>
                         <div className="FP1-child grid grid-cols-3 px-10  gap-y-5 ">
@@ -113,25 +113,25 @@ function Footer() {
                         <div className="overflow-x-hidden">
                             <div className="FP2-child  text-start flex flex-col gap-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-2xl '>What we do</h1>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/Apps" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline  text-white text-xl '>Apps
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/WebsiteCMS" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Websites & CMS
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/Ecom" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>E-commerce
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/DMplatform" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Data Management Platform
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
@@ -143,19 +143,19 @@ function Footer() {
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-2xl'>Who we are</h1>
 
-                                <NavLink to="/About" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/About" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>About us
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
+                                <NavLink to="/Careers" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
                                     <h1 className='footer-TextUnderline text-white text-xl'>Careers
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
+                                <NavLink to="/Contact" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
                                     <h1 className='footer-TextUnderline text-white text-xl'>Contact
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
@@ -166,18 +166,18 @@ function Footer() {
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-2xl'>Follow us</h1>
-                                <NavLink to="https://in.linkedin.com/company/advantium-technologies" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="https://in.linkedin.com/company/advantium-technologies" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>LinkedIn
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="https://www.instagram.com/neeraj.kumar.mnnit" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="https://www.instagram.com/neeraj.kumar.mnnit" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Instagram
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Facebook
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
@@ -188,19 +188,19 @@ function Footer() {
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-2xl'>Community</h1>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Blog
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Cases
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/Careers" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Careers
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
@@ -211,13 +211,13 @@ function Footer() {
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-2xl'>General</h1>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>Privacy Statement
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="/" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-xl'>General terms and <br /> conditions
                                         <span className="underline-footer absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                                     </h1>

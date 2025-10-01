@@ -106,7 +106,7 @@ function Contact() {
                             <div className="details w-full space-y-14 mt-18 text-white">
                                 <div className="phone-detail flex justify-between">
                                     <h1 className="phone  text-gray-400">Phone</h1>
-                                    <h1 className="number">1234567890</h1>
+                                    <h1 className="number">+91 7007621313</h1>
                                 </div>
                                 <div className="address-detail flex justify-between">
                                     <h1 className="address  text-gray-400">Address</h1>

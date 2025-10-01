@@ -7,6 +7,8 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
 import CallMadeIcon from '@mui/icons-material/CallMade';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -76,6 +78,7 @@ function SoftSolution() {
 
             const t3 = gsap.to(itm, {
                 background: "linear-gradient(to right, white, rgba(56,189,248,0.7), white)",
+                borderBottom: "0%",
                 paused: true
             });
 
@@ -122,45 +125,51 @@ function SoftSolution() {
             { trigger: ".soft-subchild:nth-child(6)", target: ".LMS-img" },
         ];
 
-        mappings.forEach(({ trigger, target }) => {
-            const el = document.querySelector(trigger);
-            const targetImg = document.querySelector(target);
+        const listeners = [];
 
-            if (el && targetImg) {
-                el.addEventListener("mouseenter", () => {
-                    gsap.to(".softImg-main-cont > div", { opacity: 0, duration: 0.5 });
-                    gsap.to(targetImg, { opacity: 1, duration: 0.5 });
-                    gsap.to(".CMP-text", { opacity: 0 })
-                });
+  mappings.forEach(({ trigger, target }) => {
+    const el = document.querySelector(trigger);
+    const targetImg = document.querySelector(target);
 
-                el.addEventListener("mouseleave", () => {
-                    gsap.to(".softImg-main-cont > div", { opacity: 0, duration: 0.5 });
-                    gsap.to(defaultImg, { opacity: 1, duration: 0.5 });
-                    gsap.to(".CMP-text", { opacity: 1 })
-                });
-            }
-        });
+    if (el && targetImg) {
+      const enter = () => {
+        gsap.to(".softImg-main-cont > div", { opacity: 0, duration: 0.5 });
+        gsap.to(targetImg, { opacity: 1, duration: 0.5 });
+        gsap.to(".CMP-text", { opacity: 0 });
+      };
 
-        return () => {
-            mappings.forEach(({ trigger }) => {
-                const el = document.querySelector(trigger);
-                if (el) {
-                    el.replaceWith(el.cloneNode(true)); // cleanup listeners
-                }
-            });
-        };
-    }, []);
+      const leave = () => {
+        gsap.to(".softImg-main-cont > div", { opacity: 0, duration: 0.5 });
+        gsap.to(defaultImg, { opacity: 1, duration: 0.5 });
+        gsap.to(".CMP-text", { opacity: 1 });
+      };
+
+      el.addEventListener("mouseenter", enter);
+      el.addEventListener("mouseleave", leave);
+
+      // store references for cleanup
+      listeners.push({ el, enter, leave });
+    }
+  });
+
+  return () => {
+    listeners.forEach(({ el, enter, leave }) => {
+      el.removeEventListener("mouseenter", enter);
+      el.removeEventListener("mouseleave", leave);
+    });
+  };
+}, []);
 
 
 
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-x-hidden  '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-x-hidden  ' >
             <div className="softImg-main-cont w-[50%] h-[90vh] rounded-3xl relative">
-                <div className="CMP-img w-[100%] h-[90vh] rounded-3xl absolute bg ">
+                <div className="CMP-img w-[100%] h-[90vh] rounded-3xl absolute bg " >
                     <img className='object-fit w-full h-full rounded-3xl' src="tech002.jpg" alt="" />
-                    <h1 className='CMP-text text-[20px]  text-white  font-extrabold absolute top-5 left-5'>What software solution <br /> are you looking for?</h1>
+                    <h1  className='CMP-text text-[20px]  text-white  font-extrabold absolute top-5 left-5'>What software solution <br /> are you looking for?</h1>
                 </div>
 
                 <div className="Apps-img w-[100%] h-[90vh] rounded-3xl absolute opacity-0">
@@ -184,84 +193,97 @@ function SoftSolution() {
                 </div>
 
             </div>
-            <div className="softImg-cont w-[40%] h-[90%]">
+            <div className="softImg-cont w-[45%] h-[90%] ">
 
-                <div className="soft-subchild ">
-                    <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
-                        <div className='flex items-center'>
-                            <h1 className='text-[30px] text-white'>Customer and management portals</h1>
+                <div className="soft-subchild rounded-4xl overflow-hidden"  >
+                    <NavLink  to="/CMportal" onClick={() => window.scrollTo(0, 0)}  >
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400      py-10">
+                            <div className='flex items-center pl-7'>
+                                <h1 className='text-[30px] text-white'>Customer and management portals</h1>
+                            </div>
+
+                            <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
+                                <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            </div>
                         </div>
 
-                        <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
-                            <CallMadeIcon className="!w-7 !h-7 text-black " />
+                    </NavLink>
+                </div>
+
+                <div className="soft-subchild rounded-4xl overflow-hidden ">
+                    <NavLink className="w-fit" to="/Apps" onClick={() => window.scrollTo(0, 0)} >
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                            <div className='flex items-center pl-7'>
+                                <h1 className='text-[30px] text-white'>Apps</h1>
+                            </div>
+
+                            <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
+                                <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            </div>
                         </div>
-                    </div>
+                    </NavLink >
 
                 </div>
 
-                <div className="soft-subchild ">
-                    <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
-                        <div className='flex items-center'>
-                            <h1 className='text-[30px] text-white'>Apps</h1>
-                        </div>
 
-                        <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
-                            <CallMadeIcon className="!w-7 !h-7 text-black " />
+                <div className="soft-subchild rounded-4xl overflow-hidden ">
+                    <NavLink className="w-fit" to="/WebsiteCMS" onClick={() => window.scrollTo(0, 0)} >
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                            <div className='flex items-center pl-7'>
+                                <h1 className='text-[30px] text-white'>Websites & CMS</h1>
+                            </div>
+
+                            <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
+                                <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
 
                 </div>
 
+                <div className="soft-subchild rounded-4xl overflow-hidden .pppp ">
+                    <NavLink className="w-fit" to="/Ecom" onClick={() => window.scrollTo(0, 0)} >
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                            <div className='flex items-center pl-7'>
+                                <h1 className='text-[30px] text-white'>E-commerce solutions</h1>
+                            </div>
 
-                <div className="soft-subchild ">
-                    <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
-                        <div className='flex items-center'>
-                            <h1 className='text-[30px] text-white'>Websites & CMS</h1>
+                            <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
+                                <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            </div>
                         </div>
-
-                        <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
-                            <CallMadeIcon className="!w-7 !h-7 text-black " />
-                        </div>
-                    </div>
+                    </NavLink>
 
                 </div>
 
-                <div className="soft-subchild .pppp ">
-                    <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
-                        <div className='flex items-center'>
-                            <h1 className='text-[30px] text-white'>E-commerce solutions</h1>
-                        </div>
+                <div className="soft-subchild rounded-4xl overflow-hidden ">
+                    <NavLink className="w-fit" to="/DMplatform" onClick={() => window.scrollTo(0, 0)} >
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                            <div className='flex items-center pl-7'>
+                                <h1 className='text-[30px] text-white'>Data Management Platform</h1>
+                            </div>
 
-                        <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
-                            <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
+                                <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            </div>
                         </div>
-                    </div>
+                    </NavLink>
 
                 </div>
 
-                <div className="soft-subchild ">
-                    <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
-                        <div className='flex items-center'>
-                            <h1 className='text-[30px] text-white'>Data Management Platform</h1>
-                        </div>
+                <div className="soft-subchild rounded-4xl overflow-hidden ">
+                    <NavLink className="w-fit" to="/LMS" onClick={() => window.scrollTo(0, 0)} >
 
-                        <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
-                            <CallMadeIcon className="!w-7 !h-7 text-black " />
-                        </div>
-                    </div>
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                            <div className='flex items-center pl-7'>
+                                <h1 className='text-[30px] text-white'>Learning Management System</h1>
+                            </div>
 
-                </div>
-
-                <div className="soft-subchild ">
-                    <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
-                        <div className='flex items-center'>
-                            <h1 className='text-[30px] text-white'>Learning Management System</h1>
+                            <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
+                                <CallMadeIcon className="!w-7 !h-7 text-black " />
+                            </div>
                         </div>
-
-                        <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
-                            <CallMadeIcon className="!w-7 !h-7 text-black " />
-                        </div>
-                    </div>
+                    </NavLink>
 
                 </div>
 

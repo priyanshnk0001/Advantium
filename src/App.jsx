@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import { useState } from "react";
 import { useEffect } from 'react';
 import { useRef } from 'react';
@@ -18,7 +19,9 @@ import SpinnyWheel from './advantiumComponents/SpinnyWheel.jsx'
 import Footer from './advantiumComponents/Footer.jsx';
 import Marquee from "react-fast-marquee";
 
+
 import './App.css';
+import { NavLink } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -26,9 +29,22 @@ gsap.registerPlugin(ScrambleTextPlugin);
 
 window.addEventListener('load', () => window.scrollTo(0, 0));
 
+
+
 export default function HoverSpotLight() {
   const [pos, setPos] = useState({ x: 750, y: 400 });
   const rotateTweenArrow2 = useRef(null);
+  
+
+
+   const softRef = useRef(null);
+
+  // scroll function
+  const scrollToSoft = () => {
+    if (!softRef.current) return;
+
+    softRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -142,7 +158,7 @@ export default function HoverSpotLight() {
       <div
         onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
         onMouseLeave={() => setPos({ x: -200, y: -200 })}
-        className="advantium-main-cont w-[100%]  relative overflow-x-hidden bg-slate-900 transition-colors"
+        className="advantium-main-cont w-[100%]  relative overflow-hidden bg-slate-900 transition-colors"
         style={{
           background: `radial-gradient(
           900px circle at ${pos.x}px ${pos.y}px,
@@ -156,8 +172,8 @@ export default function HoverSpotLight() {
         <Header />
 
         <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
-          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-8xl font-bold overflow-hidden'>Tech builds.</h1></div>
-          <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-8xl font-bold overflow-hidden'>scale</h1></div>
+          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-8xl font-semibold overflow-hidden'>Tech builds.</h1></div>
+          <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-8xl font-semibold overflow-hidden'>scale</h1></div>
           <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-3xl mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
@@ -168,7 +184,8 @@ export default function HoverSpotLight() {
                 <CallMadeIcon className="!w-8 !h-8" />
               </button>
             </div>
-            <button className="software border-2 rounded-full py-4 px-7 text-[20px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
+            
+            <button onClick={scrollToSoft} className="software border-2 rounded-full py-4 px-7 text-[20px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
           </div>
         </div>
         <div className="ad-Content-cont w-[100%] h-[10vh] flex flex-col justify-center items-center text-center px-10 "></div>
@@ -196,9 +213,11 @@ export default function HoverSpotLight() {
 
       <Image />
       <SplitText />
-      <SoftSolution />
-      <LatestNewsText />
-      <LatestNews />
+      <div ref={softRef}>
+      <SoftSolution  />
+      </div>
+      {/* <LatestNewsText /> */}
+      {/* <LatestNews /> */}
       <SpinnyWheel />
       <Footer  />
     </>

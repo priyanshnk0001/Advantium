@@ -18,6 +18,8 @@ import Typography from '@mui/material/Typography';
 import Footer from './Footer';
 import Header from './Header';
 
+
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrambleTextPlugin);
 

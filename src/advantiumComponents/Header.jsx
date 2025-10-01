@@ -21,19 +21,19 @@ gsap.registerPlugin(ScrambleTextPlugin);
 gsap.registerPlugin(TextPlugin);
 
 export default function Header() {
-//     const [loading, setLoading] = useState(true);
+    //     const [loading, setLoading] = useState(true);
 
-//   useEffect(() => {
-//     const handleLoad = () => setLoading(false);  // page load होते ही loading false
+    //   useEffect(() => {
+    //     const handleLoad = () => setLoading(false);  // page load होते ही loading false
 
-//     if (document.readyState === "complete") {
-//       setLoading(false); // agar page pehle se loaded hai
-//     } else {
-//       window.addEventListener("load", handleLoad);
-//     }
+    //     if (document.readyState === "complete") {
+    //       setLoading(false); // agar page pehle se loaded hai
+    //     } else {
+    //       window.addEventListener("load", handleLoad);
+    //     }
 
-//     return () => window.removeEventListener("load", handleLoad);
-//   }, []);
+    //     return () => window.removeEventListener("load", handleLoad);
+    //   }, []);
 
 
 
@@ -252,10 +252,10 @@ export default function Header() {
             casesDrawer.addEventListener("mouseleave", closeCDrawer);
         }
 
-        const insights = document.querySelector(".insightsNavP1 .Header-insightsText");
-        if (insights) {
-            insights.addEventListener("mouseenter", closeDDrawer);
-            insights.addEventListener("mouseenter", closeCDrawer);
+        const about = document.querySelector(".insightsNavP1 .Header-aboutText");
+        if (about) {
+            about.addEventListener("mouseenter", closeDDrawer);
+            about.addEventListener("mouseenter", closeCDrawer);
         }
 
         if (bookingBtn) bookingBtn.addEventListener("click", toggleBooking);
@@ -279,9 +279,9 @@ export default function Header() {
             if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
             ctl.kill();
 
-            if (insights) {
-                insights.removeEventListener("mouseenter", closeDDrawer);
-                insights.removeEventListener("mouseenter", closeCDrawer);
+            if (about) {
+                about.removeEventListener("mouseenter", closeDDrawer);
+                about.removeEventListener("mouseenter", closeCDrawer);
             }
 
             if (bookingBtn) bookingBtn.removeEventListener("click", toggleBooking);
@@ -332,7 +332,7 @@ export default function Header() {
             const t = gsap.to(btn, {
                 opacity: 1,
                 scale: 1,
-                x: 20,
+                x: 5,
                 paused: true,
             });
 
@@ -476,20 +476,20 @@ export default function Header() {
         //             }}
         // className={loading ? "hidden" : ""}
         >
-            <div className="insightsNav w-[100%]  flex justify-between items-center px-[40px] py-10 absolute top-0 left-0 text-white z-50">
-                <div className="insightsNavP1 w-[40%] flex justify-between items-center ml-[30px] px-7  ">
+            <div className="insightsNav w-[100%]  flex justify-between items-center px-[50px] py-10 absolute top-0 left-0 text-white z-50">
+                <div className="insightsNavP1 w-[40%] flex gap-10 items-center      ">
                     <h1 className="Header-deliver NavTextUnderline text-[15px] cursor-pointer relative  ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                     </h1>
                     <h1 className="Header-cases NavTextUnderline text-[15px] cursor-pointer relative ">Cases <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                     </h1>
-                    <NavLink to="/Insights" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
+                    {/* <NavLink to="/Insights" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`}>
                         <h1 className="Header-insightsText NavTextUnderline text-[15px] cursor-pointer relative ">Insights
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1>
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to="/About" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`} >
                         <h1 className="Header-aboutText NavTextUnderline text-[15px] cursor-pointer relative ">About us
@@ -505,7 +505,7 @@ export default function Header() {
                     <NavLink to="/" >
                         <h1 className=" Header-advantium-text flex items-center gap-2 text-[30px] font-bold"><img className='w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
                 </div>
-                <div className="insightsNavP3 w-[40%] flex justify-center items-center  ">
+                <div className="insightsNavP3 w-[40%] flex justify-end items-center  ">
                     <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? " text-amber-300" : "after:w-0"}`}>
                         <button className="Header-contactButton border-2 rounded-full py-3 px-7 text-[20px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
@@ -527,129 +527,121 @@ export default function Header() {
 
 
                 <div className="Header-drawer-cont w-[100%] h-[73vh] mt-[150px] pl-4   ">
-                    <div className="Header-dr-sub-cont w-[90%] h-[73vh] flex mx-auto ">
+                    <div className="Header-dr-sub-cont w-[95%] h-[73vh] flex justify-between mx-auto  ">
                         <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden">
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Digital transformation
+                            <h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Digital transformation
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]   '>Code review
+                            </h1>
+                            <NavLink className='w-fit' to="/Code"><h1 className='Header-drawerArrowH1 text-[20px]   '>Code review
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full  px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Strategy & Advice
+                            </h1></NavLink>
+                            <NavLink className='w-fit' to="/Strategy"><h1 className='Header-drawerArrowH1 text-[20px]  '>Strategy & Advice
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Texhnical architecture
+                            </h1></NavLink>
+                            <NavLink className='w-fit' to="/Technical"><h1 className='Header-drawerArrowH1 text-[20px]  '>Technical architecture
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Data & AI
+                            </h1></NavLink>
+                            <NavLink className='w-fit' to="/DataAI"><h1 className='Header-drawerArrowH1 text-[20px]  '>Data & AI
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Replatforming
+                            </h1></NavLink>
+                            <NavLink className='w-fit' to="/Replatform"><h1 className='Header-drawerArrowH1 text-[20px]  '>Replatforming
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
+                            </h1></NavLink>
                         </div>
 
 
                         <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden  ">
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Software solutions
+                           <h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Software solutions
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Customer and management portals
+                            </h1>
+                            <NavLink className="w-fit" to="/CMportal"><h1 className='Header-drawerArrowH1 text-[20px]  '>Customer and management portals
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Apps
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/Apps"><h1 className='Header-drawerArrowH1 text-[20px]  '>Apps
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Websites & CMS
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/WebsiteCMS"><h1 className='Header-drawerArrowH1 text-[20px]  '>Websites & CMS
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>E-commerce solutions
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/Ecom"><h1 className='Header-drawerArrowH1 text-[20px]  '>E-commerce solutions
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='Header-drawerArrowH1 text-[20px]  '>Data Management Platform
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/DMplatform"><h1 className='Header-drawerArrowH1 text-[20px]  '>Data Management Platform
                                 <button
                                     className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
-                            </h1></a>
+                            </h1></NavLink>
                         </div>
 
 
                         <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden  ">
-                            <a className='w-fit' href=""><h1 className='text-[20px] font-bold !text-white '>Digital transformation
+                            <h1 className='text-[20px] font-bold !text-white '>Services
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Code review
+                            </h1>
+                            <NavLink className="w-fit" to="/SoftDev"><h1 className='text-[18px]  '>Software Development
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Strategy & Advice
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/Design"><h1 className='text-[18px]  '>Design
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Texhnical architecture
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/Maintenance"><h1 className='text-[18px]  '>Maintenance
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Data & AI
+                            </h1></NavLink>
+                           <NavLink className="w-fit" to="/Security"><h1 className='text-[18px]  '>Security & Privacy
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Replatforming
+                            </h1></NavLink>
+                            <NavLink className="w-fit" to="/DevSecOps"><h1 className='text-[18px]  '>DevSecOps
 
-                            </h1></a>
+                            </h1></NavLink>
                         </div>
 
 
-                        <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden  ">
-                            <a className='w-fit' href=""><h1 className='text-[20px] font-bold !text-white '>Digital transformation
+                        <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden   ">
+                            <h1 className='text-[20px] w-fit font-bold !text-white '>Also interesting
+                            </h1>
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Code review
+                            <NavLink className="w-fit" to="/Technology"><h1 className='text-[18px]  '>Technology
+                            </h1></NavLink>
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Strategy & Advice
+                            <NavLink className="w-fit" to="/Integration"><h1 className='text-[18px]  '>Integrations
+                            </h1></NavLink>
 
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Texhnical architecture
-
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Data & AI
-
-                            </h1></a>
-                            <a className='w-fit' href=""><h1 className='text-[18px]  '>Replatforming
-
-                            </h1></a>
+                           
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div className="Header-casesdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0   bg-black/80 backdrop-filter backdrop-blur-[12px] z-30 ">
+            <div className="Header-casesdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0   bg-black/80 backdrop-filter backdrop-blur-[12px] overflow-hidden z-30 ">
 
                 <div className='w-[100%] h-[73vh] mt-[150px] px-19 pt-20 '>
                     <h1 className="Header-cases-heading text-white text-[30px] font-bold absolute ">Highlighted cases</h1>
@@ -752,10 +744,10 @@ export default function Header() {
                             <h1 className='text-gray-400 text-xl  '>Curious how we can help with your digital challenges? Schedule a quick chat and get immediate insight into the best solution for your situation.</h1>
                             <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
                                 <div className="book-img flex items-center gap-5"><img className='w-[150px] h-[150px] rounded-full' src="neerajAdvantium.jpeg" alt="" />
-                                <div className="book-name">
-                                    <h1>Neeraj Kumar</h1>
-                                    <h1 className='text-gray-400'>Co-Founder and Director</h1>
-                                </div>
+                                    <div className="book-name">
+                                        <h1>Neeraj Kumar</h1>
+                                        <h1 className='text-gray-400'>Co-Founder and Director</h1>
+                                    </div>
                                 </div>
 
                                 <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-3 ml-20 cursor-pointer">@</button>
@@ -765,10 +757,10 @@ export default function Header() {
 
                             <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
                                 <div className="book-img flex items-center gap-5"><img className='w-[150px] h-[150px] rounded-full' src="priyaAdvantium.webp" alt="" />
-                                <div className="book-name">
-                                    <h1>Priya Fozdar</h1>
-                                    <h1 className='text-gray-400'>Director</h1>
-                                </div>
+                                    <div className="book-name">
+                                        <h1>Priya Fozdar</h1>
+                                        <h1 className='text-gray-400'>Director</h1>
+                                    </div>
                                 </div>
 
                                 <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-3 ml-20 cursor-pointer">@</button>
