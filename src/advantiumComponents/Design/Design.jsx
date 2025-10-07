@@ -11,6 +11,7 @@ import Footer from '../Footer';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import DesignSplitText from './DesignSplitText';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -72,17 +73,17 @@ function Design() {
     }, []);
 
 
-    useGSAP(()=>{
+    useGSAP(() => {
 
-        gsap.from(".DesignCard",{
-            y:600,
-            stagger:0.2,
-            scrollTrigger:{
-                trigger:(".DesignCard-container"),
-                scroller:"body",
-                scrub:2,
-                start:"top 85%",
-                end:"top 33%",
+        gsap.from(".DesignCard", {
+            y: 600,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: (".DesignCard-container"),
+                scroller: "body",
+                scrub: 2,
+                start: "top 85%",
+                end: "top 33%",
                 // markers:true
             }
 
@@ -100,7 +101,7 @@ function Design() {
         })
 
 
-         mtl2.from(".Design4-child1 > *", {
+        mtl2.from(".Design4-child1 > *", {
             x: -760,
             stagger: 0.2,
 
@@ -149,8 +150,8 @@ function Design() {
                 <div className="Design-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
                     <div className="Design-container1 w-[100%] mt-60  flex justify-around items-center">
                         <div className="Design1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Design that scores with users and your goals.</h1>
-                            <h1 className='text-gray-300 text-xl '>Design is the basis for digital success. Our UX designers translate your requirements into a modern, user-friendly interface with a smooth user experience. This is how we create digital products that not only look good, but also work superbly. Ready for a great user experience?</h1>
+                            <h1 className='text-white text-[70px]  leading-tight '>Design that connects with users and drives your goals.</h1>
+                            <h1 className='text-gray-300 text-xl '>Design is the foundation of digital success. Our UX designers turn your requirements into modern, user-friendly interfaces that deliver seamless experiences. The result? Digital products that don’t just look great — they perform flawlessly. Ready to elevate your user experience?</h1>
                             <div className="DesignBottomButton flex  items-center mt-5 z-0    ">
                                 <div className="DesignBtn-container ">
                                     <button className="DesignButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
@@ -174,40 +175,68 @@ function Design() {
                     </div>
 
                     <div className="Design-container3 text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-8xl px-45 ">Ready to create your blueprint?</h1>
-                        <div className="DesignCard-container w-[100%] flex  justify-around">
-                            <div className="DesignCard w-[30%] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
-                                <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
-                                    <h1 className='text-4xl'>Design sprint </h1>
-                                    <h1 className='text-white/70 leading-loose'>We work together to understand the core needs of your target audience. What you want, we like to hear. But what your target group wants is what matters. We start with design sprints, in which we formulate user goals using User Stories. Ready to sprint? </h1>
+                        <h1 className="text-center text-8xl px-45 ">Ready to design your blueprint?</h1>
+                        <div className="DesignCard-container w-[100vw] grid grid-cols-3 gap-8 ">
+                            <NavLink to="/DesignSprint" onClick={()=> window.scrollTo(0,0)}>
+                                <div className="DesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
+                                    <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
+                                        <h1 className='text-4xl'>Design sprint </h1>
+                                        <h1 className='text-white/70 leading-loose'>We collaborate to understand the core needs of your target audience. Your vision matters — but your users’ needs guide the way. Through focused design sprints, we define user goals using clear User Stories. Ready to sprint?</h1>
+                                    </div>
+                                    <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                 </div>
-                                <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
-                            </div>
-                           
-                            <div className="DesignCard w-[30%] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
-                                <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
-                                    <h1 className='text-4xl'>UX Design</h1>
-                                    <h1 className='text-white/70 leading-loose'>Designing an optimal user experience (UX) is essential to the success of your digital product. Our UX designers always work from the end-user's perspective. We make sure the interface is intuitive, with a strong focus on simplicity and functionality. </h1>
+                                </NavLink>
+
+                                <NavLink to="/UXDesign" onClick={()=> window.scrollTo(0,0)}>
+                                <div className="DesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
+                                    <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
+                                        <h1 className='text-4xl'>UX Design</h1>
+                                        <h1 className='text-white/70 leading-loose'>Designing an optimal user experience (UX) is key to any digital product’s success. Our UX designers always think from the end user’s perspective, creating interfaces that are intuitive, simple, and highly functional.</h1>
+                                    </div>
+                                    <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                 </div>
-                                <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
-                            </div>
-                           
-                            <div className="DesignCard w-[30%] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
-                                <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
-                                    <h1 className='text-4xl'>UI Design</h1>
-                                    <h1 className='text-white/70 leading-loose'>The right icon, in the best colour, with appropriate contrast. Using space, shape and colour, we guide the user to what they want. From the right icon to the best contrast, we ensure that the interface optimally suits the needs of your target group. </h1>
+                                </NavLink>
+
+
+
+                                <NavLink to="/UIDesign" onClick={()=> window.scrollTo(0,0)}>
+                                <div className="DesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
+                                    <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
+                                        <h1 className='text-4xl'>UI Design</h1>
+                                        <h1 className='text-white/70 leading-loose'>The right icon, the perfect color, and balanced contrast — every detail matters. Through thoughtful use of space, shape, and color, we guide users effortlessly toward their goals, ensuring the interface perfectly aligns with your audience’s needs. </h1>
+                                    </div>
+                                    <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                 </div>
-                                <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
-                            </div>
-                           
+                                </NavLink>
+
+                                <NavLink to="/Technical" onClick={()=> window.scrollTo(0,0)}>
+                                <div className="DesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
+                                    <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
+                                        <h1 className='text-4xl'>Technical Architecture</h1>
+                                        <h1 className='text-white/70 leading-loose'>In design sprints, we determine the techniques and frameworks best suited to your project. We create the technical architecture your digital systems need — ensuring they’re efficient, flexible, secure, and future-ready. </h1>
+                                    </div>
+                                    <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                </div>
+                                </NavLink>
+
+                                <NavLink to="/AppDesign" onClick={()=> window.scrollTo(0,0)}>
+                                <div className="DesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
+                                    <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
+                                        <h1 className='text-4xl'>App design</h1>
+                                        <h1 className='text-white/70 leading-loose'>Developing a mobile app begins with design, not code. Great app design goes beyond aesthetics — it defines how users interact, navigate features, and stay engaged with your app.</h1>
+                                    </div>
+                                    <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                </div>
+                                </NavLink>
+
                         </div>
                     </div>
 
 
                     <div className="Design-container4 w-[100%] my-20  flex justify-around items-center">
                         <div className="Design4-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>The basis for success.</h1>
-                            <h1 className='text-gray-300 text-xl '>In the first stage of our process, we work with you to understand the core needs of your target audience. What you want, we like to hear. But what your target group wants is what matters. We start with design sprints, in which we formulate user goals using User Stories. These stories help us determine what your visitors really want and how we can best serve them.</h1>
+                            <h1 className='text-white text-[70px]  leading-tight '>The foundation for success.</h1>
+                            <h1 className='text-gray-300 text-xl '>In the first phase, we collaborate with you to uncover the core needs of your target audience. Your vision is important — but your users’ needs come first. Through design sprints, we define user goals using clear User Stories, helping us understand what your visitors truly want and how to serve them best.</h1>
                             <div className="DesignBottomButton2 flex  items-center mt-5 z-0    ">
                                 <div className="DesignBtn-container2 ">
                                     <button className="DesignButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Sprinting together?</button>
@@ -230,8 +259,8 @@ function Design() {
                             <img className='rounded-2xl' src="pic29.webp" alt="" />
                         </div>
                         <div className="Design5-child2 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Technical architecture: Choosing the right foundation</h1>
-                            <h1 className='text-gray-300 text-xl '>Every website needs a solid technical architecture. In the design sprints, we make choices about the techniques and frameworks we use. This is always done in consultation with you, so that we know exactly what choices we are making and what the consequences are. Our lead developer ensures that we make the right choices for a robust, scalable solution.</h1>
+                            <h1 className='text-white text-[70px]  leading-tight '>Technical architecture: Building the right foundation</h1>
+                            <h1 className='text-gray-300 text-xl '>Every website needs a strong technical foundation. During the design sprints, we decide on the right techniques and frameworks in close collaboration with you — ensuring full transparency in every choice and its impact. Our lead developer guides the process, guaranteeing a robust and scalable solution.</h1>
                             <div className="DesignBottomButton4 flex  items-center mt-5 z-0    ">
                                 <div className="DesignBtn-container4 ">
                                     <button className="DesignButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More info</button>

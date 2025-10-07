@@ -33,6 +33,21 @@ import Maintenance from './advantiumComponents/Maintenance/Maintenance.jsx'
 import Design from './advantiumComponents/Design/Design.jsx'
 import SoftDev from './advantiumComponents/SoftwereDev/SoftDev.jsx'
 import SoftSolution from './advantiumComponents/SoftSolution.jsx'
+import PureEnergy from './advantiumComponents/PureEnergy/PureEnergy.jsx'
+import RequestForm from './advantiumComponents/RequestForm/RequestForm.jsx'
+import OpenApp from './advantiumComponents/OpenApplication/OpenApp.jsx'
+import MobileApp from './advantiumComponents/MobileApp/MobileApp.jsx'
+import WebApp from './advantiumComponents/WebApp/WebApp.jsx'
+import AppDesign from './advantiumComponents/AppDesign/AppDesign.jsx'
+import DesignSprint from './advantiumComponents/DesignSprint/DesignSprint.jsx'
+import UXDesign from './advantiumComponents/UXdesign/UXDesign.jsx'
+import UIDesign from './advantiumComponents/UIdesign /UIDesign.jsx'
+import Nou from './advantiumComponents/Nou/Nou.jsx'
+import InCorpe from './advantiumComponents/InCorpe/InCorpe.jsx'
+import EastBorn from './advantiumComponents/EastBorn/EastBorn.jsx'
+import Fundaments from './advantiumComponents/Fundaments/Fundaments.jsx'
+import JustEat from './advantiumComponents/JustEat/JustEat.jsx'
+import TakeAway from './advantiumComponents/TakeAway/TakeAway.jsx'
 
 
 
@@ -147,6 +162,66 @@ let allRouts = createHashRouter(
     {
       path: "SoftDev",
       element: <SoftDev/>
+    },
+    {
+      path: "PureEnergy",
+      element: <PureEnergy/>
+    },
+    {
+      path: "RequestForm",
+      element: <RequestForm/>
+    },
+    {
+      path: "OpenApp",
+      element: <OpenApp/>
+    },
+    {
+      path: "MobileApp",
+      element: <MobileApp/>
+    },
+    {
+      path: "WebApp",
+      element: <WebApp/>
+    },
+    {
+      path: "AppDesign",
+      element: <AppDesign/>
+    },
+    {
+      path: "DesignSprint",
+      element: <DesignSprint/>
+    },
+    {
+      path: "UXDesign",
+      element: <UXDesign/>
+    },
+    {
+      path: "UIDesign",
+      element: <UIDesign/>
+    },
+    {
+      path: "Nou",
+      element: <Nou/>
+    },
+    {
+      path: "InCorpe",
+      element: <InCorpe/>
+    },
+    {
+      path: "EastBorn",
+      element: <EastBorn/>
+    },
+    {
+      path: "Fundaments",
+      element: <Fundaments/>
+    },
+    {
+      path: "JustEat",
+      element: <JustEat/>
+    },
+    {
+      path: "TakeAway",
+      element: <TakeAway/>
     },
     
 

@@ -12,6 +12,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import ReplatformSplitText from './ReplatformSplitText';
 import ReplatformFlexible from './ReplatformFlexible';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -150,6 +151,18 @@ function Replatform() {
         };
     }, []);
 
+
+     window.addEventListener('load', () => window.scrollTo(0, 0));
+               const moreReplatformRef = useRef(null);
+            
+              // scroll function
+              const scrollTomoreReplatform = () => {
+                if (!moreReplatformRef.current) return;
+            
+                moreReplatformRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              };
+    
+
     return (
         <>
             <div
@@ -174,6 +187,7 @@ function Replatform() {
                             <h1 className='text-white text-[70px]  leading-tight '>Replatforming: ready for the future.</h1>
                             <h1 className='text-gray-300 text-xl '>Replatforming offers companies the opportunity to rebuild their e-commerce platforms and digital environments with advanced technologies. This process enables a digital transformation that ensures not only better performance, security and scalability, but also future growth.</h1>
                             <div className="ReplatformBottomButton flex  items-center mt-5 z-0    ">
+                                <NavLink to="/RequestForm">
                                 <div className="ReplatformBtn-container ">
                                     <button className="ReplatformButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -181,7 +195,8 @@ function Replatform() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                </NavLink>
+                                <button onClick={scrollTomoreReplatform} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
                         <div className="replatform1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -192,7 +207,7 @@ function Replatform() {
 
 
 
-                    <div className="replatform-container2">
+                    <div ref={moreReplatformRef} className="replatform-container2">
                         <ReplatformSplitText />
                     </div>
                    <div className="str-container2">
@@ -211,6 +226,7 @@ function Replatform() {
                             <h1 className='text-white text-[70px]  leading-tight '>Start your replatforming journey today.</h1>
                             <h1 className='text-gray-300 text-xl '>Replatforming is not only a technical decision, but also a strategic move that affects the entire organisation. By investing in a new platform, you can not only improve your digital processes, but also optimise the customer experience and make your operations more efficient. Every organisation is unique, which is why tailor-made solutions are offered that meet technology needs and contribute to broader business goals. Whether you are a growing e-commerce company or looking to modernise your digital infrastructure for future innovation, we will help you successfully achieve this transformation, with minimal disruption and maximum benefits.</h1>
                             <div className="ReplatformBottomButton2 flex  items-center mt-5 z-0    ">
+                                 <NavLink to="/RequestForm">
                                 <div className="ReplatformBtn-container2 ">
                                     <button className="ReplatformButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
                                     <button
@@ -218,6 +234,7 @@ function Replatform() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="replatform3-child2 w-[45%]  flex flex-col rounded-2xl overflow-hidden  ">

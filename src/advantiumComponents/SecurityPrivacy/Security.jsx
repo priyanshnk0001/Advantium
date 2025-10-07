@@ -12,6 +12,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import SecuritySplitText from './SecuritySplitText';
 import SecurityFlexible from './SecurityFlexible';
+import { NavLink } from 'react-router-dom';
 
 function Security() {
     const [pos, setPos] = useState({ x: 750, y: 400 });
@@ -155,6 +156,18 @@ function Security() {
         };
     }, []);
 
+
+     window.addEventListener('load', () => window.scrollTo(0, 0));
+        const moreScurityRef = useRef(null);
+    
+        // scroll function
+        const scrollTomoreScurity = () => {
+            if (!moreScurityRef.current) return;
+    
+            moreScurityRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        };
+    
+
     return (
         <>
             <div
@@ -179,6 +192,8 @@ function Security() {
                             <h1 className='text-white text-[70px]  leading-tight '>Security & Privacy</h1>
                             <h1 className='text-gray-300 text-xl '>At Advantium, privacy and security are paramount. We protect our data and that of clients by complying with stringent standards such as ISO 27001 and NEN 7510, and work with transparent, reliable processes. Security is essential to us.</h1>
                             <div className="SecurityBottomButton flex  items-center mt-5 z-0    ">
+
+                                <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0,0)}>
                                 <div className="SecurityBtn-container ">
                                     <button className="SecurityButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -186,7 +201,8 @@ function Security() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                </NavLink>
+                                <button onClick={scrollTomoreScurity} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
                         <div className="Security1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -196,7 +212,7 @@ function Security() {
 
 
 
-                    <div className="Security-container2">
+                    <div ref={moreScurityRef} className="Security-container2">
                         <SecuritySplitText />
                     </div>
                    
@@ -209,8 +225,9 @@ function Security() {
                     <div className="Security-container3 w-[100%] my-20  flex justify-around items-center">
                         <div className="Security3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Advantium is ISO 27001 certified.</h1>
-                            <h1 className='text-gray-300 text-xl '>ISO 27001 is de internationale norm voor informatiebeveiliging die waarborgt dat gegevens vertrouwelijk, integer en beschikbaar blijven. Onze ISO 27001-certificering bevestigt dat we voldoen aan de strengste beveiligingsnormen en risicomanagementprocessen. Dit biedt onze opdrachtgevers de zekerheid dat hun gegevens goed beschermd zijn, en dat wij een gedegen en systematische aanpak volgen om hun informatie te beheren. Bovendien stelt de certificering ons in staat snel in te spelen op nieuwe dreigingen en veranderingen in wetgeving, zoals de AVG. Zo kunnen zij rekenen op een betrouwbare partner die voortdurend streeft naar de hoogste beveiligingsstandaarden en hun belangen vooropstelt.</h1>
+                            <h1 className='text-gray-300 text-xl '>ISO 27001 is the international standard for information security that ensures data confidentiality, integrity, and availability. Our ISO 27001 certification confirms that we meet the strictest security standards and risk management processes. This provides our clients with the assurance that their data is well-protected and that we employ a thorough and systematic approach to managing their information. Furthermore, certification enables us to quickly respond to new threats and changes in legislation, such as the GDPR. This allows them to count on a reliable partner who continuously strives for the highest security standards and puts their interests first.</h1>
                             <div className="SecurityBottomButton2 flex  items-center mt-5 z-0    ">
+                                <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0,0)}>
                                 <div className="SecurityBtn-container2 ">
                                     <button className="SecurityButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
                                     <button
@@ -218,6 +235,7 @@ function Security() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="Security3-child2 w-[45%]  flex flex-col rounded-2xl overflow-hidden  ">
@@ -233,8 +251,8 @@ function Security() {
                         </div>
                         <div className="Security4-child2 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Advantium is NEN 7510 certified.</h1>
-                            <h1 className='text-gray-300 text-xl '>Bij het ontwikkelen van software voor zorginstellingen en andere organisaties die werken met privacygevoelige gegevens, is informatiebeveiliging geen bijzaak. Het is essentieel. Advantium is officieel NEN 7510 gecertificeerd: dé norm voor informatiebeveiliging in de zorg. Daarmee tonen we aan dat we niet alleen voldoen aan de strenge eisen, maar ook actief investeren in veilige processen en systemen. Benieuwd wat deze certificering inhoudt en waarom het relevant is voor jouw organisatie?</h1>
-                            <div className="SecurityBottomButton4 flex  items-center mt-5 z-0    ">
+                            <h1 className='text-gray-300 text-xl '>When developing software for healthcare institutions and other organizations that work with privacy-sensitive data, information security isn't a side issue. It's essential. Advantium is officially NEN 7510 certified: the leading standard for information security in healthcare. This demonstrates that we not only meet the strict requirements but also actively invest in secure processes and systems. Curious about what this certification entails and why it's relevant to your organization?</h1>
+                            {/* <div className="SecurityBottomButton4 flex  items-center mt-5 z-0    ">
                                 <div className="SecurityBtn-container4 ">
                                     <button className="SecurityButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More info</button>
                                     <button
@@ -242,7 +260,7 @@ function Security() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>

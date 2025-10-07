@@ -12,6 +12,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import DataAISplitText from './DataAISplitText';
 import DataAIFlexible from './DataAIFlexible';
+import { NavLink } from 'react-router-dom';
 
 
 function DataAI() {
@@ -156,6 +157,17 @@ function DataAI() {
         };
     }, []);
 
+
+        window.addEventListener('load', () => window.scrollTo(0, 0));
+           const moreDataAiRef = useRef(null);
+        
+          // scroll function
+          const scrollTomoreDataAi = () => {
+            if (!moreDataAiRef.current) return;
+        
+            moreDataAiRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          };
+
     return (
         <>
             <div
@@ -177,9 +189,11 @@ function DataAI() {
                 <div className="data-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
                     <div className="data-container1 w-[100%] mt-60  flex justify-around">
                         <div className="data1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>The smart future for your organisation</h1>
-                            <h1 className='text-gray-300 text-xl '>Wondering how Artificial Intelligence (AI) can help your organisation work more efficiently and make better decisions? Our expertise in data management, machine learning and automation ensures that your organisation is ready for the challenges of tomorrow.</h1>
+                            <h1 className='text-white text-[70px]  leading-tight '>The smart future for your organization.</h1>
+                            <h1 className='text-gray-300 text-xl '>Curious how Artificial Intelligence (AI) can help your organization work smarter and make better decisions? With our expertise in data management, machine learning, and automation, we prepare your business for the challenges of tomorrow.</h1>
                             <div className="DataAIBottomButton flex  items-center mt-5 z-0    ">
+
+                                <NavLink to="/RequestForm">
                                 <div className="DataAIBtn-container ">
                                     <button className="DataAIButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -187,7 +201,8 @@ function DataAI() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                </NavLink>
+                                <button onClick={scrollTomoreDataAi}  className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
                         <div className="data1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -197,7 +212,7 @@ function DataAI() {
 
 
 
-                    <div className="data-container2">
+                    <div ref={moreDataAiRef} className="data-container2">
                         <DataAISplitText />
                     </div>
                    <div className="str-container2 w-[100%]">
@@ -214,8 +229,10 @@ function DataAI() {
                     <div className="data-container3 w-[100%] mb-20  flex justify-around items-center">
                         <div className="data3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Where to start with AI?</h1>
-                            <h1 className='text-gray-300 text-xl '>Want to get started with AI, but don't know where to start? From setting up a Data Management Platform to integrating AI models into your work processes, Advantium offers full support for a successful transition to AI. We work with your team to collect data, develop models and deploy them appropriately. This way, you not only make smart predictions, but also ensure better alignment of products and services with customer needs. By creating flexible, scalable AI solutions, we can ensure that your organisation can constantly adapt to changes in the market and technological advances.</h1>
+                            <h1 className='text-gray-300 text-xl '>Want to get started with AI but not sure where to begin? From building a Data Management Platform to integrating AI models into your workflows, Advantium provides complete support for a seamless transition to AI. We collaborate with your team to gather data, develop models, and implement them effectively. This not only enables smarter predictions but also ensures your products and services align better with customer needs. With flexible, scalable AI solutions, we help your organization stay agile and ready for future market and technological shifts.</h1>
                             <div className="DataAIBottomButton2 flex  items-center mt-5 z-0    ">
+
+                                <NavLink to="/RequestForm">
                                 <div className="DataAIBtn-container2 ">
                                     <button className="DataAIButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
                                     <button
@@ -223,6 +240,7 @@ function DataAI() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="data3-child2 w-[45%]  flex flex-col rounded-2xl overflow-hidden  ">
@@ -238,15 +256,15 @@ function DataAI() {
                         </div>
                         <div className="data4-child2 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Better software with Gitlab Duo</h1>
-                            <h1 className='text-gray-300 text-xl '>By using AI tools, such as GitLab Duo, we improve both the quality and security of our software. This not only speeds up the development process, but also makes it more secure. At Advantium, we apply this technology not only to optimise your processes, but also to improve our own tools. Thanks to GitLab Duo, we can detect and correct errors faster, resulting in robust solutions that meet the highest standards. Find out how Advantium uses AI in GitLab Duo to take software security and quality to the next level.</h1>
+                            <h1 className='text-gray-300 text-xl '>By leveraging AI tools like GitLab Duo, we enhance both the quality and security of our software. This accelerates development while ensuring greater protection. At Advantium, we use this technology to optimize your processes and refine our own tools. With GitLab Duo, we identify and fix issues faster, delivering robust, high-standard solutions. Discover how Advantium uses AI in GitLab Duo to elevate software security and quality to the next level.</h1>
                             <div className="DataAIBottomButton4 flex  items-center mt-5 z-0    ">
-                                <div className="DataAIBtn-container4 ">
+                                {/* <div className="DataAIBtn-container4 ">
                                     <button className="DataAIButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Read the case</button>
                                     <button
                                         className="DataAIArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

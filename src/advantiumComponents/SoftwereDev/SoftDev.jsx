@@ -12,6 +12,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import SoftDevSplitText from './SoftDevSplitText';
 import SoftDevSplitText2 from './SoftDevSplitText2';
+import { NavLink } from 'react-router-dom';
 
 
 function SoftDev() {
@@ -196,6 +197,17 @@ function SoftDev() {
     })
 
 
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+                        const moreSoftDevRef = useRef(null);
+                    
+                        // scroll function
+                        const scrollTomoreSoftDev = () => {
+                            if (!moreSoftDevRef.current) return;
+                    
+                            moreSoftDevRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        };
+
+
 
 
 
@@ -223,6 +235,7 @@ function SoftDev() {
                             <h1 className='text-white text-[70px]  leading-tight '>Custom software development</h1>
                             <h1 className='text-gray-300 text-xl '>Customised software helps your organisation work more efficiently, streamline processes and better respond to your specific challenges. Not a standard solution, but exactly what you need to grow, innovate and make a difference. Whether it is about improving internal workflows, automating repetitive tasks or integrating various systems, your business processes and digital transformation are optimally supported.</h1>
                             <div className="SoftDevBottomButton flex  items-center mt-5 z-0    ">
+                                <NavLink to="/RequestForm">
                                 <div className="SoftDevBtn-container ">
                                     <button className="SoftDevButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -230,7 +243,8 @@ function SoftDev() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                </NavLink>
+                                <button onClick={scrollTomoreSoftDev} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
                         <div className="SoftDev1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -240,7 +254,7 @@ function SoftDev() {
 
 
 
-                    <div className="SoftDev-container2">
+                    <div ref={moreSoftDevRef} className="SoftDev-container2">
                         <SoftDevSplitText />
                     </div>
 

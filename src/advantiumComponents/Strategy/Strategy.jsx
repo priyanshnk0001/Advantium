@@ -11,6 +11,7 @@ import Footer from '../Footer';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import StrategyFlexible from './StrategyFlexible';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -156,6 +157,21 @@ function Strategy() {
         };
     }, []);
 
+
+
+
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+       const moreStrategyRef = useRef(null);
+    
+      // scroll function
+      const scrollTomoreStrategy = () => {
+        if (!moreStrategyRef.current) return;
+    
+        moreStrategyRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+
+      
+
     return (
         <>
             <div
@@ -180,6 +196,7 @@ function Strategy() {
                             <h1 className='text-white text-[70px]  leading-tight '>Strategy & advice for your digital transformation</h1>
                             <h1 className='text-gray-300 text-xl '>Digital transformation enables companies to optimise processes, improve the customer experience and innovate to stay competitive. A digital strategy is the starting point for success. Your organisation's vision, combined with our no-nonsense mentality and technological know-how, will make your strategy executable, result-oriented and ready to grow with the future.</h1>
                             <div className="StrategyBottomButton flex  items-center mt-5 z-0    ">
+                                <NavLink to="/RequestForm">
                                 <div className="StrategyBtn-container ">
                                     <button className="StrategyButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -187,7 +204,8 @@ function Strategy() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
+                                </NavLink>
+                                <button onClick={scrollTomoreStrategy}  className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
                             </div>
                         </div>
                         <div className="str1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden   ">
@@ -197,7 +215,7 @@ function Strategy() {
 
 
 
-                    <div className="str-container2">
+                    <div className="str-container2" ref={moreStrategyRef}>
                         <h1 className=" text-white mt-30 text-9xl px-45 ">Your ideal digital strategies.</h1>
 
                         <StrategyFlexible />
@@ -209,7 +227,7 @@ function Strategy() {
                         <div className="str3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Your digital roadmap in sprint 0</h1>
                             <h1 className='text-gray-300 text-xl '>Good preparation is half the battle; with the right knowledge, the best choices can be made. Using Sprint 0, we will discover how your business works, what makes it distinctive and where the needs lie. The essence of your issue is made concrete and we then translate this into the perfect digital strategy.</h1>
-                            <div className="StrategyBottomButton2 flex  items-center mt-5 z-0    ">
+                            {/* <div className="StrategyBottomButton2 flex  items-center mt-5 z-0    ">
                                 <div className="StrategyBtn-container2 ">
                                     <button className="StrategyButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Learn more about Sprint 0</button>
                                     <button
@@ -217,7 +235,7 @@ function Strategy() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="str3-child2 w-[45%]  flex flex-col rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic12.webp" alt="" />
@@ -233,7 +251,7 @@ function Strategy() {
                         <div className="str4-child2 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>A targeted conversion strategy</h1>
                             <h1 className='text-gray-300 text-xl '>It all starts with a good picture of your target audience: who are they, what do they need and how can you best reach them? By clearly establishing this, we devise ways to attract and convince them digitally. With clever routes, touchpoints and triggers, we ensure that your target group gets exactly what they are looking for, and you get the results you want.</h1>
-                            <div className="StrategyBottomButton4 flex  items-center mt-5 z-0    ">
+                            {/* <div className="StrategyBottomButton4 flex  items-center mt-5 z-0    ">
                                 <div className="StrategyBtn-container4 ">
                                     <button className="StrategyButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More on conversion strategy</button>
                                     <button
@@ -241,7 +259,7 @@ function Strategy() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
 
                     </div>

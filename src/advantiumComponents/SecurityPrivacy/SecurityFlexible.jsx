@@ -229,11 +229,11 @@ function SecurityFlexible() {
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
                     <h1 className='text-7xl'>Tech</h1>
-                    <h1 className='text-white/70 text-[20px]'>We maken gebruik van geavanceerde technologieën, zoals geautomatiseerde security scanners, om continu kwetsbaarheden te monitoren en tijdig te verhelpen. Door gebruik te maken van proactieve technologieën kunnen we snel reageren op potentiële dreigingen en de veiligheid van systemen blijven waarborgen. Dit stelt ons in staat om risico’s tijdig te identificeren en de impact te minimaliseren, wat de algehele beveiliging verhoogt.</h1>
+                    <h1 className='text-white/70 text-[20px]'>We use advanced technologies, such as automated security scanners, to continuously monitor vulnerabilities and resolve them promptly. By using proactive technologies, we can respond quickly to potential threats and continue to ensure system security. This allows us to identify risks early and minimize their impact, enhancing overall security.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Compliance</h1>
-                    <h1 className='text-white/70 text-[20px]'>Wij houden voortdurend de wetgeving in de gaten en passen onze systemen aan om te voldoen aan de nieuwste vereisten, zoals de AVG. Dit helpt onze opdrachtgevers om compliant te blijven zonder zelf alle details te hoeven beheren. Door de naleving van de wetgeving te waarborgen, zorgen we ervoor dat organisaties zich geen zorgen hoeven te maken over juridische gevolgen en zich volledig kunnen richten op hun kernactiviteiten.</h1>
+                    <h1 className='text-white/70 text-[20px]'>We continuously monitor legislation and adapt our systems to meet the latest requirements, such as the GDPR. This helps our clients stay compliant without having to manage all the details themselves. By ensuring compliance, we ensure organizations don't have to worry about legal consequences and can fully focus on their core business.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Training</h1>

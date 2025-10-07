@@ -50,9 +50,9 @@ export default function DevSecSplitText() {
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
         className=" text-[20px] space-y-5   text-white text-start leading-snug "
       >
-DevSecOps integrates security into every stage of software development. This starts at software design and continues through production and maintenance. Instead of security being a step added later in the process (e.g. at product launch), it becomes part of development from the outset. This ensures that security measures are applied proactively, rather than reactively after an attack or vulnerability.
+DevSecOps integrates security into every phase of software development — from initial design to production and maintenance. Instead of treating security as an afterthought or a final checkpoint, it becomes an integral part of the process from day one. This proactive approach ensures vulnerabilities are prevented early, keeping your software secure, stable, and ready for continuous delivery.
 <br /><br />
-A DevSecOps approach uses automation to increase the speed of software delivery while ensuring a high level of security. Automated testing, continuous integration (CI) and continuous delivery (CD) are deployed to quickly test and immediately deploy any change in code, while security checks and scanning are always in place to identify vulnerabilities in a timely manner.</h1>
+A DevSecOps approach leverages automation to accelerate software delivery while maintaining strong security. Through automated testing, Continuous Integration (CI), and Continuous Delivery (CD), every code change is rapidly tested and deployed. Built-in security scans and checks run continuously, ensuring vulnerabilities are detected and resolved early in the process.</h1>
     </div>
   );
 }

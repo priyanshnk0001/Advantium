@@ -122,6 +122,7 @@ function TechFlexible() {
             { trigger: ".Tech-subchild:nth-child(2)", target: ".text02" },
             { trigger: ".Tech-subchild:nth-child(3)", target: ".text03" },
             { trigger: ".Tech-subchild:nth-child(4)", target: ".text04" },
+            { trigger: ".Tech-subchild:nth-child(5)", target: ".text05" },
 
         ];
 
@@ -238,9 +239,9 @@ function TechFlexible() {
 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
                     <h1 className='text-7xl'>Blueprinting</h1>
-                    <h1 className='text-white/70 text-[20px]'>Hulp nodig bij het opstellen van een op maat gemaakte technische architectuur die perfect aansluit bij de specifieke behoeften en doelen van jouw organisatie? Doen we! <br /><br />
+                    <h1 className='text-white/70 text-[20px]'>Need help developing a customized technical architecture that perfectly matches your organization's specific needs and goals? We can help! <br /><br />
 
-                        Met het C4-model creëren we een duidelijke en gestructureerde blauwdruk die de technische componenten en hun onderlinge relaties visueel maakt. Dit zorgt ervoor dat de architectuur begrijpelijk en flexibel is, zodat je systemen optimaal presteren en mee kunnen groeien met de ontwikkelingen binnen je organisatie.
+                        With the C4 model, we create a clear and structured blueprint that visualizes the technical components and their interrelationships. This ensures that the architecture is understandable and flexible, so your systems perform optimally and can grow with the developments within your organization.
 
 
                     </h1>

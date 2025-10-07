@@ -45,18 +45,18 @@ export default function DesignSplitText() {
 
     return (
         <div className="DesignsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="Design-Text text-start py-5 text-[55px] text-white flex items-center">Our design philosophy: winning with usability.</h1>
+            <h1 className="Design-Text text-start py-5 text-[55px] text-white flex items-center">Our design philosophy: winning through usability.</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
                 className=" text-[20px] flex flex-col gap-5    text-white text-start leading-snug "
             >
-                <h1 className="text-white/80 space-y-5">Design is not just about aesthetics. It is about accessibility, functionality and a design that does what it is supposed to do: convert. But there is more. Good design has to match who you are and what your brand radiates. That's where we make a difference. For us, it's all about impact. That is why we combine data and creativity to come up with a design that not only looks good, but also really delivers. Whether that's more conversions, satisfied users or a streamlined process. Because of our approach, we win awards, partners and hearts.</h1>
+                <h1 className="text-white/80 space-y-5">Design is more than aesthetics — it’s about accessibility, functionality, and purpose. A great design doesn’t just look good; it converts, communicates, and reflects your brand’s identity. That’s where we stand out. At Advantium, impact drives everything we create. By combining data with creativity, we craft designs that deliver real results — from higher conversions and happier users to more efficient processes. Our approach earns not just awards, but lasting partnerships and trust.</h1>
 
-                <h1 className="text-[45px] text-white">Our designprocess in action.</h1>
+                <h1 className="text-[45px] text-white">Our design process in action.</h1>
 
                 
-                    <h1 className="text-white/80 space-y-5">Over the years, our design process has matured well with many new flavours. We have extensive experience and know the latest trends like no other. These are our digital design services.</h1>
+                    <h1 className="text-white/80 space-y-5">Over the years, our design process has evolved and refined, enriched with fresh insights and innovation. With deep experience and a strong grasp of the latest trends, we deliver digital design services that set your brand apart.</h1>
                
 
 

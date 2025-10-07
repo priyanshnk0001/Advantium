@@ -11,6 +11,7 @@ import Footer from '../Footer';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import DMplatformSplitText from './DMplatformSplitText';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -166,6 +167,20 @@ function DMplatform() {
         })
     })
 
+
+
+     window.addEventListener('load', () => window.scrollTo(0, 0));
+                    const moreDMPRef = useRef(null);
+                
+                    // scroll function
+                    const scrollTomoreDMP = () => {
+                        if (!moreDMPRef.current) return;
+                
+                        moreDMPRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    };
+
+
+
     return (
         <>
             <div
@@ -187,9 +202,10 @@ function DMplatform() {
                 <div className="DM-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
                     <div className="DM-container1 w-[100%] mt-50  flex justify-around">
                         <div className="DM1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Manage your data smartly with a Data Management Platform.</h1>
-                            <h1 className='text-gray-300 text-xl '>Many organisations already have strong systems in place such as a CRM, ERP or PIM solution. A solid foundation, and we are happy to build on it. The real magic only happens when these systems no longer stand alone, but work together and smart business logic is applied. A well-designed Data Management Platform (DMP) makes this possible.</h1>
+                            <h1 className='text-white text-[70px]  leading-tight '>Manage your data intelligently with a Data Management Platform.</h1>
+                            <h1 className='text-gray-300 text-xl '>Many organizations already use powerful systems like CRM, ERP, or PIM solutions — a solid foundation we’re glad to build upon. The real transformation begins when these systems work together seamlessly, powered by smart business logic. A well-designed Data Management Platform (DMP) makes this integration possible.</h1>
                             <div className="DMplatformBottomButton flex  items-center mt-5 z-0    ">
+                                <NavLink to="/RequestForm">
                                 <div className="DMplatformBtn-container ">
                                     <button className="DMplatformButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -197,7 +213,8 @@ function DMplatform() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on the DMP</button>
+                                </NavLink>
+                                <button onClick={scrollTomoreDMP} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on the DMP</button>
                             </div>
                         </div>
                         <div className="DM1-child2 w-[45%] h-[640px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -207,7 +224,7 @@ function DMplatform() {
 
 
 
-                    <div className="DM-container2">
+                    <div ref={moreDMPRef} className="DM-container2">
                         <DMplatformSplitText />
                     </div>
 
@@ -222,8 +239,9 @@ function DMplatform() {
                     <div className="DM-container3 w-[100%] mb-20  flex justify-around items-center py-10">
                         <div className="DM3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>How does a DMP connect to your processes?</h1>
-                            <h1 className='text-gray-300 text-xl '>A DMP is ideal for organisations dealing with a growing digital landscape. As you manage more systems and data, the benefits of a DMP increase. Most organisations already have a solid foundation with software such as CRM, ERP, or accounting systems. These are valuable tools, but often they still work independently of each other. A DMP makes the connection between these systems and ensures that together they form a stronger whole. The platform not only acts as middleware, but also adds intelligence. Think advanced analytics, data validation or the application of business rules. This allows you to work faster, smarter and more efficiently, while getting the most out of your existing software landscape.</h1>
+                            <h1 className='text-gray-300 text-xl '>A Data Management Platform (DMP) is ideal for organizations navigating an expanding digital ecosystem. As the number of systems and data sources grows, so do the advantages of a DMP. While most businesses already rely on strong tools like CRM, ERP, or accounting software, these systems often operate in isolation. A DMP connects them, creating a unified, intelligent ecosystem. Acting as more than just middleware, it adds smart capabilities — from advanced analytics and data validation to automated business rules — enabling your organization to work faster, smarter, and more efficiently while maximizing the value of your existing software landscape.</h1>
                             <div className="DMplatformBottomButton2 flex  items-center mt-5 z-0    ">
+                                <NavLink to="/CMportal" onClick={()=> window.scrollTo(0,0)}>
                                 <div className="DMplatformBtn-container2 ">
                                     <button className="DMplatformButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Read more about portals</button>
                                     <button
@@ -231,6 +249,7 @@ function DMplatform() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="DM3-child2 w-[45%]  flex flex-col rounded-2xl overflow-hidden  ">

@@ -52,9 +52,9 @@ export default function CodeSplitText() {
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
                 className=" text-[20px] flex flex-col gap-10    text-white text-start leading-snug "
             >
-                <h1 className="text-white/80 space-y-5">Code reviewing is the process of analysing and assessing existing codebases to evaluate software quality, maintainability and security. The aim is to identify potential inefficiencies, technical errors or risks in the source code before they cause problems. Through regular code reviews, a software application can not only function better, but also be more secure and easier to maintain in the long run. <br /><br />
+                <h1 className="text-white/80 space-y-5">Code reviewing is the systematic process of analyzing and evaluating existing codebases to ensure high standards of quality, performance, and security. The goal is to identify inefficiencies, technical issues, or potential risks before they impact functionality. Regular code reviews help software run more efficiently, remain secure, and become easier to maintain over time. <br /><br />
 
-                    When Advantium takes over responsibility for your existing software, we perform a thorough audit to evaluate the current state of the application. For standard software, we inventory exactly what processes the application handles and examine how we can possibly link it to other systems. For custom software, we do a code review to determine whether we can take over management of the software and whether the code base is suitable for further development.
+At Advantium, when we take responsibility for your existing software, our team performs a comprehensive audit to assess its current condition and architecture. For standard software, we map out every process the application manages and explore integration opportunities with other systems. For custom-built solutions, our experts conduct a detailed code review to evaluate maintainability, identify optimization areas, and ensure the codebase is ready for scalable future development.
                 </h1>
 
 

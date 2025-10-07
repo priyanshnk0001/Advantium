@@ -45,13 +45,13 @@ export default function CMportalSplitText() {
 
   return (
     <div className="CMsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
-        <h1 className="Modular-Text text-start py-5 text-[55px] text-white flex items-center">Modular portals that grow with your organisation.</h1>
+        <h1 className="Modular-Text text-start py-5 text-[55px] text-white flex items-center">Modular portals that scale with your organization.</h1>
       <h1
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className=" text-[20px] space-y-5   text-white text-start leading-snug "
+        className=" text-[20px] space-y-5   text-white/80 text-start leading-snug "
       >
-A portal is a digital environment where customers or administrators can securely access information and functionalities relevant to them. Customer portals provide users with personalised services, such as viewing invoices, tracking orders and submitting support tickets. Management portals focus on internal processes and help companies monitor workflows, optimise processes and manage customer interactions. Often, these portals are integrated with existing systems such as CRM, ERP and CMS, making all information centrally available. Thanks to a modular structure, a portal can easily grow with an organisation's digital strategy, providing a future-proof solution.</h1>
+A portal is a secure digital environment where customers or administrators can access information and functionalities tailored to their needs. Customer portals offer personalized services like viewing invoices, tracking orders, and submitting support requests. Management portals streamline internal workflows, optimize processes, and enhance customer interaction management. Integrated with systems such as CRM, ERP, and CMS, they centralize data for efficiency. With a modular architecture, portals evolve alongside your organization’s digital strategy, delivering a scalable and future-proof solution.</h1>
     </div>
   );
 }

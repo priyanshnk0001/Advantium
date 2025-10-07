@@ -51,11 +51,11 @@ export default function DataAISplitText() {
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
         className=" text-[20px] space-y-5   text-white/70 text-start leading-snug "
       >
-AI is everywhere these days. Perhaps you already work with it and see its potential, or you are still looking for ways to deploy it. Artificial Intelligence (AI) is all about technology that makes systems smarter and more efficient. It can learn from data, recognise patterns and make decisions or predictions based on them. As a result, AI offers more than just automation of repetitive tasks. It also helps uncover hidden insights, such as what trends are at play in customer behaviour or which processes need more attention.
+AI is everywhere today — you may already be using it or exploring how to put it to work. Artificial Intelligence empowers systems to become smarter and more efficient by learning from data, recognizing patterns, and making informed decisions or predictions. Beyond automating repetitive tasks, AI uncovers valuable insights — revealing trends in customer behavior and identifying areas for process improvement.
 <br /><br />
-Many organisations face challenges such as managing data from different systems, developing actionable AI models, and effectively integrating AI into existing processes. Data is often spread across multiple sources, making it difficult to keep an overview and actually extract value from it. This is where AI comes into play.
+Many organizations struggle with challenges like managing data across multiple systems, building actionable AI models, and integrating AI effectively into existing workflows. With data often scattered across different sources, gaining clear insights and real value becomes difficult — and that’s where AI makes the difference.
 <br /><br />
-By applying AI intelligently, you can make processes more efficient as well as more personal. Think of customer interactions that respond perfectly to someone's preferences, or systems that proactively spot opportunities and problems before you notice them yourself. It is a powerful and practical way to future-proof work, create value and get the most out of your data.</h1>
+By applying AI intelligently, you can make processes both more efficient and more personalized. Imagine customer interactions that adapt perfectly to individual preferences, or systems that identify opportunities and issues before you even notice them. It’s a powerful, practical way to future-proof operations, create value, and unlock the full potential of your data.</h1>
     </div>
   );
 }

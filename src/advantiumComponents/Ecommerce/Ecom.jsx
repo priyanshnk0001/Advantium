@@ -11,6 +11,7 @@ import Footer from '../Footer';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import EcomSplitText from './EcomSplitText';
+import { NavLink } from 'react-router-dom';
 
 
 function Ecom() {
@@ -53,7 +54,7 @@ function Ecom() {
         Ecomtl2.from(".Ecom3-child1 > *", {
             x: -760,
             stagger: 0.2,
-            
+
 
 
         }, "okk")
@@ -63,12 +64,12 @@ function Ecom() {
 
 
         Ecomtl2.from(".Ecom4-child1 > *", {
-             x: -760
+            x: -760
         }, "okkk")
 
         Ecomtl2.from(".Ecom4-child2 > *", {
-           
-             x: 760,
+
+            x: 760,
             stagger: 0.2,
         }, "okkk")
     })
@@ -155,6 +156,17 @@ function Ecom() {
         };
     }, []);
 
+
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+    const moreEcomRef = useRef(null);
+
+    // scroll function
+    const scrollTomoreEcom = () => {
+        if (!moreEcomRef.current) return;
+
+        moreEcomRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
     return (
         <>
             <div
@@ -176,17 +188,19 @@ function Ecom() {
                 <div className="Ecom-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
                     <div className="Ecom-container1 w-[100%] mt-50  flex justify-around">
                         <div className="Ecom1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight !break-keep '>Building your E-commerce environment together.</h1>
-                            <h1 className='text-gray-300 text-xl '>Offering your services or products online. It all falls under e-commerce, the world of digital revenue models. Whether you need a webshop, leasing platform, or a smart integrated payment process, we offer customised solutions that take your e-commerce business to a higher level.</h1>
+                            <h1 className='text-white text-[70px]  leading-tight !break-keep '>Building your e-commerce environment together.</h1>
+                            <h1 className='text-gray-300 text-xl '>Offering your services or products online — it’s all part of e-commerce, the world of digital revenue models. Whether you need a webshop, leasing platform, or an intelligent integrated payment system, we provide custom solutions that elevate your e-commerce business to the next level.</h1>
                             <div className="EcomBottomButton flex  items-center mt-5 z-0    ">
-                                <div className="EcomBtn-container ">
-                                    <button className="EcomButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
-                                    <button
-                                        className="EcomArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
-                                    </button>
-                                </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More on E-commerce</button>
+                                <NavLink to="/RequestForm">
+                                    <div className="EcomBtn-container ">
+                                        <button className="EcomButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                        <button
+                                            className="EcomArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
+                                            <CallMadeIcon className="!w-8 !h-8" />
+                                        </button>
+                                    </div>
+                                </NavLink>
+                                <button onClick={scrollTomoreEcom} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More on E-commerce</button>
                             </div>
                         </div>
                         <div className="Ecom1-child2 w-[45%] h-[630px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -196,8 +210,8 @@ function Ecom() {
 
 
 
-                    <div className="Ecom-container2">
-                        <EcomSplitText/>
+                    <div ref={moreEcomRef} className="Ecom-container2">
+                        <EcomSplitText />
                     </div>
 
 
@@ -205,15 +219,17 @@ function Ecom() {
                     <div className="Ecom-container3 w-[100%] mb-20  flex justify-around items-center">
                         <div className="Ecom3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Your idea. Our technology. Growing together.</h1>
-                            <h1 className='text-gray-300 text-xl '>At Advantium, we believe in the power of collaboration. Your ideas are the basis of what we create, and our technical expertise helps make those ideas a reality. Whether you have an innovative product offering, want to develop a new digital platform or integrate complex payment systems, we make sure everything is technically possible. Together, we provide a solid foundation, enabling your organisation to grow and evolve in the dynamic world of e-commerce. Your vision, combined with our technology, provides the perfect formula for success.</h1>
+                            <h1 className='text-gray-300 text-xl '>At <span className="text-white">Advantium</span>, we believe in the power of collaboration. Your ideas form the foundation of what we build, and our technical expertise turns them into reality. Whether you’re launching an innovative product, developing a new digital platform, or integrating complex payment systems, we ensure every solution is technically sound and future-ready. Together, we create a strong foundation that empowers your organization to grow and thrive in the fast-moving world of e-commerce. Your vision, combined with our technology, is the perfect formula for success.</h1>
                             <div className="EcomBottomButton2 flex  items-center mt-5 z-0    ">
-                                <div className="EcomBtn-container2 ">
-                                    <button className="EcomButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Schedule an appointment</button>
-                                    <button
-                                        className="EcomArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
-                                    </button>
-                                </div>
+                                <NavLink to="/RequestForm">
+                                    <div className="EcomBtn-container2 ">
+                                        <button className="EcomButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Schedule an appointment</button>
+                                        <button
+                                            className="EcomArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
+                                            <CallMadeIcon className="!w-8 !h-8" />
+                                        </button>
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>
                         <div className="Ecom3-child2 w-[45%]  flex flex-col rounded-2xl overflow-hidden  ">
@@ -224,23 +240,27 @@ function Ecom() {
 
 
                     <div className="Ecom-container4 w-[100%] mb-20  flex justify-around items-center">
-                         <div className="Ecom4-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="Ecom4-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden  ">
                             <img className=' rounded-2xl' src="pic06.webp" alt="" />
                         </div>
                         <div className="Ecom4-child2 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[70px]  leading-tight '>Tailor-made e-commerce solutions.</h1>
-                            <h1 className='text-gray-300 text-xl '>Our team of experts has extensive experience in developing customised solutions for various business models, such as licensing models and recurring revenue, and offering SaaS (Software as a Service). We can also set up systems for composing energy packages, online leasing and financing, and digital purchasing of items and content. We provide smart payment integrations to suit the complexity of your business. Designing user-friendly check-out flows is one of our specialities, allowing customers to complete their purchase quickly and easily. With links to WMS, ERP and inventory management systems, we ensure that your e-commerce platform is fully integrated and runs smoothly, so that your organisation always runs efficiently.</h1>
+                            <h1 className='text-gray-300 text-xl '>Our team of experts has deep experience in building custom e-commerce solutions tailored to a wide range of business models — from licensing and recurring revenue to SaaS (Software as a Service). We also design systems for creating energy packages, online leasing and financing, and digital purchasing of products or content. <br />
+
+                                With smart payment integrations that match your business complexity, we ensure every transaction is seamless. Designing intuitive, user-friendly checkout flows is one of our strengths, helping customers complete purchases quickly and effortlessly. By connecting your e-commerce platform with WMS, ERP, and inventory management systems, we create a fully integrated environment — ensuring smooth operations and maximum efficiency across your organization.</h1>
                             <div className="EcomBottomButton4 flex  items-center mt-5 z-0    ">
-                                <div className="EcomBtn-container4 ">
-                                    <button className="EcomButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
-                                    <button
-                                        className="EcomArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
-                                    </button>
-                                </div>
+                                <NavLink to="/RequestForm">
+                                    <div className="EcomBtn-container4 ">
+                                        <button className="EcomButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
+                                        <button
+                                            className="EcomArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
+                                            <CallMadeIcon className="!w-8 !h-8" />
+                                        </button>
+                                    </div>
+                                </NavLink>
                             </div>
                         </div>
-                       
+
                     </div>
                 </div>
 

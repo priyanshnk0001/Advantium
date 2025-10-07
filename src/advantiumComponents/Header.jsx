@@ -13,6 +13,8 @@ import { NavLink, useLocation } from 'react-router-dom';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import './Header.css';
+import emailjs from "emailjs-com";
+
 
 
 
@@ -198,6 +200,36 @@ export default function Header() {
             }
         };
 
+
+
+        // paste immediately after closeDDrawer
+        const toggleDDrawer = (e) => {
+            e && e.stopPropagation();
+            if (dtl.reversed()) { // closed -> open
+                if (!ctl.reversed()) ctl.timeScale(4).reverse(); // close cases if open
+                if (btl && !btl.reversed()) btl.timeScale(2).reverse(); // close booking if open
+                dtl.timeScale(1).play();
+                try { setIsDeliverOpen(true); setIsBookingOpen(false); setIsCasesOpen(false); } catch (err) { }
+            } else { // open -> close
+                dtl.timeScale(4).reverse();
+                try { setIsDeliverOpen(false); } catch (err) { }
+            }
+        };
+
+        const toggleCDrawer = (e) => {
+            e && e.stopPropagation();
+            if (ctl.reversed()) { // closed -> open
+                if (!dtl.reversed()) dtl.timeScale(4).reverse(); // close deliver if open
+                if (btl && !btl.reversed()) btl.timeScale(2).reverse(); // close booking if open
+                ctl.timeScale(1).play();
+                try { setIsCasesOpen(true); setIsBookingOpen(false); setIsDeliverOpen(false); } catch (err) { }
+            } else { // open -> close
+                ctl.timeScale(4).reverse();
+                try { setIsCasesOpen(false); } catch (err) { }
+            }
+        };
+
+
         const openCDrawer = () => {
             closeBookingIfOpen();
             if (ctl.reversed()) {
@@ -237,7 +269,7 @@ export default function Header() {
         if (deliver) {
             deliver.addEventListener("mouseenter", openDDrawer);
             deliver.addEventListener("mouseenter", closeCDrawer);
-            deliver.addEventListener("click", closeDDrawer);
+deliver.addEventListener("click", toggleDDrawer);
         }
         if (deliverDrawer) {
             deliverDrawer.addEventListener("mouseleave", closeDDrawer);
@@ -246,7 +278,7 @@ export default function Header() {
         if (cases) {
             cases.addEventListener("mouseenter", openCDrawer);
             cases.addEventListener("mouseenter", closeDDrawer);
-            cases.addEventListener("click", closeCDrawer);
+cases.addEventListener("click", toggleCDrawer);
         }
         if (casesDrawer) {
             casesDrawer.addEventListener("mouseleave", closeCDrawer);
@@ -266,7 +298,7 @@ export default function Header() {
             if (deliver) {
                 deliver.removeEventListener("mouseenter", openDDrawer);
                 deliver.removeEventListener("mouseenter", closeCDrawer);
-                deliver.removeEventListener("click", closeDDrawer);
+deliver.removeEventListener("click", toggleDDrawer);
             }
             if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
             dtl.kill();
@@ -274,7 +306,7 @@ export default function Header() {
             if (cases) {
                 cases.removeEventListener("mouseenter", openCDrawer);
                 cases.removeEventListener("mouseenter", closeDDrawer);
-                cases.removeEventListener("click", closeCDrawer);
+cases.removeEventListener("click", toggleCDrawer);
             }
             if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
             ctl.kill();
@@ -458,12 +490,40 @@ export default function Header() {
     }, []);
 
 
+    const formRef2 = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_naresh",   // EmailJS se milega
+                "template_3fokrph",  // EmailJS se milega
+                formRef2.current,
+                "TXgR3cKIt4epQKF6L"    // EmailJS dashboard me "Public Key"
+            )
+            .then(
+                (result) => {
+                    alert("✅ Message sent successfully!");
+                    console.log(result.text);
+                    formRef2.current.reset();
+                },
+                (error) => {
+                    alert("❌ Failed to send message.");
+                    console.log(error.text);
+                }
+            );
+    };
+
+
+
 
 
 
 
     return (
         <div
+
         //             onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
         //             onMouseLeave={() => setPos({ x: -200, y: -200 })}
         //   className="Header-main-cont w-full h-[100vh] relative bg-slate-900 transition-colors"
@@ -566,7 +626,7 @@ export default function Header() {
 
 
                         <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden  ">
-                           <h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Software solutions
+                            <h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Software solutions
 
                             </h1>
                             <NavLink className="w-fit" to="/CMportal"><h1 className='Header-drawerArrowH1 text-[20px]  '>Customer and management portals
@@ -615,7 +675,7 @@ export default function Header() {
                             <NavLink className="w-fit" to="/Maintenance"><h1 className='text-[18px]  '>Maintenance
 
                             </h1></NavLink>
-                           <NavLink className="w-fit" to="/Security"><h1 className='text-[18px]  '>Security & Privacy
+                            <NavLink className="w-fit" to="/Security"><h1 className='text-[18px]  '>Security & Privacy
 
                             </h1></NavLink>
                             <NavLink className="w-fit" to="/DevSecOps"><h1 className='text-[18px]  '>DevSecOps
@@ -634,7 +694,7 @@ export default function Header() {
                             <NavLink className="w-fit" to="/Integration"><h1 className='text-[18px]  '>Integrations
                             </h1></NavLink>
 
-                           
+
                         </div>
                     </div>
                 </div>
@@ -646,88 +706,106 @@ export default function Header() {
                 <div className='w-[100%] h-[73vh] mt-[150px] px-19 pt-20 '>
                     <h1 className="Header-cases-heading text-white text-[30px] font-bold absolute ">Highlighted cases</h1>
                     <div className="Header-cases-drawer-cont w-[100%] h-[73vh]  flex justify-between items-center">
-                        <div className="Header-cases-drawer-child w-[22.5%] h-[450px] flex flex-col gap-2 text-start text-white   ">
-                            <img src="pure.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                            <h1 className="Header-cases-h1 text-[25px] font-semibold">Pure Energie</h1>
-                            <h1 className="Header-cases-h1 text-[20px] text-white/80">Pure Energie:from green ambition to pure result.</h1>
-                            <div className="Header-cases-sub-btn mt-4">
-                                <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Website</button>
-                                <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mx-2 rounded-2xl">Platform</button>
+                        <NavLink className=" w-[22.5%] h-[450px] " to="/PureEnergy">
+                            <div className="Header-cases-drawer-child flex flex-col gap-2 text-start text-white   ">
+                                <img src="pure.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
+                                <h1 className="Header-cases-h1 text-[25px] font-semibold">Pure Energie</h1>
+                                <h1 className="Header-cases-h1 text-[20px] text-white/80">Pure Energie:from green ambition to pure result.</h1>
+                                <div className="Header-cases-sub-btn mt-4">
+                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300  mr-2 rounded-2xl">Website</button>
+                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300  mx-2 rounded-2xl">Platform</button>
+                                </div>
                             </div>
-                        </div>
-                        <div className="Header-cases-drawer-child w-[22.5%] h-[450px] flex flex-col gap-2 text-start text-white   ">
-                            <img src="nou.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                            <h1 className="Header-cases-h1 text-[25px] font-semibold">Nou</h1>
-                            <h1 className="Header-cases-h1 text-[20px] text-white/80">An enhanced brand position with a customer portal website and...</h1>
-                            <div className="Header-cases-sub-btn mt-4">
-                                <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Website</button>
-                                <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mx-2 rounded-2xl">Platform</button>
+                        </NavLink>
+
+                        <NavLink className=" w-[22.5%] h-[450px] " to="/Nou">
+                            <div className="Header-cases-drawer-child  flex flex-col gap-2 text-start text-white   ">
+                                <img src="nou.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
+                                <h1 className="Header-cases-h1 text-[25px] font-semibold">Nou</h1>
+                                <h1 className="Header-cases-h1 text-[20px] text-white/80">An enhanced brand position with a customer portal website and...</h1>
+                                <div className="Header-cases-sub-btn mt-4">
+                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Website</button>
+                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mx-2 rounded-2xl">Platform</button>
+                                </div>
                             </div>
-                        </div>
-                        <div className="Header-cases-drawer-child w-[22.5%] h-[450px] flex flex-col gap-2 text-start text-white   ">
-                            <img src="inCorpe.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                            <h1 className="Header-cases-h1 text-[25px] font-semibold">InCorpe</h1>
-                            <h1 className="Header-cases-h1 text-[20px] text-white/80">How InCorpe transitioned to greater efficiency through web...</h1>
-                            <div className="Header-cases-sub-btn mt-4">
-                                <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Portal</button>
+                        </NavLink>
+
+                        <NavLink className=" w-[22.5%] h-[450px] " to="/InCorpe">
+                            <div className="Header-cases-drawer-child  flex flex-col gap-2 text-start text-white   ">
+                                <img src="inCorpe.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
+                                <h1 className="Header-cases-h1 text-[25px] font-semibold">InCorpe</h1>
+                                <h1 className="Header-cases-h1 text-[20px] text-white/80">How InCorpe transitioned to greater efficiency through web...</h1>
+                                <div className="Header-cases-sub-btn mt-4">
+                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Portal</button>
+                                </div>
                             </div>
-                        </div>
+                        </NavLink>
 
 
                         <div className="Header-cases-drawer-child w-[22.5%] h-[450px] flex flex-col gap-2 text-start text-white   ">
 
-                            <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
-                                <div className='flex items-center'>
-                                    <img src="eastborn.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                    <h1 className='text-[20px]'>Eastborn</h1>
-                                </div>
-                                <div className='w-[28px] h-[28px]   relative  overflow-hidden '>
-                                    <div className="Header-iconAnim absolute right-0   flex">
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                            <NavLink className="  " to="/EastBorn">
+                                <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
+                                    <div className='flex items-center'>
+                                        <img src="eastborn.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
+                                        <h1 className='text-[20px]'>Eastborn</h1>
+                                    </div>
+                                    <div className='w-[28px] h-[28px]   relative  overflow-hidden '>
+                                        <div className="Header-iconAnim absolute right-0   flex">
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </NavLink>
 
-                            <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
-                                <div className='flex items-center'>
-                                    <img src="fundament.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                    <h1 className='text-[20px]'>Fundaments</h1>
-                                </div>
-                                <div className='w-[28px] h-[28px]   relative   overflow-hidden'>
-                                    <div className="Header-iconAnim absolute right-0   flex">
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                            <NavLink className="  " to="/Fundaments">
+                                <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
+                                    <div className='flex items-center'>
+                                        <img src="fundament.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
+                                        <h1 className='text-[20px]'>Fundaments</h1>
+                                    </div>
+                                    <div className='w-[28px] h-[28px]   relative   overflow-hidden'>
+                                        <div className="Header-iconAnim absolute right-0   flex">
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </NavLink>
 
-                            <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
-                                <div className='flex items-center'>
-                                    <img src="justeat.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                    <h1 className='text-[20px]'>Just Eat Takeaway</h1>
-                                </div>
-                                <div className='w-[28px] h-[28px]   relative  overflow-hidden'>
-                                    <div className="Header-iconAnim absolute right-0   flex">
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+
+                            <NavLink className="  " to="/JustEat">
+                                <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
+                                    <div className='flex items-center'>
+                                        <img src="justeat.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
+                                        <h1 className='text-[20px]'>Just Eat Takeaway</h1>
+                                    </div>
+                                    <div className='w-[28px] h-[28px]   relative  overflow-hidden'>
+                                        <div className="Header-iconAnim absolute right-0   flex">
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </NavLink>
 
-                            <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-2-xl border-gray-400 hover:bg-gray-200/10  py-4">
-                                <div className='flex items-center'>
-                                    <img src="takeAway.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                    <h1 className='text-[20px]'>Takeaway.com</h1>
-                                </div>
 
-                                <div className='w-[28px] h-[28px]   relative  overflow-hidden ' >
-                                    <div className="Header-iconAnim absolute right-0   flex">
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
-                                        <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                            <NavLink className="  " to="/TakeAway">
+                                <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-2-xl border-gray-400 hover:bg-gray-200/10  py-4">
+                                    <div className='flex items-center'>
+                                        <img src="takeAway.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
+                                        <h1 className='text-[20px]'>Takeaway.com</h1>
+                                    </div>
+
+                                    <div className='w-[28px] h-[28px]   relative  overflow-hidden ' >
+                                        <div className="Header-iconAnim absolute right-0   flex">
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400 mt-[28px]" />
+                                            <CallMadeIcon className="!w-7 !h-7 text-amber-400" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </NavLink>
 
                         </div>
                     </div>
@@ -771,10 +849,12 @@ export default function Header() {
                     </div>
                     <div className="bookingP2 w-[55%] text-white px-15   ">
 
-                        <form className=' flex flex-col gap-10 ' action="">
+                        <form className=' flex flex-col gap-10 ' action="" ref={formRef2} onSubmit={sendEmail}>
                             <div>
                                 <label htmlFor="">What is your name ?</label>
                                 <input
+                                    required
+                                    name="user_name"
                                     type="text"
                                     placeholder="Name"
                                     aria-label="Name"
@@ -786,6 +866,8 @@ export default function Header() {
                                 <div className='w-[45%] flex flex-col gap-4'>
                                     <label htmlFor="">What is your e-mail?</label>
                                     <input
+                                        required
+                                        name="user_email"
                                         type="email"
                                         placeholder="Email address"
                                         aria-label="Email address"
@@ -795,6 +877,8 @@ export default function Header() {
                                 <div className='w-[45%] flex flex-col gap-4'>
                                     <label htmlFor="">What is your phone number?</label>
                                     <input
+                                        required
+                                        name="user_phone"
                                         type="number"
                                         placeholder="Phone number"
                                         aria-label="Phone number"
@@ -807,6 +891,8 @@ export default function Header() {
                             <div>
                                 <label htmlFor="">What would you like to talk about?</label>
                                 <textarea
+                                    required
+                                    name="message"
                                     placeholder="Type your answer here"
                                     aria-label="answer"
                                     rows={4}

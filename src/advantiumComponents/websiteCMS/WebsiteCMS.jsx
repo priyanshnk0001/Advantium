@@ -12,6 +12,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import WebCMSSplitText from './WebCMSSplitText';
 import Flexible from './Flexible';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -91,6 +92,16 @@ function WebsiteCMS() {
     })
 
 
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+            const moreWebCMSRef = useRef(null);
+        
+            // scroll function
+            const scrollTomoreWebCMS = () => {
+                if (!moreWebCMSRef.current) return;
+        
+                moreWebCMSRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+
 
 
     return (
@@ -117,6 +128,7 @@ function WebsiteCMS() {
                             <h1 className='text-white text-[70px]  leading-tight '>Websites that let users discover, click and buy.</h1>
                             <h1 className='text-gray-300 text-xl '>Website creation, that's where it all started for Advantium. More than 10 years ago, we took our first steps into the digital world, and since then the possibilities have developed at a racing pace. The technology is constantly changing, and we are leading. Are you walking with us?</h1>
                             <div className="webCMSBottomButton flex  items-center mt-5 z-0    ">
+                                <NavLink to="/RequestForm">
                                 <div className="webCMSBtn-container ">
                                     <button className="webCMSButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
@@ -124,7 +136,8 @@ function WebsiteCMS() {
                                         <CallMadeIcon className="!w-8 !h-8" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on websites</button>
+                                </NavLink>
+                                <button onClick={scrollTomoreWebCMS} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on websites</button>
                             </div>
                         </div>
                         <div className="webCMS1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -134,7 +147,7 @@ function WebsiteCMS() {
 
 
 
-                    <div className="webCMS-container2">
+                    <div ref={moreWebCMSRef} className="webCMS-container2">
                         <WebCMSSplitText />
                     </div>
 

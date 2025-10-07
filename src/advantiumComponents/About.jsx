@@ -6,10 +6,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
+import { NavLink } from 'react-router-dom';
 import OppositeScroll from './OppositeScroll';
 import Footer from './Footer';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from './Header';
+import Careers from './Careers';
+
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -104,7 +108,9 @@ export default function About() {
 
                     <div className="aboutJobOpeningBtn-cont  flex self-start mt-15 items-center  ">
 
+                        <NavLink to="/Careers">
                         <button className="About-jobOpeningButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Job openings</button>
+                        </NavLink>
                         <button
                             className="About-nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
 

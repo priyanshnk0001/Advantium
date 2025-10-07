@@ -61,28 +61,28 @@ export default function ReplatformSplitText() {
                  <h1 className="text-white/70">Replatforming offers companies a powerful solution for future-proofing their digital infrastructure. The benefits of replatforming are numerous:</h1>
                 <div className="!flex">
                     <CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3" />
-                    <h1 className="text-white/70">Improved performance:By investing in modern technologies, businesses can make their platforms run faster and more efficiently. This is of great importance, especially for e-commerce companies striving for better load times and higher conversions.</h1>
+                    <h1 className="text-white/70"><span className="text-white ">Improved performance:</span> By investing in modern technologies, businesses can make their platforms run faster and more efficiently. This is of great importance, especially for e-commerce companies striving for better load times and higher conversions.</h1>
                 </div>
                 <div className="!flex">
                     <CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3" />
-                    <h1 className="text-white/70">Better security: Outdated technologies often pose security risks. By moving to modern platforms, businesses can benefit from more advanced security measures that improve the protection of customer data and transactions.</h1>
+                    <h1 className="text-white/70"><span className="text-white ">Better security:</span> Outdated technologies often pose security risks. By moving to modern platforms, businesses can benefit from more advanced security measures that improve the protection of customer data and transactions.</h1>
                 </div>
                 <div className="!flex ">
                     <CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3" />
-                    <h1 className="text-white/70">Optimising user experience:By choosing modern, flexible platforms, the user experience on both mobile devices and desktops can be greatly improved, which is crucial for customer satisfaction and conversion.</h1>
+                    <h1 className="text-white/70"><span className="text-white ">Optimising user experience:</span> By choosing modern, flexible platforms, the user experience on both mobile devices and desktops can be greatly improved, which is crucial for customer satisfaction and conversion.</h1>
                 </div>
                 <div className="!flex">
                     <CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3" />
-                    <h1 className="text-white/70">Integration with new tools:Replatforming makes it easier to integrate new systems and tools, such as APIs, headless CMS architectures and other innovations that support digital strategy.</h1>
+                    <h1 className="text-white/70"><span className="text-white ">Integration with new tools:</span> Replatforming makes it easier to integrate new systems and tools, such as APIs, headless CMS architectures and other innovations that support digital strategy.</h1>
 
                 </div>
                 <div className="!flex">
                     <CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3" />
-                    <h1 className="text-white/70">Cost-effective solutions:The benefits of replatforming also extend to operational costs. By replacing obsolete technologies, maintenance costs are reduced and processes can be made more efficient.</h1>
+                    <h1 className="text-white/70"><span className="text-white ">Cost-effective solutions:</span> The benefits of replatforming also extend to operational costs. By replacing obsolete technologies, maintenance costs are reduced and processes can be made more efficient.</h1>
 
                 </div>
                 <div className="!flex">
-                    <h1 className="text-white/70">Advantium offers extensive expertise in replatforming and helps companies every step of the way. Whether replatforming e-commerce or migrating other digital systems, Advantium has the experience and technical know-how to make the process run smoothly and efficiently. Our focus is on delivering customised solutions that perfectly match the specific needs of your business, ensuring a successful transformation without unnecessary disruptions to your operations.</h1>
+                    <h1 className="text-white/70"><span className="text-white ">Advantium</span> offers extensive expertise in replatforming and helps companies every step of the way. Whether replatforming e-commerce or migrating other digital systems, Advantium has the experience and technical know-how to make the process run smoothly and efficiently. Our focus is on delivering customised solutions that perfectly match the specific needs of your business, ensuring a successful transformation without unnecessary disruptions to your operations.</h1>
 
                 </div>
 

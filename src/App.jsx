@@ -27,16 +27,38 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);
 
-window.addEventListener('load', () => window.scrollTo(0, 0));
 
 
 
 export default function HoverSpotLight() {
   const [pos, setPos] = useState({ x: 750, y: 400 });
   const rotateTweenArrow2 = useRef(null);
+
+
+    const headerRef = useRef(null); // agar future mein ref use karna ho to handy rahega
+
+  const triggerHeaderBookingClick = () => {
+    // try to find header's booking button and click it
+    const attemptClick = (attempt = 0) => {
+      const btn = document.querySelector('.Header-bookingButton');
+      if (btn) {
+        btn.click();
+        return;
+      }
+      // retry up to 10 times with small delay (60ms)
+      if (attempt < 10) {
+        setTimeout(() => attemptClick(attempt + 1), 60);
+      } else {
+        console.warn('Header booking button not found to trigger click.');
+      }
+    };
+
+    attemptClick();
+  };
   
 
 
+  window.addEventListener('load', () => window.scrollTo(0, 0));
    const softRef = useRef(null);
 
   // scroll function
@@ -169,7 +191,7 @@ export default function HoverSpotLight() {
       >
 
 
-        <Header />
+        <Header ref={headerRef} />
 
         <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
           <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-8xl font-semibold overflow-hidden'>Tech builds.</h1></div>
@@ -178,7 +200,9 @@ export default function HoverSpotLight() {
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
             <div className="BookingBtn-container">
-              <button className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+              <button 
+               onClick={triggerHeaderBookingClick}
+              className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
               <button
                 className="nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
                 <CallMadeIcon className="!w-8 !h-8" />
