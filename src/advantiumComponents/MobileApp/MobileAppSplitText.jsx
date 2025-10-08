@@ -43,12 +43,12 @@ export default function MobileAppSplitText() {
     }, []);
 
     return (
-        <div className="MobileAppsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="MobileApp-Text text-start py-5 text-[55px] text-white flex items-center">Why a mobile app?</h1>
+        <div className="MobileAppsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-x-hidden  ">
+            <h1 className="MobileApp-Text text-start py-5 text-[50px] text-white flex items-center">Why a mobile app?</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-10    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-10    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80 space-y-5">Having a mobile application created offers numerous advantages. Mobile apps are fast, responsive and even work offline. This makes them ideal for businesses that want to offer a better user experience while optimising their processes. Whether you have a business app created for internal efficiency or a professional app developed for consumers, you can count on benefits such as:
                 </h1>

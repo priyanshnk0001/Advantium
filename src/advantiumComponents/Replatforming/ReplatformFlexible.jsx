@@ -165,7 +165,7 @@ function ReplatformFlexible() {
                 <div className="Replatform-subchild rounded-4xl overflow-hidden  ">
                     <div className="ReplatformItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Analysis digital environment</h1>
+                            <h1 className='text-[18px] text-white'>1. Analysis digital environment</h1>
                         </div>
 
                         <div className="Replatform-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -178,7 +178,7 @@ function ReplatformFlexible() {
                 <div className="Replatform-subchild rounded-4xl overflow-hidden ">
                     <div className="ReplatformItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Technical architecture</h1>
+                            <h1 className='text-[18px] text-white'>2. Technical architecture</h1>
                         </div>
 
                         <div className="Replatform-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -192,7 +192,7 @@ function ReplatformFlexible() {
                 <div className="Replatform-subchild rounded-4xl overflow-hidden ">
                     <div className="ReplatformItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Migration and integration</h1>
+                            <h1 className='text-[18px] text-white'>3. Migration and integration</h1>
                         </div>
 
                         <div className="Replatform-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -205,7 +205,7 @@ function ReplatformFlexible() {
                 <div className="Replatform-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="ReplatformItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Maintenance & Service</h1>
+                            <h1 className='text-[18px] text-white'>4. Maintenance & Service</h1>
                         </div>
 
                         <div className="Replatform-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -225,13 +225,13 @@ function ReplatformFlexible() {
             <div className="Replatformtext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px]  ">
 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
-                    <h1 className='text-7xl'>Analysis digital environment</h1>
-                    <h1 className='text-white/70 text-[20px]'>Migrating to a new platform starts by thoroughly analysing the existing digital environment. This helps determine which systems can be migrated, which are outdated and which components need to be replaced completely. Advantium provides detailed assessments to determine which technologies and systems provide the best foundation for the future. We ensure that the analysis is carried out carefully, making the right choices not only for the short-term, but also for a sustainable and growth-oriented future of your business.
+                    <h1 className='text-6xl'>Analysis digital environment</h1>
+                    <h1 className='text-white/70 text-[18px]'>Migrating to a new platform starts by thoroughly analysing the existing digital environment. This helps determine which systems can be migrated, which are outdated and which components need to be replaced completely. Advantium provides detailed assessments to determine which technologies and systems provide the best foundation for the future. We ensure that the analysis is carried out carefully, making the right choices not only for the short-term, but also for a sustainable and growth-oriented future of your business.
                     </h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
-                    <h1 className='text-7xl'>Technical architecture</h1>
-                    <h1 className='text-white/70 text-[20px]'>We help design a digital architecture that fits your company's needs. A Data Management Platform (DMP) is often implemented as middleware to connect systems and optimise data flows. This makes the digital landscape future-proof and flexible, with opportunities for expansion as your business grows.
+                    <h1 className='text-6xl'>Technical architecture</h1>
+                    <h1 className='text-white/70 text-[18px]'>We help design a digital architecture that fits your company's needs. A Data Management Platform (DMP) is often implemented as middleware to connect systems and optimise data flows. This makes the digital landscape future-proof and flexible, with opportunities for expansion as your business grows.
                         <br /><br />
 
                         Our focus is not only on technology, but above all on value for your business. The chosen architecture meets current requirements and is prepared for future developments, such as new tools and headless CMS architectures. By choosing a scalable and modular architecture, we create a digital foundation that easily grows with your business.
@@ -240,8 +240,8 @@ function ReplatformFlexible() {
                     </h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Migration and integration</h1>
-                    <h1 className='text-white/70 text-[20px]'>One of the biggest challenges of replatforming is migrating data and systems without losing functionality or customer data. Advantium guides you through the entire migration process, including data migration, integration with existing systems and extensive testing to minimise risks. The aim is to achieve a smooth transition without inconveniencing customers or users.
+                    <h1 className='text-6xl'>Migration and integration</h1>
+                    <h1 className='text-white/70 text-[18px]'>One of the biggest challenges of replatforming is migrating data and systems without losing functionality or customer data. Advantium guides you through the entire migration process, including data migration, integration with existing systems and extensive testing to minimise risks. The aim is to achieve a smooth transition without inconveniencing customers or users.
                         <br /><br />
 
                         We understand that moving systems and data is a complex process, but at Advantium, we make sure you are completely unburdened. We guide you through every phase, from testing the new infrastructure to the actual go live. Our technical experts ensure that all integrations are seamless, so that the user experience remains optimal.
@@ -250,8 +250,8 @@ function ReplatformFlexible() {
                     </h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Maintenance & Service</h1>
-                    <h1 className='text-white/70 text-[20px]'>After migration, Advantium stays involved by providing aftercare in the form of service packages, SLAs and ongoing management. This ensures that your digital platform continues to perform optimally even after the project is completed. We understand that replatforming success does not end with the launch of the new system. This is why we provide ongoing support and ensure that your platform is always up-to-date and functioning properly.
+                    <h1 className='text-6xl'>Maintenance & Service</h1>
+                    <h1 className='text-white/70 text-[18px]'>After migration, Advantium stays involved by providing aftercare in the form of service packages, SLAs and ongoing management. This ensures that your digital platform continues to perform optimally even after the project is completed. We understand that replatforming success does not end with the launch of the new system. This is why we provide ongoing support and ensure that your platform is always up-to-date and functioning properly.
                         <br /><br />
 
                         Our service packages offer not only proactive management, but also optimisation, so you get the most out of your new digital environment. Flexibility and scalability are key, allowing your business to adapt quickly to new opportunities and technological developments. By ensuring a strong technical foundation, we minimise risks and keep your business on track during and after migration.

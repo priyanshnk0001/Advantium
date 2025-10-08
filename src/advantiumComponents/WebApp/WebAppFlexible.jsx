@@ -158,14 +158,14 @@ function WebAppFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden   '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around  overflow-hidden   '>
 
             <div className="WebApptext-cont w-[25%] h-[90%] flex flex-col justify-center ">
 
                 <div className="WebApp-subchild rounded-4xl overflow-hidden  ">
                     <div className="WebAppItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Smart technology</h1>
+                            <h1 className='text-[18px] text-white'>1. Smart technology</h1>
                         </div>
 
                         <div className="WebApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -178,7 +178,7 @@ function WebAppFlexible() {
                 <div className="WebApp-subchild rounded-4xl overflow-hidden ">
                     <div className="WebAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Visual design</h1>
+                            <h1 className='text-[18px] text-white'>2. Visual design</h1>
                         </div>
 
                         <div className="WebApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -192,7 +192,7 @@ function WebAppFlexible() {
                 <div className="WebApp-subchild rounded-4xl overflow-hidden ">
                     <div className="WebAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Interactive prototype</h1>
+                            <h1 className='text-[18px] text-white'>3. Interactive prototype</h1>
                         </div>
 
                         <div className="WebApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -205,7 +205,7 @@ function WebAppFlexible() {
                 <div className="WebApp-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="WebAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Craftsmanship</h1>
+                            <h1 className='text-[18px] text-white'>4. Craftsmanship</h1>
                         </div>
 
                         <div className="WebApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -223,8 +223,8 @@ function WebAppFlexible() {
 
             <div className="WebApptext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] pt-33 ">
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
-                    <h1 className='text-7xl'>Smart technology</h1>
-                    <h1 className='text-white/70 text-[20px]'>Every project starts with a thorough analysis. Together, we explore your needs, objectives and the opportunities offered by different technologies. In doing so, we address questions such as:
+                    <h1 className='text-6xl'>Smart technology</h1>
+                    <h1 className='text-white/70 text-[18px]'>Every project starts with a thorough analysis. Together, we explore your needs, objectives and the opportunities offered by different technologies. In doing so, we address questions such as:
 
                         - What is the main purpose of the web application?
 
@@ -241,16 +241,16 @@ function WebAppFlexible() {
                     </h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
-                    <h1 className='text-7xl'>Visual design</h1>
-                    <h1 className='text-white/70 text-[20px]'>With a clear goal in mind, we start by designing wireframes and storyboards for your web application. These provide a visual overview of the web app's structure, functionalities and user flow. It is the first step in turning your idea into a tangible design for the web environment.</h1>
+                    <h1 className='text-6xl'>Visual design</h1>
+                    <h1 className='text-white/70 text-[18px]'>With a clear goal in mind, we start by designing wireframes and storyboards for your web application. These provide a visual overview of the web app's structure, functionalities and user flow. It is the first step in turning your idea into a tangible design for the web environment.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Interactive prototype</h1>
-                    <h1 className='text-white/70 text-[20px]'>During the design phase, we bring the concept of your web application to life by creating an interactive prototype. This gives a clear picture of what the web app will look like and how the functionalities work. In the feedback phase, we incorporate your input so that together we can strive for the best end result. It is also valuable to test the prototype outside the project team, with real users from the target audience. This helps to identify any problems, inconsistencies or areas for improvement in the user experience.</h1>
+                    <h1 className='text-6xl'>Interactive prototype</h1>
+                    <h1 className='text-white/70 text-[18px]'>During the design phase, we bring the concept of your web application to life by creating an interactive prototype. This gives a clear picture of what the web app will look like and how the functionalities work. In the feedback phase, we incorporate your input so that together we can strive for the best end result. It is also valuable to test the prototype outside the project team, with real users from the target audience. This helps to identify any problems, inconsistencies or areas for improvement in the user experience.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Craftsmanship</h1>
-                    <h1 className='text-white/70 text-[20px]'>Now our craftsmanship really comes into its own. We thoroughly build and test your web application on different browsers and operating systems to ensure it performs optimally and meets the highest quality standards. Although 100% error-free software does not exist, we always strive to make the web application as close to perfection as possible so that users have a smooth experience.</h1>
+                    <h1 className='text-6xl'>Craftsmanship</h1>
+                    <h1 className='text-white/70 text-[18px]'>Now our craftsmanship really comes into its own. We thoroughly build and test your web application on different browsers and operating systems to ensure it performs optimally and meets the highest quality standards. Although 100% error-free software does not exist, we always strive to make the web application as close to perfection as possible so that users have a smooth experience.</h1>
                 </div>
                 
 

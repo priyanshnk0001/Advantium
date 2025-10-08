@@ -9,6 +9,7 @@ import { ScrambleTextPlugin } from 'gsap/all';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 
 
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);

@@ -44,12 +44,12 @@ export default function EcomSplitText() {
   }, []);
 
   return (
-    <div className="EcomsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
-        <h1 className="connect-Text text-start py-5 text-[55px] text-white flex items-center">Connect your services with your customers.</h1>
+    <div className="EcomsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-hidden  ">
+        <h1 className="connect-Text text-start py-5 text-[50px] text-white flex items-center">Connect your services with your customers.</h1>
       <h1
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className=" text-[20px] space-y-3  text-white text-start leading-snug "
+        className=" text-[18px] space-y-3  text-white text-start leading-snug "
       >
 E-commerce is more than just selling products online — it’s the digital ecosystem that connects your services and products directly with your customers, enabling them to buy, pay, or even enter into contracts effortlessly. Whether it’s a lease agreement, energy package, or digital content, Advantium delivers tailor-made e-commerce solutions. We design platforms that meet your specific needs, ensure a seamless payment experience, and integrate flawlessly with your existing systems. From a simple webshop to a complete digital platform, we make it easy for your customers to browse, order, and pay — all in one smooth experience.</h1>
     </div>

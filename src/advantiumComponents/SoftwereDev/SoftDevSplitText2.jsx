@@ -44,15 +44,15 @@ export default function SoftDevSplitText2() {
 
     return (
         <div className="SoftDev2splitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="SoftDev2-Text text-start py-5 text-[55px] text-white flex items-center">Back-end Development.</h1>
+            <h1 className="SoftDev2-Text text-start py-5 text-[50px] text-white flex items-center">Back-end Development.</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-5    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-5    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80 space-y-5">Our world is changing more radically than ever before. More and more processes are being optimised through digitisation. Yet we are only at the beginning. Blockchain, IoT, big data, machine learning and Artificial Intelligence herald the next phase on the digital frontier. For all these new things, as well as the digital solutions we already know, back-end development is crucial. A strong back-end forms the backbone of your digital environment.</h1>
 
-                <h1 className="text-[45px] text-white">A master plan on the table.</h1>
+                <h1 className="text-[40px] text-white">A master plan on the table.</h1>
 
                 
                     <h1 className="text-white/80 space-y-5"><span className="text-white">Advantium</span> is used to working with various back-end technologies. We map the technology within the organisation and together develop a vision for the coming years. With this master plan on the table, we select the most appropriate tools and platforms for each specific situation. Technology has an often underestimated dimension: the people who work with it. The best technology only has value if people can easily handle it. We always take that into account.</h1>

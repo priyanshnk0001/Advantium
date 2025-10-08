@@ -269,7 +269,7 @@ export default function Header() {
         if (deliver) {
             deliver.addEventListener("mouseenter", openDDrawer);
             deliver.addEventListener("mouseenter", closeCDrawer);
-deliver.addEventListener("click", toggleDDrawer);
+            deliver.addEventListener("click", toggleDDrawer);
         }
         if (deliverDrawer) {
             deliverDrawer.addEventListener("mouseleave", closeDDrawer);
@@ -278,7 +278,7 @@ deliver.addEventListener("click", toggleDDrawer);
         if (cases) {
             cases.addEventListener("mouseenter", openCDrawer);
             cases.addEventListener("mouseenter", closeDDrawer);
-cases.addEventListener("click", toggleCDrawer);
+            cases.addEventListener("click", toggleCDrawer);
         }
         if (casesDrawer) {
             casesDrawer.addEventListener("mouseleave", closeCDrawer);
@@ -298,7 +298,7 @@ cases.addEventListener("click", toggleCDrawer);
             if (deliver) {
                 deliver.removeEventListener("mouseenter", openDDrawer);
                 deliver.removeEventListener("mouseenter", closeCDrawer);
-deliver.removeEventListener("click", toggleDDrawer);
+                deliver.removeEventListener("click", toggleDDrawer);
             }
             if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
             dtl.kill();
@@ -306,7 +306,7 @@ deliver.removeEventListener("click", toggleDDrawer);
             if (cases) {
                 cases.removeEventListener("mouseenter", openCDrawer);
                 cases.removeEventListener("mouseenter", closeDDrawer);
-cases.removeEventListener("click", toggleCDrawer);
+                cases.removeEventListener("click", toggleCDrawer);
             }
             if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
             ctl.kill();
@@ -538,44 +538,44 @@ cases.removeEventListener("click", toggleCDrawer);
         >
             <div className="insightsNav w-[100%]  flex justify-between items-center px-[50px] py-10 absolute top-0 left-0 text-white z-50">
                 <div className="insightsNavP1 w-[40%] flex gap-10 items-center      ">
-                    <h1 className="Header-deliver NavTextUnderline text-[15px] cursor-pointer relative  ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
+                    <h1 className="Header-deliver NavTextUnderline text-[13px] cursor-pointer relative  ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                     </h1>
-                    <h1 className="Header-cases NavTextUnderline text-[15px] cursor-pointer relative ">Cases <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
+                    <h1 className="Header-cases NavTextUnderline text-[13px] cursor-pointer relative ">Cases <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                     </h1>
                     {/* <NavLink to="/Insights" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`}>
-                        <h1 className="Header-insightsText NavTextUnderline text-[15px] cursor-pointer relative ">Insights
+                        <h1 className="Header-insightsText NavTextUnderline text-[13px] cursor-pointer relative ">Insights
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1>
                     </NavLink> */}
                     <NavLink to="/About" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`} >
-                        <h1 className="Header-aboutText NavTextUnderline text-[15px] cursor-pointer relative ">About us
+                        <h1 className="Header-aboutText NavTextUnderline text-[13px] cursor-pointer relative ">About us
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1></NavLink>
                     <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`}>
-                        <h1 className="Header-careersText NavTextUnderline text-[15px] cursor-pointer relative ">Careers
+                        <h1 className="Header-careersText NavTextUnderline text-[13px] cursor-pointer relative ">Careers
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1></NavLink>
                 </div>
                 <div className="insightsNavP2 flex justify-center  items-center text-center w-[20%]  ">
                     <NavLink to="/" >
-                        <h1 className=" Header-advantium-text flex items-center gap-2 text-[30px] font-bold"><img className='w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
+                        <h1 className=" Header-advantium-text flex items-center gap-2 text-[25px] font-semibold"><img className='w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
                 </div>
                 <div className="insightsNavP3 w-[40%] flex justify-end items-center  ">
                     <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? " text-amber-300" : "after:w-0"}`}>
-                        <button className="Header-contactButton border-2 rounded-full py-3 px-7 text-[20px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
+                        <button className="Header-contactButton border-2 rounded-full py-2.5 px-7 text-[18px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
                     </NavLink>
                     <div className="header-bookingBtn-container">
-                        <button className="Header-bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+                        <button className="Header-bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
                         <button
-                            className="Header-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
+                            className="Header-nextArrowButton bg-yellow-300 rounded-full p-3 text-black cursor-pointer  "
 
-                        ><CallMadeIcon className="!w-8 !h-8" /></button>
+                        ><CallMadeIcon className="!w-7 !h-7" /></button>
                     </div>
                 </div>
 
@@ -589,36 +589,36 @@ cases.removeEventListener("click", toggleCDrawer);
                 <div className="Header-drawer-cont w-[100%] h-[73vh] mt-[150px] pl-4   ">
                     <div className="Header-dr-sub-cont w-[95%] h-[73vh] flex justify-between mx-auto  ">
                         <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden">
-                            <h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Digital transformation
+                            <h1 className='Header-drawerArrowH1 text-[25px]  font-semibold !text-white '>Digital transformation
 
                             </h1>
-                            <NavLink className='w-fit' to="/Code"><h1 className='Header-drawerArrowH1 text-[20px]   '>Code review
+                            <NavLink className='w-fit' to="/Code"><h1 className='Header-drawerArrowH1 text-[18px]   '>Code review
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full  px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full  px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className='w-fit' to="/Strategy"><h1 className='Header-drawerArrowH1 text-[20px]  '>Strategy & Advice
+                            <NavLink className='w-fit' to="/Strategy"><h1 className='Header-drawerArrowH1 text-[18px]  '>Strategy & Advice
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className='w-fit' to="/Technical"><h1 className='Header-drawerArrowH1 text-[20px]  '>Technical architecture
+                            <NavLink className='w-fit' to="/Technical"><h1 className='Header-drawerArrowH1 text-[18px]  '>Technical architecture
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className='w-fit' to="/DataAI"><h1 className='Header-drawerArrowH1 text-[20px]  '>Data & AI
+                            <NavLink className='w-fit' to="/DataAI"><h1 className='Header-drawerArrowH1 text-[18px]  '>Data & AI
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className='w-fit' to="/Replatform"><h1 className='Header-drawerArrowH1 text-[20px]  '>Replatforming
+                            <NavLink className='w-fit' to="/Replatform"><h1 className='Header-drawerArrowH1 text-[18px]  '>Replatforming
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
@@ -626,36 +626,36 @@ cases.removeEventListener("click", toggleCDrawer);
 
 
                         <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden  ">
-                            <h1 className='Header-drawerArrowH1 text-[25px]  font-bold !text-white '>Software solutions
+                            <h1 className='Header-drawerArrowH1 text-[25px]  font-semibold !text-white '>Software solutions
 
                             </h1>
-                            <NavLink className="w-fit" to="/CMportal"><h1 className='Header-drawerArrowH1 text-[20px]  '>Customer and management portals
+                            <NavLink className="w-fit" to="/CMportal"><h1 className='Header-drawerArrowH1 text-[18px]  '>Customer and management portals
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className="w-fit" to="/Apps"><h1 className='Header-drawerArrowH1 text-[20px]  '>Apps
+                            <NavLink className="w-fit" to="/Apps"><h1 className='Header-drawerArrowH1 text-[18px]  '>Apps
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className="w-fit" to="/WebsiteCMS"><h1 className='Header-drawerArrowH1 text-[20px]  '>Websites & CMS
+                            <NavLink className="w-fit" to="/WebsiteCMS"><h1 className='Header-drawerArrowH1 text-[18px]  '>Websites & CMS
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className="w-fit" to="/Ecom"><h1 className='Header-drawerArrowH1 text-[20px]  '>E-commerce solutions
+                            <NavLink className="w-fit" to="/Ecom"><h1 className='Header-drawerArrowH1 text-[18px]  '>E-commerce solutions
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
-                            <NavLink className="w-fit" to="/DMplatform"><h1 className='Header-drawerArrowH1 text-[20px]  '>Data Management Platform
+                            <NavLink className="w-fit" to="/DMplatform"><h1 className='Header-drawerArrowH1 text-[18px]  '>Data Management Platform
                                 <button
-                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2 text-black cursor-pointer opacity-0 scale-50  ">
+                                    className="Header-drawerArrowButton bg-yellow-300 rounded-full   px-3 py-2.5 text-black cursor-pointer opacity-0 scale-50  ">
                                     <CallMadeIcon className="!w-6 !h-6" />
                                 </button>
                             </h1></NavLink>
@@ -663,7 +663,7 @@ cases.removeEventListener("click", toggleCDrawer);
 
 
                         <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden  ">
-                            <h1 className='text-[20px] font-bold !text-white '>Services
+                            <h1 className='text-[18px] font-semibold !text-white '>Services
 
                             </h1>
                             <NavLink className="w-fit" to="/SoftDev"><h1 className='text-[18px]  '>Software Development
@@ -685,7 +685,7 @@ cases.removeEventListener("click", toggleCDrawer);
 
 
                         <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden   ">
-                            <h1 className='text-[20px] w-fit font-bold !text-white '>Also interesting
+                            <h1 className='text-[18px] w-fit font-semibold !text-white '>Also interesting
                             </h1>
 
                             <NavLink className="w-fit" to="/Technology"><h1 className='text-[18px]  '>Technology
@@ -703,14 +703,14 @@ cases.removeEventListener("click", toggleCDrawer);
 
             <div className="Header-casesdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0   bg-black/80 backdrop-filter backdrop-blur-[12px] overflow-hidden z-30 ">
 
-                <div className='w-[100%] h-[73vh] mt-[150px] px-19 pt-20 '>
-                    <h1 className="Header-cases-heading text-white text-[30px] font-bold absolute ">Highlighted cases</h1>
+                <div className='w-[100%] h-[73vh] mt-[150px] px-19 pt-15 '>
+                    <h1 className="Header-cases-heading text-white text-[30px] font-semibold absolute ">Highlighted cases</h1>
                     <div className="Header-cases-drawer-cont w-[100%] h-[73vh]  flex justify-between items-center">
                         <NavLink className=" w-[22.5%] h-[450px] " to="/PureEnergy">
                             <div className="Header-cases-drawer-child flex flex-col gap-2 text-start text-white   ">
                                 <img src="pure.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                                <h1 className="Header-cases-h1 text-[25px] font-semibold">Pure Energie</h1>
-                                <h1 className="Header-cases-h1 text-[20px] text-white/80">Pure Energie:from green ambition to pure result.</h1>
+                                <h1 className="Header-cases-h1 text-[25px] font-semisemibold">Pure Energie</h1>
+                                <h1 className="Header-cases-h1 text-[18px] text-white/80">Pure Energie:from green ambition to pure result.</h1>
                                 <div className="Header-cases-sub-btn mt-4">
                                     <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300  mr-2 rounded-2xl">Website</button>
                                     <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300  mx-2 rounded-2xl">Platform</button>
@@ -721,8 +721,8 @@ cases.removeEventListener("click", toggleCDrawer);
                         <NavLink className=" w-[22.5%] h-[450px] " to="/Nou">
                             <div className="Header-cases-drawer-child  flex flex-col gap-2 text-start text-white   ">
                                 <img src="nou.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                                <h1 className="Header-cases-h1 text-[25px] font-semibold">Nou</h1>
-                                <h1 className="Header-cases-h1 text-[20px] text-white/80">An enhanced brand position with a customer portal website and...</h1>
+                                <h1 className="Header-cases-h1 text-[25px] font-semisemibold">Nou</h1>
+                                <h1 className="Header-cases-h1 text-[18px] text-white/80">An enhanced brand position with a customer portal website and...</h1>
                                 <div className="Header-cases-sub-btn mt-4">
                                     <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Website</button>
                                     <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mx-2 rounded-2xl">Platform</button>
@@ -733,8 +733,8 @@ cases.removeEventListener("click", toggleCDrawer);
                         <NavLink className=" w-[22.5%] h-[450px] " to="/InCorpe">
                             <div className="Header-cases-drawer-child  flex flex-col gap-2 text-start text-white   ">
                                 <img src="inCorpe.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                                <h1 className="Header-cases-h1 text-[25px] font-semibold">InCorpe</h1>
-                                <h1 className="Header-cases-h1 text-[20px] text-white/80">How InCorpe transitioned to greater efficiency through web...</h1>
+                                <h1 className="Header-cases-h1 text-[25px] font-semisemibold">InCorpe</h1>
+                                <h1 className="Header-cases-h1 text-[18px] text-white/80">How InCorpe transitioned to greater efficiency through web...</h1>
                                 <div className="Header-cases-sub-btn mt-4">
                                     <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Portal</button>
                                 </div>
@@ -748,7 +748,7 @@ cases.removeEventListener("click", toggleCDrawer);
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
                                         <img src="eastborn.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[20px]'>Eastborn</h1>
+                                        <h1 className='text-[18px]'>Eastborn</h1>
                                     </div>
                                     <div className='w-[28px] h-[28px]   relative  overflow-hidden '>
                                         <div className="Header-iconAnim absolute right-0   flex">
@@ -763,7 +763,7 @@ cases.removeEventListener("click", toggleCDrawer);
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
                                         <img src="fundament.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[20px]'>Fundaments</h1>
+                                        <h1 className='text-[18px]'>Fundaments</h1>
                                     </div>
                                     <div className='w-[28px] h-[28px]   relative   overflow-hidden'>
                                         <div className="Header-iconAnim absolute right-0   flex">
@@ -779,7 +779,7 @@ cases.removeEventListener("click", toggleCDrawer);
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
                                         <img src="justeat.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[20px]'>Just Eat Takeaway</h1>
+                                        <h1 className='text-[18px]'>Just Eat Takeaway</h1>
                                     </div>
                                     <div className='w-[28px] h-[28px]   relative  overflow-hidden'>
                                         <div className="Header-iconAnim absolute right-0   flex">
@@ -795,7 +795,7 @@ cases.removeEventListener("click", toggleCDrawer);
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-2-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
                                         <img src="takeAway.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[20px]'>Takeaway.com</h1>
+                                        <h1 className='text-[18px]'>Takeaway.com</h1>
                                     </div>
 
                                     <div className='w-[28px] h-[28px]   relative  overflow-hidden ' >
@@ -818,30 +818,30 @@ cases.removeEventListener("click", toggleCDrawer);
                 <div className="Header-booking-container w-[100%] flex mt-50">
                     <div className="bookingP1 w-[45%] pl-10   ">
                         <div className="BP1-child w-[100%] flex flex-col items-start gap-10 text-white  ">
-                            <h1 className="helper-work text-6xl text-white ">Book an appointment</h1>
+                            <h1 className="helper-work text-5xl text-white ">Book an appointment</h1>
                             <h1 className='text-gray-400 text-xl  '>Curious how we can help with your digital challenges? Schedule a quick chat and get immediate insight into the best solution for your situation.</h1>
                             <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
-                                <div className="book-img flex items-center gap-5"><img className='w-[150px] h-[150px] rounded-full' src="neerajAdvantium.jpeg" alt="" />
+                                <div className="book-img flex items-center gap-5"><img className='w-[130px] h-[130px] rounded-full' src="neerajAdvantium.jpeg" alt="" />
                                     <div className="book-name">
                                         <h1>Neeraj Kumar</h1>
                                         <h1 className='text-gray-400'>Co-Founder and Director</h1>
                                     </div>
                                 </div>
 
-                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-3 ml-20 cursor-pointer">@</button>
+                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-3 py-2.5 ml-20 cursor-pointer">@</button>
 
                             </div>
 
 
                             <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
-                                <div className="book-img flex items-center gap-5"><img className='w-[150px] h-[150px] rounded-full' src="priyaAdvantium.webp" alt="" />
+                                <div className="book-img flex items-center gap-5"><img className='w-[130px] h-[130px] rounded-full' src="priyaAdvantium.webp" alt="" />
                                     <div className="book-name">
                                         <h1>Priya Fozdar</h1>
                                         <h1 className='text-gray-400'>Director</h1>
                                     </div>
                                 </div>
 
-                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-4 py-3 ml-20 cursor-pointer">@</button>
+                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-3 py-2.5 ml-20 cursor-pointer">@</button>
 
                             </div>
 
@@ -901,10 +901,10 @@ cases.removeEventListener("click", toggleCDrawer);
                             </div>
 
                             <div className="Booking-drawer-Btn-container">
-                                <button className="booking-drawer-Button  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+                                <button className="booking-drawer-Button  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
                                 <button
-                                    className="booking-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
-                                    <CallMadeIcon className="!w-8 !h-8" />
+                                    className="booking-nextArrowButton bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
+                                    <CallMadeIcon className="!w-7 !h-7" />
                                 </button>
                             </div>
                         </form>

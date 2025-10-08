@@ -117,24 +117,24 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
                 <Header />
 
                 <div className="DesignSprint-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="DesignSprint-container1 w-[100%] mt-50  flex justify-around items-center">
+                    <div className="DesignSprint-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="DesignSprint1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>From design sprints to your ideal design.</h1>
-                            <h1 className='text-gray-300 text-xl '>Your vision matters, but the focus is on your audience’s needs. During a design sprint, we identify their goals and challenges together, then turn those insights into action. The result: an improved user experience, a more effective website, and higher conversions with happier visitors.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>From design sprints to your ideal design.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Your vision matters, but the focus is on your audience’s needs. During a design sprint, we identify their goals and challenges together, then turn those insights into action. The result: an improved user experience, a more effective website, and higher conversions with happier visitors.</h1>
                             <div className="DesignSprintBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                     <div className="DesignSprintBtn-container ">
-                                        <button className="DesignSprintButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                        <button className="DesignSprintButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                         <button
                                             className="DesignSprintArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                            <CallMadeIcon className="!w-8 !h-8" />
+                                            <CallMadeIcon className="!w-7 !h-7" />
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreDesignSprint} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoreDesignSprint} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
-                        <div className="DesignSprint1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="DesignSprint1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img src="pic39.webp" alt="" />
                         </div>
                     </div>
@@ -147,7 +147,7 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
 
                     
 
-                    <div className="bigImg w-[100%] h-[100vh] flex justify-center items-center mt-[-100px]"><img className='w-[95%] h-[95vh] rounded-xl ' src="pic38.webp" alt="" /></div>
+                    <div className="bigImg w-[100%] h-[100vh] flex justify-center items-center "><img className='w-[95%] h-[95vh] rounded-xl ' src="pic38.webp" alt="" /></div>
 
 
                 </div>

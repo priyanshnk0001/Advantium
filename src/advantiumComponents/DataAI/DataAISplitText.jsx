@@ -45,11 +45,11 @@ export default function DataAISplitText() {
 
   return (
     <div className="DataAIsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
-        <h1 className="Modular-Text text-start py-5 text-[55px] text-white flex items-center">Why AI is indispensable</h1>
+        <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">Why AI is indispensable</h1>
       <h1
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className=" text-[20px] space-y-5   text-white/70 text-start leading-snug "
+        className=" text-[18px] space-y-5   text-white/70 text-start leading-snug "
       >
 AI is everywhere today — you may already be using it or exploring how to put it to work. Artificial Intelligence empowers systems to become smarter and more efficient by learning from data, recognizing patterns, and making informed decisions or predictions. Beyond automating repetitive tasks, AI uncovers valuable insights — revealing trends in customer behavior and identifying areas for process improvement.
 <br /><br />

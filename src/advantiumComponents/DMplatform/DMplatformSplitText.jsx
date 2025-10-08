@@ -45,12 +45,12 @@ export default function DMplatformSplitText() {
   }, []);
 
   return (
-    <div className="DMsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-        <h1 className="Modular-Text text-start py-5 text-[55px] text-white flex items-center">What is a Data Management Platform?</h1>
+    <div className="DMsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-x-hidden  ">
+        <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">What is a Data Management Platform?</h1>
       <div
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className=" text-[20px] font-semi-bold   text-white text-start leading-loose flex flex-col gap-5 "
+        className=" text-[18px]    text-white text-start leading-loose flex flex-col gap-5 "
       >
 <h1 className="text-white/70">Efficiently connecting data and processes can be a major step forward — and that’s exactly where a Data Management Platform (DMP) makes the difference. As a powerful middleware solution, it not only links systems seamlessly but also adds smart logic and intelligence, helping you leverage technology to take your business to the next level.</h1> 
 

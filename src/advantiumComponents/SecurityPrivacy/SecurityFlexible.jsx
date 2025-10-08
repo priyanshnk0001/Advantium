@@ -163,7 +163,7 @@ function SecurityFlexible() {
                 <div className="Security-subchild rounded-4xl overflow-hidden  ">
                     <div className="SecurityItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Privacy by design</h1>
+                            <h1 className='text-[18px] text-white'>1. Privacy by design</h1>
                         </div>
 
                         <div className="Security-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -176,7 +176,7 @@ function SecurityFlexible() {
                 <div className="Security-subchild rounded-4xl overflow-hidden ">
                     <div className="SecurityItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Tech</h1>
+                            <h1 className='text-[18px] text-white'>2. Tech</h1>
                         </div>
 
                         <div className="Security-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -190,7 +190,7 @@ function SecurityFlexible() {
                 <div className="Security-subchild rounded-4xl overflow-hidden ">
                     <div className="SecurityItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Compliance</h1>
+                            <h1 className='text-[18px] text-white'>3. Compliance</h1>
                         </div>
 
                         <div className="Security-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -203,7 +203,7 @@ function SecurityFlexible() {
                 <div className="Security-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="SecurityItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Training</h1>
+                            <h1 className='text-[18px] text-white'>4. Training</h1>
                         </div>
 
                         <div className="Security-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -223,21 +223,21 @@ function SecurityFlexible() {
             <div className="Securitytext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px]  ">
 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
-                    <h1 className='text-7xl'>Privacy by design</h1>
-                    <h1 className='text-white/70 text-[20px]'>We implement privacy measures from the design stage, ensuring that personal data is not collected inappropriately and that necessary security measures are in place. Our focus is on integrating privacy from the beginning of a project, ensuring that systems and applications comply with the AVG and other regulations. This ensures that we meet the highest security standards, giving clients peace of mind that their data is well protected.
+                    <h1 className='text-6xl'>Privacy by design</h1>
+                    <h1 className='text-white/70 text-[18px]'>We implement privacy measures from the design stage, ensuring that personal data is not collected inappropriately and that necessary security measures are in place. Our focus is on integrating privacy from the beginning of a project, ensuring that systems and applications comply with the AVG and other regulations. This ensures that we meet the highest security standards, giving clients peace of mind that their data is well protected.
                     </h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
-                    <h1 className='text-7xl'>Tech</h1>
-                    <h1 className='text-white/70 text-[20px]'>We use advanced technologies, such as automated security scanners, to continuously monitor vulnerabilities and resolve them promptly. By using proactive technologies, we can respond quickly to potential threats and continue to ensure system security. This allows us to identify risks early and minimize their impact, enhancing overall security.</h1>
+                    <h1 className='text-6xl'>Tech</h1>
+                    <h1 className='text-white/70 text-[18px]'>We use advanced technologies, such as automated security scanners, to continuously monitor vulnerabilities and resolve them promptly. By using proactive technologies, we can respond quickly to potential threats and continue to ensure system security. This allows us to identify risks early and minimize their impact, enhancing overall security.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Compliance</h1>
-                    <h1 className='text-white/70 text-[20px]'>We continuously monitor legislation and adapt our systems to meet the latest requirements, such as the GDPR. This helps our clients stay compliant without having to manage all the details themselves. By ensuring compliance, we ensure organizations don't have to worry about legal consequences and can fully focus on their core business.</h1>
+                    <h1 className='text-6xl'>Compliance</h1>
+                    <h1 className='text-white/70 text-[18px]'>We continuously monitor legislation and adapt our systems to meet the latest requirements, such as the GDPR. This helps our clients stay compliant without having to manage all the details themselves. By ensuring compliance, we ensure organizations don't have to worry about legal consequences and can fully focus on their core business.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Training</h1>
-                    <h1 className='text-white/70 text-[20px]'>We offer workshops and coaching for both our employees and clients, so that everyone understands how to ensure their responsibility in privacy and security. By providing targeted training, we raise awareness about security and privacy and help employees and clients handle sensitive data responsibly. This contributes to a culture of security and awareness within the organisation.
+                    <h1 className='text-6xl'>Training</h1>
+                    <h1 className='text-white/70 text-[18px]'>We offer workshops and coaching for both our employees and clients, so that everyone understands how to ensure their responsibility in privacy and security. By providing targeted training, we raise awareness about security and privacy and help employees and clients handle sensitive data responsibly. This contributes to a culture of security and awareness within the organisation.
                         <br /><br />
                         In all this, we ensure full transparency in our processes and policies, so that clients are always aware of the security of their data. We take responsibility for security so that organisations can concentrate on their day-to-day business, knowing that their data is managed securely and compliantly.
 

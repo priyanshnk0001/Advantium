@@ -159,14 +159,14 @@ function StrategyFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden pt-20  '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden pt-15  '>
 
             <div className="Strategytext-cont w-[25%] h-[90%] flex flex-col  ">
 
                 <div className="Strategy-subchild rounded-4xl overflow-hidden  ">
                     <div className="StrategyItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Digital roadmap</h1>
+                            <h1 className='text-[18px] text-white'>1. Digital roadmap</h1>
                         </div>
 
                         <div className="Strategy-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -179,7 +179,7 @@ function StrategyFlexible() {
                 <div className="Strategy-subchild rounded-4xl overflow-hidden ">
                     <div className="StrategyItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Analysing</h1>
+                            <h1 className='text-[18px] text-white'>2. Analysing</h1>
                         </div>
 
                         <div className="Strategy-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -193,7 +193,7 @@ function StrategyFlexible() {
                 <div className="Strategy-subchild rounded-4xl overflow-hidden ">
                     <div className="StrategyItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Research and advice</h1>
+                            <h1 className='text-[18px] text-white'>3. Research and advice</h1>
                         </div>
 
                         <div className="Strategy-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -206,7 +206,7 @@ function StrategyFlexible() {
                 <div className="Strategy-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="StrategyItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Change management</h1>
+                            <h1 className='text-[18px] text-white'>4. Change management</h1>
                         </div>
 
                         <div className="Strategy-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -226,19 +226,19 @@ function StrategyFlexible() {
                 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
                     <h1 className='text-7xl'>Digital roadmap</h1>
-                    <h1 className='text-white/70 text-[20px]'>Drawing up a digital roadmap starts with an intensive Sprint 0, in which we get to know your organisation and market completely. The business model and internal processes form the basis, while we curiously investigate how the lines run and where the biggest opportunities lie. Together, during interactive sessions, we clearly map out the essence of your issue or need. This inventory phase results in strategic goals and a digital strategy that fits your organisation perfectly. Thanks to this cooperation and short turnaround time, a solid foundation is laid for what follows: the translation into concrete digital solutions.</h1>
+                    <h1 className='text-white/70 text-[18px]'>Drawing up a digital roadmap starts with an intensive Sprint 0, in which we get to know your organisation and market completely. The business model and internal processes form the basis, while we curiously investigate how the lines run and where the biggest opportunities lie. Together, during interactive sessions, we clearly map out the essence of your issue or need. This inventory phase results in strategic goals and a digital strategy that fits your organisation perfectly. Thanks to this cooperation and short turnaround time, a solid foundation is laid for what follows: the translation into concrete digital solutions.</h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
                     <h1 className='text-7xl'>Analysing</h1>
-                    <h1 className='text-white/70 text-[20px]'>A digital transformation starts with a thorough understanding of what is already there. By analysing current business processes and technologies, we identify bottlenecks and opportunities. We examine how processes run, which tools are used and where inefficiencies or areas for improvement lie. This helps to understand what works well and what could be improved, both technologically and organisationally. With this analysis, we lay a solid foundation for targeted improvements and the integration of new solutions that will make your organisation stronger and future-proof.</h1>
+                    <h1 className='text-white/70 text-[18px]'>A digital transformation starts with a thorough understanding of what is already there. By analysing current business processes and technologies, we identify bottlenecks and opportunities. We examine how processes run, which tools are used and where inefficiencies or areas for improvement lie. This helps to understand what works well and what could be improved, both technologically and organisationally. With this analysis, we lay a solid foundation for targeted improvements and the integration of new solutions that will make your organisation stronger and future-proof.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Research and advice</h1>
-                    <h1 className='text-white/70 text-[20px]'>Setting up an effective digital landscape requires a combination of insight and customisation. Using the C4 model, we clearly map the relationship between applications - both standard and customised. We examine which solutions best suit your organisation and how they can be integrated into the existing landscape. Here, we look not only at the technology, but also at the strategic impact and future growth opportunities. This research results in concrete advice that allows you to optimise your digital ecosystem so that it is ready to deliver value at both operational and strategic levels.</h1>
+                    <h1 className='text-white/70 text-[18px]'>Setting up an effective digital landscape requires a combination of insight and customisation. Using the C4 model, we clearly map the relationship between applications - both standard and customised. We examine which solutions best suit your organisation and how they can be integrated into the existing landscape. Here, we look not only at the technology, but also at the strategic impact and future growth opportunities. This research results in concrete advice that allows you to optimise your digital ecosystem so that it is ready to deliver value at both operational and strategic levels.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Change management</h1>
-                    <h1 className='text-white/70 text-[20px]'>In digital transformation, it is not only important to implement new technologies, but also to bring the organisation and its employees along with the change. We support in strengthening internal acceptance by actively involving employees and equipping them with the right knowledge and skills. This helps to reduce any resistance and ensures that the technology is successfully integrated into daily business processes. This not only helps speed up implementation, but ensures that new technologies are effectively integrated into existing processes and actually contribute to the organisation's strategic goals. Through this focus on both technology and culture, we make digital transformation sustainable and successful.</h1>
+                    <h1 className='text-white/70 text-[18px]'>In digital transformation, it is not only important to implement new technologies, but also to bring the organisation and its employees along with the change. We support in strengthening internal acceptance by actively involving employees and equipping them with the right knowledge and skills. This helps to reduce any resistance and ensures that the technology is successfully integrated into daily business processes. This not only helps speed up implementation, but ensures that new technologies are effectively integrated into existing processes and actually contribute to the organisation's strategic goals. Through this focus on both technology and culture, we make digital transformation sustainable and successful.</h1>
                 </div>
                
                

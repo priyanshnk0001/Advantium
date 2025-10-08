@@ -187,24 +187,24 @@ function CMportal() {
                 <Header />
 
                 <div className="CM-main-container w-[100%]     flex flex-col justify-center items-center  text-start ]">
-                    <div className="CM-container1 w-[100%] mt-60  flex justify-around">
-                        <div className="CM1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Develop custom portals.</h1>
-                            <h1 className='text-gray-300 text-xl '>Whether it’s a customer portal linked to AFAS for viewing invoices and orders, an employee portal for managing leave requests and pay slips, or a dealer portal for placing orders and handling customer data — a digital portal brings structure, speed, and convenience to every process.</h1>
+                    <div className="CM-container1 w-[100%] mt-40  flex justify-around">
+                        <div className="CM1-child1 w-[45%] flex flex-col justify-center gap-7">
+                            <h1 className='text-white text-[60px]  leading-tight '>Develop custom portals.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Whether it’s a customer portal linked to AFAS for viewing invoices and orders, an employee portal for managing leave requests and pay slips, or a dealer portal for placing orders and handling customer data — a digital portal brings structure, speed, and convenience to every process.</h1>
                             <div className="CMportalBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="CMportalBtn-container ">
-                                    <button className="CMportalButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="CMportalButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="CMportalArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreCMP} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on portals</button>
+                                <button onClick={scrollTomoreCMP} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on portals</button>
                             </div>
                         </div>
-                        <div className="CM1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="CM1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic01.webp" alt="" />
                         </div>
                     </div>
@@ -219,15 +219,15 @@ function CMportal() {
 
                     <div className="CM-container3 w-[100%] mb-20  flex justify-around items-center">
                         <div className="CM3-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Quicker adaptation to customer demands.</h1>
-                            <h1 className='text-gray-300 text-xl '>A portal empowers customers to update information, track applications, and make payments independently, enhancing usability and overall experience. At the same time, it automates repetitive tasks like administration and contract management, saving time and minimizing errors. This streamlines processes, improves communication, and enables companies to respond faster to customer needs while optimizing operations, reducing costs, and boosting customer satisfaction.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Quicker adaptation to customer demands.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>A portal empowers customers to update information, track applications, and make payments independently, enhancing usability and overall experience. At the same time, it automates repetitive tasks like administration and contract management, saving time and minimizing errors. This streamlines processes, improves communication, and enables companies to respond faster to customer needs while optimizing operations, reducing costs, and boosting customer satisfaction.</h1>
                             <div className="CMportalBottomButton2 flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="CMportalBtn-container2 ">
-                                    <button className="CMportalButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Get in touch</button>
+                                    <button className="CMportalButton2  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Get in touch</button>
                                     <button
                                         className="CMportalArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
@@ -242,18 +242,18 @@ function CMportal() {
 
                     <div ref={moreCMPRef} className="CM-container4 w-[100%] mb-20  flex justify-around items-center ">
                         <div className="CM4-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden   ">
-                            <img className=' scale-105   rounded-2xl ' src="pic18.webp" alt="" />
+                            <img className='   rounded-2xl ' src="pic18.webp" alt="" />
                         </div>
                         <div className="CM4-child2 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Efficient, secure, and customer-focused.</h1>
-                            <h1 className='text-gray-300 text-xl '>A modular portal minimizes manual work and phone support, reducing costs and boosting productivity. Users gain quick access to relevant information, enhancing convenience and satisfaction. With scalability and ISO 27001–level security, the portal grows alongside your organization while delivering a reliable and transparent customer experience.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Efficient, secure, and customer-focused.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>A modular portal minimizes manual work and phone support, reducing costs and boosting productivity. Users gain quick access to relevant information, enhancing convenience and satisfaction. With scalability and ISO 27001–level security, the portal grows alongside your organization while delivering a reliable and transparent customer experience.</h1>
                             <div className="CMportalBottomButton4 flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="CMportalBtn-container4 ">
-                                    <button className="CMportalButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Get in touch</button>
+                                    <button className="CMportalButton4  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Get in touch</button>
                                     <button
                                         className="CMportalArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>

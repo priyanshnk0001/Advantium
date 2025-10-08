@@ -10,6 +10,7 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
+
 function LatestNewsText() {
     const viewTweenArrow = useRef(null);
 

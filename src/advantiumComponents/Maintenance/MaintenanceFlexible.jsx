@@ -165,7 +165,7 @@ function MaintenanceFlexible() {
                 <div className="Maintenance-subchild rounded-4xl overflow-hidden  ">
                     <div className="MaintenanceItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. What is it?</h1>
+                            <h1 className='text-[18px] text-white'>1. What is it?</h1>
                         </div>
 
                         <div className="Maintenance-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -178,7 +178,7 @@ function MaintenanceFlexible() {
                 <div className="Maintenance-subchild rounded-4xl overflow-hidden ">
                     <div className="MaintenanceItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Advantages</h1>
+                            <h1 className='text-[18px] text-white'>2. Advantages</h1>
                         </div>
 
                         <div className="Maintenance-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -192,7 +192,7 @@ function MaintenanceFlexible() {
                 <div className="Maintenance-subchild rounded-4xl overflow-hidden ">
                     <div className="MaintenanceItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Better software</h1>
+                            <h1 className='text-[18px] text-white'>3. Better software</h1>
                         </div>
 
                         <div className="Maintenance-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -205,7 +205,7 @@ function MaintenanceFlexible() {
                 <div className="Maintenance-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="MaintenanceItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Case study</h1>
+                            <h1 className='text-[18px] text-white'>4. Case study</h1>
                         </div>
 
                         <div className="Maintenance-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -225,21 +225,21 @@ function MaintenanceFlexible() {
             <div className="Maintenancetext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px]  ">
 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
-                    <h1 className='text-7xl'>What is it?</h1>
-                    <h1 className='text-white/70 text-[20px]'>Automatic testing helps developers detect bugs early, even before code enters production. This process automatically checks whether functions work as intended, without a developer having to manually test everything. Think of testing individual functions (unit tests), the collaboration between different components (integration tests) and entire systems. Building testing in keeps software stable and reliable. Automated testing is not necessary for every project, but it is indispensable for larger and more complex applications. Especially for projects of 250 hours or more or for software that depends on links to external systems, automated testing prevents errors and delays. Test automation is also a smart choice for applications with a Data Management Platform (DMP) or systems where small changes can have major consequences.
+                    <h1 className='text-6xl'>What is it?</h1>
+                    <h1 className='text-white/70 text-[18px]'>Automatic testing helps developers detect bugs early, even before code enters production. This process automatically checks whether functions work as intended, without a developer having to manually test everything. Think of testing individual functions (unit tests), the collaboration between different components (integration tests) and entire systems. Building testing in keeps software stable and reliable. Automated testing is not necessary for every project, but it is indispensable for larger and more complex applications. Especially for projects of 250 hours or more or for software that depends on links to external systems, automated testing prevents errors and delays. Test automation is also a smart choice for applications with a Data Management Platform (DMP) or systems where small changes can have major consequences.
                     </h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
-                    <h1 className='text-7xl'>Advantages</h1>
-                    <h1 className='text-white/70 text-[20px]'>For developers, automated testing offers many advantages. It ensures better code quality because tests force structured and testable programming. It also speeds up development, as bugs are detected early and do not cause delays later on. It also increases software reliability, allowing releases to be rolled out with more confidence. Moreover, tests serve as documentation as they show exactly how functions are supposed to work.</h1>
+                    <h1 className='text-6xl'>Advantages</h1>
+                    <h1 className='text-white/70 text-[18px]'>For developers, automated testing offers many advantages. It ensures better code quality because tests force structured and testable programming. It also speeds up development, as bugs are detected early and do not cause delays later on. It also increases software reliability, allowing releases to be rolled out with more confidence. Moreover, tests serve as documentation as they show exactly how functions are supposed to work.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Better software</h1>
-                    <h1 className='text-white/70 text-[20px]'>Not only developers, but also organisations benefit from automated testing. Fewer bugs and more stable software improve the customer experience, as users experience fewer problems. In addition, maintenance becomes more efficient because it is immediately visible whether an update affects existing functions. This saves time and costs. The higher quality of software allows an organisation to stand out from the competition and increase customer trust.</h1>
+                    <h1 className='text-6xl'>Better software</h1>
+                    <h1 className='text-white/70 text-[18px]'>Not only developers, but also organisations benefit from automated testing. Fewer bugs and more stable software improve the customer experience, as users experience fewer problems. In addition, maintenance becomes more efficient because it is immediately visible whether an update affects existing functions. This saves time and costs. The higher quality of software allows an organisation to stand out from the competition and increase customer trust.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Case study</h1>
-                    <h1 className='text-white/70 text-[20px]'>In the development of the Data Management Platform for Thermen Resorts automatic testing played a major role.Extensive unit tests were set up to monitor complex processes, such as product availability, blockades and the Mollie link for payments. These tests allowed early detection of errors, for example when calculating blockages within product sets. A failed test immediately made it clear that the original solution was not fully working, leading to a quick revision and correct implementation - even before anyone manually checked the code or the customer interacted with it. With a test coverage of 35%, not all lines of code are tested, but the most critical parts are, allowing major changes to be implemented safely without compromising core functionality. This ensured that Thermen Resorts received hardly any high-priority bugs after a year, especially within the tested components.</h1>
+                    <h1 className='text-6xl'>Case study</h1>
+                    <h1 className='text-white/70 text-[18px]'>In the development of the Data Management Platform for Thermen Resorts automatic testing played a major role.Extensive unit tests were set up to monitor complex processes, such as product availability, blockades and the Mollie link for payments. These tests allowed early detection of errors, for example when calculating blockages within product sets. A failed test immediately made it clear that the original solution was not fully working, leading to a quick revision and correct implementation - even before anyone manually checked the code or the customer interacted with it. With a test coverage of 35%, not all lines of code are tested, but the most critical parts are, allowing major changes to be implemented safely without compromising core functionality. This ensured that Thermen Resorts received hardly any high-priority bugs after a year, especially within the tested components.</h1>
                 </div>
                 
 

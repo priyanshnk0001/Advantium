@@ -45,11 +45,11 @@ export default function WebCMSSplitText() {
 
     return (
         <div className="webCMSsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="webCMS-Text text-start py-5 text-[55px] text-white flex items-center">A website with impact.</h1>
+            <h1 className="webCMS-Text text-start py-5 text-[50px] text-white flex items-center">A website with impact.</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-10    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-10    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80">Sure, a beautiful website with strong content is important. But the power lies in combining that look with smart functionalities and processes that make it easier for you to achieve your goals. The goal is clear: a website that works, pays off and helps you grow. And that's what we're all about. What would you like your website to do for you?</h1>
 

@@ -206,24 +206,24 @@ function Maintenance() {
                 <Header />
 
                 <div className="Maintenance-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="Maintenance-container1 w-[100%] mt-60  flex justify-around">
-                        <div className="Maintenance1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Maintenance & management out of your hands.</h1>
-                            <h1 className='text-gray-300 text-xl '>At <span className="text-white">Advantium</span>, we ensure quality and reliability by taking the management of your online platforms off your hands. From project management to hosting, monitoring and testing: we keep everything running so that you can focus on what really matters.</h1>
+                    <div className="Maintenance-container1 w-[100%] mt-40  flex justify-around">
+                        <div className="Maintenance1-child1 w-[45%] flex flex-col justify-center gap-7">
+                            <h1 className='text-white text-[60px]  leading-tight '>Maintenance & management out of your hands.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>At <span className="text-white">Advantium</span>, we ensure quality and reliability by taking the management of your online platforms off your hands. From project management to hosting, monitoring and testing: we keep everything running so that you can focus on what really matters.</h1>
                             <div className="MaintenanceBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0,0)}>
                                 <div className="MaintenanceBtn-container ">
-                                    <button className="MaintenanceButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="MaintenanceButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="MaintenanceArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoremaintenance}  className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoremaintenance}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
-                        <div className="Maintenance1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="Maintenance1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic25.webp" alt="" />
                         </div>
                     </div>
@@ -240,17 +240,17 @@ function Maintenance() {
 
 
 
-                    <div className="Maintenance-container3 w-[100%] my-20  flex justify-around items-center">
+                    <div className="Maintenance-container3 w-[100%] mb-20  flex justify-around items-center">
                         <div className="Maintenance3-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Hosting</h1>
-                            <h1 className='text-gray-300 text-xl '>The foundation of any successful online solution is a reliable and stable environment. Our digital solutions run on scalable cloud servers that are always ready for growth. We work with our hosting partners to bring you the best managed hosting solutions. Best of all? Everything is monitored 24/7. This means we always keep an eye on how your platform is performing. Thanks to the close cooperation between our developers and hosting partners, we can guarantee that you have a secure, stable and high-performing website.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Hosting</h1>
+                            <h1 className='text-gray-300 text-[18px] '>The foundation of any successful online solution is a reliable and stable environment. Our digital solutions run on scalable cloud servers that are always ready for growth. We work with our hosting partners to bring you the best managed hosting solutions. Best of all? Everything is monitored 24/7. This means we always keep an eye on how your platform is performing. Thanks to the close cooperation between our developers and hosting partners, we can guarantee that you have a secure, stable and high-performing website.</h1>
                             <div className="MaintenanceBottomButton2 flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0,0)}>
                                 <div className="MaintenanceBtn-container2 ">
-                                    <button className="MaintenanceButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
+                                    <button className="MaintenanceButton2  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
                                     <button
                                         className="MaintenanceArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
@@ -268,14 +268,14 @@ function Maintenance() {
                             <img className='rounded-2xl' src="pic20.webp" alt="" />
                         </div>
                         <div className="Maintenance4-child2 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Software management by Advantium</h1>
-                            <h1 className='text-gray-300 text-xl '>Software is the engine of your organisation, which is precisely why management should not be a weak spot. Yet it often happens: applications quietly age, crucial knowledge resides in a handful of people, and responsibilities are unclear. This leads to errors in releases, security risks and stagnating development. Advantium helps organisations regain control with software management that is tailored to your processes and needs.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Software management by Advantium</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Software is the engine of your organisation, which is precisely why management should not be a weak spot. Yet it often happens: applications quietly age, crucial knowledge resides in a handful of people, and responsibilities are unclear. This leads to errors in releases, security risks and stagnating development. Advantium helps organisations regain control with software management that is tailored to your processes and needs.</h1>
                             <div className="MaintenanceBottomButton4 flex  items-center mt-5 z-0    ">
                                 <div className="MaintenanceBtn-container4 ">
-                                    <button onClick={scrollTomoremaintenance2} className="MaintenanceButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More info</button>
+                                    <button onClick={scrollTomoremaintenance2} className="MaintenanceButton4  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More info</button>
                                     <button
                                         className="MaintenanceArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                             </div>
@@ -284,7 +284,7 @@ function Maintenance() {
                     </div>
 
                     <div ref={moremaintenanceRef2} className="str-container2 w-[100%]">
-                        <h1 className=" text-white mt-30 text-9xl px-45 ">Automated testing for complex solutions.</h1>
+                        <h1 className=" text-white mt-30 text-8xl px-45 ">Automated testing for complex solutions.</h1>
 
                         <MaintenanceFlexible />
                     </div>

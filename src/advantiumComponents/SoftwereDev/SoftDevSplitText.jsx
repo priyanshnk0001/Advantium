@@ -44,15 +44,15 @@ export default function SoftDevSplitText() {
 
     return (
         <div className="SoftDevsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="SoftDev-Text text-start py-5 text-[55px] text-white flex items-center">Front-end Development.</h1>
+            <h1 className="SoftDev-Text text-start py-5 text-[50px] text-white flex items-center">Front-end Development.</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-5    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-5    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80 space-y-5">All styling on the internet comes about through front-end technology. Apps, websites, platforms and more: together, they define your online brand experience with content, interaction and technology. How your solution looks plays a crucial role in the impression you want to make. Our front-end developers ensure that your solution looks exactly as you envision it. Whether you want to have a platform, website or application developed, Advantium has the knowledge and experience to make your vision a reality.</h1>
 
-                <h1 className="text-[45px] text-white">Mapping goals.</h1>
+                <h1 className="text-[40px] text-white">Mapping goals.</h1>
 
                 
                     <h1 className="text-white/80 space-y-5">In consultation, we map out your wishes and goals. What do you want to project? Who are your target groups? Based on these insights, we choose the right techniques for your specific situation. In everything we develop, the end user is central. That is what we do it for. At Advantium, we take front-end development seriously. From large to small, from television to phone: your SoftDev will be fully optimised for every format. From colours and typography to interactive menus: with a combination of advanced techniques, we ensure that your solution is not only beautiful, but also functional.</h1>

@@ -116,29 +116,29 @@ function OpenApp() {
 
                 <Header />
 
-                <div className="OpenApp-main-container w-[100%] pt-60     flex flex-col justify-center items-center  text-start ">
+                <div className="OpenApp-main-container w-[100%] pt-40     flex flex-col justify-center items-center  text-start ">
 
                     <div className="OpenAppHeading-container text-white flex flex-col gap-10 px-[84px]">
-                        <h1 className='text-9xl '>Open application (dutch speaking)</h1>
-                        <h1 className='text-white/60 text-xl leading-8'>Haven't seen a suitable vacancy but curious about the possibilities? Send us an open application! At Advantium, we are always looking for new colleagues. Whether you are an experienced professional or an emerging digital talent, we would love to hear why you are the perfect addition to our team. Perhaps we will soon be sitting down together at our beautiful office in the heart of Oldenzaal for an introduction and a tour.
+                        <h1 className='text-8xl '>Open application (dutch speaking)</h1>
+                        <h1 className='text-white/60 text-[20px] leading-8'>Haven't seen a suitable vacancy but curious about the possibilities? Send us an open application! At Advantium, we are always looking for new colleagues. Whether you are an experienced professional or an emerging digital talent, we would love to hear why you are the perfect addition to our team. Perhaps we will soon be sitting down together at our beautiful office in the heart of Oldenzaal for an introduction and a tour.
                         </h1>
 
                         <div className='w-[100%] flex justify-between'>
                             <div className='flex w-fit gap-5'>
-                                <img className='w-30 rounded-full' src="pic03.webp" alt="" />
+                                <img className='w-40 rounded-full' src="pic03.webp" alt="" />
                                 <div className='flex flex-col gap-2 justify-center  '>
                                     <h1>name</h1>
                                     <h1>designation</h1>
                                 </div>
                             </div>
-                            <div className="OpenAppBottomButton flex  items-center overflow-hidden px-20 mt-5 z-0    ">
+                            <div className="OpenAppBottomButton flex  items-end overflow-hidden px-20 mt-5 z-0  ">
                                 <NavLink to="/RequestForm">
                                     <div className="OpenAppBtn-container ">
 
-                                        <button className="OpenAppButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Apply now</button>
+                                        <button className="OpenAppButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Apply now</button>
                                         <button
                                             className="OpenAppArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                            <CallMadeIcon className="!w-8 !h-8" />
+                                            <CallMadeIcon className="!w-7 !h-7" />
                                         </button>
                                     </div>
                                 </NavLink>

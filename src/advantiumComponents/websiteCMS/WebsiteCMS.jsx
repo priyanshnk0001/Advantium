@@ -123,24 +123,24 @@ function WebsiteCMS() {
                 <Header />
 
                 <div className="webCMS-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="webCMS-container1 w-[100%] mt-60  flex justify-around items-center">
+                    <div className="webCMS-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="webCMS1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Websites that let users discover, click and buy.</h1>
-                            <h1 className='text-gray-300 text-xl '>Website creation, that's where it all started for Advantium. More than 10 years ago, we took our first steps into the digital world, and since then the possibilities have developed at a racing pace. The technology is constantly changing, and we are leading. Are you walking with us?</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Websites that let users discover, click and buy.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Website creation, that's where it all started for Advantium. More than 10 years ago, we took our first steps into the digital world, and since then the possibilities have developed at a racing pace. The technology is constantly changing, and we are leading. Are you walking with us?</h1>
                             <div className="webCMSBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="webCMSBtn-container ">
-                                    <button className="webCMSButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="webCMSButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="webCMSArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreWebCMS} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on websites</button>
+                                <button onClick={scrollTomoreWebCMS} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on websites</button>
                             </div>
                         </div>
-                        <div className="webCMS1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="webCMS1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img src="pic03.webp" alt="" />
                         </div>
                     </div>
@@ -152,7 +152,7 @@ function WebsiteCMS() {
                     </div>
 
                     <div className="flexible-text-container text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-9xl px-45 ">The process to your perfect website</h1>
+                        <h1 className="text-center text-8xl px-45 ">The process to your perfect website</h1>
                         <div className="flexible-container">
                             <Flexible/>
                         </div>

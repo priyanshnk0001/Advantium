@@ -187,6 +187,7 @@ export default function HoverSpotLight() {
           rgba(56, 189, 248, 0.7),
           transparent 80%
         ), #0f172a`,
+        
         }}
       >
 
@@ -194,22 +195,22 @@ export default function HoverSpotLight() {
         <Header ref={headerRef} />
 
         <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
-          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-8xl font-semibold overflow-hidden'>Tech builds.</h1></div>
-          <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-8xl font-semibold overflow-hidden'>scale</h1></div>
-          <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-3xl mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
+          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-7xl font-semibold overflow-hidden'>Tech builds.</h1></div>
+          <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-7xl font-semibold overflow-hidden'>scale</h1></div>
+          <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-[30px] mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
             <div className="BookingBtn-container">
               <button 
                onClick={triggerHeaderBookingClick}
-              className="bookingButton  rounded-full py-4 px-7 text-[20px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+              className="bookingButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
               <button
                 className="nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
-                <CallMadeIcon className="!w-8 !h-8" />
+                <CallMadeIcon className="!w-7 !h-7" />
               </button>
             </div>
             
-            <button onClick={scrollToSoft} className="software border-2 rounded-full py-4 px-7 text-[20px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
+            <button onClick={scrollToSoft} className="software border-2 rounded-full py-3 px-7 text-[18px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
           </div>
         </div>
         <div className="ad-Content-cont w-[100%] h-[10vh] flex flex-col justify-center items-center text-center px-10 "></div>
@@ -217,7 +218,7 @@ export default function HoverSpotLight() {
 
 
         <div className='overflow-x-hidden flex items-center h-[10vh] ' style={{ position: "absolute", bottom: 0, left: 0, width: "100%", }}>
-          <Marquee className='text-white text-[25px]'>
+          <Marquee className='text-white text-[20px]'>
             <h1 className="mr-20">Advantium</h1>
             <h1 className="mr-20">Advantium</h1>
             <h1 className="mr-20">Advantium</h1>

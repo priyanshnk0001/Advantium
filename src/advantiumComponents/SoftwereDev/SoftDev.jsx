@@ -230,25 +230,25 @@ function SoftDev() {
                 <Header />
 
                 <div className="SoftDev-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="SoftDev-container1 w-[100%] mt-60  flex justify-around items-center">
+                    <div className="SoftDev-container1 w-[100%] mt-50  flex justify-around items-center">
                         <div className="SoftDev1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Custom software development</h1>
-                            <h1 className='text-gray-300 text-xl '>Customised software helps your organisation work more efficiently, streamline processes and better respond to your specific challenges. Not a standard solution, but exactly what you need to grow, innovate and make a difference. Whether it is about improving internal workflows, automating repetitive tasks or integrating various systems, your business processes and digital transformation are optimally supported.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Custom software development</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Customised software helps your organisation work more efficiently, streamline processes and better respond to your specific challenges. Not a standard solution, but exactly what you need to grow, innovate and make a difference. Whether it is about improving internal workflows, automating repetitive tasks or integrating various systems, your business processes and digital transformation are optimally supported.</h1>
                             <div className="SoftDevBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="SoftDevBtn-container ">
-                                    <button className="SoftDevButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="SoftDevButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="SoftDevArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreSoftDev} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoreSoftDev} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
                             </div>
                         </div>
-                        <div className="SoftDev1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
-                            <img className='scale-105 rounded-2xl' src="pic30.webp" alt="" />
+                        <div className="SoftDev1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
+                            <img className=' rounded-2xl' src="pic30.webp" alt="" />
                         </div>
                     </div>
 
@@ -260,7 +260,7 @@ function SoftDev() {
 
 
                     <div>
-                        <h1 className='frontEnd-headingText text-[130px] px-50 text-white font-semi-bold text-start self-start leading-none mt-[100px]'>Which front-end technology do you want to deploy? </h1>
+                        <h1 className='frontEnd-headingText text-[110px] px-50 text-white  text-start self-start leading-none mt-[50px] '>Which front-end technology do you want to deploy? </h1>
                     </div>
 
 
@@ -340,7 +340,7 @@ function SoftDev() {
 
 
                     <div>
-                        <h1 className='backEnd-headingText text-[130px] px-50 text-white font-semi-bold text-start self-start leading-none mt-[100px]'>Which back-end technology do you want to deploy? </h1>
+                        <h1 className='backEnd-headingText text-[110px] px-50 text-white font-semi-bold text-start self-start leading-none mt-[50px]'>Which back-end technology do you want to deploy? </h1>
                     </div>
 
 

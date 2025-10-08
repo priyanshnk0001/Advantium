@@ -200,25 +200,25 @@ function DMplatform() {
                 <Header />
 
                 <div className="DM-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="DM-container1 w-[100%] mt-50  flex justify-around">
+                    <div className="DM-container1 w-[100%] mt-40  flex justify-around">
                         <div className="DM1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Manage your data intelligently with a Data Management Platform.</h1>
-                            <h1 className='text-gray-300 text-xl '>Many organizations already use powerful systems like CRM, ERP, or PIM solutions — a solid foundation we’re glad to build upon. The real transformation begins when these systems work together seamlessly, powered by smart business logic. A well-designed Data Management Platform (DMP) makes this integration possible.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Manage your data intelligently with a Data Management Platform.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Many organizations already use powerful systems like CRM, ERP, or PIM solutions — a solid foundation we’re glad to build upon. The real transformation begins when these systems work together seamlessly, powered by smart business logic. A well-designed Data Management Platform (DMP) makes this integration possible.</h1>
                             <div className="DMplatformBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="DMplatformBtn-container ">
-                                    <button className="DMplatformButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="DMplatformButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="DMplatformArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreDMP} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on the DMP</button>
+                                <button onClick={scrollTomoreDMP} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on the DMP</button>
                             </div>
                         </div>
-                        <div className="DM1-child2 w-[45%] h-[640px] flex flex-col rounded-2xl overflow-hidden  ">
-                            <img src="pic03.webp" alt="" />
+                        <div className="DM1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
+                            <img className='rounded-2xl' src="pic03.webp" alt="" />
                         </div>
                     </div>
 
@@ -229,7 +229,7 @@ function DMplatform() {
                     </div>
 
 
-                     <div className="DMbigImg w-[100%] h-[100vh] flex justify-center items-center mt-[-100px]"><img className='w-[95%] h-[95vh] rounded-xl ' src="pic04.webp" alt="" /></div>
+                     <div className="DMbigImg w-[100%] h-[100vh] flex justify-center items-center "><img className='w-[95%] h-[95vh] rounded-xl ' src="pic04.webp" alt="" /></div>
 
 
                 
@@ -238,15 +238,15 @@ function DMplatform() {
 
                     <div className="DM-container3 w-[100%] mb-20  flex justify-around items-center py-10">
                         <div className="DM3-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>How does a DMP connect to your processes?</h1>
-                            <h1 className='text-gray-300 text-xl '>A Data Management Platform (DMP) is ideal for organizations navigating an expanding digital ecosystem. As the number of systems and data sources grows, so do the advantages of a DMP. While most businesses already rely on strong tools like CRM, ERP, or accounting software, these systems often operate in isolation. A DMP connects them, creating a unified, intelligent ecosystem. Acting as more than just middleware, it adds smart capabilities — from advanced analytics and data validation to automated business rules — enabling your organization to work faster, smarter, and more efficiently while maximizing the value of your existing software landscape.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>How does a DMP connect to your processes?</h1>
+                            <h1 className='text-gray-300 text-[18px] '>A Data Management Platform (DMP) is ideal for organizations navigating an expanding digital ecosystem. As the number of systems and data sources grows, so do the advantages of a DMP. While most businesses already rely on strong tools like CRM, ERP, or accounting software, these systems often operate in isolation. A DMP connects them, creating a unified, intelligent ecosystem. Acting as more than just middleware, it adds smart capabilities — from advanced analytics and data validation to automated business rules — enabling your organization to work faster, smarter, and more efficiently while maximizing the value of your existing software landscape.</h1>
                             <div className="DMplatformBottomButton2 flex  items-center mt-5 z-0    ">
                                 <NavLink to="/CMportal" onClick={()=> window.scrollTo(0,0)}>
                                 <div className="DMplatformBtn-container2 ">
-                                    <button className="DMplatformButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Read more about portals</button>
+                                    <button className="DMplatformButton2  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Read more about portals</button>
                                     <button
                                         className="DMplatformArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>

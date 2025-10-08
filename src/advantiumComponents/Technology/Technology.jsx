@@ -89,8 +89,8 @@ export default function Technology() {
 
 
                 <div className="technology-ad-Content-cont w-[100%]   flex flex-col   items-center   text-start px-[54px]   ">
-                    <h1 className='technology-headingText text-[130px] text-white font-semi-bold text-start self-start leading-none mt-[250px]'>Tech we deploy for your success.</h1>
-                    <h1 className='technology-SubHeadingText text-xl text-white/70 font-semibold text-start self-start break-keep mt-[50px] pr-90'>Discover the power behind our tech stack, frameworks, and tools we utilize.</h1>
+                    <h1 className='technology-headingText text-[110px] text-white  text-start self-start leading-none mt-[225px]'>Tech we deploy for your success.</h1>
+                    <h1 className='technology-SubHeadingText text-[24px] text-white/70  text-start self-start break-keep mt-[50px] pr-90'>Discover the power behind our tech stack, frameworks, and tools we utilize.</h1>
 
 
                 </div>
@@ -102,84 +102,84 @@ export default function Technology() {
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className='w-20  ' src="elasticsearch.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>ElasticSearch</h1>
+                        <h1 className='text-2xl'>ElasticSearch</h1>
                         <h1 className="text-white/70">Elastic Search serves as an efficient search and analytics tool that processes large amounts of data in real-time. The platform offers advanced search capabilities and scalable data analysis, suitable for a wide...</h1>
                     </div>
                     <div className="techCard flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className='w-20  ' src="expo.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Expo</h1>
+                        <h1 className='text-2xl'>Expo</h1>
                         <h1 className="text-white/70">Expo provides an open-source platform for the development of React Native apps. It offers developers a user-friendly environment and handy tools to quickly build...</h1>
                     </div>
                     <div className="techCard flex flex-col gap-5">
-                        <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
+                        <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 py-8 px-6">
                             <img className='w-30  ' src="Laravel.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Laravel</h1>
+                        <h1 className='text-2xl'>Laravel</h1>
                         <h1 className="text-white/70">Laravel, a leading PHP framework, accelerates development with tools like Eloquent ORM, Blade templating, and built-in security features. It provides an efficient and...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className='w-20  ' src="magento.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Magento</h1>
+                        <h1 className='text-2xl'>Magento</h1>
                         <h1 className="text-white/70">Magento is een e-commerce platform dat flexibiliteit, schaalbaarheid en uitgebreide aanpassingsmogelijkheden biedt. Perfect voor bedrijven die hun webshop willen laten...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 px-8 py-12">
                             <img className='w-20  ' src="php.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>PHP</h1>
+                        <h1 className='text-2xl'>PHP</h1>
                         <h1 className="text-white/70">PHP, or Hypertext Preprocessor, serves as a powerful scripting language for creating dynamic web pages and applications. It allows you to develop robust and flexible...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className='w-20  ' src="reactNative.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>React Native</h1>
+                        <h1 className='text-2xl'>React Native</h1>
                         <h1 className="text-white/70">React Native enables the development of powerful native apps for iOS and Android using JavaScript and React. By utilizing a single codebase, you significantly reduce development time and costs. This framework</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 px-8 py-12">
                             <img className='w-20  ' src="silverstripe.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Silverstripe</h1>
+                        <h1 className='text-2xl'>Silverstripe</h1>
                         <h1 className="text-white/70">Silverstripe offers a user-friendly interface and strong scalability with its open-source CMS. Thanks to its integration capabilities, this platform is ideal for both simple and...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className='w-20  ' src="vuejs.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Vue.js</h1>
+                        <h1 className='text-2xl'>Vue.js</h1>
                         <h1 className="text-white/70">Vue.js, an innovative JavaScript framework, enables you to create dynamic and interactive web applications. It offers not only speed and flexibility but also a modular...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className="rounded-2xl w-20"  src="statamic.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Statamic</h1>
+                        <h1 className='text-2xl'>Statamic</h1>
                         <h1 className="text-white/70">Statamic, an open-source CMS, operates without databases, ensuring speed and security. The system offers user-friendly features, low costs, and strong integration...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className="rounded-2xl w-20"  src="craft.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Craft</h1>
+                        <h1 className='text-2xl'>Craft</h1>
                         <h1 className="text-white/70">Craft CMS is known as a flexible CMS that excellently combines customization and user-friendliness. The platform offers a clean codebase, robust e-commerce capabilities...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className="rounded-2xl w-20"  src="filament.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>Filament</h1>
+                        <h1 className='text-2xl'>Filament</h1>
                         <h1 className="text-white/70">Filament is a powerful open-source PHP framework for building administrative interfaces and dashboards. It easily integrates with Laravel and allows developers...</h1>
                     </div>
                     <div className="techCard1 flex flex-col gap-5">
                         <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
                             <img className="rounded-2xl w-20"  src="backpack.png" alt="" />
                         </div>
-                        <h1 className='text-3xl'>BackPack</h1>
+                        <h1 className='text-2xl'>BackPack</h1>
                         <h1 className="text-white/70">Backpack is an open-source toolkit for quickly developing user-friendly admin interfaces within Laravel projects.</h1>
                     </div>
                 </div>

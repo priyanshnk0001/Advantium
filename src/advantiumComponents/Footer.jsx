@@ -89,13 +89,13 @@ function Footer() {
                     <div className="footer-contentP1 w-[35%] h-[75vh] pl-12 flex flex-col justify-center overflow-hidden  ">
                         <h1 className='FP1-headingText text-white text-6xl mb-5 pl-10'>Advantium</h1>
                         <div className="FP1-child grid grid-cols-3 px-10  gap-y-5 ">
-                            <div className="FP1-sub-child py-5 px-8 rounded-2xl flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="iso27001.png" alt="" /></div>
-                            <div className="FP1-sub-child py-5 px-8 rounded-2xl flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="nen7510.webp" alt="" /></div>
-                            <div className="FP1-sub-child border-gray-400 border-2 p-3 w-fit flex flex-col justify-center rounded-2xl">
-                                <h1 className='text-white flex text-2xl items-center '><img className='w-[30px]' src="gitlab.png" alt="" />GitLab</h1>
+                            <div className="FP1-sub-child py-5 px-8 rounded-[22px] flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="iso27001.png" alt="" /></div>
+                            <div className="FP1-sub-child py-5 px-8 rounded-[22px] flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="nen7510.webp" alt="" /></div>
+                            <div className="FP1-sub-child border-gray-400 border-2 p-3 w-fit flex flex-col justify-center rounded-[22px]">
+                                <h1 className='text-white flex text-[22px] items-center '><img className='w-[30px]' src="gitlab.png" alt="" />GitLab</h1>
                                 <h1 className='text-white'>Channel Partner</h1>
                             </div>
-                            <div className="FP1-sub-child px-6 py-8 flex justify-center items-center gap-2 border-2 border-gray-400 w-[220px] rounded-2xl ">
+                            <div className="FP1-sub-child px-6 py-8 flex justify-center items-center gap-2 border-2 border-gray-400 w-[220px] rounded-[22px] ">
                                 <img className='w-[30px]' src="g-logo.webp" alt="" />
                                 <h1 className='text-white'>4.9 <span className='text-gray-400'>uit 45 reviews</span></h1>
                             </div>
@@ -104,35 +104,35 @@ function Footer() {
                     <div className="footer-contentP2 w-[65%] h-[75vh] grid grid-cols-3 px-10 ">
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
-                                <h1 className='text-gray-400 text-2xl'>Office</h1>
-                                <h1 className='text-white text-xl'>C 22 UGF, </h1>
-                                <h1 className='text-white text-xl'>Anoop Nagar, </h1>
-                                <h1 className='text-white text-xl'>Delhi</h1>
+                                <h1 className='text-gray-400 text-[22px]'>Office</h1>
+                                <h1 className='text-white text-[18px]'>C 22 UGF, </h1>
+                                <h1 className='text-white text-[18px]'>Anoop Nagar, </h1>
+                                <h1 className='text-white text-[18px]'>Delhi</h1>
                             </div>
                         </div>
                         <div className="overflow-x-hidden">
                             <div className="FP2-child  text-start flex flex-col gap-5 p-5 overflow-x-hidden">
-                                <h1 className='text-gray-400 text-2xl '>What we do</h1>
+                                <h1 className='text-gray-400 text-[22px] '>What we do</h1>
                                 <NavLink to="/Apps" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline  text-white text-xl '>Apps
+                                    <h1 className='footer-TextUnderline  text-white text-[18px] '>Apps
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="/WebsiteCMS" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Websites & CMS
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Websites & CMS
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="/Ecom" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>E-commerce
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>E-commerce
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="/DMplatform" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Data Management Platform
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Data Management Platform
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
@@ -141,22 +141,22 @@ function Footer() {
                         </div>
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
-                                <h1 className='text-gray-400 text-2xl'>Who we are</h1>
+                                <h1 className='text-gray-400 text-[22px]'>Who we are</h1>
 
                                 <NavLink to="/About" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>About us
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>About us
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="/Careers" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Careers
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Careers
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="/Contact" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`}>
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Contact
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Contact
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
@@ -165,20 +165,20 @@ function Footer() {
                         </div>
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
-                                <h1 className='text-gray-400 text-2xl'>Follow us</h1>
+                                <h1 className='text-gray-400 text-[22px]'>Follow us</h1>
                                 <NavLink to="https://in.linkedin.com/company/advantium-technologies" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>LinkedIn
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>LinkedIn
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="https://www.instagram.com/neeraj.kumar.mnnit" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Instagram
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Instagram
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                                     </h1>
                                 </NavLink>
                                 <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Facebook
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Facebook
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
@@ -187,21 +187,21 @@ function Footer() {
                         </div>
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
-                                <h1 className='text-gray-400 text-2xl'>Community</h1>
+                                <h1 className='text-gray-400 text-[22px]'>Community</h1>
                                 <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Blog
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Blog
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Cases
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Cases
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="/Careers" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Careers
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Careers
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
@@ -210,15 +210,15 @@ function Footer() {
                         </div>
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
-                                <h1 className='text-gray-400 text-2xl'>General</h1>
+                                <h1 className='text-gray-400 text-[22px]'>General</h1>
                                 <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>Privacy Statement
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>Privacy Statement
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
                                 <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
-                                    <h1 className='footer-TextUnderline text-white text-xl'>General terms and <br /> conditions
+                                    <h1 className='footer-TextUnderline text-white text-[18px]'>General terms and <br /> conditions
                                         <span className="underline-footer absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                                     </h1>
                                 </NavLink>
@@ -231,7 +231,7 @@ function Footer() {
             </div>
 
 
-            <Marquee className='flex items-end text-9xl  text-white space-x-10  h-[25vh]' style={{ width: "100%", height: "25vh" }}>
+            <Marquee className='flex items-end text-8xl  text-white space-x-10  h-[25vh]' style={{ width: "100%", height: "25vh" }}>
                 Think inside the Advantium.
             </Marquee>
         </div>

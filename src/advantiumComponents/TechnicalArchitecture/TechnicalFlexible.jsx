@@ -167,7 +167,7 @@ function TechFlexible() {
                 <div className="Tech-subchild rounded-4xl overflow-hidden  ">
                     <div className="TechItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Blueprinting</h1>
+                            <h1 className='text-[18px] text-white'>1. Blueprinting</h1>
                         </div>
 
                         <div className="Tech-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -180,7 +180,7 @@ function TechFlexible() {
                 <div className="Tech-subchild rounded-4xl overflow-hidden ">
                     <div className="TechItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Advice</h1>
+                            <h1 className='text-[18px] text-white'>2. Advice</h1>
                         </div>
 
                         <div className="Tech-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -194,7 +194,7 @@ function TechFlexible() {
                 <div className="Tech-subchild rounded-4xl overflow-hidden ">
                     <div className="TechItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Designing ecosystems</h1>
+                            <h1 className='text-[18px] text-white'>3. Designing ecosystems</h1>
                         </div>
 
                         <div className="Tech-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -207,7 +207,7 @@ function TechFlexible() {
                 <div className="Tech-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="TechItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Implementation</h1>
+                            <h1 className='text-[18px] text-white'>4. Implementation</h1>
                         </div>
 
                         <div className="Tech-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -219,7 +219,7 @@ function TechFlexible() {
                 <div className="Tech-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="TechItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>5. Maintenance & management</h1>
+                            <h1 className='text-[18px] text-white'>5. Maintenance & management</h1>
                         </div>
 
                         <div className="Tech-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -238,8 +238,8 @@ function TechFlexible() {
             <div className="Techtext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px]  ">
 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
-                    <h1 className='text-7xl'>Blueprinting</h1>
-                    <h1 className='text-white/70 text-[20px]'>Need help developing a customized technical architecture that perfectly matches your organization's specific needs and goals? We can help! <br /><br />
+                    <h1 className='text-6xl'>Blueprinting</h1>
+                    <h1 className='text-white/70 text-[18px]'>Need help developing a customized technical architecture that perfectly matches your organization's specific needs and goals? We can help! <br /><br />
 
                         With the C4 model, we create a clear and structured blueprint that visualizes the technical components and their interrelationships. This ensures that the architecture is understandable and flexible, so your systems perform optimally and can grow with the developments within your organization.
 
@@ -247,20 +247,20 @@ function TechFlexible() {
                     </h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
-                    <h1 className='text-7xl'>Advice</h1>
-                    <h1 className='text-white/70 text-[20px]'>We advise on the best technology choices, such as frameworks, hosting, CMS and integration tools. Thanks to our broad industry knowledge, we know exactly which technologies are best suited to your organisation's unique needs. This enables us to make informed choices that ensure efficient, secure and future-proof systems, and a solid foundation for your digital platforms. Whether it's choosing a flexible CMS, finding reliable hosting solutions, or integrating systems to optimise your processes, we ensure that the chosen technologies not only fit your current needs, but also grow with your organisation.</h1>
+                    <h1 className='text-6xl'>Advice</h1>
+                    <h1 className='text-white/70 text-[18px]'>We advise on the best technology choices, such as frameworks, hosting, CMS and integration tools. Thanks to our broad industry knowledge, we know exactly which technologies are best suited to your organisation's unique needs. This enables us to make informed choices that ensure efficient, secure and future-proof systems, and a solid foundation for your digital platforms. Whether it's choosing a flexible CMS, finding reliable hosting solutions, or integrating systems to optimise your processes, we ensure that the chosen technologies not only fit your current needs, but also grow with your organisation.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Designing ecosystems</h1>
-                    <h1 className='text-white/70 text-[20px]'>At Advantium, we design modular and future-proof ecosystems that are flexible and scalable. This means that we divide systems into different, easily manageable parts (modules) that can be easily adapted or extended, without the need to rebuild everything from scratch. This allows you to continue developing your digital platforms in the future without major disruptions. We also ensure that the links between different systems work well and that everything remains user-friendly, so that it is not only technically strong, but also easy for you and your team to manage and use. The result is a system that grows with your organisation and is ready for the future.</h1>
+                    <h1 className='text-6xl'>Designing ecosystems</h1>
+                    <h1 className='text-white/70 text-[18px]'>At Advantium, we design modular and future-proof ecosystems that are flexible and scalable. This means that we divide systems into different, easily manageable parts (modules) that can be easily adapted or extended, without the need to rebuild everything from scratch. This allows you to continue developing your digital platforms in the future without major disruptions. We also ensure that the links between different systems work well and that everything remains user-friendly, so that it is not only technically strong, but also easy for you and your team to manage and use. The result is a system that grows with your organisation and is ready for the future.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Implementation</h1>
-                    <h1 className='text-white/70 text-[20px]'>We provide comprehensive guidance on the implementation of your new systems to ensure everything runs smoothly and efficiently. We ensure that the transition to the new technical architecture is well managed, with clear steps and timelines, so there are no unexpected bumps in the road. Our team works closely with your organisation to ensure that everything is implemented as required, so that your systems are up and running quickly and meet expectations straight away. We take the time to answer any questions and make sure your team is well prepared to use the new technology.</h1>
+                    <h1 className='text-6xl'>Implementation</h1>
+                    <h1 className='text-white/70 text-[18px]'>We provide comprehensive guidance on the implementation of your new systems to ensure everything runs smoothly and efficiently. We ensure that the transition to the new technical architecture is well managed, with clear steps and timelines, so there are no unexpected bumps in the road. Our team works closely with your organisation to ensure that everything is implemented as required, so that your systems are up and running quickly and meet expectations straight away. We take the time to answer any questions and make sure your team is well prepared to use the new technology.</h1>
                 </div>
                 <div className="text05 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Maintenance & management</h1>
-                    <h1 className='text-white/70 text-[20px]'>Do you want to be assured of a stable, secure and optimally performing digital platform? Advantium offers ongoing maintenance and management support to ensure your systems always remain up-to-date and reliable. With proactive monitoring, timely updates and technical support, we minimise risks and maximise performance. Any bugs or incidents are dealt with quickly via our Service Desk, and thanks to our clear Service Level Agreements (SLA), you always know where you stand. <br /><br />
+                    <h1 className='text-6xl'>Maintenance & management</h1>
+                    <h1 className='text-white/70 text-[18px]'>Do you want to be assured of a stable, secure and optimally performing digital platform? Advantium offers ongoing maintenance and management support to ensure your systems always remain up-to-date and reliable. With proactive monitoring, timely updates and technical support, we minimise risks and maximise performance. Any bugs or incidents are dealt with quickly via our Service Desk, and thanks to our clear Service Level Agreements (SLA), you always know where you stand. <br /><br />
 
                         We like to think strategically with you about improvements and optimisations, so that your digital landscape not only continues to function well, but can also grow along with your ambitions.
 

@@ -45,11 +45,11 @@ export default function SecuritySplitText() {
 
   return (
     <div className="SecuritysplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
-        <h1 className="Modular-Text text-start py-5 text-[55px] text-white flex items-center">Highest standards of information security.</h1>
+        <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">Highest standards of information security.</h1>
       <div
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className=" text-[20px] space-y-5   text-white text-start leading-snug "
+        className=" text-[18px] space-y-5   text-white text-start leading-snug "
       >
 <h1 className="text-white/70 space-y-5">Security and privacy is essential for any organisation, especially at a time when data processing and information security are key. Implementing security measures protects both our systems and our clients' data from unauthorised access, loss or misuse. Advantium has achieved ISO 27001 certification, an international standard for information security, demonstrating that we meet the highest standards of protection and risk management.
 

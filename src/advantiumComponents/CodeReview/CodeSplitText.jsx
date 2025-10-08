@@ -54,11 +54,11 @@ export default function CodeSplitText() {
             >
                 <h1 className="text-white/80 space-y-5">Code reviewing is the systematic process of analyzing and evaluating existing codebases to ensure high standards of quality, performance, and security. The goal is to identify inefficiencies, technical issues, or potential risks before they impact functionality. Regular code reviews help software run more efficiently, remain secure, and become easier to maintain over time. <br /><br />
 
-At Advantium, when we take responsibility for your existing software, our team performs a comprehensive audit to assess its current condition and architecture. For standard software, we map out every process the application manages and explore integration opportunities with other systems. For custom-built solutions, our experts conduct a detailed code review to evaluate maintainability, identify optimization areas, and ensure the codebase is ready for scalable future development.
+                    At Advantium, when we take responsibility for your existing software, our team performs a comprehensive audit to assess its current condition and architecture. For standard software, we map out every process the application manages and explore integration opportunities with other systems. For custom-built solutions, our experts conduct a detailed code review to evaluate maintainability, identify optimization areas, and ensure the codebase is ready for scalable future development.
                 </h1>
 
 
-               
+
 
 
 

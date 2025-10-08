@@ -160,14 +160,14 @@ function MobileAppFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden   '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around  overflow-hidden   '>
 
             <div className="MobileApptext-cont w-[25%] h-[90%] flex flex-col justify-center ">
 
                 <div className="MobileApp-subchild rounded-4xl overflow-hidden  ">
                     <div className="MobileAppItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Analysing</h1>
+                            <h1 className='text-[18px] text-white'>1. Analysing</h1>
                         </div>
 
                         <div className="MobileApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -180,7 +180,7 @@ function MobileAppFlexible() {
                 <div className="MobileApp-subchild rounded-4xl overflow-hidden ">
                     <div className="MobileAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Storyboard</h1>
+                            <h1 className='text-[18px] text-white'>2. Storyboard</h1>
                         </div>
 
                         <div className="MobileApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -194,7 +194,7 @@ function MobileAppFlexible() {
                 <div className="MobileApp-subchild rounded-4xl overflow-hidden ">
                     <div className="MobileAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Architecture</h1>
+                            <h1 className='text-[18px] text-white'>3. Architecture</h1>
                         </div>
 
                         <div className="MobileApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -207,7 +207,7 @@ function MobileAppFlexible() {
                 <div className="MobileApp-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="MobileAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Design</h1>
+                            <h1 className='text-[18px] text-white'>4. Design</h1>
                         </div>
 
                         <div className="MobileApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -220,7 +220,7 @@ function MobileAppFlexible() {
                 <div className="MobileApp-subchild rounded-4xl overflow-hidden ">
                     <div className="MobileAppItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>5. Delivery</h1>
+                            <h1 className='text-[18px] text-white'>5. Delivery</h1>
                         </div>
 
                         <div className="MobileApp-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -237,7 +237,7 @@ function MobileAppFlexible() {
             <div className="MobileApptext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] pt-33 ">
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
                     <h1 className='text-7xl'>Analysing</h1>
-                    <h1 className='text-white/70 text-[20px]'>Every project starts with a comprehensive analysis. Together, we discuss your needs, goals and the possibilities offered by different technologies. We answer questions such as:
+                    <h1 className='text-white/70 text-[18px]'>Every project starts with a comprehensive analysis. Together, we discuss your needs, goals and the possibilities offered by different technologies. We answer questions such as:
 
                         - What exactly should the app do?"
                         - Who will use the app?"
@@ -249,19 +249,19 @@ function MobileAppFlexible() {
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
                     <h1 className='text-7xl'>Storyboard</h1>
-                    <h1 className='text-white/70 text-[20px]'>With a clear goal in mind, we start designing wireframes and storyboards. These provide a visual overview of what your mobile app will look like and what functionalities it will incorporate. This is the first step in translating your idea into a concrete design.</h1>
+                    <h1 className='text-white/70 text-[18px]'>With a clear goal in mind, we start designing wireframes and storyboards. These provide a visual overview of what your mobile app will look like and what functionalities it will incorporate. This is the first step in translating your idea into a concrete design.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Architecture</h1>
-                    <h1 className='text-white/70 text-[20px]'>The technical structure of your mobile application is crucial and forms the backbone of the project. Based on the wireframes and goals created, we design a strong foundation with data relay models, APIs, servers and management environments. Our developers ensure that all data flows, exchanges and customisations are programmed and managed. This way, we create a future-proof mobile app that is easy to maintain and ready for growth.</h1>
+                    <h1 className='text-white/70 text-[18px]'>The technical structure of your mobile application is crucial and forms the backbone of the project. Based on the wireframes and goals created, we design a strong foundation with data relay models, APIs, servers and management environments. Our developers ensure that all data flows, exchanges and customisations are programmed and managed. This way, we create a future-proof mobile app that is easy to maintain and ready for growth.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Design</h1>
-                    <h1 className='text-white/70 text-[20px]'>During the design phase, we bring the concept to life by creating a clickable prototype. This gives you a clear picture of what your mobile app will roughly look like. During the feedback phase, we incorporate your input so that we can work together to create a perfect end product. It is also valuable to test the prototype outside the project team and with people from the target group, to discover possible problems, irregularities or areas for improvement in the user experience.</h1>
+                    <h1 className='text-white/70 text-[18px]'>During the design phase, we bring the concept to life by creating a clickable prototype. This gives you a clear picture of what your mobile app will roughly look like. During the feedback phase, we incorporate your input so that we can work together to create a perfect end product. It is also valuable to test the prototype outside the project team and with people from the target group, to discover possible problems, irregularities or areas for improvement in the user experience.</h1>
                 </div>
                 <div className="text05 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
                     <h1 className='text-7xl'>Delivery</h1>
-                    <h1 className='text-white/70 text-[20px]'>Now our craftsmanship really comes into its own. We build and test your customised app extensively on different devices and systems, from Android to iOS, to ensure the application works optimally and meets the highest quality standards. Although 100% error-free software does not exist, we always strive to get as close to perfection as possible.</h1>
+                    <h1 className='text-white/70 text-[18px]'>Now our craftsmanship really comes into its own. We build and test your customised app extensively on different devices and systems, from Android to iOS, to ensure the application works optimally and meets the highest quality standards. Although 100% error-free software does not exist, we always strive to get as close to perfection as possible.</h1>
                 </div>
 
 

@@ -49,11 +49,11 @@ export default function AppsSplitText() {
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-5    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-5    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80">In today’s digital world, apps are essential for enhancing user experiences and streamlining operations. Whether mobile or web-based, each offers unique advantages that help your business grow.</h1>
 
-                <h1 className="text-[55px] text-white">Advantages of having an app for your organization.</h1>
+                <h1 className="text-[45px] text-white">Advantages of having an app for your organization.</h1>
 
                 <div className="!flex">
                     <CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3" />

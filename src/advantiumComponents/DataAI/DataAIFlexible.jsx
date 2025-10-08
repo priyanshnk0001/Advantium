@@ -167,7 +167,7 @@ function DataAIFlexible() {
                 <div className="DataAI-subchild rounded-4xl overflow-hidden  ">
                     <div className="DataAIItm flex justify-between items-center border-b-1  border-gray-400      py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>1. Decision-making</h1>
+                            <h1 className='text-[18px] text-white'>1. Decision-making</h1>
                         </div>
 
                         <div className="DataAI-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -180,7 +180,7 @@ function DataAIFlexible() {
                 <div className="DataAI-subchild rounded-4xl overflow-hidden ">
                     <div className="DataAIItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>2. Efficiency in processes</h1>
+                            <h1 className='text-[18px] text-white'>2. Efficiency in processes</h1>
                         </div>
 
                         <div className="DataAI-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -194,7 +194,7 @@ function DataAIFlexible() {
                 <div className="DataAI-subchild rounded-4xl overflow-hidden ">
                     <div className="DataAIItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>3. Personalisation at scale</h1>
+                            <h1 className='text-[18px] text-white'>3. Personalisation at scale</h1>
                         </div>
 
                         <div className="DataAI-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -207,7 +207,7 @@ function DataAIFlexible() {
                 <div className="DataAI-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="DataAIItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>4. Better customer interactions</h1>
+                            <h1 className='text-[18px] text-white'>4. Better customer interactions</h1>
                         </div>
 
                         <div className="DataAI-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -219,7 +219,7 @@ function DataAIFlexible() {
                 <div className="DataAI-subchild rounded-4xl overflow-hidden .pppp ">
                     <div className="DataAIItm flex justify-between items-center border-b-1  border-gray-400    py-5">
                         <div className='flex items-center pl-7'>
-                            <h1 className='text-[20px] text-white'>5. Working cost-effectively</h1>
+                            <h1 className='text-[18px] text-white'>5. Working cost-effectively</h1>
                         </div>
 
                         <div className="DataAI-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -238,25 +238,25 @@ function DataAIFlexible() {
             <div className="DataAItext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px]  ">
 
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
-                    <h1 className='text-7xl'>Decision-making</h1>
-                    <h1 className='text-white/70 text-[20px]'>AI enables you to make data-driven decisions. By recognising patterns in data and acting on them, you can make predictions and take the right actions. This not only helps you react faster to changes, but also better inform strategic choices.
+                    <h1 className='text-6xl'>Decision-making</h1>
+                    <h1 className='text-white/70 text-[18px]'>AI enables you to make data-driven decisions. By recognising patterns in data and acting on them, you can make predictions and take the right actions. This not only helps you react faster to changes, but also better inform strategic choices.
                     </h1>
                 </div>
                 <div className="text02 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0   ">
-                    <h1 className='text-7xl'>Efficiency in processes</h1>
-                    <h1 className='text-white/70 text-[20px]'>AI makes it possible to automate repetitive tasks. From simple administrative operations to more complex business logic, AI can take over and streamline tasks, allowing employees to focus on more strategic and valuable work.</h1>
+                    <h1 className='text-6xl'>Efficiency in processes</h1>
+                    <h1 className='text-white/70 text-[18px]'>AI makes it possible to automate repetitive tasks. From simple administrative operations to more complex business logic, AI can take over and streamline tasks, allowing employees to focus on more strategic and valuable work.</h1>
                 </div>
                 <div className="text03 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Personalisation at scale</h1>
-                    <h1 className='text-white/70 text-[20px]'>With AI, you can personalise customer interactions based on data. Think personalised recommendations, tailored marketing campaigns and proactive customer service. AI makes it possible to respond to the needs of individual customers on a large scale, boosting customer satisfaction and loyalty.</h1>
+                    <h1 className='text-6xl'>Personalisation at scale</h1>
+                    <h1 className='text-white/70 text-[18px]'>With AI, you can personalise customer interactions based on data. Think personalised recommendations, tailored marketing campaigns and proactive customer service. AI makes it possible to respond to the needs of individual customers on a large scale, boosting customer satisfaction and loyalty.</h1>
                 </div>
                 <div className="text04 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Better customer interactions</h1>
-                    <h1 className='text-white/70 text-[20px]'>AI offers the opportunity to improve customer communication through, for example, chatbots and virtual assistants. These systems can provide 24/7 support, not only answering simple questions but also solving complex problems, enhancing the customer experience.</h1>
+                    <h1 className='text-6xl'>Better customer interactions</h1>
+                    <h1 className='text-white/70 text-[18px]'>AI offers the opportunity to improve customer communication through, for example, chatbots and virtual assistants. These systems can provide 24/7 support, not only answering simple questions but also solving complex problems, enhancing the customer experience.</h1>
                 </div>
                 <div className="text05 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10 opacity-0  ">
-                    <h1 className='text-7xl'>Working cost-effectively</h1>
-                    <h1 className='text-white/70 text-[20px]'>By automating processes, reducing human error and making efficient use of data, organisations can save costs. AI solutions can also lead to higher margins through smarter planning and more focused activities.
+                    <h1 className='text-6xl'>Working cost-effectively</h1>
+                    <h1 className='text-white/70 text-[18px]'>By automating processes, reducing human error and making efficient use of data, organisations can save costs. AI solutions can also lead to higher margins through smarter planning and more focused activities.
 
                     </h1>
                 </div>

@@ -161,9 +161,9 @@ function CodeFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden   '>
+        <div className='w-[100%]  bg-gray-900 flex justify-around items-center overflow-hidden pb-20  '>
 
-            <div className="codetext-cont w-[25%] h-[90%] flex flex-col justify-center ">
+            <div className="codetext-cont w-[25%] h-[90%] flex flex-col justify-center">
 
                 <div className="code-subchild rounded-4xl overflow-hidden  ">
                     <div className="codeItm flex justify-between items-center border-b-1  border-gray-400      py-5">

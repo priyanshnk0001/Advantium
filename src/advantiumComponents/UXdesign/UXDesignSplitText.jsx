@@ -44,11 +44,11 @@ export default function UXDesignSplitText() {
 
     return (
         <div className="UXDesignsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="UXDesign-Text text-start py-5 text-[55px] text-white flex items-center">Wat is User Experience Design?</h1>
+            <h1 className="UXDesign-Text text-start py-5 text-[50px] text-white flex items-center">Wat is User Experience Design?</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-5    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-5    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80 space-y-5">User Experience Design (UX) is about creating an intuitive and efficient interaction between the user and your product. It's not just about the visual elements of an interface, but also about how that interface functions. The goal? To provide the user with a hassle-free and enjoyable experience. The simpler and user-friendly the experience, the more likely users are to stick around, come back and eventually take the desired action.
                     <br /><br />

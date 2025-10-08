@@ -44,11 +44,11 @@ export default function WebAppSplitText() {
 
     return (
         <div className="WebAppsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="WebApp-Text text-start py-5 text-[55px] text-white flex items-center">Web applications as digital tools.</h1>
+            <h1 className="WebApp-Text text-start py-5 text-[50px] text-white flex items-center">Web applications as digital tools.</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-10    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-10    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80 space-y-5">A web application is a software application that can be accessed via a web browser. Unlike traditional desktop applications, web apps are platform-independent and available anywhere, as long as there is an internet connection. Whether it is to manage customer relationships, streamline internal processes, or provide self-service portals for users, web applications are increasingly being used to help companies work more efficiently and better meet their customers' needs.
                     <br /><br />

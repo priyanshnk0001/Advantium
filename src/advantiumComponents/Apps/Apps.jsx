@@ -122,25 +122,25 @@ function Apps() {
                 <Header />
 
                 <div className="apps-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="apps-container1 w-[100%] mt-60  flex justify-around items-center">
+                    <div className="apps-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="apps1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Your app developed by experienced app developers.</h1>
-                            <h1 className='text-gray-300 text-xl '>Mobile applications are becoming increasingly important, and it is essential to stand out with a user-friendly and perfectly functioning app. As experienced app developers, we create customised solutions that not only match your personal requirements, but also appeal to the right target group.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Your app developed by experienced app developers.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Mobile applications are becoming increasingly important, and it is essential to stand out with a user-friendly and perfectly functioning app. As experienced app developers, we create customised solutions that not only match your personal requirements, but also appeal to the right target group.</h1>
                             <div className="appsBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                     <div className="appsBtn-container ">
-                                        <button className="appsButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                        <button className="appsButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                         <button
                                             className="appsArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                            <CallMadeIcon className="!w-8 !h-8" />
+                                            <CallMadeIcon className="!w-7 !h-7" />
                                         </button>
                                     </div>
                                 </NavLink>
 
-                                <button onClick={scrollTomoreApp} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on apps</button>
+                                <button onClick={scrollTomoreApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on apps</button>
                             </div>
                         </div>
-                        <div className="apps1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="apps1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img className='scale-105 rounded-2xl' src="dubeySir.jpeg" alt="" />
                         </div>
                     </div>
@@ -155,38 +155,38 @@ function Apps() {
                         <h1 className="text-center text-8xl px-45 ">Which app are you looking for?</h1>
                         <div className="appCard-container w-[100%] flex  justify-around">
 
-                            <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
+                            <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%]  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
                                 <NavLink to="/MobileApp">
-                                    <div className='h-[500px]'>
+                                    <div className='h-[450px]'>
                                         <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                             <h1 className='text-4xl'>Mobile app</h1>
                                             <h1 className='text-white/70 leading-loose'>Creating a mobile app means turning your users’ goals into a digital, on-the-go experience. With our expertise in custom app development, we ensure your app meets every requirement and connects seamlessly with your target audience.</h1>
                                         </div>
-                                        <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                        <h1 className='mx-8 text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                     </div>
                                 </NavLink>
                             </div>
 
-                            <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
+                            <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%]  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
                                 <NavLink to="/WebApp">
-                                    <div className='h-[500px]'>
+                                    <div className='h-[450px]'>
                                         <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                             <h1 className='text-4xl'>Web app</h1>
                                             <h1 className='text-white/70 leading-loose'>The web applications developed by Advantium deliver a seamless user experience and a robust backend that integrates systems effortlessly, ensuring your organisation runs efficiently and scales with ease. </h1>
                                         </div>
-                                        <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                        <h1 className='mx-8 text-[18px] '>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                     </div>
                                 </NavLink>
                             </div>
 
-                            <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
+                            <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%]  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
                                 <NavLink to="/AppDesign">
-                                    <div className='h-[500px]'>
+                                    <div className='h-[450px]'>
                                         <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                             <h1 className='text-4xl'>App design</h1>
                                             <h1 className='text-white/70 leading-loose'>Developing a mobile app begins with design, not code. At Advantium, we ensure your app’s design forms the foundation for an exceptional user experience. Together, we identify and shape the needs of your end users. </h1>
                                         </div>
-                                        <h1 className='mx-8 text-[20px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                        <h1 className='mx-8 text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                     </div>
                                 </NavLink>
                             </div>

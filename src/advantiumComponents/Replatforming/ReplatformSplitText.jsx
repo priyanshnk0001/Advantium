@@ -48,7 +48,7 @@ export default function ReplatformSplitText() {
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-10    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-10    text-white text-start leading-snug "
             >
                 <h1 className="text-white/70">Replatforming is the process of migrating an existing digital platform, such as a website, e-commerce platform or application, to a new technology or infrastructure. This involves modernising the technical stack, modifying the architecture for better performance, scalability and maintainability, and replacing outdated systems with modern, cloud-based solutions.
                     <br /><br />

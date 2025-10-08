@@ -165,7 +165,7 @@ function SoftSolution() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-x-hidden  ' >
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden  ' >
             <div className="softImg-main-cont w-[50%] h-[90vh] rounded-3xl relative">
                 <div className="CMP-img w-[100%] h-[90vh] rounded-3xl absolute bg " >
                     <img className='object-fit w-full h-full rounded-3xl' src="tech002.jpg" alt="" />
@@ -197,9 +197,9 @@ function SoftSolution() {
 
                 <div className="soft-subchild rounded-4xl overflow-hidden"  >
                     <NavLink  to="/CMportal" onClick={() => window.scrollTo(0, 0)}  >
-                        <div className="itm flex justify-between items-center border-b-1  border-gray-400      py-10">
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400      py-8">
                             <div className='flex items-center pl-7'>
-                                <h1 className='text-[30px] text-white'>Customer and management portals</h1>
+                                <h1 className='text-2xl text-white'>Customer and management portals</h1>
                             </div>
 
                             <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -212,9 +212,9 @@ function SoftSolution() {
 
                 <div className="soft-subchild rounded-4xl overflow-hidden ">
                     <NavLink className="w-fit" to="/Apps" onClick={() => window.scrollTo(0, 0)} >
-                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-8">
                             <div className='flex items-center pl-7'>
-                                <h1 className='text-[30px] text-white'>Apps</h1>
+                                <h1 className='text-2xl text-white'>Apps</h1>
                             </div>
 
                             <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -228,9 +228,9 @@ function SoftSolution() {
 
                 <div className="soft-subchild rounded-4xl overflow-hidden ">
                     <NavLink className="w-fit" to="/WebsiteCMS" onClick={() => window.scrollTo(0, 0)} >
-                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-8">
                             <div className='flex items-center pl-7'>
-                                <h1 className='text-[30px] text-white'>Websites & CMS</h1>
+                                <h1 className='text-2xl text-white'>Websites & CMS</h1>
                             </div>
 
                             <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -243,9 +243,9 @@ function SoftSolution() {
 
                 <div className="soft-subchild rounded-4xl overflow-hidden .pppp ">
                     <NavLink className="w-fit" to="/Ecom" onClick={() => window.scrollTo(0, 0)} >
-                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-8">
                             <div className='flex items-center pl-7'>
-                                <h1 className='text-[30px] text-white'>E-commerce solutions</h1>
+                                <h1 className='text-2xl text-white'>E-commerce solutions</h1>
                             </div>
 
                             <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -258,9 +258,9 @@ function SoftSolution() {
 
                 <div className="soft-subchild rounded-4xl overflow-hidden ">
                     <NavLink className="w-fit" to="/DMplatform" onClick={() => window.scrollTo(0, 0)} >
-                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-8">
                             <div className='flex items-center pl-7'>
-                                <h1 className='text-[30px] text-white'>Data Management Platform</h1>
+                                <h1 className='text-2xl text-white'>Data Management Platform</h1>
                             </div>
 
                             <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">
@@ -274,9 +274,9 @@ function SoftSolution() {
                 <div className="soft-subchild rounded-4xl overflow-hidden ">
                     <NavLink className="w-fit" to="/LMS" onClick={() => window.scrollTo(0, 0)} >
 
-                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-10">
+                        <div className="itm flex justify-between items-center border-b-1  border-gray-400    py-8">
                             <div className='flex items-center pl-7'>
-                                <h1 className='text-[30px] text-white'>Learning Management System</h1>
+                                <h1 className='text-2xl text-white'>Learning Management System</h1>
                             </div>
 
                             <div className="soft-iconAnim opacity-0 scale-0  bg-yellow-300  flex px-3 py-3 rounded-full">

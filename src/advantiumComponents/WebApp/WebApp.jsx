@@ -118,24 +118,24 @@ function WebApp() {
                 <Header />
 
                 <div className="WebApp-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="WebApp-container1 w-[100%] mt-50  flex justify-around items-center">
+                    <div className="WebApp-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="WebApp1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Getting web app created: the key to powerful business processes.</h1>
-                            <h1 className='text-gray-300 text-xl '>The web applications that we develop not only offer a smooth user experience, but also provide a reliable backend that seamlessly integrates websystems, so that your organisation can continue to operate efficiently and scalable.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Getting web app created: the key to powerful business processes.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>The web applications that we develop not only offer a smooth user experience, but also provide a reliable backend that seamlessly integrates websystems, so that your organisation can continue to operate efficiently and scalable.</h1>
                             <div className="WebAppBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                     <div className="WebAppBtn-container ">
-                                        <button className="WebAppButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                        <button className="WebAppButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                         <button
                                             className="WebAppArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                            <CallMadeIcon className="!w-8 !h-8" />
+                                            <CallMadeIcon className="!w-7 !h-7" />
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreWebApp} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on Web apps</button>
+                                <button onClick={scrollTomoreWebApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on Web apps</button>
                             </div>
                         </div>
-                        <div className="WebApp1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="WebApp1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img src="pic33.webp" alt="" />
                         </div>
                     </div>
@@ -147,13 +147,13 @@ function WebApp() {
                     </div>
 
                     <div className="WebApp-text-container text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-9xl px-45 ">In five stages, we guide you to the final result.</h1>
+                        <h1 className="text-center text-8xl px-45 ">In five stages, we guide you to the final result.</h1>
                         <div className="WebAppFlexible-container">
                             <WebAppFlexible />
                         </div>
                     </div>
 
-                    <div className="bigImg w-[100%] h-[100vh] flex justify-center items-center mt-[-100px]"><img className='w-[95%] h-[95vh] rounded-xl ' src="pic34.webp" alt="" /></div>
+                    <div className="bigImg w-[100%] h-[100vh] flex justify-center items-center mt-[-150px]"><img className='w-[95%] h-[95vh] rounded-xl ' src="pic34.webp" alt="" /></div>
 
 
                 </div>

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+
 export default function OppositeScroll({
     images = [
         { src: "./whiteLaptop.jpg", caption: "Project One" },
@@ -113,10 +114,10 @@ export default function OppositeScroll({
         for (let i = 0; i < images.length; i++) {
             const img = images[i];
             items.push(
-                <div key={`${r}-${i}`} className="flex-none px-6" style={{ width: 450 }}>
+                <div key={`${r}-${i}`} className="flex-none px-6" style={{ width: 430 }}>
                     <div className="card-3d group" style={{ perspective: 1000 }}>
                         <div
-                            className="card-inner relative w-full h-[300px] transition-transform duration-500"
+                            className="card-inner relative w-full h-[280px] transition-transform duration-500"
                         >
                             <div
                                 className="card-face card-front absolute inset-0 rounded-xl  shadow-lg"

@@ -6,6 +6,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import "./SplitText.css"
 gsap.registerPlugin(ScrollTrigger);
 
+
 export default function SplitTextAnimate() {
   const elRef = useRef(null);
   const splitRef = useRef(null);
@@ -28,7 +29,7 @@ export default function SplitTextAnimate() {
       scrollTrigger: {
         trigger: elRef.current,
         start: "top 93%",
-        end:"top 10%",
+        end:"top 28%",
         scrub: 2,
         // markers:true
       },
@@ -48,7 +49,7 @@ export default function SplitTextAnimate() {
       <h1
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className="text-4xl md:text-6xl font-semi-bold   text-white text-start leading-snug "
+        className="text-4xl md:text-[52px]    text-white text-start leading-snug "
       >
 At <span className="text-[rgb(35,147,195)]   ">Advantium</span>, we’re not just creating technology — we’re shaping tomorrow with smart, innovative digital solutions that empower businesses and individuals to grow, connect, and succeed. </h1>
     </div>

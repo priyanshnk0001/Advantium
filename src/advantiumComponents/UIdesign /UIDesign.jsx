@@ -18,6 +18,8 @@ import { NavLink } from 'react-router-dom';
 function UIDesign() {
     const [pos, setPos] = useState({ x: 750, y: 400 });
     const UIDesignTweenArrow2 = useRef(null);
+    const UIDesignTweenArrow3 = useRef(null);
+    const UIDesignTweenArrow4 = useRef(null);
 
 
 
@@ -70,6 +72,59 @@ function UIDesign() {
             UIDesignTweenArrow2.current.kill();
         };
     }, []);
+
+     useGSAP(() => {
+        UIDesignTweenArrow3.current = gsap.to(".UIDesignBottomButton2 .UIDesignArrowButton3", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor:"#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const UIDesignarrow3 = document.querySelector(".UIDesignBtn-container2");
+        if (!UIDesignarrow3) return;
+
+        const onEnter3 = () => UIDesignTweenArrow3.current.play();
+        const onLeave3 = () => UIDesignTweenArrow3.current.reverse();
+
+        UIDesignarrow3.addEventListener("mouseenter", onEnter3);
+        UIDesignarrow3.addEventListener("mouseleave", onLeave3);
+
+        return () => {
+            UIDesignarrow3.removeEventListener("mouseenter", onEnter3);
+            UIDesignarrow3.removeEventListener("mouseleave", onLeave3);
+            UIDesignTweenArrow3.current.kill();
+        };
+    }, []);
+    
+    useGSAP(() => {
+        UIDesignTweenArrow4.current = gsap.to(".UIDesignBottomButton4 .UIDesignArrowButton4", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor:"#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const UIDesignarrow4 = document.querySelector(".UIDesignBtn-container4");
+        if (!UIDesignarrow4) return;
+
+        const onEnter4 = () => UIDesignTweenArrow4.current.play();
+        const onLeave4 = () => UIDesignTweenArrow4.current.reverse();
+
+        UIDesignarrow4.addEventListener("mouseenter", onEnter4);
+        UIDesignarrow4.addEventListener("mouseleave", onLeave4);
+
+        return () => {
+            UIDesignarrow4.removeEventListener("mouseenter", onEnter4);
+            UIDesignarrow4.removeEventListener("mouseleave", onLeave4);
+            UIDesignTweenArrow4.current.kill();
+        };
+    }, []);
+
 
 
     useGSAP(()=>{
@@ -159,24 +214,24 @@ function UIDesign() {
                 <Header />
 
                 <div className="UIDesign-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="UIDesign-container1 w-[100%] mt-60  flex justify-around items-center">
+                    <div className="UIDesign-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="UIDesign1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Optimal interactions with User Interface Designs.</h1>
-                            <h1 className='text-gray-300 text-xl '>Good design is more than just aesthetically pleasing; it's about the experience you provide. From the right icon to the perfect colour and contrast, our UI/UX designers make sure every interaction is optimised for the user. We make sure your message comes across clearly and effectively, by carefully fine-tuning the arrangement and even the smallest details. Complexity is made simple, so that your users always have the best experience.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Optimal interactions with User Interface Designs.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Good design is more than just aesthetically pleasing; it's about the experience you provide. From the right icon to the perfect colour and contrast, our UI/UX designers make sure every interaction is optimised for the user. We make sure your message comes across clearly and effectively, by carefully fine-tuning the arrangement and even the smallest details. Complexity is made simple, so that your users always have the best experience.</h1>
                             <div className="UIDesignBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="UIDesignBtn-container ">
-                                    <button className="UIDesignButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="UIDesignButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="UIDesignArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreUIDesign} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on UI Design</button>
+                                <button onClick={scrollTomoreUIDesign} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on UI Design</button>
                             </div>
                         </div>
-                        <div className="UIDesign1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="UIDesign1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img className=' rounded-2xl' src="pic43.webp" alt="" />
                         </div>
                     </div>
@@ -192,15 +247,15 @@ function UIDesign() {
 
                     <div className="UIDesign-container4 w-[100%] my-10  flex justify-around items-center">
                         <div className="UIDesign4-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Why is User Interface Design important?</h1>
-                            <h1 className='text-gray-300 text-xl '>A well-designed user interface makes it easy for users to understand how to interact with a product, leading to higher conversion and satisfaction. If users cannot quickly find what they need or cannot navigate intuitively, you will lose them to competitors. By focusing on simplicity and usability, we combine UI and UX design in a coherent process. Our UX designers ensure that your product performs effectively and keeps users coming back. With a well-designed user interface and user experience design, you not only create beautiful products, but also products that really work.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Why is User Interface Design important?</h1>
+                            <h1 className='text-gray-300 text-[18px] '>A well-designed user interface makes it easy for users to understand how to interact with a product, leading to higher conversion and satisfaction. If users cannot quickly find what they need or cannot navigate intuitively, you will lose them to competitors. By focusing on simplicity and usability, we combine UI and UX design in a coherent process. Our UX designers ensure that your product performs effectively and keeps users coming back. With a well-designed user interface and user experience design, you not only create beautiful products, but also products that really work.</h1>
                             <div className="UIDesignBottomButton2 flex  items-center mt-5 z-0     ">
                                 <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0 , 0)}>
                                 <div className="UIDesignBtn-container2 ">
-                                    <button className="UIDesignButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
+                                    <button className="UIDesignButton2  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
                                     <button
                                         className="UIDesignArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
@@ -218,15 +273,15 @@ function UIDesign() {
                             <img className='rounded-2xl' src="pic42.webp" alt="" />
                         </div>
                         <div className="UIDesign5-child2 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>An experience between the brand, product and user.</h1>
-                            <h1 className='text-gray-300 text-xl '>The right icon, in the best colour, with appropriate contrast. Using space, shape and colour, we guide the user to what they want. Besides the user experience, we also focus on the User Interface (UI) - everything the user sees and interacts with. From the right icon to the best contrast, we make sure the interface optimally suits the needs of your target audience. We make complexity simple and ensure smooth interaction and conversion.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>An experience between the brand, product and user.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>The right icon, in the best colour, with appropriate contrast. Using space, shape and colour, we guide the user to what they want. Besides the user experience, we also focus on the User Interface (UI) - everything the user sees and interacts with. From the right icon to the best contrast, we make sure the interface optimally suits the needs of your target audience. We make complexity simple and ensure smooth interaction and conversion.</h1>
                             <div className="UIDesignBottomButton4 flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="UIDesignBtn-container4 ">
-                                    <button className="UIDesignButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Schedule an appointment</button>
+                                    <button className="UIDesignButton4  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="UIDesignArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>

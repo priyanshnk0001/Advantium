@@ -19,6 +19,8 @@ import { NavLink } from 'react-router-dom';
 function Design() {
     const [pos, setPos] = useState({ x: 750, y: 400 });
     const DesignTweenArrow2 = useRef(null);
+    const DesignTweenArrow3 = useRef(null);
+    const DesignTweenArrow4 = useRef(null);
 
 
 
@@ -71,6 +73,59 @@ function Design() {
             DesignTweenArrow2.current.kill();
         };
     }, []);
+
+     useGSAP(() => {
+        DesignTweenArrow3.current = gsap.to(".DesignBottomButton2 .DesignArrowButton3", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor:"#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const Designarrow3 = document.querySelector(".DesignBtn-container2");
+        if (!Designarrow3) return;
+
+        const onEnter3 = () => DesignTweenArrow3.current.play();
+        const onLeave3 = () => DesignTweenArrow3.current.reverse();
+
+        Designarrow3.addEventListener("mouseenter", onEnter3);
+        Designarrow3.addEventListener("mouseleave", onLeave3);
+
+        return () => {
+            Designarrow3.removeEventListener("mouseenter", onEnter3);
+            Designarrow3.removeEventListener("mouseleave", onLeave3);
+            DesignTweenArrow3.current.kill();
+        };
+    }, []);
+    
+    useGSAP(() => {
+        DesignTweenArrow4.current = gsap.to(".DesignBottomButton4 .DesignArrowButton4", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor:"#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const Designarrow4 = document.querySelector(".DesignBtn-container4");
+        if (!Designarrow4) return;
+
+        const onEnter4 = () => DesignTweenArrow4.current.play();
+        const onLeave4 = () => DesignTweenArrow4.current.reverse();
+
+        Designarrow4.addEventListener("mouseenter", onEnter4);
+        Designarrow4.addEventListener("mouseleave", onLeave4);
+
+        return () => {
+            Designarrow4.removeEventListener("mouseenter", onEnter4);
+            Designarrow4.removeEventListener("mouseleave", onLeave4);
+            DesignTweenArrow4.current.kill();
+        };
+    }, []);
+
 
 
     useGSAP(() => {
@@ -148,23 +203,23 @@ function Design() {
                 <Header />
 
                 <div className="Design-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="Design-container1 w-[100%] mt-60  flex justify-around items-center">
+                    <div className="Design-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="Design1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Design that connects with users and drives your goals.</h1>
-                            <h1 className='text-gray-300 text-xl '>Design is the foundation of digital success. Our UX designers turn your requirements into modern, user-friendly interfaces that deliver seamless experiences. The result? Digital products that don’t just look great — they perform flawlessly. Ready to elevate your user experience?</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Design that connects with users and drives your goals.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Design is the foundation of digital success. Our UX designers turn your requirements into modern, user-friendly interfaces that deliver seamless experiences. The result? Digital products that don’t just look great — they perform flawlessly. Ready to elevate your user experience?</h1>
                             <div className="DesignBottomButton flex  items-center mt-5 z-0    ">
                                 <div className="DesignBtn-container ">
-                                    <button className="DesignButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="DesignButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="DesignArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
-                                <button className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on Design</button>
+                                <button className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on Design</button>
                             </div>
                         </div>
-                        <div className="Design1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
-                            <img className='scale-105 rounded-2xl' src="pic27.webp" alt="" />
+                        <div className="Design1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
+                            <img className=' rounded-2xl' src="pic27.webp" alt="" />
                         </div>
                     </div>
 
@@ -235,14 +290,14 @@ function Design() {
 
                     <div className="Design-container4 w-[100%] my-20  flex justify-around items-center">
                         <div className="Design4-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>The foundation for success.</h1>
-                            <h1 className='text-gray-300 text-xl '>In the first phase, we collaborate with you to uncover the core needs of your target audience. Your vision is important — but your users’ needs come first. Through design sprints, we define user goals using clear User Stories, helping us understand what your visitors truly want and how to serve them best.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>The foundation for success.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>In the first phase, we collaborate with you to uncover the core needs of your target audience. Your vision is important — but your users’ needs come first. Through design sprints, we define user goals using clear User Stories, helping us understand what your visitors truly want and how to serve them best.</h1>
                             <div className="DesignBottomButton2 flex  items-center mt-5 z-0    ">
                                 <div className="DesignBtn-container2 ">
-                                    <button className="DesignButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Sprinting together?</button>
+                                    <button className="DesignButton2  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Sprinting together?</button>
                                     <button
                                         className="DesignArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                             </div>
@@ -259,14 +314,14 @@ function Design() {
                             <img className='rounded-2xl' src="pic29.webp" alt="" />
                         </div>
                         <div className="Design5-child2 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Technical architecture: Building the right foundation</h1>
-                            <h1 className='text-gray-300 text-xl '>Every website needs a strong technical foundation. During the design sprints, we decide on the right techniques and frameworks in close collaboration with you — ensuring full transparency in every choice and its impact. Our lead developer guides the process, guaranteeing a robust and scalable solution.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Technical architecture: Building the right foundation</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Every website needs a strong technical foundation. During the design sprints, we decide on the right techniques and frameworks in close collaboration with you — ensuring full transparency in every choice and its impact. Our lead developer guides the process, guaranteeing a robust and scalable solution.</h1>
                             <div className="DesignBottomButton4 flex  items-center mt-5 z-0    ">
                                 <div className="DesignBtn-container4 ">
-                                    <button className="DesignButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More info</button>
+                                    <button className="DesignButton4  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">More info</button>
                                     <button
                                         className="DesignArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                             </div>

@@ -87,15 +87,15 @@ function MobileApp() {
         })
     })
 
-window.addEventListener('load', () => window.scrollTo(0, 0));
-   const moreMobileAppRef = useRef(null);
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+    const moreMobileAppRef = useRef(null);
 
-  // scroll function
-  const scrollTomoreMobileApp = () => {
-    if (!moreMobileAppRef.current) return;
+    // scroll function
+    const scrollTomoreMobileApp = () => {
+        if (!moreMobileAppRef.current) return;
 
-    moreMobileAppRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+        moreMobileAppRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
 
 
 
@@ -118,24 +118,24 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
                 <Header />
 
                 <div className="MobileApp-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="MobileApp-container1 w-[100%] mt-50  flex justify-around items-center">
+                    <div className="MobileApp-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="MobileApp1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Mobile app: software in your customer's hand. software.</h1>
-                            <h1 className='text-gray-300 text-xl '>Having a mobile app created means making your user goal both digital and portable. Whether you are having an app built for your customers or want to have a business app developed for internal processes, we go through a structured process with you from idea to final product.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Mobile app: software in your customer's hand. software.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Having a mobile app created means making your user goal both digital and portable. Whether you are having an app built for your customers or want to have a business app developed for internal processes, we go through a structured process with you from idea to final product.</h1>
                             <div className="MobileAppBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                     <div className="MobileAppBtn-container ">
-                                        <button className="MobileAppButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                        <button className="MobileAppButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                         <button
                                             className="MobileAppArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                            <CallMadeIcon className="!w-8 !h-8" />
+                                            <CallMadeIcon className="!w-7 !h-7" />
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreMobileApp} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on mobile apps</button>
+                                <button onClick={scrollTomoreMobileApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on mobile apps</button>
                             </div>
                         </div>
-                        <div className="MobileApp1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="MobileApp1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img src="pic31.webp" alt="" />
                         </div>
                     </div>
@@ -146,9 +146,9 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
                         <MobileAppSplitText />
                     </div>
 
-                    <div className="MobileApp-text-container text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-9xl px-45 ">From idea to successful app.</h1>
-                        <div className="MobileAppFlexible-container">
+                    <div className="MobileApp-text-container text-white !flex !flex-col w-[100%] gap-10 pt-20 ">
+                        <h1 className="text-center text-8xl px-45  ">From idea to successful app.</h1>
+                        <div className="MobileAppFlexible-container  ">
                             <MobileAppFlexible />
                         </div>
                     </div>

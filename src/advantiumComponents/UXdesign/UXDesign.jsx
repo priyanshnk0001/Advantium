@@ -18,6 +18,8 @@ import { NavLink } from 'react-router-dom';
 function UXDesign() {
     const [pos, setPos] = useState({ x: 750, y: 400 });
     const UXDesignTweenArrow2 = useRef(null);
+    const UXDesignTweenArrow3 = useRef(null);
+    const UXDesignTweenArrow4 = useRef(null);
 
 
 
@@ -70,6 +72,59 @@ function UXDesign() {
             UXDesignTweenArrow2.current.kill();
         };
     }, []);
+
+
+    useGSAP(() => {
+        UXDesignTweenArrow3.current = gsap.to(".UXDesignBottomButton2 .UXDesignArrowButton3", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor:"#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const UXDesignarrow3 = document.querySelector(".UXDesignBtn-container2");
+        if (!UXDesignarrow3) return;
+
+        const onEnter3 = () => UXDesignTweenArrow3.current.play();
+        const onLeave3 = () => UXDesignTweenArrow3.current.reverse();
+
+        UXDesignarrow3.addEventListener("mouseenter", onEnter3);
+        UXDesignarrow3.addEventListener("mouseleave", onLeave3);
+
+        return () => {
+            UXDesignarrow3.removeEventListener("mouseenter", onEnter3);
+            UXDesignarrow3.removeEventListener("mouseleave", onLeave3);
+            UXDesignTweenArrow3.current.kill();
+        };
+    }, []);
+    useGSAP(() => {
+        UXDesignTweenArrow4.current = gsap.to(".UXDesignBottomButton4 .UXDesignArrowButton4", {
+            rotation: 45,
+            x: 7,
+            // backgroundColor:"#fbbf24",
+            duration: 0.4,
+            ease: "power2.out",
+            paused: true,
+        });
+
+        const UXDesignarrow4 = document.querySelector(".UXDesignBtn-container4");
+        if (!UXDesignarrow4) return;
+
+        const onEnter4 = () => UXDesignTweenArrow4.current.play();
+        const onLeave4 = () => UXDesignTweenArrow4.current.reverse();
+
+        UXDesignarrow4.addEventListener("mouseenter", onEnter4);
+        UXDesignarrow4.addEventListener("mouseleave", onLeave4);
+
+        return () => {
+            UXDesignarrow4.removeEventListener("mouseenter", onEnter4);
+            UXDesignarrow4.removeEventListener("mouseleave", onLeave4);
+            UXDesignTweenArrow4.current.kill();
+        };
+    }, []);
+
 
 
     useGSAP(()=>{
@@ -159,24 +214,24 @@ function UXDesign() {
                 <Header />
 
                 <div className="UXDesign-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
-                    <div className="UXDesign-container1 w-[100%] mt-60  flex justify-around items-center">
+                    <div className="UXDesign-container1 w-[100%] mt-40  flex justify-around items-center">
                         <div className="UXDesign1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Impress with User Experience Designs.</h1>
-                            <h1 className='text-gray-300 text-xl '>Design is the basis for digital success. Our UX designers translate your requirements and wireframes into a user-friendly, modern User Interface. From a streamlined user experience to a interface you love to use - we make sure your digital products not only look good, but also perform. Ready to create a great user experience for your digital product?</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Impress with User Experience Designs.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>Design is the basis for digital success. Our UX designers translate your requirements and wireframes into a user-friendly, modern User Interface. From a streamlined user experience to a interface you love to use - we make sure your digital products not only look good, but also perform. Ready to create a great user experience for your digital product?</h1>
                             <div className="UXDesignBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="UXDesignBtn-container ">
-                                    <button className="UXDesignButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="UXDesignButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="UXDesignArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreUXDesign} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on UX Design</button>
+                                <button onClick={scrollTomoreUXDesign} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on UX Design</button>
                             </div>
                         </div>
-                        <div className="UXDesign1-child2 w-[45%] h-[625px] flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="UXDesign1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
                             <img className=' rounded-2xl' src="pic40.webp" alt="" />
                         </div>
                     </div>
@@ -192,15 +247,15 @@ function UXDesign() {
 
                     <div className="UXDesign-container4 w-[100%] my-10  flex justify-around items-center">
                         <div className="UXDesign4-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Why is UX Design important?</h1>
-                            <h1 className='text-gray-300 text-xl '>In today's digital world, the difference between success and failure is often found in user experience. Without thinking about User Experience, your visitors can quickly leave your site or app, while a positive UX drives engagement, trust and conversions. Whether you have an e-commerce website, develop a SaaS solution, or build an enterprise platform, your end-user experience is always key to achieving your goals. We shape experiences that users crave and organisations grow from. That's because User Experience Design is at the heart of everything we create.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Why is UX Design important?</h1>
+                            <h1 className='text-gray-300 text-[18px] '>In today's digital world, the difference between success and failure is often found in user experience. Without thinking about User Experience, your visitors can quickly leave your site or app, while a positive UX drives engagement, trust and conversions. Whether you have an e-commerce website, develop a SaaS solution, or build an enterprise platform, your end-user experience is always key to achieving your goals. We shape experiences that users crave and organisations grow from. That's because User Experience Design is at the heart of everything we create.</h1>
                             <div className="UXDesignBottomButton2 flex  items-center mt-5 z-0     ">
                                 <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0 , 0)}>
                                 <div className="UXDesignBtn-container2 ">
-                                    <button className="UXDesignButton2  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
+                                    <button className="UXDesignButton2  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Contact us</button>
                                     <button
                                         className="UXDesignArrowButton3  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
@@ -218,15 +273,15 @@ function UXDesign() {
                             <img className='rounded-2xl' src="pic42.webp" alt="" />
                         </div>
                         <div className="UXDesign5-child2 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[70px]  leading-tight '>Data meets design.</h1>
-                            <h1 className='text-gray-300 text-xl '>We want to know as much as possible about your end-users and product, because the right insights lead to appropriate design choices. The design must be both functional and attractive. We take the end-user as our starting point, because if you want to be an online end-user you will have to start at the end of the chain: the final online experience. Who are they? What do they want? How do they behave online? With the right balance of data and knowledge, we shape a strong brand experience. Our UX designers ensure that your solution fits perfectly. Whatever you want developed, Advantium has the knowledge and experience.</h1>
+                            <h1 className='text-white text-[60px]  leading-tight '>Data meets design.</h1>
+                            <h1 className='text-gray-300 text-[18px] '>We want to know as much as possible about your end-users and product, because the right insights lead to appropriate design choices. The design must be both functional and attractive. We take the end-user as our starting point, because if you want to be an online end-user you will have to start at the end of the chain: the final online experience. Who are they? What do they want? How do they behave online? With the right balance of data and knowledge, we shape a strong brand experience. Our UX designers ensure that your solution fits perfectly. Whatever you want developed, Advantium has the knowledge and experience.</h1>
                             <div className="UXDesignBottomButton4 flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="UXDesignBtn-container4 ">
-                                    <button className="UXDesignButton4  rounded-full py-4 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Schedule an appointment</button>
+                                    <button className="UXDesignButton4  rounded-full py-3 px-7 text-[18px] border-2 border-white text-white cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="UXDesignArrowButton4  rounded-full p-3 text-white border-2 border-white cursor-pointer  ">
-                                        <CallMadeIcon className="!w-8 !h-8" />
+                                        <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>

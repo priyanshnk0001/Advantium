@@ -43,12 +43,12 @@ export default function DevSecSplitText() {
   }, []);
 
   return (
-    <div className="DevSecsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
-        <h1 className="Modular-Text text-start py-5 text-[55px] text-white flex items-center">What is DevSecOps exactly?</h1>
+    <div className="DevSecsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-hidden  ">
+        <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">What is DevSecOps exactly?</h1>
       <h1
         ref={elRef}
        style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-        className=" text-[20px] space-y-5   text-white text-start leading-snug "
+        className=" text-[18px] space-y-5   text-white text-start leading-snug "
       >
 DevSecOps integrates security into every phase of software development — from initial design to production and maintenance. Instead of treating security as an afterthought or a final checkpoint, it becomes an integral part of the process from day one. This proactive approach ensures vulnerabilities are prevented early, keeping your software secure, stable, and ready for continuous delivery.
 <br /><br />

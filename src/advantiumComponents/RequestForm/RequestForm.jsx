@@ -83,7 +83,7 @@ function RequestForm() {
          onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
                 onMouseLeave={() => setPos({ x: -200, y: -200 })}
 
-        className='w-[100%] h-[100vh] pt-35 '
+        className='w-[100%] h-[100vh] pt-32 '
          style={{
                     background: `radial-gradient(
                         900px circle at ${pos.x}px ${pos.y}px,
@@ -95,9 +95,9 @@ function RequestForm() {
             <div>
                 <Header/>
             </div>
-            <div className="Request w-[55%] text-white m-auto rounded-2xl  border-2 border-white/50 p-20  ">
+            <div className="Request w-[55%] text-white m-auto rounded-2xl  border-2 border-white/50 p-15">
 
-                <form className=' flex flex-col gap-10 ' action="" ref={formRef} onSubmit={sendEmail}>
+                <form className=' flex flex-col gap-5 ' action="" ref={formRef} onSubmit={sendEmail}>
                     <div>
                         <label htmlFor="">What is your name ?</label>
                         <input
@@ -148,11 +148,11 @@ function RequestForm() {
                         />
                     </div>
 
-                    <div className="Request-drawer-Btn-container">
-                        <button className="Request-drawer-Button  rounded-full py-4 px-15 text-[20px] bg-yellow-300 text-black cursor-pointer ">Send</button>
+                    <div className="Request-drawer-Btn-container pt-5">
+                        <button className="Request-drawer-Button  rounded-full py-4 px-15 text-[18px] bg-yellow-300 text-black cursor-pointer ">Send</button>
                         <button
                             className="Request-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
-                            <CallMadeIcon className="!w-8 !h-8" />
+                            <CallMadeIcon className="!w-7 !h-7" />
                         </button>
                     </div>
                 </form>

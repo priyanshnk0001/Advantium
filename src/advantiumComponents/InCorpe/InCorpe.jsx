@@ -126,7 +126,7 @@ function InCorpe() {
 
                     </h1>
                     <h1 className="text-black/50 text-xl">
-                        Customers should enjoy every interaction with InCorpe, which is why the customer portal was designed with intuitive self-service features. Users can easily manage all their devices, view and enter counter readings, and submit service requests for specific machines. They can also order related products — such as cartridges, paper, and toners — directly through the portal. This makes the entire ordering process simple, accessible, and efficient.
+                        Customers should enjoy every interaction with InCorpe, which is why the customer portal was designed with intuitive self-service features. Users can easily manage all their devices, view and enter counter readings, and submit service requests for specific machines. They can also order related products — such as cartridges, paper, and toners — directly through the portal. This makes the entire ordering process simple, accessible, and efficient.\
                     </h1>
                 </div>
 

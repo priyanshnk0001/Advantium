@@ -45,11 +45,11 @@ export default function AppDesignSplitText() {
 
     return (
         <div className="AppDesignsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
-            <h1 className="AppDesign-Text text-start py-5 text-[55px] text-white flex items-center">Build meaningful connections between users and your brand.</h1>
+            <h1 className="AppDesign-Text text-start py-5 text-[50px] text-white flex items-center">Build meaningful connections between users and your brand.</h1>
             <div
                 ref={elRef}
                 style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
-                className=" text-[20px] flex flex-col gap-5    text-white text-start leading-snug "
+                className=" text-[18px] flex flex-col gap-5    text-white text-start leading-snug "
             >
                 <h1 className="text-white/80 space-y-5">Great app design goes beyond aesthetics — it shapes how users interact, explore features, and stay engaged. An intuitive interface ensures a seamless experience, helping users achieve their goals effortlessly. At Advantium, we craft designs that not only enhance usability but also strengthen the emotional bond between users and your brand — building trust and setting your app apart in a competitive digital landscape.</h1>
 
