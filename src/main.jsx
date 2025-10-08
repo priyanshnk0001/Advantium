@@ -48,6 +48,7 @@ import EastBorn from './advantiumComponents/EastBorn/EastBorn.jsx'
 import Fundaments from './advantiumComponents/Fundaments/Fundaments.jsx'
 import JustEat from './advantiumComponents/JustEat/JustEat.jsx'
 import TakeAway from './advantiumComponents/TakeAway/TakeAway.jsx'
+import TermsAndConditions from './advantiumComponents/TermsAndConditions/TermsAndConditions.jsx'
 
 
 
@@ -222,6 +223,10 @@ let allRouts = createHashRouter(
     {
       path: "TakeAway",
       element: <TakeAway/>
+    },
+    {
+      path: "TermsAndConditions",
+      element: <TermsAndConditions/>
     },
     
 

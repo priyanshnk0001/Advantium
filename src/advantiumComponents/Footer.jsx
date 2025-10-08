@@ -211,13 +211,13 @@ function Footer() {
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start flex flex-col gap-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-[22px]'>General</h1>
-                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/TermsAndConditions" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-[18px]'>Privacy Statement
                                         <span className="underline-footer  absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
 
                                     </h1>
                                 </NavLink>
-                                <NavLink to="" className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
+                                <NavLink to="/TermsAndConditions" onClick={() => window.scrollTo(0, 0)} className={({ isActive }) => `w-fit relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300`} >
                                     <h1 className='footer-TextUnderline text-white text-[18px]'>General terms and <br /> conditions
                                         <span className="underline-footer absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                                     </h1>
