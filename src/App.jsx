@@ -203,9 +203,9 @@ export default function HoverSpotLight() {
             <div className="BookingBtn-container">
               <button 
                onClick={triggerHeaderBookingClick}
-              className="bookingButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+              className="bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
               <button
-                className="nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
+                className="nextArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
                 <CallMadeIcon className="!w-7 !h-7" />
               </button>
             </div>
