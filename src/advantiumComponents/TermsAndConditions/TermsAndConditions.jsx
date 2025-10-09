@@ -34,7 +34,10 @@ export default function TermsAndConditions() {
 
                 <div className="w-[100%] h-auto ">
                     <div className="text text-white space-y-10 pt-40 px-13">
-                        <div className="image overflow-hidden"><img className='scale-110 w-[100%] h-[300px]' src="privacyImg.png" alt="" /></div>
+                        <div className="logo-container flex justify-center gap-5 overflow-hidden w-[100%] h-[200px] ">
+                            <img className='w-50 h-50' src="privacylogo01.png" alt="" />
+                            <h1 className='text-8xl font-bold self-center'>Privacy Policy</h1>
+                            </div>
                         <h1 className='text-white/70'>
                             <span className='text-white'>Advantium</span> Technlogies Service Llp built the App for survey as a free app at no cost and is intended for use as is.
                             <br />
