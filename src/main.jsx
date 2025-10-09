@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import {  Routes } from "react-router"
+import { Routes } from "react-router"
 import {
   createBrowserRouter,
   createHashRouter,
@@ -54,8 +54,8 @@ import TermsAndConditions from './advantiumComponents/TermsAndConditions/TermsAn
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
-    
-   
+
+
 //     <Contact/>
 //   </StrictMode>,
 // )
@@ -67,173 +67,173 @@ let allRouts = createHashRouter(
   [
     {
       path: '/',
-      element: <App  />
+      element: <App />
     },
-  
+
     {
       path: 'Insights',
-      element: <Insights  />
+      element: <Insights />
     },
     {
       path: 'About',
-      element: <About  />
+      element: <About />
     },
-  
-   
+
+
     {
       path: 'Careers',
-      element: <Careers  />
+      element: <Careers />
     },
-   
+
     {
       path: 'Contact',
-      element: <Contact  />
+      element: <Contact />
     },
 
     {
       path: "CMportal",
-      element: <CMportal/>
+      element: <CMportal />
     },
 
     {
       path: "Apps",
-      element: <Apps/>
+      element: <Apps />
     },
 
     {
       path: "WebsiteCMS",
-      element: <WebsiteCMS/>
+      element: <WebsiteCMS />
     },
     {
       path: "Ecom",
-      element: <Ecom/>
+      element: <Ecom />
     },
     {
       path: "DMplatform",
-      element: <DMplatform/>
+      element: <DMplatform />
     },
     {
       path: "LMS",
-      element: <LMS/>
+      element: <LMS />
     },
     {
       path: "Code",
-      element: <Code/>
+      element: <Code />
     },
     {
       path: "Strategy",
-      element: <Strategy/>
+      element: <Strategy />
     },
     {
       path: "Technical",
-      element: <Technical/>
+      element: <Technical />
     },
     {
       path: "DataAI",
-      element: <DataAI/>
+      element: <DataAI />
     },
     {
       path: "Replatform",
-      element: <Replatform/>
+      element: <Replatform />
     },
     {
       path: "Technology",
-      element: <Technology/>
+      element: <Technology />
     },
     {
       path: "Integration",
-      element: <Integration/>
+      element: <Integration />
     },
     {
       path: "DevSecOps",
-      element: <DevSecOps/>
+      element: <DevSecOps />
     },
     {
       path: "Security",
-      element: <Security/>
+      element: <Security />
     },
     {
       path: "Maintenance",
-      element: <Maintenance/>
+      element: <Maintenance />
     },
     {
       path: "Design",
-      element: <Design/>
+      element: <Design />
     },
     {
       path: "SoftDev",
-      element: <SoftDev/>
+      element: <SoftDev />
     },
     {
       path: "PureEnergy",
-      element: <PureEnergy/>
+      element: <PureEnergy />
     },
     {
       path: "RequestForm",
-      element: <RequestForm/>
+      element: <RequestForm />
     },
     {
       path: "OpenApp",
-      element: <OpenApp/>
+      element: <OpenApp />
     },
     {
       path: "MobileApp",
-      element: <MobileApp/>
+      element: <MobileApp />
     },
     {
       path: "WebApp",
-      element: <WebApp/>
+      element: <WebApp />
     },
     {
       path: "AppDesign",
-      element: <AppDesign/>
+      element: <AppDesign />
     },
     {
       path: "DesignSprint",
-      element: <DesignSprint/>
+      element: <DesignSprint />
     },
     {
       path: "UXDesign",
-      element: <UXDesign/>
+      element: <UXDesign />
     },
     {
       path: "UIDesign",
-      element: <UIDesign/>
+      element: <UIDesign />
     },
     {
       path: "Nou",
-      element: <Nou/>
+      element: <Nou />
     },
     {
       path: "InCorpe",
-      element: <InCorpe/>
+      element: <InCorpe />
     },
     {
       path: "EastBorn",
-      element: <EastBorn/>
+      element: <EastBorn />
     },
     {
       path: "Fundaments",
-      element: <Fundaments/>
+      element: <Fundaments />
     },
     {
       path: "JustEat",
-      element: <JustEat/>
+      element: <JustEat />
     },
     {
       path: "TakeAway",
-      element: <TakeAway/>
+      element: <TakeAway />
     },
     {
       path: "TermsAndConditions",
-      element: <TermsAndConditions/>
+      element: <TermsAndConditions />
     },
-    
 
-     {
-    basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
-  }
-   
+
+    {
+      basename: '/Advantium'  // 👈 ye line important hai for GitHub Pages
+    }
+
   ]
 )
 
@@ -244,7 +244,7 @@ let allRouts = createHashRouter(
 Root.render(
   <StrictMode>
     <RouterProvider router={allRouts} />
-   </StrictMode>,
+  </StrictMode>,
 )
 
 

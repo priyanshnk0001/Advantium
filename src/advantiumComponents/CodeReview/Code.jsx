@@ -50,7 +50,6 @@ function Code() {
         CodeTweenArrow2.current = gsap.to(".CodeBottomButton .CodeArrowButton2", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,

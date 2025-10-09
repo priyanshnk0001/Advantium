@@ -81,7 +81,6 @@ function CMportal() {
         CMportalTweenArrow2.current = gsap.to(".CMportalBottomButton .CMportalArrowButton2", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,
@@ -108,7 +107,6 @@ function CMportal() {
         CMportalTweenArrow3.current = gsap.to(".CMportalBottomButton2 .CMportalArrowButton3", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,
@@ -135,7 +133,6 @@ function CMportal() {
         CMportalTweenArrow4.current = gsap.to(".CMportalBottomButton4 .CMportalArrowButton4", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,

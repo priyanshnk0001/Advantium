@@ -41,17 +41,15 @@ export default function HoverSpotLight() {
   const rotateTweenArrow2 = useRef(null);
 
 
-    const headerRef = useRef(null); // agar future mein ref use karna ho to handy rahega
+  const headerRef = useRef(null); 
 
   const triggerHeaderBookingClick = () => {
-    // try to find header's booking button and click it
     const attemptClick = (attempt = 0) => {
       const btn = document.querySelector('.Header-bookingButton');
       if (btn) {
         btn.click();
         return;
       }
-      // retry up to 10 times with small delay (60ms)
       if (attempt < 10) {
         setTimeout(() => attemptClick(attempt + 1), 60);
       } else {
@@ -61,11 +59,11 @@ export default function HoverSpotLight() {
 
     attemptClick();
   };
-  
+
 
 
   window.addEventListener('load', () => window.scrollTo(0, 0));
-   const softRef = useRef(null);
+  const softRef = useRef(null);
 
   // scroll function
   const scrollToSoft = () => {
@@ -74,18 +72,10 @@ export default function HoverSpotLight() {
     softRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  
+
 
   useGSAP(() => {
     const tl = gsap.timeline();
-    // tl.from(".advantium-main-cont", {
-
-    //   y: 1200,
-    //   duration: 0.5,
-    // })
-
-
-
     tl.from(".techBuilds", {
       y: 100,
       opacity: 0,
@@ -113,7 +103,6 @@ export default function HoverSpotLight() {
       ease: "power2.out",
     }, "-=0.4")
 
-
   })
 
 
@@ -123,11 +112,10 @@ export default function HoverSpotLight() {
     rotateTweenArrow2.current = gsap.to(".advantiumBottomButton .nextArrowButton2", {
       rotation: 45,
       x: 7,
-      // backgroundColor:"#fbbf24",
       duration: 0.4,
       ease: "power2.out",
-       force3D: true,   // 👈 GPU acceleration + no layout jank
-  willChange: "transform", // 👈 help CSS engine prepare
+      force3D: true,   
+      willChange: "transform", 
       paused: true,
     });
 
@@ -149,57 +137,21 @@ export default function HoverSpotLight() {
 
   // ---------------- Text Animation ----------------
 
-  // const ttl = gsap.timeline({ repeat: -1, });
-  // useGSAP(() => {
-
-  //   ttl.to(".scaleText", {
-  //     delay: 2,
-  //     scrambleText: {
-  //       text: "Innovation",
-  //       chars: "_-&%",
-  //       revealDelay: 0.5,
-  //       speed: 0.3,
-  //       newClass: "innovationText"
-  //     }
-  //   });
-
-  //   ttl.to(".scaleText", {
-  //     delay: 2,
-  //     scrambleText: {
-  //       text: "Buisness",
-  //       chars: "_-&% ",
-  //       revealDelay: 0.5,
-  //       speed: 0.3,
-  //       newClass: "buisnessText"
-  //     }
-  //   });
-  //   ttl.to(".scaleText", {
-  //     delay: 2,
-  //     scrambleText: {
-  //       text: "scale",
-  //       chars: "_-&% ",
-  //       revealDelay: 0.5,
-  //       speed: 0.3,
-  //       newClass: "scaleText"
-  //     }
-  //   });
-  // })
-
 
   const ttl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
-useGSAP(() => {
-  const words = ["Innovation", "Business", "Scale"];
+  useGSAP(() => {
+    const words = ["Innovation", "Business", "Scale"];
 
-  words.forEach((word, i) => {
-    ttl.to(".scaleText", {
-      duration: 2,
-      text: word,
-      ease: "power2.inOut", // smooth easing
-      delay: 1,
+    words.forEach((word, i) => {
+      ttl.to(".scaleText", {
+        duration: 2,
+        text: word,
+        ease: "power2.inOut", // smooth easing
+        delay: 1,
+      });
     });
   });
-});
 
   return (
     <>
@@ -213,7 +165,7 @@ useGSAP(() => {
           rgba(56, 189, 248, 0.7),
           transparent 80%
         ), #0f172a`,
-        
+
         }}
       >
 
@@ -227,15 +179,15 @@ useGSAP(() => {
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
             <div className="BookingBtn-container">
-              <button 
-               onClick={triggerHeaderBookingClick}
-              className="bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+              <button
+                onClick={triggerHeaderBookingClick}
+                className="bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
               <button
                 className="nextArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
                 <CallMadeIcon className="!w-7 !h-7" />
               </button>
             </div>
-            
+
             <button onClick={scrollToSoft} className="software border-2 rounded-full py-3 px-7 text-[18px] text-white cursor-pointer  mx-3 hover:border-amber-300">Software solution</button>
           </div>
         </div>
@@ -265,12 +217,12 @@ useGSAP(() => {
       <Image />
       <SplitText />
       <div ref={softRef}>
-      <SoftSolution  />
+        <SoftSolution />
       </div>
       {/* <LatestNewsText /> */}
       {/* <LatestNews /> */}
       <SpinnyWheel />
-      <Footer  />
+      <Footer />
     </>
 
   );

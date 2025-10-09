@@ -37,7 +37,6 @@ function CodeFlexible() {
 
         tl.from(".codetext-main-cont", {
             scale: 0,
-            // delay:0.2,
             duration: 2
         }, "code")
 

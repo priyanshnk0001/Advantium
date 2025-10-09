@@ -52,7 +52,6 @@ function AppDesign() {
         AppDesignTweenArrow2.current = gsap.to(".AppDesignBottomButton .AppDesignArrowButton2", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,
@@ -78,7 +77,6 @@ function AppDesign() {
         AppDesignTweenArrow3.current = gsap.to(".AppDesignBottomButton2 .AppDesignArrowButton3", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,
@@ -103,7 +101,6 @@ function AppDesign() {
         AppDesignTweenArrow4.current = gsap.to(".AppDesignBottomButton4 .AppDesignArrowButton4", {
             rotation: 45,
             x: 7,
-            // backgroundColor:"#fbbf24",
             duration: 0.4,
             ease: "power2.out",
             paused: true,
