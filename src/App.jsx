@@ -101,7 +101,7 @@ export default function HoverSpotLight() {
     }, "-=0.3")
 
     tl.from(".ad-Content-cont .nextArrowButton2", {
-      x: -50,
+      y: 50,
       opacity: 0,
       duration: 0.5,
       ease: "power2.out",
@@ -126,6 +126,8 @@ export default function HoverSpotLight() {
       // backgroundColor:"#fbbf24",
       duration: 0.4,
       ease: "power2.out",
+       force3D: true,   // 👈 GPU acceleration + no layout jank
+  willChange: "transform", // 👈 help CSS engine prepare
       paused: true,
     });
 
