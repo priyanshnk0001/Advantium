@@ -222,7 +222,7 @@ useGSAP(() => {
 
         <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
           <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-7xl font-semibold overflow-hidden'>Tech builds.</h1></div>
-          <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-7xl font-semibold overflow-hidden'>scale</h1></div>
+          <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-7xl font-semibold overflow-hidden'>Scale</h1></div>
           <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-[30px] mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
