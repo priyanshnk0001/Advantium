@@ -74,23 +74,7 @@ export default function HoverSpotLight() {
     softRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
-  useEffect(() => {
-    setLoading(true);
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:1337/api/homepage');
-        setHomePageData(response.data.data);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching data:', err);
-        setLoading(false);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []); 
+  
 
   useGSAP(() => {
     const tl = gsap.timeline();
