@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from 'gsap/all';
+import { TextPlugin } from 'gsap/TextPlugin';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from './advantiumComponents/Header.jsx';
 import Image from './advantiumComponents/Image.jsx'
@@ -27,6 +28,8 @@ import { NavLink } from 'react-router-dom';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrambleTextPlugin);
+gsap.registerPlugin(TextPlugin);
+
 
 
 
@@ -160,45 +163,60 @@ export default function HoverSpotLight() {
 
   // ---------------- Text Animation ----------------
 
-  const ttl = gsap.timeline({ repeat: -1, });
-  useGSAP(() => {
+  // const ttl = gsap.timeline({ repeat: -1, });
+  // useGSAP(() => {
 
-    ttl.to(".scaleText", {
-      delay: 2,
-      scrambleText: {
-        text: "Innovation",
-        chars: "_-&%",
-        revealDelay: 0.5,
-        speed: 0.3,
-        newClass: "innovationText"
-      }
-    });
+  //   ttl.to(".scaleText", {
+  //     delay: 2,
+  //     scrambleText: {
+  //       text: "Innovation",
+  //       chars: "_-&%",
+  //       revealDelay: 0.5,
+  //       speed: 0.3,
+  //       newClass: "innovationText"
+  //     }
+  //   });
 
+  //   ttl.to(".scaleText", {
+  //     delay: 2,
+  //     scrambleText: {
+  //       text: "Buisness",
+  //       chars: "_-&% ",
+  //       revealDelay: 0.5,
+  //       speed: 0.3,
+  //       newClass: "buisnessText"
+  //     }
+  //   });
+  //   ttl.to(".scaleText", {
+  //     delay: 2,
+  //     scrambleText: {
+  //       text: "scale",
+  //       chars: "_-&% ",
+  //       revealDelay: 0.5,
+  //       speed: 0.3,
+  //       newClass: "scaleText"
+  //     }
+  //   });
+  // })
+
+
+  const ttl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+
+useGSAP(() => {
+  const words = ["Innovation", "Business", "Scale"];
+
+  words.forEach((word, i) => {
     ttl.to(".scaleText", {
-      delay: 2,
-      scrambleText: {
-        text: "Buisness",
-        chars: "_-&% ",
-        revealDelay: 0.5,
-        speed: 0.3,
-        newClass: "buisnessText"
-      }
+      duration: 2,
+      text: word,
+      ease: "power2.inOut", // smooth easing
+      delay: 1,
     });
-    ttl.to(".scaleText", {
-      delay: 2,
-      scrambleText: {
-        text: "scale",
-        chars: "_-&% ",
-        revealDelay: 0.5,
-        speed: 0.3,
-        newClass: "scaleText"
-      }
-    });
-  })
+  });
+});
 
   return (
     <>
-    
       <div
         onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
         onMouseLeave={() => setPos({ x: -200, y: -200 })}
