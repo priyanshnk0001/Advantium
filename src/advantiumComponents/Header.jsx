@@ -172,7 +172,7 @@ export default function Header() {
 
         const btl = gsap.timeline({ paused: true, reversed: true });
         btl.to(".Header-Bookingdrawer", { top: 0, duration: 0.45, opacity: 1, ease: "power2.out" });
-        btl.to(".Header-bookingButton", { text: "Close overlay", ease: "none" })
+        btl.to(".Header-bookingButton", { text: "Close", ease: "none" })
         btl.from(".bookingP1 > * , .bookingP2 > * ", {
             y: 30,
             opacity: 0,

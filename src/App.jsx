@@ -18,6 +18,7 @@ import LatestNewsText from './advantiumComponents/LatestNewsText.jsx'
 import SpinnyWheel from './advantiumComponents/SpinnyWheel.jsx'
 import Footer from './advantiumComponents/Footer.jsx';
 import Marquee from "react-fast-marquee";
+import axios from 'axios';
 
 
 import './App.css';
@@ -32,6 +33,8 @@ gsap.registerPlugin(ScrambleTextPlugin);
 
 export default function HoverSpotLight() {
   const [pos, setPos] = useState({ x: 750, y: 400 });
+  const [homePageData, setHomePageData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const rotateTweenArrow2 = useRef(null);
 
 
@@ -67,6 +70,24 @@ export default function HoverSpotLight() {
 
     softRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+
+  useEffect(() => {
+    setLoading(true);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:1337/api/homepage');
+        setHomePageData(response.data.data);
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching data:', err);
+        setLoading(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []); 
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -177,6 +198,7 @@ export default function HoverSpotLight() {
 
   return (
     <>
+    
       <div
         onMouseMove={(e) => setPos({ x: e.clientX, y: e.clientY })}
         onMouseLeave={() => setPos({ x: -200, y: -200 })}
@@ -195,7 +217,7 @@ export default function HoverSpotLight() {
         <Header ref={headerRef} />
 
         <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
-          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-7xl font-semibold overflow-hidden'>Tech builds.</h1></div>
+          <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-7xl font-semibold overflow-hidden'>{homePageData?.heading_line1}</h1></div>
           <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-7xl font-semibold overflow-hidden'>scale</h1></div>
           <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-[30px] mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>

@@ -198,14 +198,14 @@ function Strategy() {
                             <div className="StrategyBottomButton flex  items-center  z-0    ">
                                 <NavLink to="/RequestForm">
                                 <div className="StrategyBtn-container ">
-                                    <button className="StrategyButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="StrategyButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
-                                        className="StrategyArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
+                                        className="StrategyArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
                                         <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreStrategy}  className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
+                                <button onClick={scrollTomoreStrategy}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
                             </div>
                         </div>
                         <div className="str1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden   ">

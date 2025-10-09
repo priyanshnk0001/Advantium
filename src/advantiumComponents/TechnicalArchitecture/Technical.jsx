@@ -195,14 +195,14 @@ function Technical() {
 
                                 <NavLink to="/RequestForm">
                                 <div className="TechnicalBtn-container ">
-                                    <button className="TechnicalButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
+                                    <button className="TechnicalButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Schedule an appointment</button>
                                     <button
                                         className="TechnicalArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
                                         <CallMadeIcon className="!w-7 !h-7" />
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreTechArch} className="moreInfo border-2 rounded-full py-4 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
+                                <button onClick={scrollTomoreTechArch} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
                             </div>
                         </div>
                         <div className="CM1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden   ">
