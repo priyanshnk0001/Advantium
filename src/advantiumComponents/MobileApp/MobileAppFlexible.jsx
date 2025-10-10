@@ -160,9 +160,9 @@ function MobileAppFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around  overflow-hidden   '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex lg:justify-around md:justify-between lg:px-0 md:px-20  overflow-hidden   '>
 
-            <div className="MobileApptext-cont w-[25%] h-[90%] flex flex-col justify-center ">
+            <div className="MobileApptext-cont lg:w-[25%] md:w-[35%] h-[90%] flex flex-col justify-center ">
 
                 <div className="MobileApp-subchild rounded-4xl overflow-hidden  ">
                     <div className="MobileAppItm flex justify-between items-center border-b-1  border-gray-400      py-5">
@@ -234,7 +234,7 @@ function MobileAppFlexible() {
 
 
 
-            <div className="MobileApptext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] pt-33 ">
+            <div className="MobileApptext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] lg:pt-33 md:pt-65 ">
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
                     <h1 className='text-7xl'>Analysing</h1>
                     <h1 className='text-white/70 text-[18px]'>Every project starts with a comprehensive analysis. Together, we discuss your needs, goals and the possibilities offered by different technologies. We answer questions such as:

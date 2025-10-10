@@ -44,7 +44,7 @@ export default function AppsSplitText() {
     }, []);
 
     return (
-        <div className="appssplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
+        <div className="appssplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words lg:mt-20 md:mt-[-100px] lg:px-45 md:px-22 overflow-x-hidden  ">
             <h1 className="apps-Text text-start py-5 text-[55px] text-white flex items-center">Why go for an app?</h1>
             <div
                 ref={elRef}

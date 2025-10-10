@@ -202,7 +202,7 @@ function Security() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreScurity} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoreScurity} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info</button>
                             </div>
                         </div>
                         <div className="Security1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">

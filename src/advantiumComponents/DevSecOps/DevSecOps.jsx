@@ -179,7 +179,7 @@ function DevSecOps() {
                 <div className="dev-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
                     <div className="dev-container1 w-[100%] mt-40  flex justify-around">
                         <div className="dev1-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[60px]  leading-tight '>DevSecOps: Faster, smarter, and more secure software development.</h1>
+                            <h1 className='text-white lg:text-[60px] md:text-[50px]  leading-tight '>DevSecOps: Faster, smarter, and more secure software development.</h1>
                             <h1 className='text-gray-300 text-[18px] '>Organizations want to release new features and fix bugs quickly — without compromising quality or security. DevSecOps brings development, security, and operations together by embedding security from the very start, enabling faster and safer software development and deployment.</h1>
                             <div className="DevSecBottomButton flex  items-center mt-5 z-0    ">
 
@@ -192,7 +192,7 @@ function DevSecOps() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreDevSec} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">more info</button>
+                                <button onClick={scrollTomoreDevSec} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">more info</button>
                             </div>
                         </div>
                         <div className="dev1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -216,7 +216,7 @@ function DevSecOps() {
 
 
 
-                    <div className="dev-container3 w-[100%] mb-20  flex justify-around items-center">
+                    <div className="dev-container3 w-[100%] mb-20 lg:mt-0 md:mt-[-300px]  flex justify-around items-center">
                         <div className="dev3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[60px]  leading-tight '>Support for implementing DevSecOps solutions in GitLab.</h1>
                             <h1 className='text-gray-300 text-[18px] '>Shorten your time-to-market, enhance software quality, and strengthen application security with GitLab, the all-in-one DevSecOps platform. With GitLab, you can streamline development workflows, ensure code quality, and deliver secure software — all within a single, unified environment. Discover how our experts can elevate your development process to the next level.</h1>

@@ -43,7 +43,7 @@ export default function DevSecSplitText() {
   }, []);
 
   return (
-    <div className="DevSecsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-hidden  ">
+    <div className="DevSecsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  lg:px-45 md:px-22 overflow-hidden  ">
         <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">What is DevSecOps exactly?</h1>
       <h1
         ref={elRef}

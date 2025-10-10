@@ -44,7 +44,7 @@ export default function EcomSplitText() {
   }, []);
 
   return (
-    <div className="EcomsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-hidden  ">
+    <div className="EcomsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  lg:px-45 md:px-22 overflow-hidden  ">
         <h1 className="connect-Text text-start py-5 text-[50px] text-white flex items-center">Connect your services with your customers.</h1>
       <h1
         ref={elRef}

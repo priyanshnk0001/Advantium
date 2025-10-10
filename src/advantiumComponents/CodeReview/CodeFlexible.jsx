@@ -160,9 +160,9 @@ function CodeFlexible() {
 
 
     return (
-        <div className='w-[100%]  bg-gray-900 flex justify-around items-center overflow-hidden pb-20  '>
+        <div className='w-[100%]  bg-gray-900 flex justify-around items-center overflow-hidden pb-20 lg:gap-0 md:gap-20  '>
 
-            <div className="codetext-cont w-[25%] h-[90%] flex flex-col justify-center">
+            <div className="codetext-cont lg:w-[25%] md:w-[35%] h-[90%]  flex flex-col justify-center ] ">
 
                 <div className="code-subchild rounded-4xl overflow-hidden  ">
                     <div className="codeItm flex justify-between items-center border-b-1  border-gray-400      py-5">
@@ -234,7 +234,7 @@ function CodeFlexible() {
 
 
 
-            <div className="codetext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] pt-33 ">
+            <div className="codetext-main-cont text-white w-[50%] lg:h-[90vh] md:h-[70vh]  rounded-3xl relative lg:ml-[-250px] md:ml-[-100px] lg:pt-33 md:pt-35  ">
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
                     <h1 className='text-7xl'>Code reviews</h1>
                     <h1 className='text-white/70 text-[20px]'>We carry out thorough code reviews to identify inefficiencies, technical errors and improvement opportunities to optimise the quality and performance of your software.</h1>

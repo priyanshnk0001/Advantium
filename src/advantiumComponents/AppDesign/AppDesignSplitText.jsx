@@ -37,14 +37,14 @@ export default function AppDesignSplitText() {
 
         return () => {
             if (AppDesignsplitRef.current) {
-                AppDesignsplitRef.current.revert(); // cleanup split DOM
+                AppDesignsplitRef.current.revert(); 
             }
             ScrollTrigger.getAll().forEach((s) => s.kill());
         };
     }, []);
 
     return (
-        <div className="AppDesignsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
+        <div className="AppDesignsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words lg:mt-20 md:mt-0 lg:px-45 md:px-22 overflow-x-hidden  ">
             <h1 className="AppDesign-Text text-start py-5 text-[50px] text-white flex items-center">Build meaningful connections between users and your brand.</h1>
             <div
                 ref={elRef}

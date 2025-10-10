@@ -200,7 +200,7 @@ function Ecom() {
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreEcom} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More on E-commerce</button>
+                                <button onClick={scrollTomoreEcom} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More on E-commerce</button>
                             </div>
                         </div>
                         <div className="Ecom1-child2 w-[45%] h-[570px] flex flex-col rounded-2xl overflow-hidden  ">

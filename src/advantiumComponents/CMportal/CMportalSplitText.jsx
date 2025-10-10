@@ -44,7 +44,7 @@ export default function CMportalSplitText() {
   }, []);
 
   return (
-    <div className="CMsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
+    <div className="CMsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words lg:mt-20 md:mt-0 lg:px-45 md:px-22 overflow-hidden  ">
         <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">Modular portals that scale with your organization.</h1>
       <h1
         ref={elRef}

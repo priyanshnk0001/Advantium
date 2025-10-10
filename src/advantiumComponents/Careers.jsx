@@ -141,8 +141,8 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
             <Header/>
           
            <div className="career-ad-Content-cont w-[100%] min-h-screen   flex flex-col justify-center items-center  text-start px-[84px]   ">
-                    <h1 className='career-headingText text-[110px] text-white  text-start self-start leading-none mt-[100px]'>Ready to join <br /> the Advantium?</h1>
-                    <h1 className='career-SubHeadingText text-xl text-white/70  text-start self-start break-keep mt-[50px] pr-90'>
+                    <h1 className='career-headingText lg:text-[110px] md:text-[90px] text-white  text-start self-start leading-none mt-[100px]'>Ready to join <br /> the Advantium?</h1>
+                    <h1 className='career-SubHeadingText text-xl text-white/70  text-start self-start break-keep mt-[50px] lg:pr-90 md:pr-45'>
                     How Learning, helping each other further and experience adventures together. At Advantium, you will work on digital solutions with a team of driven specialists. You get the space to grow, develop your skills and make impact. Whether you are developer, designer or strateeg: together we push boundaries.</h1>
 
                     <div onClick={scrollTofind} className="careerJobOpeningBtn-cont  flex self-start mt-15 items-center  ">
@@ -165,7 +165,7 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
 
                 <div className="findJob">
                     <div ref={findRef} className="findJob-heading-cont flex justify-between px-[84px] py-20">
-                    <h1 className="findJob-heading text-white text-8xl ">Find your <br /> next job.</h1>
+                    <h1 className="findJob-heading text-white lg:text-8xl md:text-7xl ">Find your <br /> next job.</h1>
                      <div className="findJobOpeningBtn-cont  flex self-end  mt-15 items-center   ">
 
                         <NavLink to="/OpenApp" onClick={() => window.scrollTo(0, 0)}>

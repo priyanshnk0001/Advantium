@@ -186,7 +186,7 @@ function Technical() {
 
                 <Header />
 
-                <div className="CM-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
+                <div className="CM-main-container w-[100%]     flex flex-col justify-center items-center  text-start  ">
                     <div className="CM-container1 w-[100%] mt-50  flex justify-around">
                         <div className="CM1-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[60px]  leading-tight '>A strong foundation with the right technical architecture.</h1>
@@ -202,7 +202,7 @@ function Technical() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreTechArch} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
+                                <button onClick={scrollTomoreTechArch} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden lg:block">More info </button>
                             </div>
                         </div>
                         <div className="CM1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden   ">
@@ -257,8 +257,8 @@ function Technical() {
                     </div>
                 </div>
 
-                <div className="CM-container2">
-                    <h1 className=" text-white mt-30 text-8xl px-45 ">The perfect technical architecture.</h1>
+                <div className="CM-container2  " >
+                    <h1 className=" text-white mt-30 text-8xl lg:px-45 md:px-22 ">The perfect technical architecture.</h1>
 
                     <TechnicalFlexible />
                 </div>

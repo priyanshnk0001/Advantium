@@ -198,7 +198,7 @@ function CMportal() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreCMP} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on portals</button>
+                                <button onClick={scrollTomoreCMP} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden lg:block">More info on portals</button>
                             </div>
                         </div>
                         <div className="CM1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -238,7 +238,7 @@ function CMportal() {
 
 
                     <div ref={moreCMPRef} className="CM-container4 w-[100%] mb-20  flex justify-around items-center ">
-                        <div className="CM4-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden   ">
+                        <div className="CM4-child1 w-[45%] h-[700px]  flex flex-col justify-center rounded-2xl overflow-hidden   ">
                             <img className='   rounded-2xl ' src="pic18.webp" alt="" />
                         </div>
                         <div className="CM4-child2 w-[45%] flex flex-col gap-7">

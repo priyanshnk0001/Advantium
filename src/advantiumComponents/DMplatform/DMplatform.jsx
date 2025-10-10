@@ -214,7 +214,7 @@ function DMplatform() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreDMP} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on the DMP</button>
+                                <button onClick={scrollTomoreDMP} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info on the DMP</button>
                             </div>
                         </div>
                         <div className="DM1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">

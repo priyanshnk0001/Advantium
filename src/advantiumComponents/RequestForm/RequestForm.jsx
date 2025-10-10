@@ -95,7 +95,7 @@ function RequestForm() {
             <div>
                 <Header/>
             </div>
-            <div className="Request w-[55%] text-white m-auto rounded-2xl  border-2 border-white/50 p-15">
+            <div className="Request lg:w-[55%] md:w-[85%] text-white m-auto rounded-2xl  border-2 border-white/50 p-15">
 
                 <form className=' flex flex-col gap-5 ' action="" ref={formRef} onSubmit={sendEmail}>
                     <div>

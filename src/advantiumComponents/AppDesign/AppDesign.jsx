@@ -224,7 +224,7 @@ function AppDesign() {
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreAppDesign} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on App Design</button>
+                                <button onClick={scrollTomoreAppDesign} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info on App Design</button>
                             </div>
                         </div>
                         <div className="AppDesign1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -239,23 +239,23 @@ function AppDesign() {
                     </div>
 
                     <div className="AppDesign-container3 text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-8xl px-45 ">Ready to create your AppDesign?</h1>
+                        <h1 className="lg:text-center md:text-start text-8xl px-45 ">Ready to create your AppDesign?</h1>
                         <div className="AppDesignCard-container w-[100%] flex  justify-around">
 
                             <NavLink to="/DesignSprint" onClick={() => window.scrollTo(0, 0)}>
-                                <div className="AppDesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
+                                <div className="AppDesignCard lg:w-[30vw] lg:h-[550px] md:w-fit md:h-fit lg:p-0 md:p-5 text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
                                     <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                         <h1 className='text-4xl'>AppDesign sprint </h1>
                                         <h1 className='text-white/70 leading-loose'>We work together to understand the core needs of your target audience. What you want, we like to hear. But what your target group wants is what matters. We start with AppDesign sprints, in which we formulate user goals using User Stories. Ready to sprint? </h1>
                                     </div>
-                                    <h1 className='mx-8 text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                    <h1 className='mx-8  text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                 </div>
                             </NavLink>
 
 
                             <NavLink to="/UXDesign" onClick={() => window.scrollTo(0, 0)}>
 
-                                <div className="AppDesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
+                                <div className="AppDesignCard lg:w-[30vw] lg:h-[550px] md:w-fit md:h-fit lg:p-0 md:p-5 text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
                                     <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                         <h1 className='text-4xl'>UX AppDesign</h1>
                                         <h1 className='text-white/70 leading-loose'>AppDesigning an optimal user experience (UX) is essential to the success of your digital product. Our UX AppDesigners always work from the end-user's perspective. We make sure the interface is intuitive, with a strong focus on simplicity and functionality. </h1>
@@ -267,12 +267,12 @@ function AppDesign() {
 
                             <NavLink to="/UIDesign" onClick={() => window.scrollTo(0, 0)}>
 
-                                <div className="AppDesignCard w-[30vw] h-[500px] text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
+                                <div className="AppDesignCard lg:w-[30vw] lg:h-[550px] md:w-fit md:h-fit lg:p-0 md:p-5  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
                                     <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                         <h1 className='text-4xl'>UI AppDesign</h1>
                                         <h1 className='text-white/70 leading-loose'>The right icon, in the best colour, with appropriate contrast. Using space, shape and colour, we guide the user to what they want. From the right icon to the best contrast, we ensure that the interface optimally suits the needs of your target group. </h1>
                                     </div>
-                                    <h1 className='mx-8 text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
+                                    <h1 className='mx-8  text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                 </div>
                             </NavLink>
 
@@ -282,7 +282,7 @@ function AppDesign() {
 
                     <div className="AppDesign-container4 w-[100%] my-10  flex justify-around items-center">
                         <div className="AppDesign4-child1 w-[45%] flex flex-col gap-7">
-                            <h1 className='text-white text-[60px]  leading-tight '>Want to (design)sprint together?</h1>
+                            <h1 className='text-white lg:text-[60px] md:text-[50px]  leading-tight '>Want to (design)sprint together?</h1>
                             <h1 className='text-gray-300 text-[18px] '>Before we start building your mobile application, we map out the user goals during a Designsprint. This way, we ensure that the app both works well technically and meets users' needs. At Cube, we combine form and function in the design so that the app is not only beautiful, but also intuitive and works smoothly. Every choice we make focuses on a user-friendly interface without compromising on functionality.</h1>
                             <div className="AppDesignBottomButton2 flex  items-center mt-5 z-0     ">
                                 <NavLink to="/DesignSprint" onClick={() => window.scrollTo(0, 0)}>
@@ -304,7 +304,7 @@ function AppDesign() {
 
 
                     <div className="AppDesign-container5 w-[100%] my-20  flex justify-around items-center overflow-hidden">
-                        <div className="AppDesign5-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="AppDesign5-child1 w-[45%] h-[700px]  flex flex-col justify-center rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic37.webp" alt="" />
                         </div>
                         <div className="AppDesign5-child2 w-[45%] flex flex-col gap-7">

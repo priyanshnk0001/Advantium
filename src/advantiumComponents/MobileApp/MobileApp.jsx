@@ -132,7 +132,7 @@ function MobileApp() {
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreMobileApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on mobile apps</button>
+                                <button onClick={scrollTomoreMobileApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info on mobile apps</button>
                             </div>
                         </div>
                         <div className="MobileApp1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -147,7 +147,7 @@ function MobileApp() {
                     </div>
 
                     <div className="MobileApp-text-container text-white !flex !flex-col w-[100%] gap-10 pt-20 ">
-                        <h1 className="text-center text-8xl px-45  ">From idea to successful app.</h1>
+                        <h1 className="lg:text-center md:text-start text-8xl px-45  ">From idea to successful app.</h1>
                         <div className="MobileAppFlexible-container  ">
                             <MobileAppFlexible />
                         </div>

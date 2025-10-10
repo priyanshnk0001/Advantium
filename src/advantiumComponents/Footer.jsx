@@ -83,17 +83,17 @@ function Footer() {
 
     return (
         // bg-gradient-to-b from-[#0f172a]  to-gray-700
-        <div className=' bg-gray-700'>
-            <div className="insightsFooter-main w-[100%]  ">
-                <div className="insightsFooter-cont w-[100%]  flex justify-between">
-                    <div className="footer-contentP1 w-[35%] h-[75vh] pl-12 flex flex-col justify-center overflow-hidden  ">
-                        <h1 className='FP1-headingText text-white text-6xl mb-5 pl-10'>Advantium</h1>
-                        <div className="FP1-child grid grid-cols-3 px-10  gap-y-5 ">
+        <div className=' bg-gray-700 h-[100vh] '>
+            <div className="insightsFooter-main w-[100%] h-[90vh]  ">
+                <div className="insightsFooter-cont w-[100%]  flex lg:flex-row lg:justify-between md:flex-col md:items-center    ">
+                    <div className="footer-contentP1 lg:w-[35%] lg:h-[75vh] lg:pl-3  flex flex-col lg:items-start justify-center overflow-hidden md:w-[100%] md:items-center md:h-[50vh] md:pl-0     ">
+                        <h1 className='FP1-headingText text-white text-6xl mb-15 pl-10'>Advantium</h1>
+                        <div className="FP1-child grid grid-cols-3 px-5  gap-y-5 ">
                             <div className="FP1-sub-child py-5 px-8 rounded-[22px] flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="iso27001.png" alt="" /></div>
                             <div className="FP1-sub-child py-5 px-8 rounded-[22px] flex justify-center items-center border-2 border-gray-400 w-fit"><img className='w-[50px] ' src="nen7510.webp" alt="" /></div>
                             <div className="FP1-sub-child border-gray-400 border-2 p-3 w-fit flex flex-col justify-center rounded-[22px]">
-                                <h1 className='text-white flex text-[22px] items-center '><img className='w-[30px]' src="gitlab.png" alt="" />GitLab</h1>
-                                <h1 className='text-white'>Channel Partner</h1>
+                                <h1 className='text-white flex text-[18px]  items-center '><img className='w-[30px]' src="gitlab.png" alt="" />GitLab</h1>
+                                <h1 className='text-white text-[9px] pl-3'>Channel Partner</h1>
                             </div>
                             <div className="FP1-sub-child px-6 py-8 flex justify-center items-center gap-2 border-2 border-gray-400 w-[220px] rounded-[22px] ">
                                 <img className='w-[30px]' src="g-logo.webp" alt="" />
@@ -101,7 +101,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="footer-contentP2 w-[65%] h-[75vh] grid grid-cols-3 px-10 ">
+                    <div className="footer-contentP2 lg:w-[65%] lg:h-[90vh] grid grid-cols-3 px-10 md:w-[100%] lg:mt-0 md:mt-[-50px]    ">
                         <div className="overflow-x-hidden">
                             <div className="FP2-child text-start space-y-5 p-5 overflow-x-hidden">
                                 <h1 className='text-gray-400 text-[22px]'>Office</h1>
@@ -230,10 +230,10 @@ function Footer() {
                 </div>
             </div>
 
-
-            <Marquee className='flex items-end text-8xl  text-white space-x-10  h-[25vh]' style={{ width: "100%", height: "25vh" }}>
+            <Marquee className='flex items-end  text-8xl  text-white space-x-10   h-[10vh] ' style={{ width: "100%", height: "10vh" }}>
                 Think inside the Advantium.
             </Marquee>
+
         </div>
     )
 }

@@ -172,16 +172,16 @@ export default function HoverSpotLight() {
 
         <Header ref={headerRef} />
 
-        <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden ">
+        <div className="ad-Content-cont w-[100%] h-[90vh] flex flex-col justify-center items-center text-center px-10  overflow-x-hidden md:gap-10 ">
           <div className="w-fit overflow-hidden"> <h1 className='techBuilds techBuilds-text text-white text-7xl font-semibold overflow-hidden'>Tech builds.</h1></div>
           <div className="w-fit overflow-hidden"><h1 className='techBuilds scaleText text-white text-7xl font-semibold overflow-hidden'>Scale</h1></div>
-          <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-[30px] mt-5 overflow-hidden'>We transform your challenges into digital impact with smart,<br />
+          <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-[30px] mt-5 overflow-hidden md:text-[25px]'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
-          <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden   ">
+          <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden md:w-[100%]  ">
             <div className="BookingBtn-container">
               <button
                 onClick={triggerHeaderBookingClick}
-                className="bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Book a meeting</button>
+                className="bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer  ">Book a meeting</button>
               <button
                 className="nextArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
                 <CallMadeIcon className="!w-7 !h-7" />

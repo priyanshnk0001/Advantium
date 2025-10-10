@@ -157,9 +157,9 @@ function DevSecFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden pt-20  '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex lg:justify-around md:justify-between lg:px-0 md:px-20 items-center overflow-hidden pt-20  '>
 
-            <div className="DevSectext-cont w-[25%] h-[90%] flex flex-col  ">
+            <div className="DevSectext-cont lg:w-[25%] md:w-[35] h-[90%] flex flex-col  ">
 
                 <div className="DevSec-subchild rounded-4xl overflow-hidden  ">
                     <div className="DevSecItm flex justify-between items-center border-b-1  border-gray-400      py-5">

@@ -158,9 +158,9 @@ function WebAppFlexible() {
 
 
     return (
-        <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around  overflow-hidden   '>
+        <div className='w-[100%] h-[100vh] bg-gray-900 flex lg:justify-around  md:justify-between lg:px-0 md:px-20 overflow-hidden   '>
 
-            <div className="WebApptext-cont w-[25%] h-[90%] flex flex-col justify-center ">
+            <div className="WebApptext-cont lg:w-[25%] md:w-[35%] h-[90%] flex flex-col justify-center ">
 
                 <div className="WebApp-subchild rounded-4xl overflow-hidden  ">
                     <div className="WebAppItm flex justify-between items-center border-b-1  border-gray-400      py-5">
@@ -221,7 +221,7 @@ function WebAppFlexible() {
 
 
 
-            <div className="WebApptext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] pt-33 ">
+            <div className="WebApptext-main-cont text-white w-[50%] h-[90vh]  rounded-3xl relative ml-[-250px] lg:pt-33 md:pt-65 ">
                 <div className="text01 w-[100%] h-[90vh] rounded-3xl absolute pt-5 flex flex-col gap-10  ">
                     <h1 className='text-6xl'>Smart technology</h1>
                     <h1 className='text-white/70 text-[18px]'>Every project starts with a thorough analysis. Together, we explore your needs, objectives and the opportunities offered by different technologies. In doing so, we address questions such as:

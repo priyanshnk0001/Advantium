@@ -167,7 +167,7 @@ function Flexible() {
     return (
         <div className='w-[100%] h-[100vh] bg-gray-900 flex justify-around items-center overflow-hidden   '>
 
-            <div className="flextext-cont w-[25%] h-[90%] ">
+            <div className="flextext-cont lg:w-[25%] md:w-[35%] h-[90%] ">
 
                 <div className="flex-subchild rounded-4xl overflow-hidden  ">
                         <div className="flexItm flex justify-between items-center border-b-1  border-gray-400      py-5">

@@ -125,14 +125,14 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
                             <div className="CodeBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm">
                                     <div className="CodeBtn-container ">
-                                        <button className="CodeButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Request a code review</button>
+                                        <button className="CodeButton  rounded-full py-3 px-7 lg:text-[15px] md:text-[12px] bg-yellow-300 text-black cursor-pointer ">Request review</button>
                                         <button
                                             className="CodeArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">
                                             <CallMadeIcon className="!w-7 !h-7" />
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreCode} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info about code reviewing</button>
+                                <button onClick={scrollTomoreCode} className="moreInfo border-2 rounded-full py-3 px-5 lg:text-[15px] md:text-[12px] ml-6   text-white cursor-pointer   hover:border-amber-300 hidden lg:block">More about reviewing</button>
                             </div>
                         </div>
                         <div className="Code1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -147,7 +147,7 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
                     </div>
 
                     <div className="code-text-container text-white !flex !flex-col w-[100%] gap-10 ">
-                        <h1 className="text-center text-9xl px-45 ">How can Advantium help?</h1>
+                        <h1 className="lg:text-center md:text-start lg:text-9xl md:text-8xl lg:px-45 md:px-22 ">How can Advantium help?</h1>
                         <div className="CodeFlexible-container">
                             <CodeFlexible />
                         </div>

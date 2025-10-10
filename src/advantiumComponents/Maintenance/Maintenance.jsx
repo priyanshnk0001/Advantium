@@ -208,7 +208,7 @@ function Maintenance() {
                 <div className="Maintenance-main-container w-[100%]     flex flex-col justify-center items-center  text-start ">
                     <div className="Maintenance-container1 w-[100%] mt-40  flex justify-around">
                         <div className="Maintenance1-child1 w-[45%] flex flex-col justify-center gap-7">
-                            <h1 className='text-white text-[60px]  leading-tight '>Maintenance & management out of your hands.</h1>
+                            <h1 className='text-white lg:text-[60px] md:text-[50px]  leading-tight '>Maintenance & management out of your hands.</h1>
                             <h1 className='text-gray-300 text-[18px] '>At <span className="text-white">Advantium</span>, we ensure quality and reliability by taking the management of your online platforms off your hands. From project management to hosting, monitoring and testing: we keep everything running so that you can focus on what really matters.</h1>
                             <div className="MaintenanceBottomButton flex  items-center mt-5 z-0    ">
                                 <NavLink to="/RequestForm" onClick={()=>window.scrollTo(0,0)}>
@@ -220,7 +220,7 @@ function Maintenance() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoremaintenance}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoremaintenance}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info</button>
                             </div>
                         </div>
                         <div className="Maintenance1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">

@@ -135,192 +135,226 @@ export default function Header() {
 
 
 
-    useGSAP(() => {
-        // ---------------- Deliver Drawer ----------------
-        const deliver = document.querySelector(".insightsNavP1 .Header-deliver");
-        const deliverDrawer = document.querySelector(".Header-deliverdrawer");
+   useGSAP(() => {
+    // ---------------- Deliver Drawer ----------------
+    const deliver = document.querySelector(".insightsNavP1 .Header-deliver");
+    const deliverDrawer = document.querySelector(".Header-deliverdrawer");
 
-        const dtl = gsap.timeline({ paused: true, reversed: true });
-        dtl.to(".Header-deliverdrawer", { top: 0, duration: 0.5, opacity: 1 });
-        dtl.from(".Header-deliverdrawer h1", { x: -500, duration: 0.8 });
+    const dtl = gsap.timeline({ paused: true, reversed: true });
+    dtl.to(".Header-deliverdrawer", { top: 0, duration: 0.5, opacity: 1 });
+    dtl.from(".Header-deliverdrawer h1", { x: -500, duration: 0.8 });
 
-        // ---------------- Cases Drawer ----------------
-        const cases = document.querySelector(".insightsNavP1 .Header-cases");
-        const casesDrawer = document.querySelector(".Header-casesdrawer");
+    // ---------------- Cases Drawer ----------------
+    const cases = document.querySelector(".insightsNavP1 .Header-cases");
+    const casesDrawer = document.querySelector(".Header-casesdrawer");
 
-        const ctl = gsap.timeline({ paused: true, reversed: true });
-        ctl.to(".Header-casesdrawer", { top: 0, duration: 0.5, opacity: 1 });
-        ctl.from(".Header-cases-drawer-child", {
+    const ctl = gsap.timeline({ paused: true, reversed: true });
+    ctl.to(".Header-casesdrawer", { top: 0, duration: 0.5, opacity: 1 });
+    ctl.from(".Header-cases-drawer-child", {
+        y: 450,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2
+    });
+    ctl.from(
+        ".Header-cases-subchild",
+        {
             y: 450,
             opacity: 0,
-            duration: 0.5,
-            stagger: 0.2
-        });
-        ctl.from(
-            ".Header-cases-subchild",
-            {
-                y: 450,
-                opacity: 0,
-                stagger: 0.3
-            },
-            "-=0.4"
-        );
+            stagger: 0.3
+        },
+        "-=0.4"
+    );
 
-        // ---------------- Booking Drawer (same useGSAP scope) ----------------
-        const bookingBtn = document.querySelector(".Header-bookingButton");
-        const bookingDrawerEl = document.querySelector(".Header-Bookingdrawer");
+    // ---------------- Booking Drawer (same useGSAP scope) ----------------
+    const bookingBtn = document.querySelector(".Header-bookingButton");
+    const bookingDrawerEl = document.querySelector(".Header-Bookingdrawer");
 
-        const btl = gsap.timeline({ paused: true, reversed: true });
-        btl.to(".Header-Bookingdrawer", { top: 0, duration: 0.45, opacity: 1, ease: "power2.out" });
-        btl.to(".Header-bookingButton", { text: "Close", ease: "none" })
-        btl.from(".bookingP1 > * , .bookingP2 > * ", {
-            y: 30,
-            opacity: 0,
-            stagger: 0.6
-        }, "0.2");
+    const btl = gsap.timeline({ paused: true, reversed: true });
+    btl.to(".Header-Bookingdrawer", { top: 0, duration: 0.45, opacity: 1, ease: "power2.out" });
+    btl.to(".Header-bookingButton", { text: "Close", ease: "none" });
+    btl.from(".bookingP1 > * , .bookingP2 > * ", {
+        y: 30,
+        opacity: 0,
+        stagger: 0.6
+    }, "0.2");
 
-        const closeBookingIfOpen = () => {
-            if (btl && !btl.reversed()) {
-                btl.timeScale(2).reverse();
-                try { setIsBookingOpen(false); } catch (e) { }
-            }
-        };
+    const closeBookingIfOpen = () => {
+        if (btl && !btl.reversed()) {
+            btl.timeScale(2).reverse();
+            try { setIsBookingOpen(false); } catch (e) { }
+        }
+    };
 
+    const openDDrawer = () => {
+        closeBookingIfOpen();
+        if (dtl.reversed()) {
+            dtl.timeScale(1).play(); // open
+            try { setIsBookingOpen(false); setIsCasesOpen(false); } catch (e) { }
+        }
+    };
+    const closeDDrawer = () => {
+        if (!dtl.reversed()) {
+            dtl.timeScale(4).reverse(); // close
+        }
+    };
 
-        const openDDrawer = () => {
-            closeBookingIfOpen();
-            if (dtl.reversed()) {
-                dtl.timeScale(1).play(); // open
-                try { setIsBookingOpen(false); setIsCasesOpen(false); } catch (e) { }
-            }
-        };
-        const closeDDrawer = () => {
-            if (!dtl.reversed()) {
-                dtl.timeScale(4).reverse(); // close
-            }
-        };
+    const toggleDDrawer = (e) => {
+        if (e) e.stopPropagation();
+        if (dtl.reversed()) { // closed -> open
+            if (!ctl.reversed()) ctl.timeScale(4).reverse(); // close cases if open
+            if (btl && !btl.reversed()) btl.timeScale(2).reverse(); // close booking if open
+            dtl.timeScale(1).play();
+            try { setIsDeliverOpen(true); setIsBookingOpen(false); setIsCasesOpen(false); } catch (err) { }
+        } else { // open -> close
+            dtl.timeScale(4).reverse();
+            try { setIsDeliverOpen(false); } catch (err) { }
+        }
+    };
 
+    const toggleCDrawer = (e) => {
+        if (e) e.stopPropagation();
+        if (ctl.reversed()) { // closed -> open
+            if (!dtl.reversed()) dtl.timeScale(4).reverse(); // close deliver if open
+            if (btl && !btl.reversed()) btl.timeScale(2).reverse(); // close booking if open
+            ctl.timeScale(1).play();
+            try { setIsCasesOpen(true); setIsBookingOpen(false); setIsDeliverOpen(false); } catch (err) { }
+        } else { // open -> close
+            ctl.timeScale(4).reverse();
+            try { setIsCasesOpen(false); } catch (err) { }
+        }
+    };
 
+    const openCDrawer = () => {
+        closeBookingIfOpen();
+        if (ctl.reversed()) {
+            ctl.timeScale(1).play();
+            try { setIsBookingOpen(false); setIsDeliverOpen(false); } catch (e) { }
+        }
+    };
+    const closeCDrawer = () => {
+        if (!ctl.reversed()) {
+            ctl.timeScale(4).reverse();
+        }
+    };
 
-        // paste immediately after closeDDrawer
-        const toggleDDrawer = (e) => {
-            e && e.stopPropagation();
-            if (dtl.reversed()) { // closed -> open
-                if (!ctl.reversed()) ctl.timeScale(4).reverse(); // close cases if open
-                if (btl && !btl.reversed()) btl.timeScale(2).reverse(); // close booking if open
-                dtl.timeScale(1).play();
-                try { setIsDeliverOpen(true); setIsBookingOpen(false); setIsCasesOpen(false); } catch (err) { }
-            } else { // open -> close
-                dtl.timeScale(4).reverse();
-                try { setIsDeliverOpen(false); } catch (err) { }
-            }
-        };
+    const toggleBooking = (e) => {
+        if (e) e.stopPropagation();
+        if (!btl) return;
 
-        const toggleCDrawer = (e) => {
-            e && e.stopPropagation();
-            if (ctl.reversed()) { // closed -> open
-                if (!dtl.reversed()) dtl.timeScale(4).reverse(); // close deliver if open
-                if (btl && !btl.reversed()) btl.timeScale(2).reverse(); // close booking if open
-                ctl.timeScale(1).play();
-                try { setIsCasesOpen(true); setIsBookingOpen(false); setIsDeliverOpen(false); } catch (err) { }
-            } else { // open -> close
-                ctl.timeScale(4).reverse();
-                try { setIsCasesOpen(false); } catch (err) { }
-            }
-        };
+        if (btl.reversed()) {
+            if (!dtl.reversed()) dtl.timeScale(4).reverse();
+            if (!ctl.reversed()) ctl.timeScale(4).reverse();
 
+            btl.timeScale(1).play();
+            try { setIsBookingOpen(true); } catch (e) { }
+        } else {
+            btl.timeScale(2).reverse();
+            try { setIsBookingOpen(false); } catch (e) { }
+        }
+    };
 
-        const openCDrawer = () => {
-            closeBookingIfOpen();
-            if (ctl.reversed()) {
-                ctl.timeScale(1).play();
-                try { setIsBookingOpen(false); setIsDeliverOpen(false); } catch (e) { }
-            }
-        };
-        const closeCDrawer = () => {
-            if (!ctl.reversed()) {
-                ctl.timeScale(4).reverse();
-            }
-        };
+    const onBookingBgClick = (ev) => {
+        if (ev.target === bookingDrawerEl && btl && !btl.reversed()) {
+            btl.timeScale(2).reverse();
+            try { setIsBookingOpen(false); } catch (e) { }
+        }
+    };
 
-        const toggleBooking = (e) => {
-            e && e.stopPropagation();
-            if (!btl) return;
+    // ---------- Event listeners for mouse (desktop) ----------
+    if (deliver) {
+        deliver.addEventListener("mouseenter", openDDrawer);
+        deliver.addEventListener("mouseenter", closeCDrawer);
+        deliver.addEventListener("click", toggleDDrawer, { passive: false } );
+    }
+    if (deliverDrawer) {
+        deliverDrawer.addEventListener("mouseleave", closeDDrawer);
+    }
 
-            if (btl.reversed()) {
-                if (!dtl.reversed()) dtl.timeScale(4).reverse();
-                if (!ctl.reversed()) ctl.timeScale(4).reverse();
+    if (cases) {
+        cases.addEventListener("mouseenter", openCDrawer);
+        cases.addEventListener("mouseenter", closeDDrawer);
+        cases.addEventListener("click", toggleCDrawer);
+    }
+    if (casesDrawer) {
+        casesDrawer.addEventListener("mouseleave", closeCDrawer);
+    }
 
-                btl.timeScale(1).play();
-                try { setIsBookingOpen(true); } catch (e) { }
-            } else {
-                btl.timeScale(2).reverse();
-                try { setIsBookingOpen(false); } catch (e) { }
-            }
-        };
+    const about = document.querySelector(".insightsNavP1 .Header-aboutText");
+    if (about) {
+        about.addEventListener("mouseenter", closeDDrawer);
+        about.addEventListener("mouseenter", closeCDrawer);
+    }
 
-        const onBookingBgClick = (ev) => {
-            if (ev.target === bookingDrawerEl && btl && !btl.reversed()) {
-                btl.timeScale(2).reverse();
-                try { setIsBookingOpen(false); } catch (e) { }
-            }
-        };
+    if (bookingBtn) bookingBtn.addEventListener("click", toggleBooking);
+    if (bookingDrawerEl) bookingDrawerEl.addEventListener("click", onBookingBgClick);
 
+    // ---------- Touch / Click fallback for touch devices (tablets & phones) ----------
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0);
+
+    // named handlers so cleanup can remove them
+    const deliverTouchHandler = (e) => { e.preventDefault && e.preventDefault(); toggleDDrawer(e); };
+    const casesTouchHandler = (e) => { e.preventDefault && e.preventDefault(); toggleCDrawer(e); };
+    const bookingTouchHandler = (e) => { e.preventDefault && e.preventDefault(); toggleBooking(e); };
+
+    if (isTouch) {
         if (deliver) {
-            deliver.addEventListener("mouseenter", openDDrawer);
-            deliver.addEventListener("mouseenter", closeCDrawer);
-            deliver.addEventListener("click", toggleDDrawer);
+            // add both touchstart and click as fallback (some browsers dispatch click after touch)
+            deliver.addEventListener('touchstart', deliverTouchHandler, );
+            deliver.addEventListener('click', deliverTouchHandler);
         }
-        if (deliverDrawer) {
-            deliverDrawer.addEventListener("mouseleave", closeDDrawer);
+        if (cases) {
+            cases.addEventListener('touchstart', casesTouchHandler, );
+            cases.addEventListener('click', casesTouchHandler);
         }
+        if (bookingBtn) {
+            bookingBtn.addEventListener('touchstart', bookingTouchHandler, );
+            bookingBtn.addEventListener('click', bookingTouchHandler); // safe duplicate guard in handler
+        }
+    }
+
+    // cleanup
+    return () => {
+        if (deliver) {
+            deliver.removeEventListener("mouseenter", openDDrawer);
+            deliver.removeEventListener("mouseenter", closeCDrawer);
+            deliver.removeEventListener("click", toggleDDrawer);
+            if (isTouch) {
+                deliver.removeEventListener('touchstart', deliverTouchHandler);
+                deliver.removeEventListener('click', deliverTouchHandler);
+            }
+        }
+        if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
+        dtl.kill();
 
         if (cases) {
-            cases.addEventListener("mouseenter", openCDrawer);
-            cases.addEventListener("mouseenter", closeDDrawer);
-            cases.addEventListener("click", toggleCDrawer);
+            cases.removeEventListener("mouseenter", openCDrawer);
+            cases.removeEventListener("mouseenter", closeDDrawer);
+            cases.removeEventListener("click", toggleCDrawer);
+            if (isTouch) {
+                cases.removeEventListener('touchstart', casesTouchHandler);
+                cases.removeEventListener('click', casesTouchHandler);
+            }
         }
-        if (casesDrawer) {
-            casesDrawer.addEventListener("mouseleave", closeCDrawer);
-        }
+        if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
+        ctl.kill();
 
-        const about = document.querySelector(".insightsNavP1 .Header-aboutText");
         if (about) {
-            about.addEventListener("mouseenter", closeDDrawer);
-            about.addEventListener("mouseenter", closeCDrawer);
+            about.removeEventListener("mouseenter", closeDDrawer);
+            about.removeEventListener("mouseenter", closeCDrawer);
         }
 
-        if (bookingBtn) bookingBtn.addEventListener("click", toggleBooking);
-        if (bookingDrawerEl) bookingDrawerEl.addEventListener("click", onBookingBgClick);
-
-        // cleanup
-        return () => {
-            if (deliver) {
-                deliver.removeEventListener("mouseenter", openDDrawer);
-                deliver.removeEventListener("mouseenter", closeCDrawer);
-                deliver.removeEventListener("click", toggleDDrawer);
+        if (bookingBtn) {
+            bookingBtn.removeEventListener("click", toggleBooking);
+            if (isTouch) {
+                bookingBtn.removeEventListener('touchstart', bookingTouchHandler);
+                bookingBtn.removeEventListener('click', bookingTouchHandler);
             }
-            if (deliverDrawer) deliverDrawer.removeEventListener("mouseleave", closeDDrawer);
-            dtl.kill();
-
-            if (cases) {
-                cases.removeEventListener("mouseenter", openCDrawer);
-                cases.removeEventListener("mouseenter", closeDDrawer);
-                cases.removeEventListener("click", toggleCDrawer);
-            }
-            if (casesDrawer) casesDrawer.removeEventListener("mouseleave", closeCDrawer);
-            ctl.kill();
-
-            if (about) {
-                about.removeEventListener("mouseenter", closeDDrawer);
-                about.removeEventListener("mouseenter", closeCDrawer);
-            }
-
-            if (bookingBtn) bookingBtn.removeEventListener("click", toggleBooking);
-            if (bookingDrawerEl) bookingDrawerEl.removeEventListener("click", onBookingBgClick);
-            btl.kill();
-        };
-    }, []);
+        }
+        if (bookingDrawerEl) bookingDrawerEl.removeEventListener("click", onBookingBgClick);
+        btl.kill();
+    };
+}, []);
 
 
 
@@ -563,7 +597,7 @@ export default function Header() {
                 </div>
                 <div className="insightsNavP2 flex justify-center  items-center text-center w-[20%]  ">
                     <NavLink to="/" >
-                        <h1 className=" Header-advantium-text flex items-center gap-2 text-[25px] font-semibold"><img className='w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
+                        <h1 className=" Header-advantium-text flex items-center gap-2 text-[25px] font-semibold"><img className='advantium-logo w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
                 </div>
                 <div className="insightsNavP3 w-[40%] flex justify-end items-center  ">
                     <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
@@ -575,7 +609,7 @@ export default function Header() {
                         <button
                             className="Header-nextArrowButton bg-yellow-300 rounded-full p-3 text-black cursor-pointer  "
 
-                        ><CallMadeIcon className="!w-7 !h-7" /></button>
+                        ><CallMadeIcon className="callmadeicon !w-7 !h-7" /></button>
                     </div>
                 </div>
 
@@ -586,9 +620,9 @@ export default function Header() {
             <div className="Header-deliverdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0   bg-black/80 backdrop-filter backdrop-blur-[12px] z-40  ">
 
 
-                <div className="Header-drawer-cont w-[100%] h-[73vh] mt-[150px] pl-4   ">
-                    <div className="Header-dr-sub-cont w-[95%] h-[73vh] flex justify-between mx-auto  ">
-                        <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden">
+                <div className="Header-drawer-cont w-[100%] h-[73vh] pt-[150px] pl-4   ">
+                    <div className="Header-dr-sub-cont lg:w-[95%] lg:h-[73vh] lg:pl-0 md:pl-6 lg:flex lg:justify-between lg:mx-auto md:grid md:grid-cols-2   ">
+                        <div className="Header-dr-sub-child lg:w-[30%] lg:h-[73vh] flex flex-col lg:gap-10 md:gap-5 text-white/80 overflow-hidden md:w-[100%] md:h-[40vh]">
                             <h1 className='Header-drawerArrowH1 text-[25px]  font-semibold !text-white '>Digital transformation
 
                             </h1>
@@ -625,7 +659,7 @@ export default function Header() {
                         </div>
 
 
-                        <div className="Header-dr-sub-child w-[30%] h-[73vh] flex flex-col gap-10 text-white/80 overflow-hidden  ">
+                        <div className="Header-dr-sub-child lg:w-[30%] lg:h-[73vh] flex flex-col lg:gap-10 md:gap-5 text-white/80 overflow-hidden md:w-[100%] md:h-[40vh]  ">
                             <h1 className='Header-drawerArrowH1 text-[25px]  font-semibold !text-white '>Software solutions
 
                             </h1>
@@ -662,8 +696,8 @@ export default function Header() {
                         </div>
 
 
-                        <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden  ">
-                            <h1 className='text-[18px] font-semibold !text-white '>Services
+                        <div className="Header-dr-sub-child hdsc-css lg:w-[18%] lg:h-[73vh] flex flex-col gap-10  pt-4 text-white/80 overflow-hidden md:w-[100%] md:h-[40vh] ">
+                            <h1 className='text-[25px] font-semibold !text-white '>Services
 
                             </h1>
                             <NavLink className="w-fit" to="/SoftDev"><h1 className='text-[18px]  '>Software Development
@@ -684,8 +718,8 @@ export default function Header() {
                         </div>
 
 
-                        <div className="Header-dr-sub-child w-[18%] h-[73vh] flex flex-col gap-6 pt-4 text-white/80 overflow-hidden   ">
-                            <h1 className='text-[18px] w-fit font-semibold !text-white '>Also interesting
+                        <div className="Header-dr-sub-child hdsc-css lg:w-[18%] lg:h-[73vh] flex flex-col gap-10  pt-4 text-white/80 overflow-hidden md:w-[100%] md:h-[40vh]  ">
+                            <h1 className='text-[25px] w-fit font-semibold !text-white '>Also interesting
                             </h1>
 
                             <NavLink className="w-fit" to="/Technology"><h1 className='text-[18px]  '>Technology
@@ -703,52 +737,52 @@ export default function Header() {
 
             <div className="Header-casesdrawer w-[100%] h-[90vh] absolute top-[-90vh] opacity-0   bg-black/80 backdrop-filter backdrop-blur-[12px] overflow-hidden z-30 ">
 
-                <div className='w-[100%] h-[73vh] mt-[150px] px-19 pt-15 '>
-                    <h1 className="Header-cases-heading text-white text-[30px] font-semibold absolute ">Highlighted cases</h1>
-                    <div className="Header-cases-drawer-cont w-[100%] h-[73vh]  flex justify-between items-center">
-                        <NavLink className=" w-[22.5%] h-[450px] " to="/PureEnergy">
-                            <div className="Header-cases-drawer-child flex flex-col gap-2 text-start text-white   ">
-                                <img src="pure.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                                <h1 className="Header-cases-h1 text-[25px] font-semisemibold">Pure Energie</h1>
-                                <h1 className="Header-cases-h1 text-[18px] text-white/80">Pure Energie:from green ambition to pure result.</h1>
+                <div className='headerHeading-cont w-[100%] h-[73vh] pt-[160px] lg:px-19 md:px-10  '>
+                    <h1 className="Header-cases-heading text-white lg:text-[30px] md:text-[20px] font-semibold absolute ">Highlighted cases</h1>
+                    <div className="Header-cases-drawer-cont w-[100%] h-[73vh]  lg:flex lg:justify-between lg:items-center md:grid md:grid-cols-3 md:pt-20  ">
+                        <NavLink className=" headerlink lg:w-[22.5%] h-[450px] md:w-[90%]  " to="/PureEnergy">
+                            <div className="Header-cases-drawer-child w-[100%] flex flex-col gap-2 text-start text-white   ">
+                                <img src="pure.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110  ]" />
+                                <h1 className="Header-cases-h1 lg:text-[25px] md:text-[15px] font-semisemibold">Pure Energie</h1>
+                                <h1 className="Header-cases-h1 lg:text-[18px] md:text-[12px] text-white/80">Pure Energie:from green ambition to pure result.</h1>
                                 <div className="Header-cases-sub-btn mt-4">
-                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300  mr-2 rounded-2xl">Website</button>
-                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300  mx-2 rounded-2xl">Platform</button>
+                                    <button className="Header-cases-btn border-2 text-white lg:text-[15px] md:text-[12px] w-fit lg:px-4 md:px-4  lg:py-1 md:py-[8px] hover:bg-gray-300  mr-2 rounded-2xl">Website</button>
+                                    <button className="Header-cases-btn border-2 text-white w-fit lg:text-[15px] md:text-[12px]  lg:px-4 md:px-4  lg:py-1 md:py-[8px] hover:bg-gray-300  mx-2 rounded-2xl">Platform</button>
                                 </div>
                             </div>
                         </NavLink>
 
-                        <NavLink className=" w-[22.5%] h-[450px] " to="/Nou">
+                        <NavLink className=" headerlink lg:w-[22.5%] h-[450px] md:w-[90%] " to="/Nou">
                             <div className="Header-cases-drawer-child  flex flex-col gap-2 text-start text-white   ">
                                 <img src="nou.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                                <h1 className="Header-cases-h1 text-[25px] font-semisemibold">Nou</h1>
-                                <h1 className="Header-cases-h1 text-[18px] text-white/80">An enhanced brand position with a customer portal website and...</h1>
+                                <h1 className="Header-cases-h1 lg:text-[25px] md:text-[15px] font-semisemibold">Nou</h1>
+                                <h1 className="Header-cases-h1 lg:text-[18px] md:text-[12px] text-white/80">An enhanced brand position with a customer portal website and...</h1>
                                 <div className="Header-cases-sub-btn mt-4">
-                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Website</button>
-                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mx-2 rounded-2xl">Platform</button>
+                                    <button className="Header-cases-btn border-2 text-white lg:text-[15px] md:text-[12px] w-fit lg:px-4 md:px-4  lg:py-1 md:py-[8px] hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Website</button>
+                                    <button className="Header-cases-btn border-2 text-white lg:text-[15px] md:text-[12px] w-fit lg:px-4 md:px-4  lg:py-1 md:py-[8px] hover:bg-gray-300 cursor-pointer mx-2 rounded-2xl">Platform</button>
                                 </div>
                             </div>
                         </NavLink>
 
-                        <NavLink className=" w-[22.5%] h-[450px] " to="/InCorpe">
+                        <NavLink className=" headerlink lg:w-[22.5%] h-[450px] md:w-[90%] " to="/InCorpe">
                             <div className="Header-cases-drawer-child  flex flex-col gap-2 text-start text-white   ">
                                 <img src="inCorpe.png" alt="" className="Header-cases-img w-[100%] h-[225px] rounded-2xl hover:scale-110 " />
-                                <h1 className="Header-cases-h1 text-[25px] font-semisemibold">InCorpe</h1>
-                                <h1 className="Header-cases-h1 text-[18px] text-white/80">How InCorpe transitioned to greater efficiency through web...</h1>
+                                <h1 className="Header-cases-h1 lg:text-[25px] md:text-[15px] font-semisemibold">InCorpe</h1>
+                                <h1 className="Header-cases-h1 lg:text-[18px] md:text-[12px] text-white/80">How InCorpe transitioned to greater efficiency through web...</h1>
                                 <div className="Header-cases-sub-btn mt-4">
-                                    <button className="Header-cases-btn border-2 text-white w-fit px-4  py-1 hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Portal</button>
+                                    <button className="Header-cases-btn border-2 text-white lg:text-[15px] md:text-[12px] w-fit lg:px-4 md:px-4  lg:py-1 md:py-[8px] hover:bg-gray-300 cursor-pointer mr-2 rounded-2xl">Portal</button>
                                 </div>
                             </div>
                         </NavLink>
 
 
-                        <div className="Header-cases-drawer-child w-[22.5%] h-[450px] flex flex-col gap-2 text-start text-white   ">
+                        <div className="Header-cases-drawer-child lg:w-[22.5%] h-[450px] flex flex-col gap-2  text-start text-white md:w-[300%]   ">
 
                             <NavLink className="  " to="/EastBorn">
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
-                                        <img src="eastborn.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[18px]'>Eastborn</h1>
+                                        <img src="eastborn.png" alt="" className="Header-subchild-img lg:w-[70px] md:w-[40px] object-cover rounded-[7px] mr-3" />
+                                        <h1 className='lg:text-[18px] md:text-[12px]'>Eastborn</h1>
                                     </div>
                                     <div className='w-[28px] h-[28px]   relative  overflow-hidden '>
                                         <div className="Header-iconAnim absolute right-0   flex">
@@ -762,8 +796,8 @@ export default function Header() {
                             <NavLink className="  " to="/Fundaments">
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
-                                        <img src="fundament.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[18px]'>Fundaments</h1>
+                                        <img src="fundament.png" alt="" className="Header-subchild-img lg:w-[70px] md:w-[40px] object-cover rounded-[7px] mr-3" />
+                                        <h1 className='lg:text-[18px] md:text-[12px]'>Fundaments</h1>
                                     </div>
                                     <div className='w-[28px] h-[28px]   relative   overflow-hidden'>
                                         <div className="Header-iconAnim absolute right-0   flex">
@@ -778,8 +812,8 @@ export default function Header() {
                             <NavLink className="  " to="/JustEat">
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-t-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
-                                        <img src="justeat.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[18px]'>Just Eat Takeaway</h1>
+                                        <img src="justeat.png" alt="" className="Header-subchild-img lg:w-[70px] md:w-[40px] object-cover rounded-[7px] mr-3" />
+                                        <h1 className='lg:text-[18px] md:text-[12px]'>Just Eat Takeaway</h1>
                                     </div>
                                     <div className='w-[28px] h-[28px]   relative  overflow-hidden'>
                                         <div className="Header-iconAnim absolute right-0   flex">
@@ -794,8 +828,8 @@ export default function Header() {
                             <NavLink className="  " to="/TakeAway">
                                 <div className="Header-cases-subchild flex justify-between items-center border-b-1 rounded-2-xl border-gray-400 hover:bg-gray-200/10  py-4">
                                     <div className='flex items-center'>
-                                        <img src="takeAway.png" alt="" className="Header-subchild-img w-[70px] rounded-[7px] mr-3" />
-                                        <h1 className='text-[18px]'>Takeaway.com</h1>
+                                        <img src="takeAway.png" alt="" className="Header-subchild-img lg:w-[70px] md:w-[40px] object-cover rounded-[7px] mr-3" />
+                                        <h1 className='lg:text-[18px] md:text-[12px]'>Takeaway.com</h1>
                                     </div>
 
                                     <div className='w-[28px] h-[28px]   relative  overflow-hidden ' >
@@ -815,12 +849,13 @@ export default function Header() {
 
 
             <div className="Header-Bookingdrawer w-[100%] h-[100vh] absolute top-[-100vh] opacity-0    bg-black backdrop-filter backdrop-blur-[12px] z-40   ">
-                <div className="Header-booking-container w-[100%] flex mt-50">
-                    <div className="bookingP1 w-[45%] pl-10   ">
-                        <div className="BP1-child w-[100%] flex flex-col items-start gap-10 text-white  ">
+                <div className="Header-booking-container w-[100%] flex lg:flex-row md:flex-col lg:mt-40 md:mt-30">
+                    <div className="bookingP1 lg:w-[45%] md:w-[90%] pl-10   ">
+                        <div className="BP1-child w-[100%] flex flex-col items-start lg:gap-10 md:gap-5 text-white  ">
                             <h1 className="helper-work text-5xl text-white ">Book an appointment</h1>
                             <h1 className='text-gray-400 text-xl  '>Curious how we can help with your digital challenges? Schedule a quick chat and get immediate insight into the best solution for your situation.</h1>
-                            <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
+                            <div className='flex lg:flex-col md:flex-row gap-10 mt-10'> 
+                                <div className="booking-img-cont w-[100%] flex justify-between items-center pr-10 text-white text-xl">
                                 <div className="book-img flex items-center gap-5"><img className='w-[130px] h-[130px] rounded-full' src="neerajAdvantium.jpeg" alt="" />
                                     <div className="book-name">
                                         <h1>Neeraj Kumar</h1>
@@ -828,7 +863,7 @@ export default function Header() {
                                     </div>
                                 </div>
 
-                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-3 py-2.5 ml-20 cursor-pointer">@</button>
+                                {/* <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-3 py-2.5 ml-20 cursor-pointer">@</button> */}
 
                             </div>
 
@@ -841,13 +876,14 @@ export default function Header() {
                                     </div>
                                 </div>
 
-                                <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-3 py-2.5 ml-20 cursor-pointer">@</button>
+                                {/* <button className="BP1btn text-2xl text-white border-2 border-white rounded-full px-3 py-2.5 ml-20 cursor-pointer">@</button> */}
 
+                            </div>
                             </div>
 
                         </div>
                     </div>
-                    <div className="bookingP2 w-[55%] text-white px-15   ">
+                    <div className="bookingP2 lg:w-[55%] md:w-[90%] lg:mt-0 md:mt-20 text-white px-15   ">
 
                         <form className=' flex flex-col gap-10 ' action="" ref={formRef2} onSubmit={sendEmail}>
                             <div>

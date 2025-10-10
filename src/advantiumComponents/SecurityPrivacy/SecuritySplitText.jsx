@@ -44,7 +44,7 @@ export default function SecuritySplitText() {
   }, []);
 
   return (
-    <div className="SecuritysplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-hidden  ">
+    <div className="SecuritysplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 lg:px-45 md:px-22 overflow-hidden  ">
         <h1 className="Modular-Text text-start py-5 text-[50px] text-white flex items-center">Highest standards of information security.</h1>
       <div
         ref={elRef}

@@ -244,7 +244,7 @@ function SoftDev() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreSoftDev} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoreSoftDev} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info</button>
                             </div>
                         </div>
                         <div className="SoftDev1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -264,7 +264,7 @@ function SoftDev() {
                     </div>
 
 
-                    <div className="frontEndCard-cont w-[100%] grid grid-cols-3 gap-8 my-20 px-50  text-white overflow-hidden ">
+                    <div className="frontEndCard-cont w-[100%] grid grid-cols-3 gap-8 my-20 lg:px-50 md:px-25  text-white overflow-hidden ">
 
                         <div className="frontEndCard1 flex flex-col gap-5">
                             <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 p-8">
@@ -344,7 +344,7 @@ function SoftDev() {
                     </div>
 
 
-                    <div className="backEndCard-cont w-[100%] grid grid-cols-3 gap-8 my-20 px-50  text-white overflow-hidden ">
+                    <div className="backEndCard-cont w-[100%] grid grid-cols-3 gap-8 my-20 lg:px-50 md:px-22  text-white overflow-hidden ">
 
                         <div className="backEndCard1 flex flex-col gap-5">
                             <div className="w-fit TCardImg-cont rounded-2xl  border-2 border-gray-500 hover:border-gray-300 px-8 py-6">

@@ -205,7 +205,7 @@ function Strategy() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreStrategy}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info </button>
+                                <button onClick={scrollTomoreStrategy}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden lg:block">More info </button>
                             </div>
                         </div>
                         <div className="str1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden   ">
@@ -223,7 +223,7 @@ function Strategy() {
 
 
 
-                    <div className="str-container3 w-[100%] mb-20  flex justify-around items-center">
+                    <div className="str-container3 w-[100%] mb-20  flex justify-around items-center lg:mt-0 md:mt-[-300px] ">
                         <div className="str3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[60px]  leading-tight '>Your digital roadmap in sprint 0</h1>
                             <h1 className='text-gray-300 text-[18px] '>Good preparation is half the battle; with the right knowledge, the best choices can be made. Using Sprint 0, we will discover how your business works, what makes it distinctive and where the needs lie. The essence of your issue is made concrete and we then translate this into the perfect digital strategy.</h1>
@@ -244,11 +244,11 @@ function Strategy() {
 
 
 
-                    <div className="str-container4 w-[100%] mb-20  flex justify-around items-center overflow-hidden">
-                        <div className="str4-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden  ">
+                    <div className="str-container4 w-[100%] mb-20  flex justify-around items-center overflow-hidden ">
+                        <div className="str4-child1 w-[45%] h-[700px]  flex flex-col justify-center  rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic13.webp" alt="" />
                         </div>
-                        <div className="str4-child2 w-[45%] flex flex-col gap-7">
+                        <div className="str4-child2 w-[45%] flex flex-col gap-7 ">
                             <h1 className='text-white text-[60px]  leading-tight '>A targeted conversion strategy</h1>
                             <h1 className='text-gray-300 text-[18px] '>It all starts with a good picture of your target audience: who are they, what do they need and how can you best reach them? By clearly establishing this, we devise ways to attract and convince them digitally. With clever routes, touchpoints and triggers, we ensure that your target group gets exactly what they are looking for, and you get the results you want.</h1>
                             {/* <div className="StrategyBottomButton4 flex  items-center mt-5 z-0    ">

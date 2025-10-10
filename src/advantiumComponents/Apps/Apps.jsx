@@ -137,7 +137,7 @@ function Apps() {
                                     </div>
                                 </NavLink>
 
-                                <button onClick={scrollTomoreApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on apps</button>
+                                <button onClick={scrollTomoreApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden ">More info on apps</button>
                             </div>
                         </div>
                         <div className="apps1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -151,16 +151,16 @@ function Apps() {
                         <AppsSplitText />
                     </div>
 
-                    <div className="appLooking-container text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-8xl px-45 ">Which app are you looking for?</h1>
-                        <div className="appCard-container w-[100%] flex  justify-around">
+                    <div className="appLooking-container text-white !flex !flex-col w-[100%] gap-10 lg:py-20 md:py-[-100px]">
+                        <h1 className="text-center lg:text-8xl md:text-7xl lg:px-45 md:px-22 ">Which app are you looking for?</h1>
+                        <div className="appCard-container w-[100%] flex  justify-around overflow-hidden">
 
                             <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%]  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
                                 <NavLink to="/MobileApp">
-                                    <div className='h-[450px]'>
+                                    <div className='lg:h-[450px] md:h-[600px]'>
                                         <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                             <h1 className='text-4xl'>Mobile app</h1>
-                                            <h1 className='text-white/70 leading-loose'>Creating a mobile app means turning your users’ goals into a digital, on-the-go experience. With our expertise in custom app development, we ensure your app meets every requirement and connects seamlessly with your target audience.</h1>
+                                            <h1 className='text-white/70 '>Creating a mobile app means turning your users’ goals into a digital, on-the-go experience. With our expertise in custom app development, we ensure your app meets every requirement and connects seamlessly with your target audience.</h1>
                                         </div>
                                         <h1 className='mx-8 text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                     </div>
@@ -169,10 +169,10 @@ function Apps() {
 
                             <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%]  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70 ">
                                 <NavLink to="/WebApp">
-                                    <div className='h-[450px]'>
+                                    <div className='lg:h-[450px] md:h-[600px]'>
                                         <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                             <h1 className='text-4xl'>Web app</h1>
-                                            <h1 className='text-white/70 leading-loose'>The web applications developed by Advantium deliver a seamless user experience and a robust backend that integrates systems effortlessly, ensuring your organisation runs efficiently and scales with ease. </h1>
+                                            <h1 className='text-white/70 '>The web applications developed by Advantium deliver a seamless user experience and a robust backend that integrates systems effortlessly, ensuring your organisation runs efficiently and scales with ease. </h1>
                                         </div>
                                         <h1 className='mx-8 text-[18px] '>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                     </div>
@@ -181,10 +181,10 @@ function Apps() {
 
                             <div onClick={() => window.scrollTo(0, 0)} className="appCard w-[30%]  text-white border-2 rounded-xl border-gray-400/50 hover:bg-gray-400/70">
                                 <NavLink to="/AppDesign">
-                                    <div className='h-[450px]'>
+                                    <div className='lg:h-[450px] md:h-[600px]'>
                                         <div className="cardInnerDiv m-8 py-10 flex flex-col gap-8 border-b-2 border-gray-400/50 ">
                                             <h1 className='text-4xl'>App design</h1>
-                                            <h1 className='text-white/70 leading-loose'>Developing a mobile app begins with design, not code. At Advantium, we ensure your app’s design forms the foundation for an exceptional user experience. Together, we identify and shape the needs of your end users. </h1>
+                                            <h1 className='text-white/70 '>Developing a mobile app begins with design, not code. At Advantium, we ensure your app’s design forms the foundation for an exceptional user experience. Together, we identify and shape the needs of your end users. </h1>
                                         </div>
                                         <h1 className='mx-8 text-[18px]'>Read more <CallMadeIcon className='text-amber-400 text-3xl' /> </h1>
                                     </div>

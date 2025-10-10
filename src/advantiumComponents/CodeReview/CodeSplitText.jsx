@@ -45,7 +45,7 @@ export default function CodeSplitText() {
     }, []);
 
     return (
-        <div className="CodesplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words mt-20 px-45 overflow-x-hidden  ">
+        <div className="CodesplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words lg:mt-20 md:mt-10 lg:px-45 md:px-22 overflow-x-hidden  ">
             <h1 className="Code-Text text-start py-5 text-[55px] text-white flex items-center">What is code reviewing?</h1>
             <div
                 ref={elRef}

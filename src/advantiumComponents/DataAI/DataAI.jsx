@@ -202,7 +202,7 @@ function DataAI() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreDataAi}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoreDataAi}  className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden lg:block">More info</button>
                             </div>
                         </div>
                         <div className="data1-child2 w-[45%] h-[580px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -216,7 +216,7 @@ function DataAI() {
                         <DataAISplitText />
                     </div>
                    <div className="str-container2 w-[100%]">
-                        <h1 className=" text-white mt-30 text-8xl px-45 ">Creating business opportunities with AI.</h1>
+                        <h1 className=" text-white mt-30 text-8xl lg:px-45 md:px-22 ">Creating business opportunities with AI.</h1>
 
                         <DataAIFlexible />
                     </div>
@@ -226,7 +226,7 @@ function DataAI() {
 
 
 
-                    <div className="data-container3 w-[100%] mb-20  flex justify-around items-center">
+                    <div className="data-container3 w-[100%] mb-20 lg:mt-0 md:mt-[-300px]  flex justify-around items-center">
                         <div className="data3-child1 w-[45%] flex flex-col gap-7">
                             <h1 className='text-white text-[60px]  leading-tight '>Where to start with AI?</h1>
                             <h1 className='text-gray-300 text-[18px] '>Want to get started with AI but not sure where to begin? From building a Data Management Platform to integrating AI models into your workflows, Advantium provides complete support for a seamless transition to AI. We collaborate with your team to gather data, develop models, and implement them effectively. This not only enables smarter predictions but also ensures your products and services align better with customer needs. With flexible, scalable AI solutions, we help your organization stay agile and ready for future market and technological shifts.</h1>
@@ -251,7 +251,7 @@ function DataAI() {
 
 
                     <div className="data-container4 w-[100%] mb-20  flex justify-around items-center overflow-hidden">
-                        <div className="data4-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="data4-child1 w-[45%] h-[700px]  flex flex-col justify-center rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic20.webp" alt="" />
                         </div>
                         <div className="data4-child2 w-[45%] flex flex-col gap-7">

@@ -137,7 +137,7 @@ function WebsiteCMS() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreWebCMS} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on websites</button>
+                                <button onClick={scrollTomoreWebCMS} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info on websites</button>
                             </div>
                         </div>
                         <div className="webCMS1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -151,8 +151,8 @@ function WebsiteCMS() {
                         <WebCMSSplitText />
                     </div>
 
-                    <div className="flexible-text-container text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-8xl px-45 ">The process to your perfect website</h1>
+                    <div className="flexible-text-container text-white !flex !flex-col w-[100%] gap-10 lg:py-20 md:py-0">
+                        <h1 className="text-center text-8xl lg:px-45 md:px-22 ">The process to your perfect website</h1>
                         <div className="flexible-container">
                             <Flexible/>
                         </div>

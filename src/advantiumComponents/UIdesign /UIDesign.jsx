@@ -228,7 +228,7 @@ function UIDesign() {
                                     </button>
                                 </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreUIDesign} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on UI Design</button>
+                                <button onClick={scrollTomoreUIDesign} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info on UI Design</button>
                             </div>
                         </div>
                         <div className="UIDesign1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -269,7 +269,7 @@ function UIDesign() {
 
 
                     <div className="UIDesign-container5 w-[100%] my-20  flex justify-around items-center overflow-hidden">
-                        <div className="UIDesign5-child1 w-[45%] h-[700px]  flex flex-col rounded-2xl overflow-hidden  ">
+                        <div className="UIDesign5-child1 w-[45%] h-[700px]  flex flex-col justify-center rounded-2xl overflow-hidden  ">
                             <img className='rounded-2xl' src="pic42.webp" alt="" />
                         </div>
                         <div className="UIDesign5-child2 w-[45%] flex flex-col gap-7">

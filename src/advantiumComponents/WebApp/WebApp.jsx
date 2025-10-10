@@ -132,7 +132,7 @@ function WebApp() {
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreWebApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info on Web apps</button>
+                                <button onClick={scrollTomoreWebApp} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info on Web apps</button>
                             </div>
                         </div>
                         <div className="WebApp1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">
@@ -147,7 +147,7 @@ function WebApp() {
                     </div>
 
                     <div className="WebApp-text-container text-white !flex !flex-col w-[100%] gap-10 py-20">
-                        <h1 className="text-center text-8xl px-45 ">In five stages, we guide you to the final result.</h1>
+                        <h1 className="lg:text-center md:text-start text-8xl lg:px-45 md:px-22 ">In five stages, we guide you to the final result.</h1>
                         <div className="WebAppFlexible-container">
                             <WebAppFlexible />
                         </div>

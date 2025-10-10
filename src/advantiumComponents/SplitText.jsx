@@ -44,7 +44,7 @@ export default function SplitTextAnimate() {
   }, []);
 
   return (
-    <div className="splitText-container  w-full min-h-[100vh] bg-gray-900 flex flex-col   justify-center whitespace-normal break-words px-45 overflow-x-hidden  ">
+    <div className="splitText-container  w-full min-h-[100vh] bg-gray-900 flex flex-col   justify-center whitespace-normal break-words px-45 overflow-x-hidden md:px-25   ">
         <h1 className="Dot text-start py-5 text-xl text-white flex items-center"><CircleIcon className="text-2xl text-[rgb(35,147,195)] mr-3"/> Driven by technology since 2011</h1>
       <h1
         ref={elRef}

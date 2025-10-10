@@ -104,7 +104,7 @@ export default function About() {
 
             <div className="about-ad-Content-cont w-[100%] min-h-screen   flex flex-col justify-center items-center  text-start px-[84px]   ">
                     <h1 className='about-headingText text-[110px] text-white font-semi-bold text-start self-start leading-none mt-[100px]'>We are Advantium</h1>
-                    <h1 className='about-SubHeadingText text-xl text-white/70  text-start self-start break-keep mt-[50px] pr-90'>How do you stay agile in a rapidly changing digital world? How do you get the maximum out of existing systems? At Advantium, we have been working on these questions for almost 15 years, and we would love to help you find the answers. We see every challenge as an opportunity to look further and create future-proof solutions. With our knowledge and experience, we reduce complex issues to their essence and develop smart, scalable technological solutions that immediately add value.</h1>
+                    <h1 className='about-SubHeadingText text-xl text-white/70  text-start self-start break-keep mt-[50px] lg:pr-90 md:pr-45'>How do you stay agile in a rapidly changing digital world? How do you get the maximum out of existing systems? At Advantium, we have been working on these questions for almost 15 years, and we would love to help you find the answers. We see every challenge as an opportunity to look further and create future-proof solutions. With our knowledge and experience, we reduce complex issues to their essence and develop smart, scalable technological solutions that immediately add value.</h1>
 
                     <div className="aboutJobOpeningBtn-cont  flex self-start mt-15 items-center  ">
 
@@ -127,7 +127,7 @@ export default function About() {
                
 
                 <div className="aboutBottomTextCont w-[100%] flex flex-col justify-center items-center break-keep text-start ">
-                    <div className="ABT mx-50 mb-20 ">
+                    <div className="ABT lg:mx-50 md:mx-25 mb-20 ">
                         <h1 className=' text-5xl text-white break-keep  mb-3 '>Inventors, Designers, Developers - Partners.</h1>
                         <h1 className='text-lg break-keep text-white/70 leading-9'>What we do. We design and develop front-end, middleware and back-end solutions that optimise business processes, for example mobile apps, websites, customer portals, LMS systems and process management tools. But we are more than just a supplier; we are strategic partners who help our clients set clear goals and formulate digital strategies. With our expertise, we clarify complex issues and develop smart, scalable solutions that add immediate value. <br /> <br />
 

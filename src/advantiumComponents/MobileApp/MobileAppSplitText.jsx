@@ -43,7 +43,7 @@ export default function MobileAppSplitText() {
     }, []);
 
     return (
-        <div className="MobileAppsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  px-45 overflow-x-hidden  ">
+        <div className="MobileAppsplitText-container  w-full min-h-[100vh]  flex flex-col   justify-center whitespace-normal break-words  lg:px-45 md:px-22 overflow-x-hidden  ">
             <h1 className="MobileApp-Text text-start py-5 text-[50px] text-white flex items-center">Why a mobile app?</h1>
             <div
                 ref={elRef}

@@ -131,7 +131,7 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
                                         </button>
                                     </div>
                                 </NavLink>
-                                <button onClick={scrollTomoreDesignSprint} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300">More info</button>
+                                <button onClick={scrollTomoreDesignSprint} className="moreInfo border-2 rounded-full py-3 px-7  text-white cursor-pointer  mx-3 hover:border-amber-300 hidden">More info</button>
                             </div>
                         </div>
                         <div className="DesignSprint1-child2 w-[45%] h-[600px] flex flex-col rounded-2xl overflow-hidden  ">

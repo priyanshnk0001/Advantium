@@ -27,17 +27,14 @@ function Contact() {
             x: "-100%",
             duration: 0.8
         }, "ok")
-        tl.from(".Insights-card.left1", {
-            scale: 0,
-            duration: 0.8
-
-        }, "ok")
-        tl.from(".Insights-card.right1", {
-            scale: 0,
-            duration: 0.8
-
+        
+        tl.from(".contact-details-cont *", {
+            x: -300,
+            duration: 0.8,
+            // scale:0
         }, "ok")
 
+        
 
 
     })
@@ -63,15 +60,15 @@ function Contact() {
 
                 <Header />
 
-                <div className="contact-ad-Content-cont w-[100%] min-h-screen    flex flex-col justify-center items-center  text-start px-[84px]    ">
-                    <h1 className='contact-headingText text-[110px] text-white  text-start self-start leading-none mt-50'>Together we can move forward.</h1>
+                <div className="contact-ad-Content-cont w-[100%] min-h-screen     flex flex-col justify-center lg:items-center  text-start lg:px-[84px] md:px-[40px] md:items-center    ">
+                    <h1 className='contact-headingText lg:text-[110px] text-white  text-start lg:self-start leading-none lg:mt-50 md:text-[60px] md:mt-30 md:self-center'>Together we can move forward.</h1>
 
 
 
 
-                    <div className="contact-details-cont w-[100%] flex justify-between my-25  ">
-                        <div className="details1-container w-[40%] flex flex-col items-start  ">
-                            <h1 className="helper-work text-3xl text-white pb-15">Want to discuss your digital challenges? Neeraj Kumar is happy to help.</h1>
+                    <div className="contact-details-cont w-[100%] lg:flex lg:flex-row lg:justify-between lg:mb-25 md:flex-col md:items-center md:my-10  ">
+                        <div className="details1-container lg:w-[40%] flex flex-col items-start md:w-[80%]   ">
+                            <h1 className="helper-work text-3xl text-white lg:pb-15 md:py-15">Want to discuss your digital challenges? Neeraj Kumar is happy to help.</h1>
                             <div className="contact-img-cont flex justify-center items-center gap-5 text-white text-xl">
                                 <div className="cont-img"><img className='w-[130px] h-[130px] rounded-full' src="neerajAdvantium.jpeg" alt="" /></div>
                                 <div className="cont-name">
@@ -94,8 +91,8 @@ function Contact() {
                                 </div>
                             </div>
                         </div>
-                        <div className="details2 w-[40%]">
-                            <h1 className="helper-work text-3xl text-white pb-15">Want to discuss your digital challenges? Priya is happy to help.</h1>
+                        <div className="details2 lg:w-[40%] md:w-[80%] lg:mt-0 md:mt-10">
+                            <h1 className="helper-work text-3xl text-white lg:pb-15 md:py-15">Want to discuss your digital challenges? Priya is happy to help.</h1>
                             <div className="contact-img-cont flex  items-center gap-5 text-white text-xl">
                                 <div className="cont-img"><img className='w-[130px] h-[130px] rounded-full' src="priyaAdvantium.webp" alt="" /></div>
                                 <div className="cont-name">
