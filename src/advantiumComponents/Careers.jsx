@@ -170,11 +170,11 @@ window.addEventListener('load', () => window.scrollTo(0, 0));
 
                         <NavLink to="/OpenApp" onClick={() => window.scrollTo(0, 0)}>
                         <button className="find-jobOpeningButton  rounded-full py-4 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer ">Open Application</button>
-                        </NavLink>
                         <button
                             className="find-nextArrowButton2 bg-yellow-300 rounded-full p-4 text-black cursor-pointer  "
-
-                        ><CallMadeIcon className="!w-7 !h-7" /></button>
+                            
+                            ><CallMadeIcon className="!w-7 !h-7" /></button>
+                            </NavLink>
                     </div>
 
 

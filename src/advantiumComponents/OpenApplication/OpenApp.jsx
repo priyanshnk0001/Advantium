@@ -77,6 +77,7 @@ function OpenApp() {
 
 
     useGSAP(() => {
+  const ctx = gsap.context(() => {
     const cards = gsap.utils.toArray(".OpenAppCard");
 
     gsap.from(cards, {
@@ -88,12 +89,20 @@ function OpenApp() {
         start: "top 95%",
         end: "top 18%",
         scrub: 2,
+        scroller: "body",
       },
     });
+  });
 
-    // ✅ ensures ScrollTrigger works every time
-    setTimeout(() => ScrollTrigger.refresh(), 300);
-  }, []);
+  ScrollTrigger.refresh();
+  return () => ctx.revert();
+}, []);
+
+useEffect(() => {
+  const id = setTimeout(() => ScrollTrigger.refresh(), 500);
+  return () => clearTimeout(id);
+}, []);
+
 
 
 
