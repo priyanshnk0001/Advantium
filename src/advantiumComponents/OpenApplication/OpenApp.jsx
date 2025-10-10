@@ -77,26 +77,23 @@ function OpenApp() {
 
 
     useGSAP(() => {
+    const cards = gsap.utils.toArray(".OpenAppCard");
 
-        gsap.from(".OpenAppCard", {
-            y: 600,
-            stagger: 0.2,
-            scrollTrigger: {
-                trigger: (".OpenAppCard-container"),
-                scroller: "body",
-                scrub: 2,
-                start: "top 95%",
-                end: "top 18%",
-                // markers:true
-            }
+    gsap.from(cards, {
+      y: 600,
+      opacity: 0,
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".OpenAppCard-container",
+        start: "top 95%",
+        end: "top 18%",
+        scrub: 2,
+      },
+    });
 
-        })
-
-        
-
-
-    })
-
+    // ✅ ensures ScrollTrigger works every time
+    setTimeout(() => ScrollTrigger.refresh(), 300);
+  }, []);
 
 
 
