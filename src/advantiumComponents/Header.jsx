@@ -300,11 +300,11 @@ export default function Header() {
     if (isTouch) {
         if (deliver) {
             // add both touchstart and click as fallback (some browsers dispatch click after touch)
-            deliver.addEventListener('touchstart', deliverTouchHandler, );
+            deliver.addEventListener('touchstart', deliverTouchHandler, { passive: false } );
             deliver.addEventListener('click', deliverTouchHandler);
         }
         if (cases) {
-            cases.addEventListener('touchstart', casesTouchHandler, );
+            cases.addEventListener('touchstart', casesTouchHandler, { passive: false } );
             cases.addEventListener('click', casesTouchHandler);
         }
         if (bookingBtn) {
@@ -470,58 +470,59 @@ export default function Header() {
 
 
 
-    useGSAP(() => {
-        const lines = document.querySelectorAll(".NavTextUnderline");
+    // useGSAP(() => {
+    //     const lines = document.querySelectorAll(".NavTextUnderline");
 
-        lines.forEach((line) => {
-            const underline = line.querySelector(".underline-line");
-            const icon = line.querySelector(".KeyboardArrowDownIcon"); // per-line icon (may be null)
+    //     lines.forEach((line) => {
+    //         const underline = line.querySelector(".underline-line");
+    //         const icon = line.querySelector(".KeyboardArrowDownIcon"); // per-line icon (may be null)
+            
 
-            if (!underline) return;
+    //         if (!underline) return;
 
-            const unline = gsap.to(underline, {
-                width: "95%",
-                duration: 0.5,
-                paused: true
-            });
+    //         const unline = gsap.to(underline, {
+    //             width: "95%",
+    //             duration: 0.5,
+    //             paused: true
+    //         });
 
-            let iconTween = null;
-            if (icon) {
-                iconTween = gsap.to(icon, {
-                    rotation: 180,
+    //         let iconTween = null;
+    //         if (icon) {
+    //             iconTween = gsap.to(icon, {
+    //                 rotation: 180,
 
-                    color: "#fcd34d",
-                    duration: 0.5,
-                    paused: true,
-                    transformOrigin: "50% 50%"
-                });
-            }
+    //                 color: "#fcd34d",
+    //                 duration: 0.5,
+    //                 paused: true,
+    //                 transformOrigin: "50% 50%"
+    //             });
+    //         }
 
-            const onEnter = () => {
-                unline.play();
-                if (iconTween) iconTween.play();
-            };
-            const onLeave = () => {
-                unline.reverse();
-                if (iconTween) iconTween.reverse();
-            };
+    //         const onEnter = () => {
+    //             unline.play();
+    //             if (iconTween) iconTween.play();
+    //         };
+    //         const onLeave = () => {
+    //             unline.reverse();
+    //             if (iconTween) iconTween.reverse();
+    //         };
 
-            line.addEventListener("mouseenter", onEnter);
-            line.addEventListener("mouseleave", onLeave);
+    //         line.addEventListener("mouseenter", onEnter);
+    //         line.addEventListener("mouseleave", onLeave);
 
-            // store handlers for cleanup
-            line._handlers = { onEnter, onLeave, iconTween };
-        });
+    //         // store handlers for cleanup
+    //         line._handlers = { onEnter, onLeave, iconTween };
+    //     });
 
-        return () => {
-            lines.forEach((line) => {
-                const h = line._handlers || {};
-                if (h.onEnter) line.removeEventListener("mouseenter", h.onEnter);
-                if (h.onLeave) line.removeEventListener("mouseleave", h.onLeave);
-                if (h.iconTween) h.iconTween.kill();
-            });
-        };
-    }, []);
+    //     return () => {
+    //         lines.forEach((line) => {
+    //             const h = line._handlers || {};
+    //             if (h.onEnter) line.removeEventListener("mouseenter", h.onEnter);
+    //             if (h.onLeave) line.removeEventListener("mouseleave", h.onLeave);
+    //             if (h.iconTween) h.iconTween.kill();
+    //         });
+    //     };
+    // }, []);
 
 
     const formRef2 = useRef();
@@ -531,10 +532,10 @@ export default function Header() {
 
         emailjs
             .sendForm(
-                "service_naresh",   // EmailJS se milega
-                "template_3fokrph",  // EmailJS se milega
+                "service_naresh",   
+                "template_3fokrph", 
                 formRef2.current,
-                "TXgR3cKIt4epQKF6L"    // EmailJS dashboard me "Public Key"
+                "TXgR3cKIt4epQKF6L"    
             )
             .then(
                 (result) => {
@@ -623,7 +624,7 @@ export default function Header() {
                 <div className="Header-drawer-cont w-[100%] h-[73vh] pt-[150px] pl-4   ">
                     <div className="Header-dr-sub-cont lg:w-[95%] lg:h-[73vh] lg:pl-0 md:pl-6 lg:flex lg:justify-between lg:mx-auto md:grid md:grid-cols-2   ">
                         <div className="Header-dr-sub-child lg:w-[30%] lg:h-[73vh] flex flex-col lg:gap-10 md:gap-5 text-white/80 overflow-hidden md:w-[100%] md:h-[40vh]">
-                            <h1 className='Header-drawerArrowH1 text-[25px]  font-semibold !text-white '>Digital transformation
+                            <h1 className=' text-[25px]  font-semibold !text-white '>Digital transformation
 
                             </h1>
                             <NavLink className='w-fit' to="/Code"><h1 className='Header-drawerArrowH1 text-[18px]   '>Code review
@@ -660,7 +661,7 @@ export default function Header() {
 
 
                         <div className="Header-dr-sub-child lg:w-[30%] lg:h-[73vh] flex flex-col lg:gap-10 md:gap-5 text-white/80 overflow-hidden md:w-[100%] md:h-[40vh]  ">
-                            <h1 className='Header-drawerArrowH1 text-[25px]  font-semibold !text-white '>Software solutions
+                            <h1 className=' text-[25px]  font-semibold !text-white '>Software solutions
 
                             </h1>
                             <NavLink className="w-fit" to="/CMportal"><h1 className='Header-drawerArrowH1 text-[18px]  '>Customer and management portals
