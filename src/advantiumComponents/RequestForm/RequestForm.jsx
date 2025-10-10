@@ -9,6 +9,7 @@ import { ScrambleTextPlugin } from 'gsap/all';
 import { TextPlugin } from 'gsap/all';
 import { NavLink, useLocation } from 'react-router-dom';
 import emailjs from "emailjs-com";
+import "./RequestForm.css";
 
 // import { useLocation } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
@@ -144,7 +145,7 @@ function RequestForm() {
                             placeholder="Type your answer here"
                             aria-label="answer"
                             rows={4}
-                            className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4 resize-y"
+                            className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4 resize-y custom-scrollbar"
                         />
                     </div>
 
