@@ -571,12 +571,12 @@ export default function Header() {
         //             }}
         // className={loading ? "hidden" : ""}
         >
-            <div className="insightsNav w-[100%]  flex justify-between items-center px-[50px] pt-10 absolute top-0 left-0 text-white z-50 ">
+            <div className="insightsNav w-[100%]  flex justify-between items-center px-[50px] pt-10 absolute top-0 left-0 text-white ">
                 <div className="insightsNavP1 w-[40%] flex gap-10 items-center      ">
-                    <h1 className="Header-deliver NavTextUnderline text-[13px] cursor-pointer relative  ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
+                    <h1 className="Header-deliver NavTextUnderline text-[13px] cursor-pointer relative  z-50 ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                     </h1>
-                    <h1 className="Header-cases NavTextUnderline text-[13px] cursor-pointer relative ">Cases <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
+                    <h1 className="Header-cases NavTextUnderline text-[13px] cursor-pointer relative z-50 ">Cases <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                     </h1>
                     {/* <NavLink to="/Insights" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
@@ -587,20 +587,20 @@ export default function Header() {
                     </NavLink> */}
                     <NavLink to="/About" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`} >
-                        <h1 className="Header-aboutText NavTextUnderline text-[13px] cursor-pointer relative ">About us
+                        <h1 className="Header-aboutText NavTextUnderline text-[13px] cursor-pointer relative z-50 ">About us
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1></NavLink>
                     <NavLink to="/Careers" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? "after:w-full text-amber-300" : "after:w-0"}`}>
-                        <h1 className="Header-careersText NavTextUnderline text-[13px] cursor-pointer relative ">Careers
+                        <h1 className="Header-careersText NavTextUnderline text-[13px] cursor-pointer relative z-50 ">Careers
                             <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
                         </h1></NavLink>
                 </div>
-                <div className="insightsNavP2 flex justify-center  items-center text-center w-[20%]  ">
+                <div className="insightsNavP2 flex justify-center  items-center text-center w-[20%] z-50  ">
                     <NavLink to="/" >
                         <h1 className=" Header-advantium-text flex items-center gap-2 text-[25px] font-semibold"><img className='advantium-logo w-[50px]' src="Advantium-logo.png" alt="" />Advantium</h1></NavLink>
                 </div>
-                <div className="insightsNavP3 w-[40%] flex justify-end items-center  ">
+                <div className="insightsNavP3 w-[40%] flex justify-end items-center  z-50 ">
                     <NavLink to="/Contact" className={({ isActive }) => `relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-amber-300 after:transition-all after:duration-300
                      ${isActive ? " text-amber-300" : "after:w-0"}`}>
                         <button className="Header-contactButton border-2 rounded-full py-2.5 px-7 text-[18px] cursor-pointer mx-3 hover:border-amber-300">Contact</button>
