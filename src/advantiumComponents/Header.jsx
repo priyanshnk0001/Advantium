@@ -571,7 +571,7 @@ export default function Header() {
         //             }}
         // className={loading ? "hidden" : ""}
         >
-            <div className="insightsNav w-[100%]  flex justify-between items-center px-[50px] py-10 absolute top-0 left-0 text-white z-50">
+            <div className="insightsNav w-[100%]  flex justify-between items-center px-[50px] pt-10 absolute top-0 left-0 text-white z-50 ">
                 <div className="insightsNavP1 w-[40%] flex gap-10 items-center      ">
                     <h1 className="Header-deliver NavTextUnderline text-[13px] cursor-pointer relative  ">What we deliver <KeyboardArrowDownIcon className='KeyboardArrowDownIcon' />
                         <span className="underline-line absolute left-0 bottom-0 h-[2px] bg-amber-300 w-0"></span>
