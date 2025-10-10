@@ -75,34 +75,23 @@ function OpenApp() {
         };
     }, []);
 
-
-    useGSAP(() => {
-  const ctx = gsap.context(() => {
-    const cards = gsap.utils.toArray(".OpenAppCard");
-
-    gsap.from(cards, {
-      y: 600,
-      opacity: 0,
-      stagger: 0.2,
-      scrollTrigger: {
-        trigger: ".OpenAppCard-container",
-        start: "top 95%",
-        end: "top 18%",
-        scrub: 2,
-        scroller: "body",
-      },
-    });
-  });
-
-  ScrollTrigger.refresh();
-  return () => ctx.revert();
-}, []);
-
-useEffect(() => {
-  const id = setTimeout(() => ScrollTrigger.refresh(), 500);
-  return () => clearTimeout(id);
-}, []);
-
+   useGSAP(()=>{
+    gsap.from(".OpenAppCard-container .OpenAppCard",{
+        y:600,
+        opacity:0,
+        duration:1,
+        ease:"power2.out",
+        stagger:0.3,
+        scrollTrigger:{
+            trigger:".OpenAppCard-container",
+            start:"top 80%",
+            end:"bottom 60%",
+            toggleActions:"play none none reverse",
+        }
+    })
+   })
+   
+   
 
 
 
