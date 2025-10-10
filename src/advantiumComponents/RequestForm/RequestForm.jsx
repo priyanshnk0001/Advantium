@@ -99,7 +99,7 @@ function RequestForm() {
 
                 <form className=' flex flex-col gap-5 ' action="" ref={formRef} onSubmit={sendEmail}>
                     <div>
-                        <label htmlFor="">What is your name ?</label>
+                        <label htmlFor="">Your name</label>
                         <input
                         name="user_name"
                             type="text"
@@ -112,23 +112,23 @@ function RequestForm() {
 
                     <div className='flex w-[100%] justify-between py-4'>
                         <div className='w-[45%] flex flex-col gap-4'>
-                            <label htmlFor="">What is your e-mail?</label>
+                            <label htmlFor="">Email address</label>
                             <input
                              required
                             name="user_email"
                                 type="email"
-                                placeholder="Email address"
+                                placeholder="Email"
                                 aria-label="Email address"
                                 className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4"
                             />
                         </div>
                         <div className='w-[45%] flex flex-col gap-4'>
-                            <label htmlFor="">What is your phone number?</label>
+                            <label htmlFor=""> Phone number</label>
                             <input
                              required
                             name="user_phone"
                                 type="number"
-                                placeholder="Phone number"
+                                placeholder="number"
                                 aria-label="Phone number"
                                 className="w-full bg-transparent text-white placeholder-white/60 border-b border-white focus:outline-none focus:border-white py-4"
                             />
@@ -137,7 +137,7 @@ function RequestForm() {
                     </div>
 
                     <div>
-                        <label htmlFor="">What would you like to talk about?</label>
+                        <label htmlFor="">Tell us about your query</label>
                         <textarea
                          required
                         name="message"
@@ -148,7 +148,7 @@ function RequestForm() {
                         />
                     </div>
 
-                    <div className="Request-drawer-Btn-container pt-5">
+                    <div className="Request-drawer-Btn-container pt-5 w-fit">
                         <button className="Request-drawer-Button  rounded-full py-4 px-15 text-[18px] bg-yellow-300 text-black cursor-pointer ">Send</button>
                         <button
                             className="Request-nextArrowButton bg-yellow-300 rounded-full p-4 text-black cursor-pointer  ">
