@@ -167,7 +167,7 @@ export default function Header() {
     );
 
     // ---------------- Booking Drawer (same useGSAP scope) ----------------
-    const bookingBtn = document.querySelector(".Header-bookingButton");
+    const bookingBtn = document.querySelector(".header-bookingBtn-container");
     const bookingDrawerEl = document.querySelector(".Header-Bookingdrawer");
 
     const btl = gsap.timeline({ paused: true, reversed: true });

@@ -13,6 +13,8 @@ import CallMadeIcon from '@mui/icons-material/CallMade';
 import Header from '../Header';
 import OpenAppSplitText from './OpenAppSplitText';
 
+gsap.registerPlugin(ScrollTrigger);
+
 
 function OpenApp() {
     const [pos, setPos] = useState({ x: 750, y: 400 });

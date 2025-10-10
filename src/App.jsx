@@ -178,9 +178,9 @@ export default function HoverSpotLight() {
           <div className="w-fit overflow-hidden my-5"><h1 className='techBuilds techBuilds-info text-white text-[30px] mt-5 overflow-hidden md:text-[25px]'>We transform your challenges into digital impact with smart,<br />
             scalable software that works.</h1></div>
           <div className="advantiumBottomButton w-[40%] flex justify-center items-center mt-5 z-0 overflow-hidden md:w-[100%]  ">
-            <div className="BookingBtn-container">
+            <div onClick={triggerHeaderBookingClick} className="BookingBtn-container">
               <button
-                onClick={triggerHeaderBookingClick}
+                
                 className="bookingButton  rounded-full py-3 px-7 text-[18px] bg-yellow-300 text-black cursor-pointer  ">Book a meeting</button>
               <button
                 className="nextArrowButton2 bg-yellow-300 rounded-full p-3 text-black cursor-pointer  ">

@@ -119,7 +119,7 @@ function InCorpe() {
             </div>
 
 
-            <div className="InCorpe-text-imagediv02 w-[100vw] h-[500px] flex justify-between mb-20  px-40">
+            <div className="InCorpe-text-imagediv02 w-[100vw] h-[500px] flex justify-between mb-20 lg:mt-0 md:mt-70  px-40">
                 <div className="textpart w-[50%] flex flex-col justify-center pr-10 gap-5">
                     <h1 className="text-4xl">
                        Self-service customer portal.
@@ -136,7 +136,7 @@ function InCorpe() {
             </div>
 
 
-            <div className='InCorpe-text04-cont flex flex-col my-20 gap-5 px-40'>
+            <div className='InCorpe-text04-cont flex flex-col lg:my-20 md:mt-70 gap-5 px-40'>
                 <h1 className=" InCorpe-heading04 text-6xl text-black/80  text-wh   ">Phase 2: A customised webshop.</h1>
                 <h1 className='InCorpe-text04 text-2xl leading-relaxed text-black/50'>In the second phase, a custom-made web shop was developed, fully integrated with InCorpe's AFAS software, which centrally controlled product management, order processing and customer information. This eliminated the need for external platforms such as Shopify or Magento, for example, making the platform more convenient and cost-efficient. The webshop is designed for both B2C and B2B customers. Existing customers can easily order associated products, such as cartridges and toners, through the portal based on their connected devices. For businesses, a smart feature has also been added, allowing different users within an organisation to place orders on account. This makes the ordering experience flexible and efficient for every customer.
 
